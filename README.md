@@ -1,7 +1,7 @@
 # AI-Linux-Windos-2021
 in this code you can run in linux and windows 
 
-# IN Linux
+## IN Linux
 just go to
 
 > cd <filelocation>/ai/Protobuf
