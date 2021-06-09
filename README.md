@@ -5,7 +5,7 @@ in this code you can run in linux and windows
 
 download the repository
 
-'wget https://github.com/omidrobotic/AI-Linux-Windos-2021.git' 
+> `wget https://github.com/omidrobotic/AI-Linux-Windos-2021.git` 
 
 or
 
