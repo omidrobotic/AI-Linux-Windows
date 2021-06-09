@@ -25,8 +25,6 @@ then go to located file
 > `chmod 755 auto.sh`
   
   
-> `./auto.sh`
-
 then install Grsim from
 
 https://github.com/RoboCup-SSL/grSim
@@ -48,6 +46,10 @@ your run code system or if you use tow system run code in grsim system
   
   go to switch.h in ai and set IP address
   
+  For example:
+  > `#define GROUP_ADDR_SEND_GRSIM_COMMAND	"192.168.0.2"`
   
-  
-  
+go to the code runner system and run:
+> `./auto.sh`
+
+
