@@ -19,6 +19,6 @@ then go to located file
   
 > chmod 755 auto.sh
   
-  `<addr>`aaaaa
+  `<addr>` aaaaa
   
 > ./auto.sh
