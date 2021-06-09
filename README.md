@@ -21,4 +21,4 @@ then go to located file
 > `chmod 755 auto.sh`
   
   
-> `./auto.sh
+> `./auto.sh`
