@@ -2,9 +2,18 @@
 in this code you can run in linux and windows 
 
 ## IN Linux
-just go to
 
-> cd <filelocation>/ai/Protobuf
+download the repository
+
+> wget 
+
+or
+
+> git clon 
+
+then go to located file
+
+> cd ai/Protobuf
   
   and run
   
