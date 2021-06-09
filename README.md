@@ -5,11 +5,11 @@ in this code you can run in linux and windows
 
 download the repository
 
-> wget 
+> wget https://github.com/omidrobotic/AI-Linux-Windos-2021.git 
 
 or
 
-> git clon 
+> git clon https://github.com/omidrobotic/AI-Linux-Windos-2021.git
 
 then go to located file
 
