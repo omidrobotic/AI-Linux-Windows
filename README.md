@@ -9,4 +9,5 @@ just go to
   and run
   
 > chmod 755 auto.sh
+  
 > ./auto.sh
