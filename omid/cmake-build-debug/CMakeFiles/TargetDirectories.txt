@@ -1,0 +1,3 @@
+/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles/omid.dir
