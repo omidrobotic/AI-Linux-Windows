@@ -32,16 +32,21 @@ then install Grsim from
 https://github.com/RoboCup-SSL/grSim
 
 run this cod from your Grsim System 
-<italic> your run code system or if you use tow system run code in grsim system
 
+your run code system or if you use tow system run code in grsim system
+<italic>
   
-  if one system:
-> hostname -I  
+  * if one system:
+    > hostname -I  
   
  Or 
  
-  if use tow system:
-> ifconfig
+  * if use tow system:
+    > ifconfig
+  
+  see yor local IP address
+  
+  go to switch.h in ai and set IP address
   
   
   
