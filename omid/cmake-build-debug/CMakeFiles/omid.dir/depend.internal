@@ -17,7 +17,6 @@ CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.o
  /home/omid/Desktop/omid/ai/world.h
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o
  /home/omid/Desktop/omid/ai/FieldGeometry.h
- /home/omid/Desktop/omid/ai/GL/freeglut_std.h
  /home/omid/Desktop/omid/ai/GL/glut.h
  /home/omid/Desktop/omid/ai/GameState.h
  /home/omid/Desktop/omid/ai/HighLevel.cpp
@@ -41,6 +40,10 @@ CMakeFiles/omid.dir/ai/HighLevel.cpp.o
  /home/omid/Desktop/omid/ai/matrix.h
  /home/omid/Desktop/omid/ai/timer.h
  /home/omid/Desktop/omid/ai/world.h
+ /usr/include/GL/freeglut_std.h
+ /usr/include/GL/gl.h
+ /usr/include/GL/glu.h
+ /usr/include/GL/glu_mangle.h
  /usr/include/GL/glut.h
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o
  /home/omid/Desktop/omid/ai/FieldGeometry.h
@@ -233,9 +236,93 @@ CMakeFiles/omid.dir/ai/geometry.cpp.o
  /home/omid/Desktop/omid/ai/matrix.h
  /home/omid/Desktop/omid/ai/timer.h
  /home/omid/Desktop/omid/ai/world.h
+CMakeFiles/omid.dir/ai/graphical/glball.cpp.o
+ /home/omid/Desktop/omid/ai/geometry.h
+ /home/omid/Desktop/omid/ai/graphical/glball.cpp
+ /home/omid/Desktop/omid/ai/graphical/glball.h
+ /usr/include/GL/freeglut_std.h
+ /usr/include/GL/glut.h
+CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o
+ /home/omid/Desktop/omid/ai/GL/glut.h
+ /home/omid/Desktop/omid/ai/geometry.h
+ /home/omid/Desktop/omid/ai/graphical/glcircle.cpp
+ /home/omid/Desktop/omid/ai/graphical/glcircle.h
+ /usr/include/GL/freeglut_std.h
+ /usr/include/GL/gl.h
+ /usr/include/GL/glu.h
+ /usr/include/GL/glu_mangle.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o
+ /home/omid/Desktop/omid/ai/FieldGeometry.h
+ /home/omid/Desktop/omid/ai/GL/glut.h
+ /home/omid/Desktop/omid/ai/GameState.h
+ /home/omid/Desktop/omid/ai/Switches.h
+ /home/omid/Desktop/omid/ai/geometry.h
+ /home/omid/Desktop/omid/ai/graphical/glball.h
+ /home/omid/Desktop/omid/ai/graphical/glcircle.h
+ /home/omid/Desktop/omid/ai/graphical/glfield.cpp
+ /home/omid/Desktop/omid/ai/graphical/glfield.h
+ /home/omid/Desktop/omid/ai/graphical/glframe.h
+ /home/omid/Desktop/omid/ai/graphical/glline.h
+ /home/omid/Desktop/omid/ai/graphical/glrobot.h
+ /home/omid/Desktop/omid/ai/graphical/gltext.h
+ /home/omid/Desktop/omid/ai/timer.h
+ /home/omid/Desktop/omid/ai/world.h
+ /usr/include/GL/freeglut_std.h
+ /usr/include/GL/gl.h
+ /usr/include/GL/glu.h
+ /usr/include/GL/glu_mangle.h
+ /usr/include/GL/glut.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o
+ /home/omid/Desktop/omid/ai/FieldGeometry.h
+ /home/omid/Desktop/omid/ai/GL/glut.h
+ /home/omid/Desktop/omid/ai/GameState.h
+ /home/omid/Desktop/omid/ai/Switches.h
+ /home/omid/Desktop/omid/ai/geometry.h
+ /home/omid/Desktop/omid/ai/graphical/glball.h
+ /home/omid/Desktop/omid/ai/graphical/glcircle.h
+ /home/omid/Desktop/omid/ai/graphical/glfield.h
+ /home/omid/Desktop/omid/ai/graphical/glframe.cpp
+ /home/omid/Desktop/omid/ai/graphical/glframe.h
+ /home/omid/Desktop/omid/ai/graphical/glline.h
+ /home/omid/Desktop/omid/ai/graphical/glrobot.h
+ /home/omid/Desktop/omid/ai/graphical/gltext.h
+ /home/omid/Desktop/omid/ai/timer.h
+ /home/omid/Desktop/omid/ai/world.h
+ /usr/include/GL/freeglut_std.h
+ /usr/include/GL/gl.h
+ /usr/include/GL/glu.h
+ /usr/include/GL/glu_mangle.h
+ /usr/include/GL/glut.h
+CMakeFiles/omid.dir/ai/graphical/glline.cpp.o
+ /home/omid/Desktop/omid/ai/GL/glut.h
+ /home/omid/Desktop/omid/ai/geometry.h
+ /home/omid/Desktop/omid/ai/graphical/glline.cpp
+ /home/omid/Desktop/omid/ai/graphical/glline.h
+ /usr/include/GL/freeglut_std.h
+ /usr/include/GL/gl.h
+ /usr/include/GL/glu.h
+ /usr/include/GL/glu_mangle.h
+CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o
+ /home/omid/Desktop/omid/ai/GL/glut.h
+ /home/omid/Desktop/omid/ai/Switches.h
+ /home/omid/Desktop/omid/ai/geometry.h
+ /home/omid/Desktop/omid/ai/graphical/glrobot.cpp
+ /home/omid/Desktop/omid/ai/graphical/glrobot.h
+ /usr/include/GL/freeglut_std.h
+ /usr/include/GL/gl.h
+ /usr/include/GL/glu.h
+ /usr/include/GL/glu_mangle.h
+CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o
+ /home/omid/Desktop/omid/ai/GL/glut.h
+ /home/omid/Desktop/omid/ai/geometry.h
+ /home/omid/Desktop/omid/ai/graphical/gltext.cpp
+ /home/omid/Desktop/omid/ai/graphical/gltext.h
+ /usr/include/GL/freeglut_std.h
+ /usr/include/GL/gl.h
+ /usr/include/GL/glu.h
+ /usr/include/GL/glu_mangle.h
 CMakeFiles/omid.dir/ai/main.cpp.o
  /home/omid/Desktop/omid/ai/FieldGeometry.h
- /home/omid/Desktop/omid/ai/GL/freeglut_std.h
  /home/omid/Desktop/omid/ai/GL/glut.h
  /home/omid/Desktop/omid/ai/GameState.h
  /home/omid/Desktop/omid/ai/MotionControl.h
@@ -267,6 +354,10 @@ CMakeFiles/omid.dir/ai/main.cpp.o
  /home/omid/Desktop/omid/ai/nrf.h
  /home/omid/Desktop/omid/ai/timer.h
  /home/omid/Desktop/omid/ai/world.h
+ /usr/include/GL/freeglut_std.h
+ /usr/include/GL/gl.h
+ /usr/include/GL/glu.h
+ /usr/include/GL/glu_mangle.h
  /usr/include/GL/glut.h
 CMakeFiles/omid.dir/ai/nrf.cpp.o
  /home/omid/Desktop/omid/ai/FieldGeometry.h
@@ -288,7 +379,6 @@ CMakeFiles/omid.dir/ai/timer.cpp.o
  /home/omid/Desktop/omid/ai/timer.h
 CMakeFiles/omid.dir/ai/world.cpp.o
  /home/omid/Desktop/omid/ai/FieldGeometry.h
- /home/omid/Desktop/omid/ai/GL/freeglut_std.h
  /home/omid/Desktop/omid/ai/GL/glut.h
  /home/omid/Desktop/omid/ai/GameState.h
  /home/omid/Desktop/omid/ai/Switches.h
@@ -303,4 +393,8 @@ CMakeFiles/omid.dir/ai/world.cpp.o
  /home/omid/Desktop/omid/ai/timer.h
  /home/omid/Desktop/omid/ai/world.cpp
  /home/omid/Desktop/omid/ai/world.h
+ /usr/include/GL/freeglut_std.h
+ /usr/include/GL/gl.h
+ /usr/include/GL/glu.h
+ /usr/include/GL/glu_mangle.h
  /usr/include/GL/glut.h

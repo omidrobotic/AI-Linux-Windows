@@ -91,6 +91,21 @@
 		<Unit filename="/home/omid/Desktop/omid/ai/FieldGeometry.h">
 			<Option target="omid"/>
 		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/GL/glew.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/GL/glext.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/GL/glut.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/GL/glxew.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/GL/wglew.h">
+			<Option target="omid"/>
+		</Unit>
 		<Unit filename="/home/omid/Desktop/omid/ai/GameState.h">
 			<Option target="omid"/>
 		</Unit>
@@ -263,6 +278,48 @@
 			<Option target="omid"/>
 		</Unit>
 		<Unit filename="/home/omid/Desktop/omid/ai/geometry.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glball.cpp">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glball.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glcircle.cpp">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glcircle.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glfield.cpp">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glfield.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glframe.cpp">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glframe.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glline.cpp">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glline.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glrobot.cpp">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glrobot.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/graphical/gltext.cpp">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/graphical/gltext.h">
 			<Option target="omid"/>
 		</Unit>
 		<Unit filename="/home/omid/Desktop/omid/ai/main.cpp">

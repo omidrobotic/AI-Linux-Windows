@@ -16,7 +16,6 @@ CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.o: ../ai/timer.h
 CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.o: ../ai/world.h
 
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/FieldGeometry.h
-CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/GL/freeglut_std.h
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/GL/glut.h
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/GameState.h
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/HighLevel.cpp
@@ -40,6 +39,10 @@ CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/graphical/gltext.h
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/matrix.h
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/timer.h
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/world.h
+CMakeFiles/omid.dir/ai/HighLevel.cpp.o: /usr/include/GL/freeglut_std.h
+CMakeFiles/omid.dir/ai/HighLevel.cpp.o: /usr/include/GL/gl.h
+CMakeFiles/omid.dir/ai/HighLevel.cpp.o: /usr/include/GL/glu.h
+CMakeFiles/omid.dir/ai/HighLevel.cpp.o: /usr/include/GL/glu_mangle.h
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: /usr/include/GL/glut.h
 
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/FieldGeometry.h
@@ -233,8 +236,92 @@ CMakeFiles/omid.dir/ai/geometry.cpp.o: ../ai/matrix.h
 CMakeFiles/omid.dir/ai/geometry.cpp.o: ../ai/timer.h
 CMakeFiles/omid.dir/ai/geometry.cpp.o: ../ai/world.h
 
+CMakeFiles/omid.dir/ai/graphical/glball.cpp.o: ../ai/geometry.h
+CMakeFiles/omid.dir/ai/graphical/glball.cpp.o: ../ai/graphical/glball.cpp
+CMakeFiles/omid.dir/ai/graphical/glball.cpp.o: ../ai/graphical/glball.h
+CMakeFiles/omid.dir/ai/graphical/glball.cpp.o: /usr/include/GL/freeglut_std.h
+CMakeFiles/omid.dir/ai/graphical/glball.cpp.o: /usr/include/GL/glut.h
+
+CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o: ../ai/GL/glut.h
+CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o: ../ai/geometry.h
+CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o: ../ai/graphical/glcircle.cpp
+CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o: ../ai/graphical/glcircle.h
+CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o: /usr/include/GL/freeglut_std.h
+CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o: /usr/include/GL/gl.h
+CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o: /usr/include/GL/glu.h
+CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o: /usr/include/GL/glu_mangle.h
+
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/FieldGeometry.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/GL/glut.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/GameState.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/Switches.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/geometry.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/graphical/glball.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/graphical/glcircle.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/graphical/glfield.cpp
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/graphical/glfield.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/graphical/glframe.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/graphical/glline.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/graphical/glrobot.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/graphical/gltext.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/timer.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/world.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: /usr/include/GL/freeglut_std.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: /usr/include/GL/gl.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: /usr/include/GL/glu.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: /usr/include/GL/glu_mangle.h
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: /usr/include/GL/glut.h
+
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/FieldGeometry.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/GL/glut.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/GameState.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/Switches.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/geometry.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/graphical/glball.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/graphical/glcircle.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/graphical/glfield.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/graphical/glframe.cpp
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/graphical/glframe.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/graphical/glline.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/graphical/glrobot.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/graphical/gltext.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/timer.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/world.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: /usr/include/GL/freeglut_std.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: /usr/include/GL/gl.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: /usr/include/GL/glu.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: /usr/include/GL/glu_mangle.h
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: /usr/include/GL/glut.h
+
+CMakeFiles/omid.dir/ai/graphical/glline.cpp.o: ../ai/GL/glut.h
+CMakeFiles/omid.dir/ai/graphical/glline.cpp.o: ../ai/geometry.h
+CMakeFiles/omid.dir/ai/graphical/glline.cpp.o: ../ai/graphical/glline.cpp
+CMakeFiles/omid.dir/ai/graphical/glline.cpp.o: ../ai/graphical/glline.h
+CMakeFiles/omid.dir/ai/graphical/glline.cpp.o: /usr/include/GL/freeglut_std.h
+CMakeFiles/omid.dir/ai/graphical/glline.cpp.o: /usr/include/GL/gl.h
+CMakeFiles/omid.dir/ai/graphical/glline.cpp.o: /usr/include/GL/glu.h
+CMakeFiles/omid.dir/ai/graphical/glline.cpp.o: /usr/include/GL/glu_mangle.h
+
+CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o: ../ai/GL/glut.h
+CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o: ../ai/Switches.h
+CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o: ../ai/geometry.h
+CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o: ../ai/graphical/glrobot.cpp
+CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o: ../ai/graphical/glrobot.h
+CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o: /usr/include/GL/freeglut_std.h
+CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o: /usr/include/GL/gl.h
+CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o: /usr/include/GL/glu.h
+CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o: /usr/include/GL/glu_mangle.h
+
+CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o: ../ai/GL/glut.h
+CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o: ../ai/geometry.h
+CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o: ../ai/graphical/gltext.cpp
+CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o: ../ai/graphical/gltext.h
+CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o: /usr/include/GL/freeglut_std.h
+CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o: /usr/include/GL/gl.h
+CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o: /usr/include/GL/glu.h
+CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o: /usr/include/GL/glu_mangle.h
+
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/FieldGeometry.h
-CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/GL/freeglut_std.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/GL/glut.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/GameState.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/MotionControl.h
@@ -266,6 +353,10 @@ CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/matrix.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/nrf.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/timer.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/world.h
+CMakeFiles/omid.dir/ai/main.cpp.o: /usr/include/GL/freeglut_std.h
+CMakeFiles/omid.dir/ai/main.cpp.o: /usr/include/GL/gl.h
+CMakeFiles/omid.dir/ai/main.cpp.o: /usr/include/GL/glu.h
+CMakeFiles/omid.dir/ai/main.cpp.o: /usr/include/GL/glu_mangle.h
 CMakeFiles/omid.dir/ai/main.cpp.o: /usr/include/GL/glut.h
 
 CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/FieldGeometry.h
@@ -287,7 +378,6 @@ CMakeFiles/omid.dir/ai/timer.cpp.o: ../ai/timer.cpp
 CMakeFiles/omid.dir/ai/timer.cpp.o: ../ai/timer.h
 
 CMakeFiles/omid.dir/ai/world.cpp.o: ../ai/FieldGeometry.h
-CMakeFiles/omid.dir/ai/world.cpp.o: ../ai/GL/freeglut_std.h
 CMakeFiles/omid.dir/ai/world.cpp.o: ../ai/GL/glut.h
 CMakeFiles/omid.dir/ai/world.cpp.o: ../ai/GameState.h
 CMakeFiles/omid.dir/ai/world.cpp.o: ../ai/Switches.h
@@ -302,5 +392,9 @@ CMakeFiles/omid.dir/ai/world.cpp.o: ../ai/graphical/gltext.h
 CMakeFiles/omid.dir/ai/world.cpp.o: ../ai/timer.h
 CMakeFiles/omid.dir/ai/world.cpp.o: ../ai/world.cpp
 CMakeFiles/omid.dir/ai/world.cpp.o: ../ai/world.h
+CMakeFiles/omid.dir/ai/world.cpp.o: /usr/include/GL/freeglut_std.h
+CMakeFiles/omid.dir/ai/world.cpp.o: /usr/include/GL/gl.h
+CMakeFiles/omid.dir/ai/world.cpp.o: /usr/include/GL/glu.h
+CMakeFiles/omid.dir/ai/world.cpp.o: /usr/include/GL/glu_mangle.h
 CMakeFiles/omid.dir/ai/world.cpp.o: /usr/include/GL/glut.h
 

@@ -1,7 +1,7 @@
 # Set the minimum version of CMake that can be used
 # To find the cmake version run
 # $ cmake --version
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 # Set the project name
 project (omid)
@@ -12,10 +12,12 @@ file(GLOB SOURCES
     ai/Protobuf/*.h
     ai/*.cpp
     ai/Protobuf/*.cc
+		ai/graphical/*.h
+		ai/graphical/*.cpp
+		ai/GL/*.h
 )
-#ai/graphical/*.h
-#ai/graphical/*.cpp
-#home/mhz/Desktop/omid/ai/GL/*.h
+
+
 
 if(NOT "${_PROTOBUF_PROTOC_EXECUTABLE_VERSION}" VERSION_EQUAL "${Protobuf_VERSION}")
    message(WARNING "Protobuf compiler version ${_PROTOBUF_PROTOC_EXECUTABLE_VERSION}"
@@ -44,3 +46,8 @@ target_include_directories(omid PUBLIC
     				${PROTOBUF_LIBRARY}
                            )
 target_link_libraries(omid ${PROTOBUF_LIBRARIES})
+find_package(OpenGL REQUIRED)
+find_package(GLUT REQUIRED)
+include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} )
+
+target_link_libraries(omid ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} )

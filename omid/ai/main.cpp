@@ -36,7 +36,7 @@
 
 
 World world;
-//GLFrame glFrame;
+GLFrame glFrame;
 //HINSTANCE ghInst;
 LPCSTR  lpClassName = "ort";
 
@@ -233,7 +233,7 @@ void Robot_Wheels_Manual_Function(unsigned char key)
 
 
 
-/*
+
 static void redraw(void)
 {
 	glFrame.paintGL(world);
@@ -263,7 +263,7 @@ void KeyboardUp(unsigned char key, int x, int y)
 	Robot_Move_ManualUp_Function(key);
 #endif
 }
-*/
+
 
 
 //strategy
@@ -276,7 +276,7 @@ void producePathsToDestinations();
 void produceSpeedOfRobots();
 
 //===== Main program ========================================================
-int main(void)
+int main(int argc, char **argv)
 {
 
 	Estimation estimation;
@@ -378,7 +378,9 @@ int main(void)
 	};
 	auto GLUT_func = [&]()
 	{
-/*		glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH | BACKGROUND_INTENSITY );
+        glutInit(&argc, argv);
+		glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH | BACKGROUND_INTENSITY );
+
 		//glutInitWindowSize(850, 550);
 		glutInitWindowSize(650, 650);
 		glutCreateWindow("OMID  Robotic  Team ");
@@ -389,7 +391,7 @@ int main(void)
 		glutKeyboardUpFunc(KeyboardUp);
 		glutMouseFunc(mouseCB);
 		glutTimerFunc(1, timer, 0);	//32
-		glutMainLoop();*/
+		glutMainLoop();
 	};
 	auto radio_func = [&]()
 	{
@@ -1180,7 +1182,7 @@ int main(void)
 
 	std::thread refree_thread(refree_func);
 	std::thread vision_thread(vision_func);
-	//std::thread glut_thread(GLUT_func);
+	std::thread glut_thread(GLUT_func);
 	std::thread radio_thread(radio_func);
 	std::thread Send_Nrf_Temp(send_nrf_temp);
 
@@ -1205,7 +1207,7 @@ int main(void)
 
 	refree_thread.join();
 	vision_thread.join();
-	//glut_thread.join();
+	glut_thread.join();
 	radio_thread.join();
 	Send_Nrf_Temp.join();
 

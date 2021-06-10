@@ -466,9 +466,100 @@ CMakeFiles/omid.dir/ai/geometry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/geometry.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/geometry.cpp -o CMakeFiles/omid.dir/ai/geometry.cpp.s
 
+CMakeFiles/omid.dir/ai/graphical/glball.cpp.o: CMakeFiles/omid.dir/flags.make
+CMakeFiles/omid.dir/ai/graphical/glball.cpp.o: ../ai/graphical/glball.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glball.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glball.cpp.o -c /home/omid/Desktop/omid/ai/graphical/glball.cpp
+
+CMakeFiles/omid.dir/ai/graphical/glball.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/graphical/glball.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/graphical/glball.cpp > CMakeFiles/omid.dir/ai/graphical/glball.cpp.i
+
+CMakeFiles/omid.dir/ai/graphical/glball.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/graphical/glball.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/graphical/glball.cpp -o CMakeFiles/omid.dir/ai/graphical/glball.cpp.s
+
+CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o: CMakeFiles/omid.dir/flags.make
+CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o: ../ai/graphical/glcircle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o -c /home/omid/Desktop/omid/ai/graphical/glcircle.cpp
+
+CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/graphical/glcircle.cpp > CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.i
+
+CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/graphical/glcircle.cpp -o CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.s
+
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: CMakeFiles/omid.dir/flags.make
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/graphical/glfield.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o -c /home/omid/Desktop/omid/ai/graphical/glfield.cpp
+
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/graphical/glfield.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/graphical/glfield.cpp > CMakeFiles/omid.dir/ai/graphical/glfield.cpp.i
+
+CMakeFiles/omid.dir/ai/graphical/glfield.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/graphical/glfield.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/graphical/glfield.cpp -o CMakeFiles/omid.dir/ai/graphical/glfield.cpp.s
+
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: CMakeFiles/omid.dir/flags.make
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/graphical/glframe.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o -c /home/omid/Desktop/omid/ai/graphical/glframe.cpp
+
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/graphical/glframe.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/graphical/glframe.cpp > CMakeFiles/omid.dir/ai/graphical/glframe.cpp.i
+
+CMakeFiles/omid.dir/ai/graphical/glframe.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/graphical/glframe.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/graphical/glframe.cpp -o CMakeFiles/omid.dir/ai/graphical/glframe.cpp.s
+
+CMakeFiles/omid.dir/ai/graphical/glline.cpp.o: CMakeFiles/omid.dir/flags.make
+CMakeFiles/omid.dir/ai/graphical/glline.cpp.o: ../ai/graphical/glline.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glline.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glline.cpp.o -c /home/omid/Desktop/omid/ai/graphical/glline.cpp
+
+CMakeFiles/omid.dir/ai/graphical/glline.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/graphical/glline.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/graphical/glline.cpp > CMakeFiles/omid.dir/ai/graphical/glline.cpp.i
+
+CMakeFiles/omid.dir/ai/graphical/glline.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/graphical/glline.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/graphical/glline.cpp -o CMakeFiles/omid.dir/ai/graphical/glline.cpp.s
+
+CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o: CMakeFiles/omid.dir/flags.make
+CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o: ../ai/graphical/glrobot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o -c /home/omid/Desktop/omid/ai/graphical/glrobot.cpp
+
+CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/graphical/glrobot.cpp > CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.i
+
+CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/graphical/glrobot.cpp -o CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.s
+
+CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o: CMakeFiles/omid.dir/flags.make
+CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o: ../ai/graphical/gltext.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o -c /home/omid/Desktop/omid/ai/graphical/gltext.cpp
+
+CMakeFiles/omid.dir/ai/graphical/gltext.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/graphical/gltext.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/graphical/gltext.cpp > CMakeFiles/omid.dir/ai/graphical/gltext.cpp.i
+
+CMakeFiles/omid.dir/ai/graphical/gltext.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/graphical/gltext.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/graphical/gltext.cpp -o CMakeFiles/omid.dir/ai/graphical/gltext.cpp.s
+
 CMakeFiles/omid.dir/ai/main.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/omid.dir/ai/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/omid.dir/ai/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/main.cpp.o -c /home/omid/Desktop/omid/ai/main.cpp
 
 CMakeFiles/omid.dir/ai/main.cpp.i: cmake_force
@@ -481,7 +572,7 @@ CMakeFiles/omid.dir/ai/main.cpp.s: cmake_force
 
 CMakeFiles/omid.dir/ai/nrf.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/nrf.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/omid.dir/ai/nrf.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/omid.dir/ai/nrf.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/nrf.cpp.o -c /home/omid/Desktop/omid/ai/nrf.cpp
 
 CMakeFiles/omid.dir/ai/nrf.cpp.i: cmake_force
@@ -494,7 +585,7 @@ CMakeFiles/omid.dir/ai/nrf.cpp.s: cmake_force
 
 CMakeFiles/omid.dir/ai/timer.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/timer.cpp.o: ../ai/timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/omid.dir/ai/timer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/omid.dir/ai/timer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/timer.cpp.o -c /home/omid/Desktop/omid/ai/timer.cpp
 
 CMakeFiles/omid.dir/ai/timer.cpp.i: cmake_force
@@ -507,7 +598,7 @@ CMakeFiles/omid.dir/ai/timer.cpp.s: cmake_force
 
 CMakeFiles/omid.dir/ai/world.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/world.cpp.o: ../ai/world.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/omid.dir/ai/world.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/omid.dir/ai/world.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/world.cpp.o -c /home/omid/Desktop/omid/ai/world.cpp
 
 CMakeFiles/omid.dir/ai/world.cpp.i: cmake_force
@@ -550,6 +641,13 @@ omid_OBJECTS = \
 "CMakeFiles/omid.dir/ai/estimation.cpp.o" \
 "CMakeFiles/omid.dir/ai/filter.cpp.o" \
 "CMakeFiles/omid.dir/ai/geometry.cpp.o" \
+"CMakeFiles/omid.dir/ai/graphical/glball.cpp.o" \
+"CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o" \
+"CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o" \
+"CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o" \
+"CMakeFiles/omid.dir/ai/graphical/glline.cpp.o" \
+"CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o" \
+"CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o" \
 "CMakeFiles/omid.dir/ai/main.cpp.o" \
 "CMakeFiles/omid.dir/ai/nrf.cpp.o" \
 "CMakeFiles/omid.dir/ai/timer.cpp.o" \
@@ -588,14 +686,26 @@ omid: CMakeFiles/omid.dir/ai/VisionRobot.cpp.o
 omid: CMakeFiles/omid.dir/ai/estimation.cpp.o
 omid: CMakeFiles/omid.dir/ai/filter.cpp.o
 omid: CMakeFiles/omid.dir/ai/geometry.cpp.o
+omid: CMakeFiles/omid.dir/ai/graphical/glball.cpp.o
+omid: CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o
+omid: CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o
+omid: CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o
+omid: CMakeFiles/omid.dir/ai/graphical/glline.cpp.o
+omid: CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o
+omid: CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o
 omid: CMakeFiles/omid.dir/ai/main.cpp.o
 omid: CMakeFiles/omid.dir/ai/nrf.cpp.o
 omid: CMakeFiles/omid.dir/ai/timer.cpp.o
 omid: CMakeFiles/omid.dir/ai/world.cpp.o
 omid: CMakeFiles/omid.dir/build.make
 omid: /usr/local/lib/libprotobuf.so
+omid: /usr/lib/x86_64-linux-gnu/libGL.so
+omid: /usr/lib/x86_64-linux-gnu/libGLU.so
+omid: /usr/lib/x86_64-linux-gnu/libglut.so
+omid: /usr/lib/x86_64-linux-gnu/libXmu.so
+omid: /usr/lib/x86_64-linux-gnu/libXi.so
 omid: CMakeFiles/omid.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Linking CXX executable omid"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Linking CXX executable omid"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/omid.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

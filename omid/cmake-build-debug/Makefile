@@ -952,6 +952,195 @@ ai/geometry.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/geometry.cpp.s
 .PHONY : ai/geometry.cpp.s
 
+ai/graphical/glball.o: ai/graphical/glball.cpp.o
+
+.PHONY : ai/graphical/glball.o
+
+# target to build an object file
+ai/graphical/glball.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glball.cpp.o
+.PHONY : ai/graphical/glball.cpp.o
+
+ai/graphical/glball.i: ai/graphical/glball.cpp.i
+
+.PHONY : ai/graphical/glball.i
+
+# target to preprocess a source file
+ai/graphical/glball.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glball.cpp.i
+.PHONY : ai/graphical/glball.cpp.i
+
+ai/graphical/glball.s: ai/graphical/glball.cpp.s
+
+.PHONY : ai/graphical/glball.s
+
+# target to generate assembly for a file
+ai/graphical/glball.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glball.cpp.s
+.PHONY : ai/graphical/glball.cpp.s
+
+ai/graphical/glcircle.o: ai/graphical/glcircle.cpp.o
+
+.PHONY : ai/graphical/glcircle.o
+
+# target to build an object file
+ai/graphical/glcircle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o
+.PHONY : ai/graphical/glcircle.cpp.o
+
+ai/graphical/glcircle.i: ai/graphical/glcircle.cpp.i
+
+.PHONY : ai/graphical/glcircle.i
+
+# target to preprocess a source file
+ai/graphical/glcircle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.i
+.PHONY : ai/graphical/glcircle.cpp.i
+
+ai/graphical/glcircle.s: ai/graphical/glcircle.cpp.s
+
+.PHONY : ai/graphical/glcircle.s
+
+# target to generate assembly for a file
+ai/graphical/glcircle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.s
+.PHONY : ai/graphical/glcircle.cpp.s
+
+ai/graphical/glfield.o: ai/graphical/glfield.cpp.o
+
+.PHONY : ai/graphical/glfield.o
+
+# target to build an object file
+ai/graphical/glfield.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o
+.PHONY : ai/graphical/glfield.cpp.o
+
+ai/graphical/glfield.i: ai/graphical/glfield.cpp.i
+
+.PHONY : ai/graphical/glfield.i
+
+# target to preprocess a source file
+ai/graphical/glfield.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glfield.cpp.i
+.PHONY : ai/graphical/glfield.cpp.i
+
+ai/graphical/glfield.s: ai/graphical/glfield.cpp.s
+
+.PHONY : ai/graphical/glfield.s
+
+# target to generate assembly for a file
+ai/graphical/glfield.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glfield.cpp.s
+.PHONY : ai/graphical/glfield.cpp.s
+
+ai/graphical/glframe.o: ai/graphical/glframe.cpp.o
+
+.PHONY : ai/graphical/glframe.o
+
+# target to build an object file
+ai/graphical/glframe.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o
+.PHONY : ai/graphical/glframe.cpp.o
+
+ai/graphical/glframe.i: ai/graphical/glframe.cpp.i
+
+.PHONY : ai/graphical/glframe.i
+
+# target to preprocess a source file
+ai/graphical/glframe.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glframe.cpp.i
+.PHONY : ai/graphical/glframe.cpp.i
+
+ai/graphical/glframe.s: ai/graphical/glframe.cpp.s
+
+.PHONY : ai/graphical/glframe.s
+
+# target to generate assembly for a file
+ai/graphical/glframe.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glframe.cpp.s
+.PHONY : ai/graphical/glframe.cpp.s
+
+ai/graphical/glline.o: ai/graphical/glline.cpp.o
+
+.PHONY : ai/graphical/glline.o
+
+# target to build an object file
+ai/graphical/glline.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glline.cpp.o
+.PHONY : ai/graphical/glline.cpp.o
+
+ai/graphical/glline.i: ai/graphical/glline.cpp.i
+
+.PHONY : ai/graphical/glline.i
+
+# target to preprocess a source file
+ai/graphical/glline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glline.cpp.i
+.PHONY : ai/graphical/glline.cpp.i
+
+ai/graphical/glline.s: ai/graphical/glline.cpp.s
+
+.PHONY : ai/graphical/glline.s
+
+# target to generate assembly for a file
+ai/graphical/glline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glline.cpp.s
+.PHONY : ai/graphical/glline.cpp.s
+
+ai/graphical/glrobot.o: ai/graphical/glrobot.cpp.o
+
+.PHONY : ai/graphical/glrobot.o
+
+# target to build an object file
+ai/graphical/glrobot.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o
+.PHONY : ai/graphical/glrobot.cpp.o
+
+ai/graphical/glrobot.i: ai/graphical/glrobot.cpp.i
+
+.PHONY : ai/graphical/glrobot.i
+
+# target to preprocess a source file
+ai/graphical/glrobot.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.i
+.PHONY : ai/graphical/glrobot.cpp.i
+
+ai/graphical/glrobot.s: ai/graphical/glrobot.cpp.s
+
+.PHONY : ai/graphical/glrobot.s
+
+# target to generate assembly for a file
+ai/graphical/glrobot.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.s
+.PHONY : ai/graphical/glrobot.cpp.s
+
+ai/graphical/gltext.o: ai/graphical/gltext.cpp.o
+
+.PHONY : ai/graphical/gltext.o
+
+# target to build an object file
+ai/graphical/gltext.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o
+.PHONY : ai/graphical/gltext.cpp.o
+
+ai/graphical/gltext.i: ai/graphical/gltext.cpp.i
+
+.PHONY : ai/graphical/gltext.i
+
+# target to preprocess a source file
+ai/graphical/gltext.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/gltext.cpp.i
+.PHONY : ai/graphical/gltext.cpp.i
+
+ai/graphical/gltext.s: ai/graphical/gltext.cpp.s
+
+.PHONY : ai/graphical/gltext.s
+
+# target to generate assembly for a file
+ai/graphical/gltext.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/graphical/gltext.cpp.s
+.PHONY : ai/graphical/gltext.cpp.s
+
 ai/main.o: ai/main.cpp.o
 
 .PHONY : ai/main.o
@@ -1159,6 +1348,27 @@ help:
 	@echo "... ai/geometry.o"
 	@echo "... ai/geometry.i"
 	@echo "... ai/geometry.s"
+	@echo "... ai/graphical/glball.o"
+	@echo "... ai/graphical/glball.i"
+	@echo "... ai/graphical/glball.s"
+	@echo "... ai/graphical/glcircle.o"
+	@echo "... ai/graphical/glcircle.i"
+	@echo "... ai/graphical/glcircle.s"
+	@echo "... ai/graphical/glfield.o"
+	@echo "... ai/graphical/glfield.i"
+	@echo "... ai/graphical/glfield.s"
+	@echo "... ai/graphical/glframe.o"
+	@echo "... ai/graphical/glframe.i"
+	@echo "... ai/graphical/glframe.s"
+	@echo "... ai/graphical/glline.o"
+	@echo "... ai/graphical/glline.i"
+	@echo "... ai/graphical/glline.s"
+	@echo "... ai/graphical/glrobot.o"
+	@echo "... ai/graphical/glrobot.i"
+	@echo "... ai/graphical/glrobot.s"
+	@echo "... ai/graphical/gltext.o"
+	@echo "... ai/graphical/gltext.i"
+	@echo "... ai/graphical/gltext.s"
 	@echo "... ai/main.o"
 	@echo "... ai/main.i"
 	@echo "... ai/main.s"
