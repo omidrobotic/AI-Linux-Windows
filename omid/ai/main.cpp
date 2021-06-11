@@ -1,4 +1,4 @@
-
+#include "Switches.h"
 #include "Referee.h"
 #include "Vision.h"
 #include "estimation.h"
@@ -6,9 +6,12 @@
 #include <thread>
 #include <mutex>
 #include <ctime>
-#include "Protobuf/grSim_Commands.pb.h"
-#include "Protobuf/grSim_Packet.pb.h"
-#include "Protobuf/grSim_Replacement.pb.h"
+#if SEND_COMMANDS_TO_ROBOTS==2
+#else
+#include "Protobuf/Grsim/grSim_Commands.pb.h"
+#include "Protobuf/Grsim/grSim_Packet.pb.h"
+#include "Protobuf/Grsim/grSim_Replacement.pb.h"
+#endif
 #include "FieldGeometry.h"
 #include "world.h"
 #include "graphical/glframe.h"

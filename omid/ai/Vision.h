@@ -1,10 +1,17 @@
 #ifndef VISION_H
 #define VISION_H
-
+#include "Switches.h"
 #include <iostream>
-#include "Protobuf/messages_robocup_ssl_detection.pb.h"
-#include "Protobuf/messages_robocup_ssl_geometry.pb.h"
-#include "Protobuf/messages_robocup_ssl_wrapper.pb.h"
+#if (SEND_COMMANDS_TO_ROBOTS==2)
+#include "Protobuf/ER-force/messages_robocup_ssl_detection.pb.h"
+#include "Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h"
+#include "Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h"
+#else
+#include "Protobuf/Vision/messages_robocup_ssl_detection.pb.h"
+#include "Protobuf/Vision/messages_robocup_ssl_geometry.pb.h"
+#include "Protobuf/Vision/messages_robocup_ssl_wrapper.pb.h"
+#endif
+
 #include "Socket_udp.h"
 #include "filter.h"
 #include "world.h"

@@ -20,8 +20,8 @@ CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/GL/glut.h
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/GameState.h
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/HighLevel.cpp
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/HighLevel.h
-CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/Protobuf/game_event.pb.h
-CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/Protobuf/referee.pb.h
+CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/Protobuf/Refree/game_event.pb.h
+CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/Protobuf/Refree/referee.pb.h
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/RRT.h
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/Referee.h
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/Socket_udp.h
@@ -49,9 +49,11 @@ CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/FieldGeometry.h
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/GameState.h
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/MotionControl.cpp
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/MotionControl.h
-CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Protobuf/grSim_Commands.pb.h
-CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Protobuf/grSim_Packet.pb.h
-CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Protobuf/grSim_Replacement.pb.h
+CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.h
+CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
+CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_config.pb.h
+CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_control.pb.h
+CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_error.pb.h
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Socket_udp.h
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Switches.h
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/geometry.h
@@ -60,68 +62,79 @@ CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/nrf.h
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/timer.h
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/world.h
 
-CMakeFiles/omid.dir/ai/Protobuf/game_event.pb.cc.o: ../ai/Protobuf/game_event.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/game_event.pb.cc.o: ../ai/Protobuf/game_event.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/grSim_Commands.pb.cc.o: ../ai/Protobuf/grSim_Commands.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/grSim_Commands.pb.cc.o: ../ai/Protobuf/grSim_Commands.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/grSim_Packet.pb.cc.o: ../ai/Protobuf/grSim_Commands.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/grSim_Packet.pb.cc.o: ../ai/Protobuf/grSim_Packet.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/grSim_Packet.pb.cc.o: ../ai/Protobuf/grSim_Packet.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/grSim_Packet.pb.cc.o: ../ai/Protobuf/grSim_Replacement.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/grSim_Replacement.pb.cc.o: ../ai/Protobuf/grSim_Replacement.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/grSim_Replacement.pb.cc.o: ../ai/Protobuf/grSim_Replacement.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_detection.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_detection.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_detection.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_detection.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_detection_tracked.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_detection_tracked.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_detection_tracked.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_detection_tracked.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_geometry.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_geometry.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_geometry.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_geometry.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_geometry_legacy.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_geometry.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_geometry_legacy.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_geometry_legacy.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_geometry_legacy.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_geometry_legacy.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_refbox_log.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_detection.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_refbox_log.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_refbox_log.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_refbox_log.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_refbox_log.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_config.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_config.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_wrapper.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_detection.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_wrapper.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_geometry.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_wrapper.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_wrapper.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_wrapper.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_wrapper.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_config.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_control.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_control.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_error.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_wrapper_legacy.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_detection.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_wrapper_legacy.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_geometry.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_wrapper_legacy.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_geometry_legacy.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_wrapper_legacy.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_wrapper_legacy.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_wrapper_legacy.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_wrapper_legacy.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_error.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_error.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_wrapper_tracked.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_detection_tracked.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_wrapper_tracked.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_wrapper_tracked.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/messages_robocup_ssl_wrapper_tracked.pb.cc.o: ../ai/Protobuf/messages_robocup_ssl_wrapper_tracked.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/rcon.pb.cc.o: ../ai/Protobuf/game_event.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/rcon.pb.cc.o: ../ai/Protobuf/rcon.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/rcon.pb.cc.o: ../ai/Protobuf/rcon.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/rcon.pb.cc.o: ../ai/Protobuf/referee.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_error.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/referee.pb.cc.o: ../ai/Protobuf/game_event.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/referee.pb.cc.o: ../ai/Protobuf/referee.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/referee.pb.cc.o: ../ai/Protobuf/referee.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.o: ../ai/Protobuf/ER-force/vision_detection.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.o: ../ai/Protobuf/ER-force/vision_detection.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/savestate.pb.cc.o: ../ai/Protobuf/game_event.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/savestate.pb.cc.o: ../ai/Protobuf/referee.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/savestate.pb.cc.o: ../ai/Protobuf/savestate.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/savestate.pb.cc.o: ../ai/Protobuf/savestate.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.o: ../ai/Protobuf/Refree/game_event.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.o: ../ai/Protobuf/Refree/game_event.pb.h
 
-CMakeFiles/omid.dir/ai/Protobuf/vision_detection.pb.cc.o: ../ai/Protobuf/vision_detection.pb.cc
-CMakeFiles/omid.dir/ai/Protobuf/vision_detection.pb.cc.o: ../ai/Protobuf/vision_detection.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.o: ../ai/Protobuf/Refree/game_event.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.o: ../ai/Protobuf/Refree/rcon.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.o: ../ai/Protobuf/Refree/rcon.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.o: ../ai/Protobuf/Refree/referee.pb.h
+
+CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.o: ../ai/Protobuf/Refree/game_event.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.o: ../ai/Protobuf/Refree/referee.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.o: ../ai/Protobuf/Refree/referee.pb.h
+
+CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.o: ../ai/Protobuf/Refree/game_event.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.o: ../ai/Protobuf/Refree/referee.pb.h
+CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.o: ../ai/Protobuf/Refree/savestate.pb.cc
+CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.o: ../ai/Protobuf/Refree/savestate.pb.h
 
 CMakeFiles/omid.dir/ai/RRT.cpp.o: ../ai/FieldGeometry.h
 CMakeFiles/omid.dir/ai/RRT.cpp.o: ../ai/GameState.h
@@ -134,8 +147,8 @@ CMakeFiles/omid.dir/ai/RRT.cpp.o: ../ai/world.h
 
 CMakeFiles/omid.dir/ai/Referee.cpp.o: ../ai/FieldGeometry.h
 CMakeFiles/omid.dir/ai/Referee.cpp.o: ../ai/GameState.h
-CMakeFiles/omid.dir/ai/Referee.cpp.o: ../ai/Protobuf/game_event.pb.h
-CMakeFiles/omid.dir/ai/Referee.cpp.o: ../ai/Protobuf/referee.pb.h
+CMakeFiles/omid.dir/ai/Referee.cpp.o: ../ai/Protobuf/Refree/game_event.pb.h
+CMakeFiles/omid.dir/ai/Referee.cpp.o: ../ai/Protobuf/Refree/referee.pb.h
 CMakeFiles/omid.dir/ai/Referee.cpp.o: ../ai/Referee.cpp
 CMakeFiles/omid.dir/ai/Referee.cpp.o: ../ai/Referee.h
 CMakeFiles/omid.dir/ai/Referee.cpp.o: ../ai/Socket_udp.h
@@ -151,9 +164,9 @@ CMakeFiles/omid.dir/ai/Strategy.cpp.o: ../ai/Strategy.cpp
 
 CMakeFiles/omid.dir/ai/Vision.cpp.o: ../ai/FieldGeometry.h
 CMakeFiles/omid.dir/ai/Vision.cpp.o: ../ai/GameState.h
-CMakeFiles/omid.dir/ai/Vision.cpp.o: ../ai/Protobuf/messages_robocup_ssl_detection.pb.h
-CMakeFiles/omid.dir/ai/Vision.cpp.o: ../ai/Protobuf/messages_robocup_ssl_geometry.pb.h
-CMakeFiles/omid.dir/ai/Vision.cpp.o: ../ai/Protobuf/messages_robocup_ssl_wrapper.pb.h
+CMakeFiles/omid.dir/ai/Vision.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h
+CMakeFiles/omid.dir/ai/Vision.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
+CMakeFiles/omid.dir/ai/Vision.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h
 CMakeFiles/omid.dir/ai/Vision.cpp.o: ../ai/Socket_udp.h
 CMakeFiles/omid.dir/ai/Vision.cpp.o: ../ai/Switches.h
 CMakeFiles/omid.dir/ai/Vision.cpp.o: ../ai/Vision.cpp
@@ -166,9 +179,9 @@ CMakeFiles/omid.dir/ai/Vision.cpp.o: ../ai/world.h
 
 CMakeFiles/omid.dir/ai/VisionBall.cpp.o: ../ai/FieldGeometry.h
 CMakeFiles/omid.dir/ai/VisionBall.cpp.o: ../ai/GameState.h
-CMakeFiles/omid.dir/ai/VisionBall.cpp.o: ../ai/Protobuf/messages_robocup_ssl_detection.pb.h
-CMakeFiles/omid.dir/ai/VisionBall.cpp.o: ../ai/Protobuf/messages_robocup_ssl_geometry.pb.h
-CMakeFiles/omid.dir/ai/VisionBall.cpp.o: ../ai/Protobuf/messages_robocup_ssl_wrapper.pb.h
+CMakeFiles/omid.dir/ai/VisionBall.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h
+CMakeFiles/omid.dir/ai/VisionBall.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
+CMakeFiles/omid.dir/ai/VisionBall.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h
 CMakeFiles/omid.dir/ai/VisionBall.cpp.o: ../ai/Socket_udp.h
 CMakeFiles/omid.dir/ai/VisionBall.cpp.o: ../ai/Switches.h
 CMakeFiles/omid.dir/ai/VisionBall.cpp.o: ../ai/Vision.h
@@ -181,9 +194,9 @@ CMakeFiles/omid.dir/ai/VisionBall.cpp.o: ../ai/world.h
 
 CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: ../ai/FieldGeometry.h
 CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: ../ai/GameState.h
-CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: ../ai/Protobuf/messages_robocup_ssl_detection.pb.h
-CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: ../ai/Protobuf/messages_robocup_ssl_geometry.pb.h
-CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: ../ai/Protobuf/messages_robocup_ssl_wrapper.pb.h
+CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h
+CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
+CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h
 CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: ../ai/Socket_udp.h
 CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: ../ai/Switches.h
 CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: ../ai/Vision.h
@@ -196,9 +209,9 @@ CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: ../ai/world.h
 
 CMakeFiles/omid.dir/ai/VisionRobot.cpp.o: ../ai/FieldGeometry.h
 CMakeFiles/omid.dir/ai/VisionRobot.cpp.o: ../ai/GameState.h
-CMakeFiles/omid.dir/ai/VisionRobot.cpp.o: ../ai/Protobuf/messages_robocup_ssl_detection.pb.h
-CMakeFiles/omid.dir/ai/VisionRobot.cpp.o: ../ai/Protobuf/messages_robocup_ssl_geometry.pb.h
-CMakeFiles/omid.dir/ai/VisionRobot.cpp.o: ../ai/Protobuf/messages_robocup_ssl_wrapper.pb.h
+CMakeFiles/omid.dir/ai/VisionRobot.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h
+CMakeFiles/omid.dir/ai/VisionRobot.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
+CMakeFiles/omid.dir/ai/VisionRobot.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h
 CMakeFiles/omid.dir/ai/VisionRobot.cpp.o: ../ai/Socket_udp.h
 CMakeFiles/omid.dir/ai/VisionRobot.cpp.o: ../ai/Switches.h
 CMakeFiles/omid.dir/ai/VisionRobot.cpp.o: ../ai/Vision.h
@@ -325,14 +338,15 @@ CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/FieldGeometry.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/GL/glut.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/GameState.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/MotionControl.h
-CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/game_event.pb.h
-CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/grSim_Commands.pb.h
-CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/grSim_Packet.pb.h
-CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/grSim_Replacement.pb.h
-CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/messages_robocup_ssl_detection.pb.h
-CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/messages_robocup_ssl_geometry.pb.h
-CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/messages_robocup_ssl_wrapper.pb.h
-CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/referee.pb.h
+CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h
+CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.h
+CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
+CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h
+CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_config.pb.h
+CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_control.pb.h
+CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_error.pb.h
+CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/Refree/game_event.pb.h
+CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/Refree/referee.pb.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/RRT.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Referee.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Socket_udp.h
@@ -361,9 +375,11 @@ CMakeFiles/omid.dir/ai/main.cpp.o: /usr/include/GL/glut.h
 
 CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/FieldGeometry.h
 CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/GameState.h
-CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Protobuf/grSim_Commands.pb.h
-CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Protobuf/grSim_Packet.pb.h
-CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Protobuf/grSim_Replacement.pb.h
+CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.h
+CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
+CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_config.pb.h
+CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_control.pb.h
+CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_error.pb.h
 CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/RRT.h
 CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Socket_udp.h
 CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Switches.h

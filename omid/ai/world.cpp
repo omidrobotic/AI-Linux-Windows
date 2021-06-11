@@ -450,7 +450,7 @@ short int Field::detect_airt(VecPosition position)
 /**! WORLD'S STATIC VARIABLES **/
 
 World						World::instance;
-TeamColor					World::team_color;
+TeamColorData					World::team_color;
 TeamSide					World::team_side;
 Timer						World::glTimer;
 mode_State::PlayMode        World::playMode;
@@ -585,7 +585,7 @@ void World::setKickMode(mode_State::KickMode _pm)
 	kickMode = _pm;
 }
 
-void World::setTeamColor(TeamColor _cl)
+void World::setTeamColor(TeamColorData _cl)
 {
 	team_color = _cl;
 }

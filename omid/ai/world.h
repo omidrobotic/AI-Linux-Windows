@@ -47,7 +47,7 @@
 
 
 /*! ENUMS */
-enum TeamColor
+enum TeamColorData
 {
 	TC_Yellow = 0,
 	TC_Blue = 1
@@ -127,7 +127,7 @@ public:
 	bool shoot_or_chip;	///true(1) for shoot; false(0) for chip
 	bool spinBack;
 };
-class Team {
+class TeamData {
 public:
 	int Goalie;
 	int Yellow_Cards;
@@ -137,7 +137,7 @@ public:
 	int Timeouts;
 	uint32_t Timeout_Time;
 	int Score;
-	TeamColor color;
+	TeamColorData color;
 };
 class Field
 {
@@ -283,7 +283,7 @@ public:
 #endif
 #pragma endregion
 
-	static TeamColor  team_color;  // blue yellow
+	static TeamColorData  team_color;  // blue yellow
 	static TeamSide   team_side;  // right  left
 	static mode_State::StageMode stageMode;
 	static mode_State::PlayMode playMode;
@@ -293,7 +293,7 @@ public:
 	void setStageMode(mode_State::StageMode _pm);
 	void setPlayMode(mode_State::PlayMode _pm);
 	void setKickMode(mode_State::KickMode _pm);
-	void setTeamColor(TeamColor _cl);
+	void setTeamColor(TeamColorData _cl);
 	void setTeamSide(TeamSide _s);
 
 	VecPosition get_robotT_position(const int &robot_number) const;
@@ -313,8 +313,8 @@ public:
 	static World &getInstance();
 	//double time_remaining;
 	static Timer glTimer;
-	Team team_T;
-	Team team_O;
+	TeamData team_T;
+	TeamData team_O;
 	World();
 
 

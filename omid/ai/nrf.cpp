@@ -46,7 +46,10 @@
 #include <random>
 #include "RRT.h"
 #include "Socket_udp.h"
-#include "Protobuf/grSim_Packet.pb.h"
+#if SEND_COMMANDS_TO_ROBOTS==2
+#else
+#include "Protobuf/Grsim/grSim_Packet.pb.h"
+#endif
 #include <string>
 #include "Switches.h"
 ///convert arguments of functions to const World &world
@@ -287,7 +290,8 @@ void nrf::read_from_port()
 
 /*!NRF METHODS */
 
-
+#if SEND_COMMANDS_TO_ROBOTS==2
+#else
 /*!GrsimMove METHODS */
 
 ///generate a "command" that is a set of attributes for a one robot and somehow! connected to packet
@@ -391,7 +395,6 @@ void GrsimMove::go_setKick_setSpinBack_withoutSend(VecPosition vv, double w, boo
 		set_spinBack(spinBack, id);
 	}
 }
-
 //void GrsimMove::convert_robot_velocity_to_wheels_velocity(VecPosition RV, double w, AngRad rteta, MatrixD &V_send_out)
 //{
 //	//ww -> charkhesh hole mehvar khod.
@@ -654,5 +657,5 @@ void GrsimMove::send_to_grsim()
 //	//set_velocity(V);
 //	//write_on_port();
 //}
-
+#endif
 

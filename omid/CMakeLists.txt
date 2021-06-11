@@ -9,9 +9,19 @@ project (omid)
 # Create a sources variable with a link to all cpp files to compile
 file(GLOB SOURCES
     ai/*.h
-    ai/Protobuf/*.h
     ai/*.cpp
-    ai/Protobuf/*.cc
+    ai/Protobuf/ER-force/erforce/*.h
+    ai/Protobuf/ER-force/erforce/*.cc
+    ai/Protobuf/ER-force/vision/*.h
+    ai/Protobuf/ER-force/vision/*.cc
+    ai/Protobuf/Vision/*.h
+    ai/Protobuf/Vision/*.cc
+    ai/Protobuf/Refree/*.h
+    ai/Protobuf/Refree/*.cc
+    ai/Protobuf/Grsim/*.h
+    ai/Protobuf/Grsim/*.cc
+    ai/Protobuf/ER-force/*.h
+    ai/Protobuf/ER-force/*.cc
 		ai/graphical/*.h
 		ai/graphical/*.cpp
 		ai/GL/*.h

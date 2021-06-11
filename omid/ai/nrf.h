@@ -49,7 +49,14 @@
 #endif
 #include "geometry.h"
 #include "Socket_udp.h"
-#include "Protobuf/grSim_Packet.pb.h"
+#include "Switches.h"
+#if SEND_COMMANDS_TO_ROBOTS==2
+#include "Protobuf/ER-force/ssl_simulation_control.pb.h"
+#else
+#include "Protobuf/Grsim/grSim_Packet.pb.h"
+#endif
+
+//#include "Protobuf/ER-force/ssl_simulation_control.pb.h"
 #include "Switches.h"
 
 class VecPosition;
@@ -131,10 +138,15 @@ public:
     void send_to_grsim();
 
     Socket_udp grsim_udp;
-    grSim_Packet packet;     ///packet has a set of commands that each command is attributes of one robot,such speed of each wheel, etc.
     char s_data[1024];     ///whole data that will be send.
-    grSim_Robot_Command *command[8];    /// 8: need to be changed !!!!!!!!!	///command is a set of attributes for a robot.such as speed of each wheel, etc.
     double max_wheel_speed = 80;
+
+#if SEND_COMMANDS_TO_ROBOTS==2
+#else
+    grSim_Packet packet;     ///packet has a set of commands that each command is attributes of one robot,such speed of each wheel, etc.
+    grSim_Robot_Command *command[8];    /// 8: need to be changed !!!!!!!!!	///command is a set of attributes for a robot.such as speed of each wheel, etc.
+#endif
+
 };
 #endif // NRF_H
 
