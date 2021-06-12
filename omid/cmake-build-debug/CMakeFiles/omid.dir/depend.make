@@ -49,11 +49,7 @@ CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/FieldGeometry.h
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/GameState.h
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/MotionControl.cpp
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/MotionControl.h
-CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.h
-CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
-CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_config.pb.h
-CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_control.pb.h
-CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_error.pb.h
+CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.h
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Socket_udp.h
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/Switches.h
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/geometry.h
@@ -339,12 +335,9 @@ CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/GL/glut.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/GameState.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/MotionControl.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h
-CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h
-CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_config.pb.h
-CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_control.pb.h
-CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_error.pb.h
+CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/Refree/game_event.pb.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/Protobuf/Refree/referee.pb.h
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/RRT.h
@@ -380,6 +373,7 @@ CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_g
 CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_config.pb.h
 CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_control.pb.h
 CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_error.pb.h
+CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.h
 CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/RRT.h
 CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Socket_udp.h
 CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/Switches.h

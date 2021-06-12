@@ -51,13 +51,11 @@
 #include "Socket_udp.h"
 #include "Switches.h"
 #if SEND_COMMANDS_TO_ROBOTS==2
-#include "Protobuf/ER-force/ssl_simulation_control.pb.h"
+#include "Protobuf/ER-force/ssl_simulation_robot_control.pb.h"
 #else
 #include "Protobuf/Grsim/grSim_Packet.pb.h"
 #endif
 
-//#include "Protobuf/ER-force/ssl_simulation_control.pb.h"
-#include "Switches.h"
 
 class VecPosition;
 class World;
@@ -99,7 +97,7 @@ private:
 
 };
 
-class GrsimMove {
+class SimulatorMove {
 public:
 
     enum move_type {
@@ -108,7 +106,7 @@ public:
         robot_speed = 2
     };
 
-    GrsimMove();
+
 
     void initialize_port(const char *ip, int port);
 
@@ -135,14 +133,20 @@ public:
 
     void set_spinBack(bool spinBack, char id);
 
-    void send_to_grsim();
 
-    Socket_udp grsim_udp;
     char s_data[1024];     ///whole data that will be send.
     double max_wheel_speed = 80;
-
+    SimulatorMove();
 #if SEND_COMMANDS_TO_ROBOTS==2
+    Socket_udp ERforce;
+    RobotControl packet;
+    RobotCommand *command[MAX_ROBOTS_PER_TEAM_IN_THE_FIELD];
+    //RobotMoveCommand *speed;
+    void send_to_ERforce();
+    void testy();
 #else
+    Socket_udp grsim_udp;
+    void send_to_grsim();
     grSim_Packet packet;     ///packet has a set of commands that each command is attributes of one robot,such speed of each wheel, etc.
     grSim_Robot_Command *command[8];    /// 8: need to be changed !!!!!!!!!	///command is a set of attributes for a robot.such as speed of each wheel, etc.
 #endif

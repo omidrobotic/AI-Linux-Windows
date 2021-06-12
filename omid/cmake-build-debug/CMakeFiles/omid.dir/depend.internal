@@ -50,11 +50,7 @@ CMakeFiles/omid.dir/ai/MotionControl.cpp.o
  /home/omid/Desktop/omid/ai/GameState.h
  /home/omid/Desktop/omid/ai/MotionControl.cpp
  /home/omid/Desktop/omid/ai/MotionControl.h
- /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.h
- /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
- /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_config.pb.h
- /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_control.pb.h
- /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_error.pb.h
+ /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.h
  /home/omid/Desktop/omid/ai/Socket_udp.h
  /home/omid/Desktop/omid/ai/Switches.h
  /home/omid/Desktop/omid/ai/geometry.h
@@ -340,12 +336,9 @@ CMakeFiles/omid.dir/ai/main.cpp.o
  /home/omid/Desktop/omid/ai/GameState.h
  /home/omid/Desktop/omid/ai/MotionControl.h
  /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h
- /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.h
  /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h
  /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h
- /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_config.pb.h
- /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_control.pb.h
- /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_error.pb.h
+ /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.h
  /home/omid/Desktop/omid/ai/Protobuf/Refree/game_event.pb.h
  /home/omid/Desktop/omid/ai/Protobuf/Refree/referee.pb.h
  /home/omid/Desktop/omid/ai/RRT.h
@@ -381,6 +374,7 @@ CMakeFiles/omid.dir/ai/nrf.cpp.o
  /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_config.pb.h
  /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_control.pb.h
  /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_error.pb.h
+ /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.h
  /home/omid/Desktop/omid/ai/RRT.h
  /home/omid/Desktop/omid/ai/Socket_udp.h
  /home/omid/Desktop/omid/ai/Switches.h

@@ -421,7 +421,7 @@ int main(int argc, char **argv)
 
 		///send command to grsim robots
 #elif SEND_COMMANDS_TO_ROBOTS == 0
-		GrsimMove gsm;
+        SimulatorMove gsm;
 		gsm.initialize_port(GROUP_ADDR_SEND_GRSIM_COMMAND, PORT_NUM_SEND_GRSIM_COMMAND);
 		gsm.initialize_robot_color_and_timestamp(0.0);
 		int rnfi;	///robot number for index
@@ -433,7 +433,7 @@ int main(int argc, char **argv)
 				if (world.robotT[i].send_command)
 				{
 					rnfi = world.getRobotTNumberForIndex(i);
-					gsm.go_setKick_setSpinBack_withoutSend(world.robotT[i].velocityToGo, world.robotT[i].wToGo, world.robotT[i].shoot_or_chip, world.robotT[i].kick_power,world.robotT[i].spinBack, rnfi, world, GrsimMove::robot_speed);
+					gsm.go_setKick_setSpinBack_withoutSend(world.robotT[i].velocityToGo, world.robotT[i].wToGo, world.robotT[i].shoot_or_chip, world.robotT[i].kick_power,world.robotT[i].spinBack, rnfi, world, SimulatorMove::robot_speed);
 
 				}
 			}
@@ -444,6 +444,31 @@ int main(int argc, char **argv)
 			auto time = end_time - start_time;
 			cout << time.count() / 1000000.0 << endl;*/
 		}
+#else
+        SimulatorMove ERF;
+        ERF.initialize_port(GROUP_ADDR_SEND_ERforce_COMMAND, PORT_NUM_SEND_ERforce_COMMAND);
+
+       // ERF.initialize_robot_color_and_timestamp(0.0);
+        int rnfi;	///robot number for index
+        while (true)
+        {
+           /// SimulatorMove();
+           //// rnfi = world.getRobotTNumberForIndex(1);
+           // ERF.go_setKick_setSpinBack_withoutSend(world.robotT[1].velocityToGo, world.robotT[i].wToGo, world.robotT[i].shoot_or_chip, world.robotT[i].kick_power,world.robotT[i].spinBack, rnfi, world, SimulatorMove::robot_speed);
+          /*  MatrixD V(4, 1);
+           V(0, 0) = 0;
+            V(1, 0) = 4;
+            V(2, 0) = 4;
+            V(3, 0) = 0;
+           ERF.set_wheels_velocity(V,rnfi);
+            ERF.send_to_ERforce();
+            sleep(0.005);
+*/
+          ERF.testy();
+            /*auto end_time = std::chrono::high_resolution_clock::now();
+            auto time = end_time - start_time;
+            cout << time.count() / 1000000.0 << endl;*/
+        }
 #endif
 	};
 	auto main_func = [&]()
@@ -842,7 +867,7 @@ int main(int argc, char **argv)
 		auto time_auto = end_time - start_time;
 		double time_for_feedforward = 0;
 
-		//GrsimMove gsm;
+		//SimulatorMove gsm;
 		//gsm.initialize_port("192.168.0.3", 20011);
 		//gsm.initialize_robot_color_and_timestamp(0.0);
 

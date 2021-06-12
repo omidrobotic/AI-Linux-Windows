@@ -7,7 +7,9 @@
 #include "Switches.h"
 
 class World;
-class GrsimMove;
+class SimulatorMove;
+
+
 
 class PD
 {
