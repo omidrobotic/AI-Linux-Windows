@@ -4,7 +4,7 @@ in this code you can run in linux and windows
 * ### IN Linux
 
 
-you need install googleProtobuf from:
+you need install <strong>googleProtobuf</strong> from:
 
 https://github.com/protocolbuffers/protobuf/blob/master/src/README.md
 
@@ -25,11 +25,21 @@ then go to located file
 > `chmod 755 auto.sh`
   
   
-then install Grsim from
+then install <strong>Grsim</strong> from
 
 https://github.com/RoboCup-SSL/grSim
 
-run this cod from your Grsim System 
+run this cod from your <strong>Grsim</strong> System 
+
+
+then install <strong>OpenGL and GLUT</strong>
+
+update 
+> `sudo apt update`
+
+install librarys
+> `sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev`
+
 
 your run code system or if you use tow system run code in grsim system
 <italic>
