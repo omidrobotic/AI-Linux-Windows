@@ -2893,7 +2893,7 @@ int HighLevel::find_best_robot_pass(int index_robotT)
 			score_pass[j] = danger_importance_number_robott_block_roboto[j] + danger_importance_goal_distance[j] + distance_roboto_for_chipe[j] + danger_importance_goal[j] + danger_importance_distance_to_robott[j];
 		}
 
-		cout << abs(score_pass[max_pass_score] - score_pass[max_index]) << endl;
+		///cout << abs(score_pass[max_pass_score] - score_pass[max_index]) << endl;
 		if ((abs(score_pass[max_pass_score] - score_pass[max_index]) > 2)||(HighLevel::pass_mode != submit))
 		{
 			max_pass_score = max_index;

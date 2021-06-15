@@ -279,6 +279,8 @@ stdio.h
 -
 stdlib.h
 -
+string
+-
 winsock.h
 -
 stdio.h
@@ -417,6 +419,8 @@ string
 -
 Switches.h
 /home/omid/Desktop/omid/ai/Switches.h
+boost/asio.hpp
+-
 
 /home/omid/Desktop/omid/ai/nrf.h
 math.h
@@ -457,6 +461,8 @@ Switches.h
 /home/omid/Desktop/omid/ai/Switches.h
 Protobuf/ER-force/ssl_simulation_robot_control.pb.h
 /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.h
+Protobuf/ER-force/ssl_simulation_error.pb.h
+/home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_error.pb.h
 Protobuf/Grsim/grSim_Packet.pb.h
 /home/omid/Desktop/omid/ai/Protobuf/Grsim/grSim_Packet.pb.h
 

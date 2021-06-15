@@ -19,24 +19,18 @@ cd ER-force
 rm *.cc
 rm *.h
 
-cd vision
-rm *.cc
-rm *.h
-
-cd ../erforce
-rm *.cc
-rm *.h
-
 
 echo "remove grsim"
-cd ../../Grsim
+cd ../Grsim
 rm *.cc
 rm *.h
 
+echo "remove refree"
 cd ../Refree
 rm *.cc
 rm *.h
 
+echo "remove vision"
 cd ../Vision
 rm *.cc
 rm *.h

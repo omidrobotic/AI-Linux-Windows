@@ -5,6 +5,7 @@
 //----- Include files -------------------------------------------------------
 #include <stdio.h>          // Needed for printf()
 #include <stdlib.h>         // Needed for memcpy()
+#include <string>
 #ifdef _WIN32
 #include <winsock.h>      // Needed for all Windows stuff
 #elif __linux__
@@ -24,7 +25,9 @@
 
 class Socket_udp
 {
+
 public:
+    void send2ERforce(std::string *buffer_send,int buffer_send_len);
 #ifdef _WIN32
 explicit Socket_udp(void);
 	 void Init_Socket_Server(const char * Group_Addr, int Port_Num);
@@ -36,7 +39,7 @@ explicit Socket_udp(void);
     explicit Socket_udp(void);
     void Init_Socket_Server(const char * Group_Addr, int Port_Num);
     void Init_Socket_Client(const char * Group_Addr, int Port_Num);
-    void send(char buffer_send[2048], int buffer_send_len);
+    void send(char buffer_send[100000], int buffer_send_len);
     int recive(void);
     void Close_Socket(void);
 #endif

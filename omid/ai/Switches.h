@@ -56,10 +56,11 @@
 #define PORT_NUM_Vision        10020
 #define GROUP_ADDR_Vision  "224.5.23.2"
 //----- Defines Send Grsim Commands-------------------------------------------------
-#define PORT_NUM_SEND_GRSIM_COMMAND		10300
-#define GROUP_ADDR_SEND_GRSIM_COMMAND	"192.168.0.2"
+#define PORT_NUM_SEND_GRSIM_COMMAND		3000//10300
+#define GROUP_ADDR_SEND_GRSIM_COMMAND	"127.0.0.1"//"192.168.0.2"
 //----- Defines Send ER-force Commands-------------------------------------------------
-#define PORT_NUM_SEND_ERforce_COMMAND		10300
-#define GROUP_ADDR_SEND_ERforce_COMMAND	"127.0.0.1"
+#define PORT_NUM_SEND_ERforce_COMMAND		10302
+//#define GROUP_ADDR_SEND_ERforce_COMMAND	"127.0.0.1"
+#define GROUP_ADDR_SEND_ERforce_COMMAND	"192.168.0.3"
 
 #endif

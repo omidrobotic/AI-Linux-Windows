@@ -1037,8 +1037,8 @@ VecPosition PD::GenVecVelPD(int robot_number, VecPosition destination, bool rota
 		kp_x = pow(M_E, (-(size_of_error/ 30) - 0.25)) + 0.05;
 		kp_y = kp_x;
 		system("cls");
-		cout << kp_x << endl;
-		cout << size_of_error << endl;
+		///cout << kp_x << endl;
+		///cout << size_of_error << endl;
 
 
 		if (working_destination != destination)

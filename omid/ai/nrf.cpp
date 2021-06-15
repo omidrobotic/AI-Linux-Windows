@@ -483,48 +483,139 @@ void SimulatorMove::convert_robot_velocity_to_wheels_velocity(VecPosition RV, do
     }*/
     V_send_out = V;
 }
+
 void SimulatorMove::send_to_ERforce()
 {
     //packet.mutable_robot_commands()->Add()
     packet.SerializePartialToArray(s_data, sizeof(s_data));
     ERforce.send(s_data, sizeof(s_data));
 }
+#include <boost/asio.hpp>
+using namespace boost;
 void SimulatorMove::testy()
 {
 //packet.mutable_robot_commands(1)->mutable_move_command()->mutable_wheel_velocity()->set_front_right(-2);
   //  packet.mutable_robot_commands(1)->mutable_move_command()->mutable_wheel_velocity()->set_front_left(2);
     //packet.robot_commands().Add(command[0],command[7]);
    // command[0] = packet.add_robot_commands();
+/*
+   RobotCommand hello;
+   RobotMoveCommand movehello;
+   MoveWheelVelocity whellhello;
+   whellhello.set_front_left(-4);
+   whellhello.set_front_right(4);
+   hello.set_id(1);
+   movehello.set_allocated_wheel_velocity(&whellhello);
+   hello.set_allocated_move_command(&movehello);
+   hello.SerializePartialToArray(s_data,sizeof(s_data));
 
-    //packet.add_robot_commands()->set_id(1);
-    //packet.mutable_robot_commands(1)->mutable_move_command()->local_velocity(;
-  //  packet.add_robot_commands()->set_kick_speed(0);
-   // packet.add_robot_commands()->mutable_move_command()->mutable_wheel_velocity()->set_front_right(4);
-   // packet.add_robot_commands()->mutable_move_command()->mutable_wheel_velocity()->set_front_left(4);
+*/
+
+
+  /*  command[0] = packet.mutable_robot_commands()->Add();
     command[0]->set_id(1);
     command[0]->set_kick_speed(0);
-    RobotMoveCommand test;
-    test.mutable_wheel_velocity()->set_front_left(4);
-    test.mutable_wheel_velocity()->set_front_right(-4);
-    command[0]->set_allocated_move_command(&test);
-    //command[0]->mutable_move_command()->mutable_wheel_velocity()->set_front_left(4);
-    //command[0]->mutable_move_command()->mutable_wheel_velocity()->set_front_right(-4);
+    command[0]->set_kick_angle(0);
+    command[0]->set_dribbler_speed(0);
+//    set_spinBack(command[0],0);
+    command[0]->mutable_move_command()->mutable_local_velocity()->set_forward(5);
+    command[0]->mutable_move_command()->mutable_local_velocity()->set_angular(0.5);
+    command[0]->mutable_move_command()->mutable_local_velocity()->set_left(0);*/
+
+
+//Robot
+   auto control =RobotControl();
+//    control.default_instance();
+    auto* robotCommand = control.add_robot_commands();
+      robotCommand->set_id(5);
+      robotCommand->set_kick_speed(0);
+      robotCommand->set_kick_angle(45);
+      robotCommand->set_dribbler_speed(0 ); // convert from 1 - 0 to rpm, where 1 is 150 rad/s
+      auto* moveCommand  = robotCommand->mutable_move_command()->mutable_local_velocity();
+      moveCommand->set_forward(0);
+      moveCommand->set_left(0);
+      moveCommand->set_angular(50);
+      char _data[control.ByteSize()];
+      control.SerializePartialToArray(_data,sizeof(_data));
+     ERforce.send(_data,sizeof(_data));
+
+   cout<<"____------_____-----\n";
+ //   boost::asio::streambuf b;
+ //   std::ostream a(&b);
+ //   control.SerializeToOstream(&a);
+    //const char* header=boost::asio::buffer_cast<const char*>(b.data());
+//    cout<<sizeof(s_data)<<'\n';
+/*    std::string test;
+    control.SerializeToString(&test);*/
+ //ERforce.send2ERforce((string *) &header, b.data().size());
+
+
+
+
+
+
+//  ERforce.send2ERforce(&test,sizeof (test));
+
+
+    //packet.mutable_robot_commands()->AddAllocated(command[0]);
+     // packet.SerializePartialToArray(s_data, sizeof(s_data));
+//packet.SerializeToArray(s_data, sizeof(s_data));
+//packet.robot_commands().begin().;
+
+//ERforce.send(s_data, sizeof(s_data));
+    //ERforce.send(packet.robot_commands()., sizeof(packet));
+ //   cout<<ERforce.recive()<<'\n';
+
+    //SimulatorError test;
+    //cout<<test.mutable_message()<<'\n';
+
+
+
+
+   //packet.add_robot_commands()->set_id(1);
+   //packet.mutable_robot_commands()->Add(&hello)
+    //packet.add_robot_commands()->set_id(1);
+    //packet.mutable_robot_commands(1)->mutable_move_command()->local_velocity(;
+     // packet.add_robot_commands()->set_kick_speed(0);
+    //packet.add_robot_commands()->mutable_move_command()->mutable_wheel_velocity()->set_front_right(4);
+    //packet.add_robot_commands()->mutable_move_command()->mutable_wheel_velocity()->set_front_left(4);
+   // command[0]->set_id(1);
+   // command[0]->set_kick_speed(0);
+    //RobotMoveCommand test;
+    //test.mutable_wheel_velocity()->set_front_left(4);
+    //test.mutable_wheel_velocity()->set_front_right(-4);
+    //command[0]->set_allocated_move_command(&test);
+    //RobotCommand packet2 ;
+    //packet2.set_id(1);
+    //packet2.mutable_move_command()->local_velocity().New()->set_forward(4);
+    //new RobotCommand(packet2);
+    //packet2.set_id(1);
+    //packet2.mutable_move_command()->mutable_wheel_velocity()->set_front_right(4);
+   // packet2.mutable_move_command()->mutable_wheel_velocity()->set_front_left(-4);
+   // command[0]->mutable_move_command()->mutable_wheel_velocity()->set_front_left(4);
+   //command[0]->mutable_move_command()->mutable_wheel_velocity()->set_front_right(-4);
     //testi.set_id(2);
     //testi.set_kick_speed(0);
     //testi.mutable_move_command()->mutable_wheel_velocity()->set_front_left(4);
     //testi.mutable_move_command()->mutable_wheel_velocity()->set_front_left(-4);
     //testi.SerializePartialToArray(s_data,sizeof s_data);
-    //ERforce.send(s_data, sizeof(s_data));
-    packet.SerializePartialToArray(s_data, sizeof(s_data));
+
+  //  packet.SerializePartialToArray(s_data, sizeof(s_data));
+  //  cout<<s_data;
+    //s_data[0]='h';
+  //  ERforce.send(s_data, sizeof(s_data));
+    //char data[3]={'h','e','l'};
+   // ERforce.send(data, sizeof(data));
+    //cout<<"send data\n";
 //packet.mutable_robot_commands().
-    ERforce.send(s_data, sizeof(s_data));
+   // ERforce.send(s_data, sizeof(s_data));
 }
 
 #else
 /*!GrsimMove METHODS */
 
 ///generate a "command" that is a set of attributes for a one robot and somehow! connected to packet
-SimulatorMove::GrsimMove()
+SimulatorMove::SimulatorMove()
 {
 	for(int i=0;i<MAX_ROBOTS_PER_TEAM_IN_THE_FIELD;i++)
 		command[i] = packet.mutable_commands()->add_robot_commands();

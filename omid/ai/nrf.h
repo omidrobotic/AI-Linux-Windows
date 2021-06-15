@@ -52,6 +52,7 @@
 #include "Switches.h"
 #if SEND_COMMANDS_TO_ROBOTS==2
 #include "Protobuf/ER-force/ssl_simulation_robot_control.pb.h"
+#include "Protobuf/ER-force/ssl_simulation_error.pb.h"
 #else
 #include "Protobuf/Grsim/grSim_Packet.pb.h"
 #endif
@@ -134,13 +135,15 @@ public:
     void set_spinBack(bool spinBack, char id);
 
 
-    char s_data[1024];     ///whole data that will be send.
+    char s_data[2048];     ///whole data that will be send.
     double max_wheel_speed = 80;
     SimulatorMove();
 #if SEND_COMMANDS_TO_ROBOTS==2
     Socket_udp ERforce;
     RobotControl packet;
-    RobotCommand *command[MAX_ROBOTS_PER_TEAM_IN_THE_FIELD];
+    RobotCommand *command[10];
+//    RobotControl control =RobotControl();
+//    RobotCommand* robotCommand = control.add_robot_commands();
     //RobotMoveCommand *speed;
     void send_to_ERforce();
     void testy();

@@ -37,10 +37,9 @@ if (retcode < 0)
 
 // Set addr_len
 addr_len = sizeof(Server_Addr);
-
 printf("*** ready to Sending multicast datagrams to '%s' (port = %d) \n",
-	Group_Addr, Port_Num);
-}
+	Group_Addr, Port_Num);}
+
 void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num)
 {
 
@@ -74,6 +73,7 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num)
 	retcode = setsockopt(Multi_Server_Sock, IPPROTO_IP, IP_ADD_MEMBERSHIP,
 		(char *)&mreq, sizeof(mreq));
 	if (retcode < 0)
+
 	{
 		printf("*** ERROR - setsockopt() failed with retcode = %d \n", retcode);
 		getchar();
@@ -81,12 +81,21 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num)
 	}
 
 }
-void Socket_udp::send(char buffer_send[2048],int buffer_send_len)
+void Socket_udp::send(char buffer_send[100000],int buffer_send_len)
 {
 
 	    addr_len = sizeof(Server_Addr);
 		// Send buffer as a datagram to the multicast group
 		sendto(Multi_Server_Sock, buffer_send, buffer_send_len, 0,(struct sockaddr*)&Server_Addr, addr_len);
+
+
+}
+void Socket_udp::send2ERforce(std::string *buffer_send,int buffer_send_len)
+{
+
+    addr_len = sizeof(Server_Addr);
+    // Send buffer as a datagram to the multicast group
+    sendto(Multi_Server_Sock, &buffer_send, buffer_send_len, 0,(struct sockaddr*)&Server_Addr, addr_len);
 
 
 }
@@ -117,3 +126,5 @@ WSACleanup();
 close(Multi_Server_Sock);
 #endif
 }
+
+

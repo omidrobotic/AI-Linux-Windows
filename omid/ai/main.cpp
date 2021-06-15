@@ -452,7 +452,8 @@ int main(int argc, char **argv)
         int rnfi;	///robot number for index
         while (true)
         {
-           /// SimulatorMove();
+
+            /// SimulatorMove();
            //// rnfi = world.getRobotTNumberForIndex(1);
            // ERF.go_setKick_setSpinBack_withoutSend(world.robotT[1].velocityToGo, world.robotT[i].wToGo, world.robotT[i].shoot_or_chip, world.robotT[i].kick_power,world.robotT[i].spinBack, rnfi, world, SimulatorMove::robot_speed);
           /*  MatrixD V(4, 1);
@@ -465,6 +466,7 @@ int main(int argc, char **argv)
             sleep(0.005);
 */
           ERF.testy();
+            sleep(0.032);
             /*auto end_time = std::chrono::high_resolution_clock::now();
             auto time = end_time - start_time;
             cout << time.count() / 1000000.0 << endl;*/
@@ -506,7 +508,7 @@ int main(int argc, char **argv)
 		//CWorld = world;
 		while (true)
 		{
-            std::cout<<"helllllllllo";
+            ///std::cout<<"running...";
 			//auto start_time = std::chrono::high_resolution_clock::now();
 			//CWorld = world;			//erases everything of CWorld
 
