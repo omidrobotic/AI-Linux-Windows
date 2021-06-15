@@ -524,9 +524,9 @@ void SimulatorMove::testy()
 
 
 //Robot
-   auto control =RobotControl();
+  /* auto control =RobotControl();
 //    control.default_instance();
-    auto* robotCommand = control.add_robot_commands();
+        auto* robotCommand = control.add_robot_commands();
       robotCommand->set_id(5);
       robotCommand->set_kick_speed(0);
       robotCommand->set_kick_angle(45);
@@ -534,12 +534,24 @@ void SimulatorMove::testy()
       auto* moveCommand  = robotCommand->mutable_move_command()->mutable_local_velocity();
       moveCommand->set_forward(0);
       moveCommand->set_left(0);
-      moveCommand->set_angular(50);
-      char _data[control.ByteSize()];
-      control.SerializePartialToArray(_data,sizeof(_data));
+      moveCommand->set_angular(50);*/
+    for (int i = 0; i <=10; ++i) {
+        command[i]->set_id(i);
+        command[i]->mutable_move_command()->mutable_local_velocity()->set_forward(-2);
+        command[i]->mutable_move_command()->mutable_local_velocity()->set_left(2);
+        command[i]->mutable_move_command()->mutable_local_velocity()->set_angular(1);
+        command[i]->set_kick_speed(0);
+        command[i]->set_dribbler_speed(0);
+        command[i]->set_kick_angle(45);
+    }
+ //   auto control =RobotControl();
+  //  control.mutable_robot_commands()->AddAllocated(command[1]);
+      char _data[packet.ByteSize()];
+    cout<<packet.ByteSize()<<'\n';
+    packet.SerializePartialToArray(_data,sizeof(_data));
      ERforce.send(_data,sizeof(_data));
 
-   cout<<"____------_____-----\n";
+   //cout<<"____------_____-----\n";
  //   boost::asio::streambuf b;
  //   std::ostream a(&b);
  //   control.SerializeToOstream(&a);
