@@ -327,5 +327,15 @@ void produceSpeedOfRobots()
 		world.robotT[i].velocityToGo = sd.genVecVel_forGrsim(rnfi, world.robotT[i].pathToDestination[world.robotT[i].sizeOfPathToDestination-1]);
 		world.robotT[i].wToGo = sd.genVecW_forGrsim(rnfi, world.robotT[i].destination_angle);
 	}
+#elif SEND_COMMANDS_TO_ROBOTS==2
+    SpeedDiagram sd;
+    int rnfi;
+    for (int i = 0; i < world.numT; i++)
+    {
+        rnfi = world.getRobotTNumberForIndex(i);
+        world.robotT[i].velocityToGo = sd.genVecVel_forGrsim(rnfi, world.robotT[i].pathToDestination[world.robotT[i].sizeOfPathToDestination-1]);
+        world.robotT[i].wToGo = sd.genVecW_forGrsim(rnfi, world.robotT[i].destination_angle);        //cout << world.robotT[i].wToGo << endl;
+
+    }
 #endif
 }

@@ -285,7 +285,7 @@ int main(int argc, char **argv)
 	Estimation estimation;
 	world.glTimer.start();
 	world.setTeamColor(TC_Yellow);
-	world.setTeamSide(TS_RightSide);
+	world.setTeamSide(TS_LeftSide);
 
 	mode_State mode_state;
 	uint32_t stage_time_left;
@@ -447,26 +447,27 @@ int main(int argc, char **argv)
 #else
         SimulatorMove ERF;
         ERF.initialize_port(GROUP_ADDR_SEND_ERforce_COMMAND, PORT_NUM_SEND_ERforce_COMMAND);
-
-       // ERF.initialize_robot_color_and_timestamp(0.0);
         int rnfi;	///robot number for index
         while (true)
         {
+            //auto start_time = std::chrono::high_resolution_clock::now();
+            for (int i = 0; i < 11; i++)
+            {
 
-            /// SimulatorMove();
-           //// rnfi = world.getRobotTNumberForIndex(1);
-           // ERF.go_setKick_setSpinBack_withoutSend(world.robotT[1].velocityToGo, world.robotT[i].wToGo, world.robotT[i].shoot_or_chip, world.robotT[i].kick_power,world.robotT[i].spinBack, rnfi, world, SimulatorMove::robot_speed);
-          /*  MatrixD V(4, 1);
-           V(0, 0) = 0;
-            V(1, 0) = 4;
-            V(2, 0) = 4;
-            V(3, 0) = 0;
-           ERF.set_wheels_velocity(V,rnfi);
-            ERF.send_to_ERforce();
-            sleep(0.005);
-*/
-          ERF.testy();
-            sleep(0.032);
+                    rnfi = world.getRobotTNumberForIndex(i);
+                  //  ERF.go_setKick_setSpinBack_withoutSend(world.robotT[i].velocityToGo, world.robotT[i].wToGo, world.robotT[i].shoot_or_chip, world.robotT[i].kick_power,world.robotT[i].spinBack, rnfi, world, SimulatorMove::robot_speed);
+                //  ERF.set_spinBack(false,i);
+              //    ERF.set_kick(false,0,i);
+               //   ERF.set_velocity_and_W(VecPosition(0,0), 2, i);
+              /// world.robotT[i].destination_position=VecPosition(0,0);
+                ERF.setAndSend(world.robotT[i].velocityToGo,world.robotT[i].wToGo,world.robotT[i].shoot_or_chip,world.robotT[i].kick_power,world.robotT[i].spinBack,i,world);
+                sleep(0.016);
+
+
+            }
+            //ERF.testy();
+            //ERF.send_to_ERforce();
+
             /*auto end_time = std::chrono::high_resolution_clock::now();
             auto time = end_time - start_time;
             cout << time.count() / 1000000.0 << endl;*/
@@ -524,7 +525,10 @@ int main(int argc, char **argv)
 			nrf::output[29] = id;
 			nrf::output[25] = 0b00100000;
 			nrf::write_on_port();*/
-
+           /* for (int i = 0; i < 11; ++i) {
+                world.robotT[i].destination_angle=M_PI;
+                world.robotT[i].destination_position=world.robotT[i].position;
+            }*/
 			produceRobotsDestinations();
 
 			///rrt

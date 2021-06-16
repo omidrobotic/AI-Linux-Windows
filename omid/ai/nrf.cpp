@@ -305,11 +305,6 @@ void SimulatorMove::initialize_port(const char* ip, int port)
 {
     ERforce.Init_Socket_Server(ip, port); //"192.168.0.255"
 }
-/*void SimulatorMove::initialize_robot_color_and_timestamp(double timestamp)
-{
-    packet.mutable_robot_commands()->set_isteamyellow(World::team_color == TC_Yellow);
-    packet.mutable_robot_commands()->set_timestamp(0.0);
-}*/
 void SimulatorMove::go(VecPosition vv, double w, char id, World world, move_type mt)
 {
     int index_for_id = world.getIndexForRobotTNumber(id);
@@ -318,9 +313,6 @@ void SimulatorMove::go(VecPosition vv, double w, char id, World world, move_type
     if (mt == wheels_speed)
     {
         MatrixD V;
-
-        //command[id]->set_wheelsspeed(true);
-
         convert_robot_velocity_to_wheels_velocity(vv, w, world.robotT[index_for_id].angle, V);
         set_wheels_velocity(V, id);
         send_to_ERforce();
@@ -329,8 +321,6 @@ void SimulatorMove::go(VecPosition vv, double w, char id, World world, move_type
     else
     {
         VecPosition velocity;
-       // command[id]->set_wheelsspeed(false);
-
         velocity = convert_robot_velocity_from_field_to_robot_coord(vv, world.robotT[index_for_id].angle);
         set_velocity_and_W(velocity, w, id);
         send_to_ERforce();
@@ -349,8 +339,6 @@ void SimulatorMove::go_setKick_setSpinBack_withoutSend(VecPosition vv, double w,
     if (mt == wheels_speed)
     {
         MatrixD V;
-       // command[id]->set_wheelsspeed(true);
-
         convert_robot_velocity_to_wheels_velocity(vv, w, world.robotT[index_for_id].angle, V);
         set_wheels_velocity(V, id);
         set_kick(shootOrChip, kickPower, id);
@@ -360,8 +348,6 @@ void SimulatorMove::go_setKick_setSpinBack_withoutSend(VecPosition vv, double w,
     else
     {
         VecPosition velocity;
-       // command[id]->set_wheelsspeed(false);
-
         velocity = convert_robot_velocity_from_field_to_robot_coord(vv, world.robotT[index_for_id].angle);
         set_velocity_and_W(velocity, w, id);
         set_kick(shootOrChip, kickPower, id);
@@ -385,13 +371,9 @@ void SimulatorMove::set_wheels_velocity(MatrixD V,char id)
 }
 void SimulatorMove::set_velocity_and_W(VecPosition velocity, double w, char id)
 {
-
-    //command[id]->set_veltangent(velocity.getX() / 300.000);
-    //command[id]->set_velnormal(velocity.getY() / 300.000);
-
-    command[id]->set_kick_angle(w);
-    //command[id]->set_velangular(w);				//need to change
-
+    command[id]->mutable_move_command()->mutable_local_velocity()->set_forward(velocity.getX()/300.000);
+    command[id]->mutable_move_command()->mutable_local_velocity()->set_left(velocity.getY()/300.000);
+    command[id]->mutable_move_command()->mutable_local_velocity()->set_angular(w);
 }
 
 ///shootOrChip == 0 for shoot, shootOrChip == 1 for chip
@@ -400,18 +382,22 @@ void SimulatorMove::set_kick(bool shootOrChip, short int kickPower, char id)
     if (shootOrChip == 0)
     {
         command[id]->set_kick_speed(3 / 2.0*kickPower);
-        command[id]->set_kick_speed(0);
+        command[id]->set_kick_angle(0);
     }
     else if (shootOrChip == 1)
     {
+        command[id]->set_kick_angle(45);
         command[id]->set_kick_speed(3 / 2.0*kickPower*0.70710);	/// ...*cos(M_PI/4)
-        command[id]->set_kick_speed(3 / 2.0*kickPower*0.70710); /// ...*sin(M_PI/4)
+        ///command[id]->set_kick_speed(3 / 2.0*kickPower*0.70710); /// ...*sin(M_PI/4)
     }
 }
 
 void SimulatorMove::set_spinBack(bool set,char id)
 {
-    set_spinBack(command[id],set);
+    if(set)
+        command[id]->set_dribbler_speed(10);
+    else
+        command[id]->set_dribbler_speed(0);
 }
 void SimulatorMove::convert_robot_velocity_to_wheels_velocity(VecPosition RV, double w, AngRad rteta, MatrixD &V_send_out)
 {
@@ -486,12 +472,34 @@ void SimulatorMove::convert_robot_velocity_to_wheels_velocity(VecPosition RV, do
 
 void SimulatorMove::send_to_ERforce()
 {
-    //packet.mutable_robot_commands()->Add()
+    char _data[packet.ByteSize()];
     packet.SerializePartialToArray(s_data, sizeof(s_data));
     ERforce.send(s_data, sizeof(s_data));
 }
-#include <boost/asio.hpp>
-using namespace boost;
+void SimulatorMove::setAndSend(VecPosition velocity, double w, bool shootOrChip, short int kickPower, bool spinBack,
+                               int index,World world)
+{
+    int id=world.getRobotTNumberForIndex(index);
+    auto control = RobotControl();
+    auto *robotCommand = control.add_robot_commands();
+    robotCommand->set_id(id);
+    robotCommand->set_kick_speed(/*(shootOrChip)?3 / 2.0*kickPower*0.70710:(3 / 2.0*kickPower)*/100);
+    robotCommand->set_kick_angle((shootOrChip)?45:0);
+    robotCommand->set_dribbler_speed((spinBack)?1:0); // convert from 1 - 0 to rpm, where 1 is 150 rad/s
+    auto *moveCommand = robotCommand->mutable_move_command()->mutable_local_velocity();
+
+    VecPosition velocityLocal;
+    velocityLocal = convert_robot_velocity_from_field_to_robot_coord(velocity, world.robotT[index].angle);
+    moveCommand->set_forward(velocityLocal.getX()/300.000);
+    moveCommand->set_left(velocityLocal.getY()/300.000);
+    moveCommand->set_angular(w*2);
+
+
+    char _data[control.ByteSize()];
+    control.SerializePartialToArray(_data, sizeof(_data));
+    ERforce.send(_data, sizeof(_data));
+
+}
 void SimulatorMove::testy()
 {
 //packet.mutable_robot_commands(1)->mutable_move_command()->mutable_wheel_velocity()->set_front_right(-2);
@@ -535,7 +543,7 @@ void SimulatorMove::testy()
       moveCommand->set_forward(0);
       moveCommand->set_left(0);
       moveCommand->set_angular(50);*/
-    for (int i = 0; i <=10; ++i) {
+  /* for (int i = 0; i <=10; ++i) {
         command[i]->set_id(i);
         command[i]->mutable_move_command()->mutable_local_velocity()->set_forward(-2);
         command[i]->mutable_move_command()->mutable_local_velocity()->set_left(2);
@@ -543,14 +551,45 @@ void SimulatorMove::testy()
         command[i]->set_kick_speed(0);
         command[i]->set_dribbler_speed(0);
         command[i]->set_kick_angle(45);
-    }
+    }*/
  //   auto control =RobotControl();
   //  control.mutable_robot_commands()->AddAllocated(command[1]);
-      char _data[packet.ByteSize()];
+
+
+/*    auto control =RobotControl();
+//    control.default_instance();
+    auto* robotCommand = control.add_robot_commands();
+    robotCommand->set_id(5);
+    robotCommand->set_kick_speed(0);
+    robotCommand->set_kick_angle(45);
+    robotCommand->set_dribbler_speed(0 ); // convert from 1 - 0 to rpm, where 1 is 150 rad/s
+    auto* moveCommand  = robotCommand->mutable_move_command()->mutable_local_velocity();
+    moveCommand->set_forward(0);
+    moveCommand->set_left(0);
+    moveCommand->set_angular(50);*/
+
+   /*   char _data[packet.ByteSize()];
     cout<<packet.ByteSize()<<'\n';
     packet.SerializePartialToArray(_data,sizeof(_data));
-     ERforce.send(_data,sizeof(_data));
+     ERforce.send(_data,sizeof(_data));*/
 
+
+    for (int i = 0; i < 11; ++i) {
+        auto control = RobotControl();
+        auto *robotCommand = control.add_robot_commands();
+        robotCommand->set_id(i);
+        robotCommand->set_kick_speed(0);
+        robotCommand->set_kick_angle(45);
+        robotCommand->set_dribbler_speed(0); // convert from 1 - 0 to rpm, where 1 is 150 rad/s
+        auto *moveCommand = robotCommand->mutable_move_command()->mutable_local_velocity();
+        moveCommand->set_forward(2);
+        moveCommand->set_left(0);
+        moveCommand->set_angular(4);
+        char _data[control.ByteSize()];
+        control.SerializePartialToArray(_data, sizeof(_data));
+        ERforce.send(_data, sizeof(_data));
+    }
+    cout<<"____------_____-----\n";
    //cout<<"____------_____-----\n";
  //   boost::asio::streambuf b;
  //   std::ostream a(&b);

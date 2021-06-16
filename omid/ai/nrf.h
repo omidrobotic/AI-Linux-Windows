@@ -139,11 +139,13 @@ public:
     double max_wheel_speed = 80;
     SimulatorMove();
 #if SEND_COMMANDS_TO_ROBOTS==2
+    void setAndSend(VecPosition velocity, double w, bool shootOrChip, short int kickPower, bool spinBack,
+                    int index,World world);
     Socket_udp ERforce;
     RobotControl packet;
-    RobotCommand *command[10];
-//    RobotControl control =RobotControl();
-//    RobotCommand* robotCommand = control.add_robot_commands();
+    RobotCommand *command[MAX_ROBOTS_PER_TEAM_IN_THE_FIELD];
+//
+
     //RobotMoveCommand *speed;
     void send_to_ERforce();
     void testy();
