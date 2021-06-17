@@ -284,7 +284,7 @@ int main(int argc, char **argv)
 
 	Estimation estimation;
 	world.glTimer.start();
-	world.setTeamColor(TC_Yellow);
+
 	world.setTeamSide(TS_LeftSide);
 
 	mode_State mode_state;
@@ -446,10 +446,17 @@ int main(int argc, char **argv)
 		}
 #else
         SimulatorMove ERF;
-        ERF.initialize_port(GROUP_ADDR_SEND_ERforce_COMMAND, PORT_NUM_SEND_ERforce_COMMAND);
+		int port_name=world.team_T.sendDataPort;
+        ERF.initialize_port(GROUP_ADDR_SEND_ERforce_COMMAND, world.team_T.sendDataPort);
         int rnfi;	///robot number for index
         while (true)
         {
+            if(port_name!=world.team_T.sendDataPort) {
+                ERF.closeUDP();
+                sleep(1);
+                ERF.initialize_port(GROUP_ADDR_SEND_ERforce_COMMAND, world.team_T.sendDataPort);
+                port_name=world.team_T.sendDataPort;
+            }
             //auto start_time = std::chrono::high_resolution_clock::now();
             for (int i = 0; i < 11; i++)
             {

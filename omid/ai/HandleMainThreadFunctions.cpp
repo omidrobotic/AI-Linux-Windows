@@ -97,7 +97,10 @@ void produceRobotsDestinations()
 	HighLevel::defence_scor2(2);
 	HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
 	//HighLevel::defence_format(8);
-	
+	if(world.playMode==mode_State::Stop)
+    {
+	  //  cout<<"hara";
+    }
 	//switch (world.playMode)
 	//{
 

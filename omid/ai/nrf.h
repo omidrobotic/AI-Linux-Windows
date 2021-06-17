@@ -145,7 +145,7 @@ public:
     RobotControl packet;
     RobotCommand *command[MAX_ROBOTS_PER_TEAM_IN_THE_FIELD];
 //
-
+    void closeUDP();
     //RobotMoveCommand *speed;
     void send_to_ERforce();
     void testy();

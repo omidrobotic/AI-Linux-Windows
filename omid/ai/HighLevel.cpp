@@ -1893,7 +1893,7 @@ void HighLevel::Shoot(int index_robotT)
 		/*world.r[0].setVecPosition(world.ball.getCurrentBallPosition().getX(), world.ball.getCurrentBallPosition().getY());
 		world.r[1].setVecPosition(mid_bigest_holl.getX(), mid_bigest_holl.getY());*/
 		VecPosition point1, point2;
-		Circle circle(world.ball.getCurrentBallPosition(), ROBOT_RADIUS + BALL_RADIUS-6);
+		Circle circle(world.ball.getCurrentBallPosition(), ROBOT_RADIUS + BALL_RADIUS);
 		mid_bigest_hol_to_ball.getCircleIntersectionPoints(circle, &point1, &point2);
 		if (mid_bigest_holl.getDistanceTo(point1) > mid_bigest_holl.getDistanceTo(point2))
 		{

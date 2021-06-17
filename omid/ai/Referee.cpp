@@ -9,8 +9,12 @@ Refree::Refree(void)
 }
 void Refree::recive_Init(void)
 {
-	
+    world.setTeamColor(TC_Yellow);
+    world.team_T.sendDataPort=PORT_NUM_SEND_ERforce_COMMAND_YELLOW;
+    world.getInstance().team_color=TC_Yellow;
 	refree_udp.Init_Socket_Client(GROUP_ADDR_Refree, PORT_NUM_Refree);
+    world.getInstance().team_side=TS_LeftSide;
+    world.setTeamSide(TS_LeftSide);
 	
 }
 void Refree::Refree_parser(World &world)
@@ -28,7 +32,50 @@ void Refree::Refree_parser(World &world)
 		std::cout << "????refree????";
 		return;
 	}
-	
+
+
+	//////////////
+	////***
+    ////***    Set Team color
+    ////***zolfaghari
+    /////////////
+	if(packet.yellow().name()==TEAM_NAME)
+    {
+        world.setTeamColor(TC_Yellow);
+        world.team_T.sendDataPort=PORT_NUM_SEND_ERforce_COMMAND_YELLOW;
+        world.getInstance().team_color=TC_Yellow;
+    }
+	else if(packet.blue().name()==TEAM_NAME)
+    {
+        world.setTeamColor(TC_Blue);
+        world.team_T.sendDataPort=PORT_NUM_SEND_ERforce_COMMAND_BLUE;
+        world.getInstance().team_color=TC_Blue;
+    }
+
+	/////////////
+    ////***
+    ////***    Set Team side
+    ////***zolfaghari
+    /////////////
+    if(packet.blueteamonpositivehalf())
+    {
+        world.getInstance().team_side=TS_LeftSide;
+        world.setTeamSide(TS_LeftSide);
+    }
+    else
+    {
+        world.getInstance().team_side=TS_RightSide;
+        world.setTeamSide(TS_RightSide);
+    }
+
+
+
+
+
+
+
+
+
 	if (world.getInstance().team_color ==TC_Blue)///_____make it in world 
 	{
 		world.team_T.Goalie = packet.blue().goalie();
@@ -336,7 +383,8 @@ void Refree::Refree_parser(World &world)
 			if (World::getInstance().team_color == TC_Blue)
 				world.setPlayMode(mode_State::PlayMode::Wait);
 			else if (World::getInstance().team_color == TC_Yellow)
-				world.setPlayMode(mode_State::PlayMode::Stop);
+				world.setPlayMode(mode_State::PlayMode::ballPlacement);
+			    world.team_T.Set_Refree_Ball_Position=VecPosition(packet.designated_position().x(),packet.designated_position().y());
 			break;
 
 		case SSL_Referee::BALL_PLACEMENT_BLUE:
@@ -344,8 +392,9 @@ void Refree::Refree_parser(World &world)
 			if (World::getInstance().team_color == TC_Blue)
 				world.setPlayMode(mode_State::PlayMode::Wait);
 			else if (World::getInstance().team_color == TC_Yellow)
-				world.setPlayMode(mode_State::PlayMode::Stop);
-			break;
+				world.setPlayMode(mode_State::PlayMode::ballPlacement);
+                world.team_T.Set_Refree_Ball_Position=VecPosition(packet.designated_position().x(),packet.designated_position().y());
+                break;
 
 		}
 	}

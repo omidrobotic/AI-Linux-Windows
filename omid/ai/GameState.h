@@ -62,6 +62,7 @@ public:
 		Stop,
 		Wait,
 		Play,
+		ballPlacement
 	};
 	const char* getPlayModeName( PlayMode playMode)
 	{

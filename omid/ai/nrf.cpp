@@ -305,6 +305,10 @@ void SimulatorMove::initialize_port(const char* ip, int port)
 {
     ERforce.Init_Socket_Server(ip, port); //"192.168.0.255"
 }
+void SimulatorMove::closeUDP()
+{
+    ERforce.Close_Socket();
+}
 void SimulatorMove::go(VecPosition vv, double w, char id, World world, move_type mt)
 {
     int index_for_id = world.getIndexForRobotTNumber(id);
@@ -476,6 +480,9 @@ void SimulatorMove::send_to_ERforce()
     packet.SerializePartialToArray(s_data, sizeof(s_data));
     ERforce.send(s_data, sizeof(s_data));
 }
+
+
+
 void SimulatorMove::setAndSend(VecPosition velocity, double w, bool shootOrChip, short int kickPower, bool spinBack,
                                int index,World world)
 {

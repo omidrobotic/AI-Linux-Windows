@@ -129,7 +129,9 @@ public:
 };
 class TeamData {
 public:
-	int Goalie;
+    VecPosition Set_Refree_Ball_Position;
+    int sendDataPort;
+    int Goalie;
 	int Yellow_Cards;
 	uint32_t Yellow_Card_Times[12];
 	int Yellow_Cards_Times_Size;
@@ -283,7 +285,7 @@ public:
 #endif
 #pragma endregion
 
-	static TeamColorData  team_color;  // blue yellow
+    static TeamColorData  team_color;  // blue yellow
 	static TeamSide   team_side;  // right  left
 	static mode_State::StageMode stageMode;
 	static mode_State::PlayMode playMode;
