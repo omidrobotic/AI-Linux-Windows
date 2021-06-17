@@ -48,7 +48,7 @@ void Refree::Refree_parser(World &world)
 	else if(packet.blue().name()==TEAM_NAME)
     {
         world.setTeamColor(TC_Blue);
-        world.team_T.sendDataPort=(SEND_COMMANDS_TO_ROBOTS==2)?PORT_NUM_SEND_ERforce_COMMAND_YELLOW:PORT_NUM_SEND_GRSIM_COMMAND;
+        world.team_T.sendDataPort=(SEND_COMMANDS_TO_ROBOTS==2)?PORT_NUM_SEND_ERforce_COMMAND_BLUE:PORT_NUM_SEND_GRSIM_COMMAND;
         world.getInstance().team_color=TC_Blue;
     }
 
