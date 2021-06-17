@@ -124,88 +124,22 @@
 		<Unit filename="/home/omid/Desktop/omid/ai/MotionControl.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc">
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Grsim/grSim_Commands.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h">
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Grsim/grSim_Commands.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc">
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Grsim/grSim_Packet.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.h">
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Grsim/grSim_Packet.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc">
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Grsim/grSim_Replacement.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.h">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.h">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.h">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.h">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_config.pb.h">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_control.pb.h">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_error.pb.h">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.h">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.h">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/vision_detection.pb.cc">
-			<Option target="omid"/>
-		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/ER-force/vision_detection.pb.h">
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Grsim/grSim_Replacement.pb.h">
 			<Option target="omid"/>
 		</Unit>
 		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Refree/game_event.pb.cc">
@@ -230,6 +164,60 @@
 			<Option target="omid"/>
 		</Unit>
 		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Refree/savestate.pb.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/vision_detection.pb.cc">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/vision_detection.pb.h">
 			<Option target="omid"/>
 		</Unit>
 		<Unit filename="/home/omid/Desktop/omid/ai/RRT.cpp">

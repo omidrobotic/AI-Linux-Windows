@@ -204,383 +204,86 @@ ai/MotionControl.cpp.s:
 	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/MotionControl.cpp.s
 .PHONY : ai/MotionControl.cpp.s
 
-ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.o: ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.o
+ai/Protobuf/Grsim/grSim_Commands.pb.o: ai/Protobuf/Grsim/grSim_Commands.pb.cc.o
 
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.o
-
-# target to build an object file
-ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.o:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.o
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.o
-
-ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.i: ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.i
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.i
-
-# target to preprocess a source file
-ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.i:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.i
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.i
-
-ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.s: ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.s
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.s
-
-# target to generate assembly for a file
-ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.s:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.s
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.s
-
-ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.o: ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.o
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.o
+.PHONY : ai/Protobuf/Grsim/grSim_Commands.pb.o
 
 # target to build an object file
-ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.o:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.o
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.o
+ai/Protobuf/Grsim/grSim_Commands.pb.cc.o:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Grsim/grSim_Commands.pb.cc.o
+.PHONY : ai/Protobuf/Grsim/grSim_Commands.pb.cc.o
 
-ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.i: ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.i
+ai/Protobuf/Grsim/grSim_Commands.pb.i: ai/Protobuf/Grsim/grSim_Commands.pb.cc.i
 
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.i
+.PHONY : ai/Protobuf/Grsim/grSim_Commands.pb.i
 
 # target to preprocess a source file
-ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.i:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.i
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.i
+ai/Protobuf/Grsim/grSim_Commands.pb.cc.i:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Grsim/grSim_Commands.pb.cc.i
+.PHONY : ai/Protobuf/Grsim/grSim_Commands.pb.cc.i
 
-ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.s: ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.s
+ai/Protobuf/Grsim/grSim_Commands.pb.s: ai/Protobuf/Grsim/grSim_Commands.pb.cc.s
 
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.s
+.PHONY : ai/Protobuf/Grsim/grSim_Commands.pb.s
 
 # target to generate assembly for a file
-ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.s:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.s
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.s
+ai/Protobuf/Grsim/grSim_Commands.pb.cc.s:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Grsim/grSim_Commands.pb.cc.s
+.PHONY : ai/Protobuf/Grsim/grSim_Commands.pb.cc.s
 
-ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.o: ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.o
+ai/Protobuf/Grsim/grSim_Packet.pb.o: ai/Protobuf/Grsim/grSim_Packet.pb.cc.o
 
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.o
+.PHONY : ai/Protobuf/Grsim/grSim_Packet.pb.o
 
 # target to build an object file
-ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.o:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.o
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.o
+ai/Protobuf/Grsim/grSim_Packet.pb.cc.o:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Grsim/grSim_Packet.pb.cc.o
+.PHONY : ai/Protobuf/Grsim/grSim_Packet.pb.cc.o
 
-ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.i: ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.i
+ai/Protobuf/Grsim/grSim_Packet.pb.i: ai/Protobuf/Grsim/grSim_Packet.pb.cc.i
 
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.i
+.PHONY : ai/Protobuf/Grsim/grSim_Packet.pb.i
 
 # target to preprocess a source file
-ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.i:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.i
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.i
+ai/Protobuf/Grsim/grSim_Packet.pb.cc.i:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Grsim/grSim_Packet.pb.cc.i
+.PHONY : ai/Protobuf/Grsim/grSim_Packet.pb.cc.i
 
-ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.s: ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.s
+ai/Protobuf/Grsim/grSim_Packet.pb.s: ai/Protobuf/Grsim/grSim_Packet.pb.cc.s
 
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.s
+.PHONY : ai/Protobuf/Grsim/grSim_Packet.pb.s
 
 # target to generate assembly for a file
-ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.s:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.s
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.s
+ai/Protobuf/Grsim/grSim_Packet.pb.cc.s:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Grsim/grSim_Packet.pb.cc.s
+.PHONY : ai/Protobuf/Grsim/grSim_Packet.pb.cc.s
 
-ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.o: ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.o
+ai/Protobuf/Grsim/grSim_Replacement.pb.o: ai/Protobuf/Grsim/grSim_Replacement.pb.cc.o
 
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.o
+.PHONY : ai/Protobuf/Grsim/grSim_Replacement.pb.o
 
 # target to build an object file
-ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.o:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.o
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.o
+ai/Protobuf/Grsim/grSim_Replacement.pb.cc.o:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Grsim/grSim_Replacement.pb.cc.o
+.PHONY : ai/Protobuf/Grsim/grSim_Replacement.pb.cc.o
 
-ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.i: ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.i
+ai/Protobuf/Grsim/grSim_Replacement.pb.i: ai/Protobuf/Grsim/grSim_Replacement.pb.cc.i
 
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.i
-
-# target to preprocess a source file
-ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.i:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.i
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.i
-
-ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.s: ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.s
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.s
-
-# target to generate assembly for a file
-ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.s:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.s
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.s
-
-ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.o: ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.o
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.o
-
-# target to build an object file
-ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.o:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.o
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.o
-
-ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.i: ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.i
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.i
+.PHONY : ai/Protobuf/Grsim/grSim_Replacement.pb.i
 
 # target to preprocess a source file
-ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.i:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.i
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.i
+ai/Protobuf/Grsim/grSim_Replacement.pb.cc.i:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Grsim/grSim_Replacement.pb.cc.i
+.PHONY : ai/Protobuf/Grsim/grSim_Replacement.pb.cc.i
 
-ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.s: ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.s
+ai/Protobuf/Grsim/grSim_Replacement.pb.s: ai/Protobuf/Grsim/grSim_Replacement.pb.cc.s
 
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.s
-
-# target to generate assembly for a file
-ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.s:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.s
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.s
-
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.o: ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.o
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.o
-
-# target to build an object file
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.o:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.o
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.o
-
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.i: ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.i
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.i
-
-# target to preprocess a source file
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.i:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.i
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.i
-
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.s: ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.s
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.s
+.PHONY : ai/Protobuf/Grsim/grSim_Replacement.pb.s
 
 # target to generate assembly for a file
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.s:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.s
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.s
-
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.o: ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.o
-
-# target to build an object file
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o
-
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.i: ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.i
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.i
-
-# target to preprocess a source file
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.i:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.i
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.i
-
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.s: ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.s
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.s
-
-# target to generate assembly for a file
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.s:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.s
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.s
-
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.o: ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.o
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.o
-
-# target to build an object file
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.o:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.o
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.o
-
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.i: ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.i
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.i
-
-# target to preprocess a source file
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.i:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.i
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.i
-
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.s: ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.s
-
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.s
-
-# target to generate assembly for a file
-ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.s:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.s
-.PHONY : ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.s
-
-ai/Protobuf/ER-force/ssl_simulation_config.pb.o: ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.o
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_config.pb.o
-
-# target to build an object file
-ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.o:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.o
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.o
-
-ai/Protobuf/ER-force/ssl_simulation_config.pb.i: ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.i
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_config.pb.i
-
-# target to preprocess a source file
-ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.i:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.i
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.i
-
-ai/Protobuf/ER-force/ssl_simulation_config.pb.s: ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.s
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_config.pb.s
-
-# target to generate assembly for a file
-ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.s:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.s
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.s
-
-ai/Protobuf/ER-force/ssl_simulation_control.pb.o: ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_control.pb.o
-
-# target to build an object file
-ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o
-
-ai/Protobuf/ER-force/ssl_simulation_control.pb.i: ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.i
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_control.pb.i
-
-# target to preprocess a source file
-ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.i:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.i
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.i
-
-ai/Protobuf/ER-force/ssl_simulation_control.pb.s: ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.s
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_control.pb.s
-
-# target to generate assembly for a file
-ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.s:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.s
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.s
-
-ai/Protobuf/ER-force/ssl_simulation_error.pb.o: ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.o
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_error.pb.o
-
-# target to build an object file
-ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.o:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.o
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.o
-
-ai/Protobuf/ER-force/ssl_simulation_error.pb.i: ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.i
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_error.pb.i
-
-# target to preprocess a source file
-ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.i:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.i
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.i
-
-ai/Protobuf/ER-force/ssl_simulation_error.pb.s: ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.s
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_error.pb.s
-
-# target to generate assembly for a file
-ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.s:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.s
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.s
-
-ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.o: ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.o
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.o
-
-# target to build an object file
-ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.o:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.o
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.o
-
-ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.i: ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.i
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.i
-
-# target to preprocess a source file
-ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.i:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.i
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.i
-
-ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.s: ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.s
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.s
-
-# target to generate assembly for a file
-ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.s:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.s
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.s
-
-ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.o: ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.o
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.o
-
-# target to build an object file
-ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.o:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.o
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.o
-
-ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.i: ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.i
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.i
-
-# target to preprocess a source file
-ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.i:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.i
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.i
-
-ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.s: ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.s
-
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.s
-
-# target to generate assembly for a file
-ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.s:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.s
-.PHONY : ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.s
-
-ai/Protobuf/ER-force/vision_detection.pb.o: ai/Protobuf/ER-force/vision_detection.pb.cc.o
-
-.PHONY : ai/Protobuf/ER-force/vision_detection.pb.o
-
-# target to build an object file
-ai/Protobuf/ER-force/vision_detection.pb.cc.o:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.o
-.PHONY : ai/Protobuf/ER-force/vision_detection.pb.cc.o
-
-ai/Protobuf/ER-force/vision_detection.pb.i: ai/Protobuf/ER-force/vision_detection.pb.cc.i
-
-.PHONY : ai/Protobuf/ER-force/vision_detection.pb.i
-
-# target to preprocess a source file
-ai/Protobuf/ER-force/vision_detection.pb.cc.i:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.i
-.PHONY : ai/Protobuf/ER-force/vision_detection.pb.cc.i
-
-ai/Protobuf/ER-force/vision_detection.pb.s: ai/Protobuf/ER-force/vision_detection.pb.cc.s
-
-.PHONY : ai/Protobuf/ER-force/vision_detection.pb.s
-
-# target to generate assembly for a file
-ai/Protobuf/ER-force/vision_detection.pb.cc.s:
-	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.s
-.PHONY : ai/Protobuf/ER-force/vision_detection.pb.cc.s
+ai/Protobuf/Grsim/grSim_Replacement.pb.cc.s:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Grsim/grSim_Replacement.pb.cc.s
+.PHONY : ai/Protobuf/Grsim/grSim_Replacement.pb.cc.s
 
 ai/Protobuf/Refree/game_event.pb.o: ai/Protobuf/Refree/game_event.pb.cc.o
 
@@ -689,6 +392,249 @@ ai/Protobuf/Refree/savestate.pb.s: ai/Protobuf/Refree/savestate.pb.cc.s
 ai/Protobuf/Refree/savestate.pb.cc.s:
 	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.s
 .PHONY : ai/Protobuf/Refree/savestate.pb.cc.s
+
+ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.o: ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc.o
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.o
+
+# target to build an object file
+ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc.o:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc.o
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc.o
+
+ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.i: ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc.i
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.i
+
+# target to preprocess a source file
+ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc.i:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc.i
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc.i
+
+ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.s: ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc.s
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.s
+
+# target to generate assembly for a file
+ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc.s:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc.s
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc.s
+
+ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.o: ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc.o
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.o
+
+# target to build an object file
+ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc.o:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc.o
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc.o
+
+ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.i: ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc.i
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.i
+
+# target to preprocess a source file
+ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc.i:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc.i
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc.i
+
+ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.s: ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc.s
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.s
+
+# target to generate assembly for a file
+ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc.s:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc.s
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc.s
+
+ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.o: ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc.o
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.o
+
+# target to build an object file
+ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc.o:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc.o
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc.o
+
+ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.i: ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc.i
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.i
+
+# target to preprocess a source file
+ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc.i:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc.i
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc.i
+
+ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.s: ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc.s
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.s
+
+# target to generate assembly for a file
+ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc.s:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc.s
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc.s
+
+ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.o: ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc.o
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.o
+
+# target to build an object file
+ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc.o:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc.o
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc.o
+
+ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.i: ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc.i
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.i
+
+# target to preprocess a source file
+ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc.i:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc.i
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc.i
+
+ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.s: ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc.s
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.s
+
+# target to generate assembly for a file
+ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc.s:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc.s
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc.s
+
+ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.o: ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc.o
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.o
+
+# target to build an object file
+ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc.o:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc.o
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc.o
+
+ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.i: ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc.i
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.i
+
+# target to preprocess a source file
+ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc.i:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc.i
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc.i
+
+ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.s: ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc.s
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.s
+
+# target to generate assembly for a file
+ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc.s:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc.s
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc.s
+
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.o: ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc.o
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.o
+
+# target to build an object file
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc.o:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc.o
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc.o
+
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.i: ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc.i
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.i
+
+# target to preprocess a source file
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc.i:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc.i
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc.i
+
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.s: ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc.s
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.s
+
+# target to generate assembly for a file
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc.s:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc.s
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc.s
+
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.o: ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc.o
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.o
+
+# target to build an object file
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc.o:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc.o
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc.o
+
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.i: ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc.i
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.i
+
+# target to preprocess a source file
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc.i:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc.i
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc.i
+
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.s: ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc.s
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.s
+
+# target to generate assembly for a file
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc.s:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc.s
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc.s
+
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.o: ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc.o
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.o
+
+# target to build an object file
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc.o:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc.o
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc.o
+
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.i: ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc.i
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.i
+
+# target to preprocess a source file
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc.i:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc.i
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc.i
+
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.s: ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc.s
+
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.s
+
+# target to generate assembly for a file
+ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc.s:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc.s
+.PHONY : ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc.s
+
+ai/Protobuf/Vision/vision_detection.pb.o: ai/Protobuf/Vision/vision_detection.pb.cc.o
+
+.PHONY : ai/Protobuf/Vision/vision_detection.pb.o
+
+# target to build an object file
+ai/Protobuf/Vision/vision_detection.pb.cc.o:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/vision_detection.pb.cc.o
+.PHONY : ai/Protobuf/Vision/vision_detection.pb.cc.o
+
+ai/Protobuf/Vision/vision_detection.pb.i: ai/Protobuf/Vision/vision_detection.pb.cc.i
+
+.PHONY : ai/Protobuf/Vision/vision_detection.pb.i
+
+# target to preprocess a source file
+ai/Protobuf/Vision/vision_detection.pb.cc.i:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/vision_detection.pb.cc.i
+.PHONY : ai/Protobuf/Vision/vision_detection.pb.cc.i
+
+ai/Protobuf/Vision/vision_detection.pb.s: ai/Protobuf/Vision/vision_detection.pb.cc.s
+
+.PHONY : ai/Protobuf/Vision/vision_detection.pb.s
+
+# target to generate assembly for a file
+ai/Protobuf/Vision/vision_detection.pb.cc.s:
+	$(MAKE) -f CMakeFiles/omid.dir/build.make CMakeFiles/omid.dir/ai/Protobuf/Vision/vision_detection.pb.cc.s
+.PHONY : ai/Protobuf/Vision/vision_detection.pb.cc.s
 
 ai/RRT.o: ai/RRT.cpp.o
 
@@ -1302,48 +1248,15 @@ help:
 	@echo "... ai/MotionControl.o"
 	@echo "... ai/MotionControl.i"
 	@echo "... ai/MotionControl.s"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.o"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.i"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.s"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.o"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.i"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.s"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.o"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.i"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.s"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.o"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.i"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.s"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.o"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.i"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.s"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.o"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.i"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.s"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.o"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.i"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.s"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.o"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.i"
-	@echo "... ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.s"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_config.pb.o"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_config.pb.i"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_config.pb.s"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_control.pb.o"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_control.pb.i"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_control.pb.s"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_error.pb.o"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_error.pb.i"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_error.pb.s"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.o"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.i"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.s"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.o"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.i"
-	@echo "... ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.s"
-	@echo "... ai/Protobuf/ER-force/vision_detection.pb.o"
-	@echo "... ai/Protobuf/ER-force/vision_detection.pb.i"
-	@echo "... ai/Protobuf/ER-force/vision_detection.pb.s"
+	@echo "... ai/Protobuf/Grsim/grSim_Commands.pb.o"
+	@echo "... ai/Protobuf/Grsim/grSim_Commands.pb.i"
+	@echo "... ai/Protobuf/Grsim/grSim_Commands.pb.s"
+	@echo "... ai/Protobuf/Grsim/grSim_Packet.pb.o"
+	@echo "... ai/Protobuf/Grsim/grSim_Packet.pb.i"
+	@echo "... ai/Protobuf/Grsim/grSim_Packet.pb.s"
+	@echo "... ai/Protobuf/Grsim/grSim_Replacement.pb.o"
+	@echo "... ai/Protobuf/Grsim/grSim_Replacement.pb.i"
+	@echo "... ai/Protobuf/Grsim/grSim_Replacement.pb.s"
 	@echo "... ai/Protobuf/Refree/game_event.pb.o"
 	@echo "... ai/Protobuf/Refree/game_event.pb.i"
 	@echo "... ai/Protobuf/Refree/game_event.pb.s"
@@ -1356,6 +1269,33 @@ help:
 	@echo "... ai/Protobuf/Refree/savestate.pb.o"
 	@echo "... ai/Protobuf/Refree/savestate.pb.i"
 	@echo "... ai/Protobuf/Refree/savestate.pb.s"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.o"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.i"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.s"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.o"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.i"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.s"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.o"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.i"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.s"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.o"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.i"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.s"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.o"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.i"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.s"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.o"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.i"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.s"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.o"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.i"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.s"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.o"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.i"
+	@echo "... ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.s"
+	@echo "... ai/Protobuf/Vision/vision_detection.pb.o"
+	@echo "... ai/Protobuf/Vision/vision_detection.pb.i"
+	@echo "... ai/Protobuf/Vision/vision_detection.pb.s"
 	@echo "... ai/RRT.o"
 	@echo "... ai/RRT.i"
 	@echo "... ai/RRT.s"

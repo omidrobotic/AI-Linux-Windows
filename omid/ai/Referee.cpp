@@ -42,13 +42,13 @@ void Refree::Refree_parser(World &world)
 	if(packet.yellow().name()==TEAM_NAME)
     {
         world.setTeamColor(TC_Yellow);
-        world.team_T.sendDataPort=PORT_NUM_SEND_ERforce_COMMAND_YELLOW;
+        world.team_T.sendDataPort=(SEND_COMMANDS_TO_ROBOTS==2)?PORT_NUM_SEND_ERforce_COMMAND_YELLOW:PORT_NUM_SEND_GRSIM_COMMAND;
         world.getInstance().team_color=TC_Yellow;
     }
 	else if(packet.blue().name()==TEAM_NAME)
     {
         world.setTeamColor(TC_Blue);
-        world.team_T.sendDataPort=PORT_NUM_SEND_ERforce_COMMAND_BLUE;
+        world.team_T.sendDataPort=(SEND_COMMANDS_TO_ROBOTS==2)?PORT_NUM_SEND_ERforce_COMMAND_YELLOW:PORT_NUM_SEND_GRSIM_COMMAND;
         world.getInstance().team_color=TC_Blue;
     }
 
@@ -59,13 +59,29 @@ void Refree::Refree_parser(World &world)
     /////////////
     if(packet.blueteamonpositivehalf())
     {
-        world.getInstance().team_side=TS_LeftSide;
-        world.setTeamSide(TS_LeftSide);
+        if (World::team_color==TC_Yellow)
+        {
+            world.getInstance().team_side=TS_LeftSide;
+            world.setTeamSide(TS_LeftSide);
+        }
+        else
+        {
+            world.getInstance().team_side= TS_RightSide;
+            world.setTeamSide(TS_RightSide);
+        }
     }
     else
     {
-        world.getInstance().team_side=TS_RightSide;
-        world.setTeamSide(TS_RightSide);
+        if (World::team_color==TC_Blue)
+        {
+            world.getInstance().team_side=TS_LeftSide;
+            world.setTeamSide(TS_LeftSide);
+        }
+        else
+        {
+            world.getInstance().team_side= TS_RightSide;
+            world.setTeamSide(TS_RightSide);
+        }
     }
 
 

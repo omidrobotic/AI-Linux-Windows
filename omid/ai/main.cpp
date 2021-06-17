@@ -422,18 +422,23 @@ int main(int argc, char **argv)
 		///send command to grsim robots
 #elif SEND_COMMANDS_TO_ROBOTS == 0
         SimulatorMove gsm;
+        auto set_color_change=world.getInstance().team_color;
 		gsm.initialize_port(GROUP_ADDR_SEND_GRSIM_COMMAND, PORT_NUM_SEND_GRSIM_COMMAND);
 		gsm.initialize_robot_color_and_timestamp(0.0);
 		int rnfi;	///robot number for index
 		while (true)
 		{
+            if (set_color_change!=world.getInstance().team_color) {
+                gsm.initialize_robot_color_and_timestamp(0.0);
+                set_color_change=world.getInstance().team_color;
+            }
 			//auto start_time = std::chrono::high_resolution_clock::now();
 			for (int i = 0; i < world.numT; i++)
 			{
 				if (world.robotT[i].send_command)
 				{
 					rnfi = world.getRobotTNumberForIndex(i);
-					gsm.go_setKick_setSpinBack_withoutSend(world.robotT[i].velocityToGo, world.robotT[i].wToGo, world.robotT[i].shoot_or_chip, world.robotT[i].kick_power,world.robotT[i].spinBack, rnfi, world, SimulatorMove::robot_speed);
+					gsm.go_setKick_setSpinBack_withoutSend(world.robotT[i].velocityToGo, world.robotT[i].wToGo, world.robotT[i].shoot_or_chip, world.robotT[i].kick_power,world.robotT[i].spinBack, rnfi, world, SimulatorMove::wheels_speed);
 
 				}
 			}

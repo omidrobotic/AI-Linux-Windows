@@ -687,8 +687,8 @@ void SimulatorMove::initialize_port(const char* ip, int port)
 
 void SimulatorMove::initialize_robot_color_and_timestamp(double timestamp)
 {
-	packet.mutable_commands()->set_isteamyellow(World::team_color == TC_Yellow); 
-	packet.mutable_commands()->set_timestamp(0.0); 
+	packet.mutable_commands()->set_isteamyellow(World::team_color == TC_Yellow);
+	packet.mutable_commands()->set_timestamp(timestamp);
 }
 
 void SimulatorMove::go(VecPosition vv, double w, char id, World world, move_type mt)
@@ -947,8 +947,8 @@ void SimulatorMove::set_spinBack(bool set,char id)
 
 void SimulatorMove::send_to_grsim()
 {
-	packet.SerializePartialToArray(s_data, sizeof(s_data));
-	grsim_udp.send(s_data, sizeof(s_data));
+        packet.SerializePartialToArray(s_data, sizeof(s_data));
+        grsim_udp.send(s_data, sizeof(s_data));
 }
 
 /*!GrsimMove METHODS */

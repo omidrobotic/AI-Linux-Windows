@@ -153,7 +153,7 @@ public:
     Socket_udp grsim_udp;
     void send_to_grsim();
     grSim_Packet packet;     ///packet has a set of commands that each command is attributes of one robot,such speed of each wheel, etc.
-    grSim_Robot_Command *command[8];    /// 8: need to be changed !!!!!!!!!	///command is a set of attributes for a robot.such as speed of each wheel, etc.
+    grSim_Robot_Command *command[MAX_ROBOTS_PER_TEAM_IN_THE_FIELD];    /// 8: need to be changed !!!!!!!!!	///command is a set of attributes for a robot.such as speed of each wheel, etc.
 #endif
 
 };
