@@ -8,345 +8,357 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/omid/Desktop/omid/cmake-build-debug"/>
+				<Option working_dir="/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/omid/Desktop/omid/cmake-build-debug"/>
+				<Option working_dir="/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/omid/Desktop/omid/cmake-build-debug"/>
+				<Option working_dir="/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="omid">
-				<Option output="/home/omid/Desktop/omid/cmake-build-debug/omid" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/omid/Desktop/omid/cmake-build-debug"/>
+				<Option output="/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/omid" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/omid/Desktop/omid/cmake-build-debug"/>
-					<Add directory="/home/omid/Desktop/omid/ai/Protobuf"/>
+					<Add directory="/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug"/>
+					<Add directory="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf"/>
 					<Add directory="/usr/local/lib/libprotobuf.so"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 omid"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 omid"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="omid/fast">
-				<Option output="/home/omid/Desktop/omid/cmake-build-debug/omid" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/omid/Desktop/omid/cmake-build-debug"/>
+				<Option output="/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/omid" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/omid/Desktop/omid/cmake-build-debug"/>
-					<Add directory="/home/omid/Desktop/omid/ai/Protobuf"/>
+					<Add directory="/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug"/>
+					<Add directory="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf"/>
 					<Add directory="/usr/local/lib/libprotobuf.so"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 omid/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/omid/Desktop/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 omid/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/omid/Desktop/omid/ai/FieldGeometry.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/FieldGeometry.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/GL/glew.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/GL/glew.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/GL/glext.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/GL/glext.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/GL/glut.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/GL/glut.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/GL/glxew.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/GL/glxew.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/GL/wglew.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/GL/wglew.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/GameState.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/GameState.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/HandleMainThreadFunctions.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/HandleMainThreadFunctions.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/HighLevel.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/HighLevel.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/HighLevel.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/HighLevel.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/MotionControl.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/MotionControl.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/MotionControl.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/MotionControl.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Grsim/grSim_Commands.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Grsim/grSim_Commands.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Grsim/grSim_Packet.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Grsim/grSim_Packet.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Grsim/grSim_Replacement.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Grsim/grSim_Replacement.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Refree/game_event.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Refree/game_event.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Refree/rcon.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Refree/rcon.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Refree/referee.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Refree/referee.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Refree/savestate.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Refree/savestate.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_config.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_control.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_error.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/vision_detection.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/vision_detection.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/game_event.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/game_event.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/vision_detection.pb.cc">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/rcon.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Protobuf/Vision/vision_detection.pb.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/rcon.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/RRT.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/referee.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/RRT.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/referee.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Referee.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/savestate.pb.cc">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Referee.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/savestate.pb.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Socket_udp.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/RRT.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Socket_udp.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/RRT.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Strategy.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Referee.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Strategy.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Referee.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Switches.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Socket_udp.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Vision.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Socket_udp.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/Vision.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Strategy.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/VisionBall.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Strategy.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/VisionComminucation.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Switches.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/VisionRobot.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Vision.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/estimation.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/Vision.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/estimation.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/VisionBall.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/filter.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/VisionComminucation.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/filter.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/VisionRobot.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/geometry.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/estimation.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/geometry.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/estimation.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glball.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/filter.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glball.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/filter.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glcircle.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/geometry.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glcircle.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/geometry.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glfield.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/graphical/glball.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glfield.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/graphical/glball.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glframe.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/graphical/glcircle.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glframe.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/graphical/glcircle.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glline.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/graphical/glfield.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glline.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/graphical/glfield.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glrobot.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/graphical/glframe.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/graphical/glrobot.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/graphical/glframe.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/graphical/gltext.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/graphical/glline.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/graphical/gltext.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/graphical/glline.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/main.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/graphical/glrobot.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/matrix.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/graphical/glrobot.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/nrf.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/graphical/gltext.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/nrf.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/graphical/gltext.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/timer.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/main.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/timer.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/matrix.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/world.cpp">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/nrf.cpp">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/ai/world.h">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/nrf.h">
 			<Option target="omid"/>
 		</Unit>
-		<Unit filename="/home/omid/Desktop/omid/CMakeLists.txt">
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/timer.cpp">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/timer.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/world.cpp">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/ai/world.h">
+			<Option target="omid"/>
+		</Unit>
+		<Unit filename="/home/fdmx/AI-Linux-Windos-2021/omid/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

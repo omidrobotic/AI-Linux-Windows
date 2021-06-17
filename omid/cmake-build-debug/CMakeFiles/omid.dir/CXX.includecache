@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/omid/Desktop/omid/ai/FieldGeometry.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/FieldGeometry.h
 geometry.h
-/home/omid/Desktop/omid/ai/geometry.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/geometry.h
 Switches.h
-/home/omid/Desktop/omid/ai/Switches.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/Switches.h
 
-/home/omid/Desktop/omid/ai/GameState.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/GameState.h
 
-/home/omid/Desktop/omid/ai/Protobuf/Refree/game_event.pb.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/game_event.pb.h
 limits
 -
 string
@@ -52,7 +52,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/omid/Desktop/omid/ai/Protobuf/Refree/referee.pb.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/referee.pb.h
 limits
 -
 string
@@ -86,37 +86,37 @@ google/protobuf/generated_enum_reflection.h
 google/protobuf/unknown_field_set.h
 -
 game_event.pb.h
-/home/omid/Desktop/omid/ai/Protobuf/Refree/game_event.pb.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/game_event.pb.h
 google/protobuf/port_def.inc
 -
 google/protobuf/port_undef.inc
 -
 
-/home/omid/Desktop/omid/ai/Referee.cpp
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/Referee.cpp
 Referee.h
-/home/omid/Desktop/omid/ai/Referee.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/Referee.h
 iostream
 -
 Switches.h
-/home/omid/Desktop/omid/ai/Switches.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/Switches.h
 
-/home/omid/Desktop/omid/ai/Referee.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/Referee.h
 Switches.h
-/home/omid/Desktop/omid/ai/Switches.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/Switches.h
 Protobuf/Refree/referee.pb.h
-/home/omid/Desktop/omid/ai/Protobuf/Refree/referee.pb.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/referee.pb.h
 GameState.h
-/home/omid/Desktop/omid/ai/GameState.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/GameState.h
 stdint.h
 -
 Socket_udp.h
-/home/omid/Desktop/omid/ai/Socket_udp.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/Socket_udp.h
 world.h
-/home/omid/Desktop/omid/ai/world.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/world.h
 GameState.h
-/home/omid/Desktop/omid/ai/GameState.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/GameState.h
 
-/home/omid/Desktop/omid/ai/Socket_udp.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/Socket_udp.h
 stdio.h
 -
 stdlib.h
@@ -150,9 +150,9 @@ unistd.h
 netinet/in.h
 -
 
-/home/omid/Desktop/omid/ai/Switches.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/Switches.h
 
-/home/omid/Desktop/omid/ai/geometry.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/geometry.h
 math.h
 -
 string
@@ -160,7 +160,7 @@ string
 iostream
 -
 
-/home/omid/Desktop/omid/ai/timer.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/timer.h
 stdio.h
 -
 stdlib.h
@@ -170,15 +170,15 @@ ctime
 chrono
 -
 
-/home/omid/Desktop/omid/ai/world.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/world.h
 FieldGeometry.h
-/home/omid/Desktop/omid/ai/FieldGeometry.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/FieldGeometry.h
 geometry.h
-/home/omid/Desktop/omid/ai/geometry.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/geometry.h
 GameState.h
-/home/omid/Desktop/omid/ai/GameState.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/GameState.h
 timer.h
-/home/omid/Desktop/omid/ai/timer.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/timer.h
 Switches.h
-/home/omid/Desktop/omid/ai/Switches.h
+/home/fdmx/AI-Linux-Windos-2021/omid/ai/Switches.h
 

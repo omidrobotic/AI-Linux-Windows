@@ -1,22 +1,22 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/omid/Desktop/omid/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_88300/fast && /usr/bin/make  -f CMakeFiles/cmTC_88300.dir/build.make CMakeFiles/cmTC_88300.dir/build
-make[1]: Entering directory '/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_88300.dir/src.c.o
-/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_88300.dir/src.c.o -c /home/omid/Desktop/omid/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_88300
-/home/omid/clion-2021.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88300.dir/link.txt --verbose=1
-/usr/bin/cc CMakeFiles/cmTC_88300.dir/src.c.o -o cmTC_88300 
-/usr/bin/ld: CMakeFiles/cmTC_88300.dir/src.c.o: in function `main':
+Run Build Command(s):/usr/bin/gmake cmTC_ae1f1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ae1f1.dir/build.make CMakeFiles/cmTC_ae1f1.dir/build
+gmake[1]: Entering directory '/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ae1f1.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_ae1f1.dir/src.c.o -c /home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ae1f1
+/home/fdmx/clion-2021.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae1f1.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_ae1f1.dir/src.c.o -o cmTC_ae1f1 
+/usr/bin/ld: CMakeFiles/cmTC_ae1f1.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
 /usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_88300.dir/build.make:106: cmTC_88300] Error 1
-make[1]: Leaving directory '/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_88300/fast] Error 2
+gmake[1]: *** [CMakeFiles/cmTC_ae1f1.dir/build.make:106: cmTC_ae1f1] Error 1
+gmake[1]: Leaving directory '/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_ae1f1/fast] Error 2
 
 
 Source file was:
@@ -41,21 +41,20 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/omid/Desktop/omid/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_26313/fast && /usr/bin/make  -f CMakeFiles/cmTC_26313.dir/build.make CMakeFiles/cmTC_26313.dir/build
-make[1]: Entering directory '/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Warning: File '/home/omid/clion-2021.1.2/bin/cmake/linux/share/cmake-3.19/Modules/CheckFunctionExists.c' has modification time 6519088 s in the future
-Building C object CMakeFiles/cmTC_26313.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_26313.dir/CheckFunctionExists.c.o -c /home/omid/clion-2021.1.2/bin/cmake/linux/share/cmake-3.19/Modules/CheckFunctionExists.c
-Linking C executable cmTC_26313
-/home/omid/clion-2021.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26313.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_26313.dir/CheckFunctionExists.c.o -o cmTC_26313  -lpthreads 
+Run Build Command(s):/usr/bin/gmake cmTC_5ad4f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5ad4f.dir/build.make CMakeFiles/cmTC_5ad4f.dir/build
+gmake[1]: Entering directory '/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5ad4f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_5ad4f.dir/CheckFunctionExists.c.o -c /home/fdmx/clion-2021.1.2/bin/cmake/linux/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5ad4f
+/home/fdmx/clion-2021.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ad4f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_5ad4f.dir/CheckFunctionExists.c.o -o cmTC_5ad4f  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_26313.dir/build.make:106: cmTC_26313] Error 1
-make[1]: Leaving directory '/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_26313/fast] Error 2
+gmake[1]: *** [CMakeFiles/cmTC_5ad4f.dir/build.make:106: cmTC_5ad4f] Error 1
+gmake[1]: Leaving directory '/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_5ad4f/fast] Error 2
 
 
 

@@ -62,6 +62,15 @@ condition_pass HighLevel::pass_mode;
 ownership HighLevel::play_mode;
 //////////////////////////////////////////////////////////m.a//////////////////////////
 
+
+
+
+
+
+
+
+
+
 //////////////draw line frome midp to ball circle and return closest intrsection
 VecPosition HighLevel::StopSurrounding_get_general_target()
 {

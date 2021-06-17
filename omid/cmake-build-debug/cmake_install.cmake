@@ -1,4 +1,4 @@
-# Install script for directory: /home/omid/Desktop/omid
+# Install script for directory: /home/fdmx/AI-Linux-Windos-2021/omid
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/omid/Desktop/omid/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/fdmx/AI-Linux-Windos-2021/omid/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

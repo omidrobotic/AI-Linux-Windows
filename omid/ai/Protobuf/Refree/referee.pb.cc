@@ -19,7 +19,7 @@ PROTOBUF_PRAGMA_INIT_SEG
 constexpr SSL_Referee_TeamInfo::SSL_Referee_TeamInfo(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : yellow_card_times_()
-  , _yellow_card_times_cached_byte_size_()
+  , _yellow_card_times_cached_byte_size_(0)
   , name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , score_(0u)
   , red_cards_(0u)
