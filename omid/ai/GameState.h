@@ -73,6 +73,7 @@ public:
 		case Wait:return "Wait";
 		case Play:return "Play";
 		case Timeout:return "Timeout";
+		case ballPlacement:return "ballPlacement";
 		}
 	}
 

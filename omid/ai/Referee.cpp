@@ -401,7 +401,8 @@ void Refree::Refree_parser(World &world)
 			else if (World::getInstance().team_color == TC_Yellow)
 				world.setPlayMode(mode_State::PlayMode::ballPlacement);
 			    world.team_T.Set_Refree_Ball_Position=VecPosition(packet.designated_position().x(),packet.designated_position().y());
-			break;
+                cout<<world.team_T.Set_Refree_Ball_Position;
+                break;
 
 		case SSL_Referee::BALL_PLACEMENT_BLUE:
 			world.setKickMode(mode_State::KickMode::NoKickMode);
@@ -410,6 +411,7 @@ void Refree::Refree_parser(World &world)
 			else if (World::getInstance().team_color == TC_Yellow)
 				world.setPlayMode(mode_State::PlayMode::ballPlacement);
                 world.team_T.Set_Refree_Ball_Position=VecPosition(packet.designated_position().x(),packet.designated_position().y());
+                cout<<world.team_T.Set_Refree_Ball_Position;
                 break;
 
 		}
