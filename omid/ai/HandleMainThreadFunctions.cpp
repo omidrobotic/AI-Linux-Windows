@@ -97,11 +97,17 @@ void produceRobotsDestinations()
 
     // Begin Farhan Daemi
 
-
-    HighLevel::turn_all_spinbacks_on();
-//    HighLevel::goalKeeper_defend_and_pass(GOALI_NUMBER);
-//    HighLevel::forward_formation(4);
-//    HighLevel::defence_formation(2);
+    if(world.team_color == TC_Yellow) {
+        HighLevel::turn_all_spinbacks_on();
+        HighLevel::goalKeeper_defend_and_pass(GOALI_NUMBER);
+        HighLevel::forward_formation(4);
+        HighLevel::defence_formation(2);
+    }else{
+        HighLevel::GoaliHoleCover();
+        HighLevel::plan_scor(4);
+        HighLevel::defence_scor2(2);
+        HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
+    }
 //    HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
 
     // HighLevel::GoaliHoleCover();
