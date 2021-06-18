@@ -92,10 +92,33 @@ void produceRobotsDestinations()
 	//HighLevel::Block(world, 3);
 	//	HighLevel::StopSurrounding(world,1,2);
 
-	HighLevel::GoaliHoleCover();
-	HighLevel::plan_scor(4);
-	HighLevel::defence_scor2(2);
-	HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
+
+
+
+    // Begin Farhan Daemi
+
+
+    HighLevel::turn_all_spinbacks_on();
+//    HighLevel::goalKeeper_defend_and_pass(GOALI_NUMBER);
+//    HighLevel::forward_formation(4);
+//    HighLevel::defence_formation(2);
+//    HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
+
+    // HighLevel::GoaliHoleCover();
+    // HighLevel::defence_scor2(2);
+
+
+    //HighLevel::defence_format(8);
+
+
+    // End Farhan Daemi
+
+
+
+//	HighLevel::GoaliHoleCover();
+//	HighLevel::plan_scor(4);
+//	HighLevel::defence_scor2(2);
+//	HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
 	//HighLevel::defence_format(8);
 	if(world.playMode==mode_State::Stop)
     {

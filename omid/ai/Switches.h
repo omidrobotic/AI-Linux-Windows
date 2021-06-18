@@ -46,7 +46,9 @@
 #define PRESENT_OF_ATTACKER 0.80 //PRESENT OF ATTACKER ROBOT T
 //////////////////mhz
 
-
+// Begin Farhan Daemi
+#define GOALI_NUMBER 3
+// End Farhan Daemi
 
 
 //----- Defines Refree -------------------------------------------------------------
