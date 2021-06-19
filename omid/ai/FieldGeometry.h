@@ -37,14 +37,14 @@
 
 #if DIVISION == 1
 const double GlframeScale = 67.0; //if double size=67 and single size=50	//67.0	
-const int WholeFieldLength = 13400;	
-const int WholeFieldWidth = 10400;	//7400
+const int WholeFieldLength = 12004;
+const int WholeFieldWidth = 9002;	//7400
 const int SurroundFieldLength = 12600;
 const int SurroundFieldWidth = 9600;
 const int FieldLength = 12000;
 const int FieldWidth = 9000;
 const int FreeBound = 500;	//?
-const int GoalLength = 1200;
+const int GoalLength = 1800;
 const int GoalPostLength = 180;
 const int CornelPoint = 6000;
 const int PenaltyPoint = 1200;

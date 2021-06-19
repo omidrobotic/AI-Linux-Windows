@@ -324,7 +324,7 @@ int main(int argc, char **argv)
 			//auto start_time1 = std::chrono::high_resolution_clock::now();
 
 			refree.Refree_parser(world);
-			if (refree.m_counter != m)
+//			if (refree.m_counter != m)
 			{
 				cout << "\n KickMode :" << mode_state.getKickModeName(world.kickMode);
 				cout << "\n PlayMode :" << mode_state.getPlayModeName(world.playMode);
@@ -490,7 +490,7 @@ int main(int argc, char **argv)
 	{
 
 		sleep(0.005);
-		world.team_T.Goalie = 3;
+		world.team_T.Goalie = GOALI_NUMBER;
 		MatrixD V(4, 1);
 
 		//V(0, 0) = 0;

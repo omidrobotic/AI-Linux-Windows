@@ -97,27 +97,16 @@ void produceRobotsDestinations()
 
     // Begin Farhan Daemi
 
-    if(world.team_color == TC_Yellow) {
-        HighLevel::turn_all_spinbacks_on();
-        HighLevel::goalKeeper_defend_and_pass(GOALI_NUMBER);
-        HighLevel::forward_formation(4);
-        HighLevel::defence_formation(2);
-    }else{
-        HighLevel::GoaliHoleCover();
-        HighLevel::plan_scor(4);
-        HighLevel::defence_scor2(2);
-        HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
-    }
-//    HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
-
-    // HighLevel::GoaliHoleCover();
-    // HighLevel::defence_scor2(2);
+    HighLevel::turn_all_spinbacks_on();
+//    HighLevel::goalKeeper_defend_and_pass(GOALI_NUMBER);
+//    HighLevel::forward_formation(4);
+//    HighLevel::defence_formation(2);
+//	HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
 
 
-    //HighLevel::defence_format(8);
 
 
-    // End Farhan Daemi
+        // End Farhan Daemi
 
 
 
@@ -126,50 +115,46 @@ void produceRobotsDestinations()
 //	HighLevel::defence_scor2(2);
 //	HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
 	//HighLevel::defence_format(8);
-	if(world.playMode==mode_State::Stop)
-    {
-	  //  cout<<"hara";
-    }
-	//switch (world.playMode)
-	//{
 
-	//case mode_State::Stop:
-	//	switch (world.kickMode)
-	//	{
-	//	case mode_State::KickMode::NoKickMode:
-	//		HighLevel::GoaliHoleCover();
-	//		HighLevel::ReadyForKick(HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
-	//		HighLevel::defence_scor2((world.numT - 2)-int(PRESENT_OF_ATTACKER*(world.numT - 2)));
-	//		HighLevel::find_roboto_pass(int(PRESENT_OF_ATTACKER*(world.numT - 2)));
-	//		break;
+	switch (world.playMode)
+	{
+    case mode_State::Stop:
+        switch (world.kickMode)
+        {
+        case mode_State::KickMode::NoKickMode:
+            HighLevel::GoaliHoleCover();
+            HighLevel::ReadyForKick(HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
+            HighLevel::defence_scor2((world.numT - 2)-int(PRESENT_OF_ATTACKER*(world.numT - 2)));
+            HighLevel::find_roboto_pass(int(PRESENT_OF_ATTACKER*(world.numT - 2)));
+            break;
 
-	//	case mode_State::KickMode::KickOffOPrepare:
-	//		HighLevel::start_robotT_format_NoKickMode("KickOffOPrepare");
-	//		break;
+		case mode_State::KickMode::KickOffOPrepare:
+			HighLevel::start_robotT_format_NoKickMode("KickOffOPrepare");
+			break;
 
-	//	case mode_State::KickMode::KickOffTPrepare:
-	//		HighLevel::start_robotT_format_NoKickMode("KickOffTPrepare");
-	//		HighLevel::ReadyForKick(HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
+		case mode_State::KickMode::KickOffTPrepare:
+			HighLevel::start_robotT_format_NoKickMode("KickOffTPrepare");
+			HighLevel::ReadyForKick(HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
 
 
-	//		break;
+			break;
 
-	//	case mode_State::KickMode::PenaltyTPrepare:
-	//		HighLevel::start_robotT_format_penaltyt(world,1);
-	//		break;
+		case mode_State::KickMode::PenaltyTPrepare:
+			HighLevel::start_robotT_format_penaltyt(world,1);
+			break;
 
-	//	case mode_State::KickMode::PenaltyOPrepare:
-	//		HighLevel::start_robotT_format_penaltyo(world);
-	//		break;
-	//	default:
-	//		break;
-	//	}
-	//	break;
+		case mode_State::KickMode::PenaltyOPrepare:
+			HighLevel::start_robotT_format_penaltyo(world);
+			break;
+		default:
+			break;
+		}
+		break;
 
 
 	//case mode_State::Wait:
 	//	switch (world.kickMode)
-	//	{	
+	//	{
 	//	case mode_State::KickMode::KickOffO:
 	//		HighLevel::start_robotT_format_NoKickMode("KickOffO");
 	//		break;
@@ -241,7 +226,7 @@ void produceRobotsDestinations()
 	//		HighLevel::defence_hol_robotO(1, HighLevel::find_robot_have_ball('O'));
 	//		HighLevel::defence_scor2(int((world.numT-2)*0.67));
 	//		HighLevel::find_roboto_pass(world.numT-(int((world.numT - 2) * 0.67)+2));
-	//		
+	//
 	//	}
 	//	else
 	//	{
@@ -311,7 +296,7 @@ void produceRobotsDestinations()
 	//case mode_State::Timeout:
 	//	HighLevel::time_out();
 	//	break;
-	//}
+	}
 
 	//set last destination
 	HighLevel::set_last_destination_set();
