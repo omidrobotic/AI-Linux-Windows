@@ -12,7 +12,6 @@
 // Linux headers
 #include <fcntl.h> // Contains file controls like O_RDWR
 #include <errno.h> // Error integer and strerror() function
-#include <termios.h> // Contains POSIX terminal control definitions
 #include <unistd.h> // write(), read(), close()
 #include <stdlib.h>
 #include <stdint.h>     /* uint32_t */
@@ -36,6 +35,20 @@
 #include <X11/Xlib.h>
 // #include "myheader.h"    // can no longer use windows.h or conio.h
 // #include "myheader2.h"
+#include <iostream>
+#include <sstream>
+#include <stdio.h>       // Standard input/output definitions
+#include <string.h>      // String function definitions
+#include <unistd.h>      // UNIX standard function definitions
+#include <fcntl.h>       // File control definitions
+#include <errno.h>       // Error number definitions
+// #include <termios.h>     // POSIX terminal control definitions (struct termios)
+#include <system_error>    // For throwing std::system_error
+#include <sys/ioctl.h> // Used for TCGETS2, which is required for custom baud rates
+#include <cassert>
+// #include <asm/termios.h> // Terminal control definitions (struct termios)
+#include <asm/ioctls.h>
+#include <asm/termbits.h>
 #endif
 #include "math.h"
 #include "matrix.h"
@@ -79,8 +92,13 @@ MatrixD nrf::V(4, 1);
 bool nrf::statusNrf = false;
 bool nrf::ftime = true;
 /*! NRF VARIABLES */
-
-
+#include <stdio.h>
+#include <fcntl.h>
+#include <errno.h>
+//#include <asm/termios.h>
+#include <sys/ioctl.h>
+#include <asm-generic/termbits.h>
+//#include <asm/termios.h>
 
 
 /*! GrsimMove VARIABLES */
@@ -223,43 +241,40 @@ void nrf::write_on_port() {
         statusNrf = SetCommState(hComm, &dcbSerialParams);
         ftime = false;
 #elif __linux__
+        serial_port = open("/dev/ttyUSB2", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
 
-    serial_port = open(portName, O_RDWR);
+        if(serial_port == -1) // if open is unsucessful
+        {
+            //perror("open_port: Unable to open /dev/ttyS0 - ");
+            printf("open_port: Unable to open /dev/ttyUSB1. \n");
+        }
+        else
+        {
+            fcntl(serial_port, F_SETFL, 0);
+            printf("port is open.\n");
+        }
+        struct termios2 tty;      // structure to store the port settings in
+        ioctl(serial_port, TCGETS2, &tty);
 
-    // Create new termios struct, we call it 'tty' for convention
-// No need for "= {0}" at the end as we'll immediately write the existing
-// config to this struct
-    struct termios tty;
+        //================= (.c_cflag) ===============//
 
-// Read in existing settings, and handle any error
-// NOTE: This is important! POSIX states that the struct passed to tcsetattr()
-// must have been initialized with a call to tcgetattr() overwise behaviour
-// is undefined
-    if(tcgetattr(serial_port, &tty) != 0) {
-        printf("Error %i from tcgetattr: %s\n", errno, strerror(errno));
-    }
-    tty.c_cflag &= ~PARENB; // Clear parity bit, disabling parity (most common)
-    tty.c_cflag &= ~CSTOPB; // Clear stop field, only one stop bit used in communication (most common)
-    tty.c_cflag &= ~CSIZE; // Clear all bits that set the data size
-    tty.c_cflag |= CS8; // 8 bits per byte (most common)
-    tty.c_cflag &= ~CRTSCTS; // Disable RTS/CTS hardware flow control (most common)
-    tty.c_cflag |= CREAD | CLOCAL; // Turn on READ & ignore ctrl lines (CLOCAL = 1)
+        tty.c_cflag     &=  ~PARENB;           // No parity bit is added to the output characters
+        tty.c_cflag     &=  ~CSTOPB;        // Only one stop-bit is used
+        tty.c_cflag     &=  ~CSIZE;            // CSIZE is a mask for the number of bits per character
+        tty.c_cflag     |=  CS8;            // Set to 8 bits per character
+        tty.c_cflag     &=  ~CRTSCTS;       // Disable hadrware flow control (RTS/CTS)
+        tty.c_cflag     |=  CREAD | CLOCAL;
+        tty.c_cflag &= ~CBAUD;
+        tty.c_cflag |= CBAUDEX;
+        // tty.c_cflag |= BOTHER;
+        tty.c_ispeed = 256000;
+        tty.c_ospeed = 256000;
+        tty.c_oflag     =   0;              // No remapping, no delays
+        tty.c_oflag     &=  ~OPOST;            // Make raw
 
-    tty.c_lflag &= ~ICANON;
-    tty.c_lflag &= ~ECHO; // Disable echo
-    tty.c_lflag &= ~ECHOE; // Disable erasure
-    tty.c_lflag &= ~ECHONL; // Disable new-line echo
-    tty.c_lflag &= ~ISIG; // Disable interpretation of INTR, QUIT and SUSP
-    tty.c_iflag &= ~(IXON | IXOFF | IXANY); // Turn off s/w flow ctrl
-    tty.c_iflag &= ~(IGNBRK|BRKINT|PARMRK|ISTRIP|INLCR|IGNCR|ICRNL); // Disable any special handling of received bytes
 
-    tty.c_oflag &= ~OPOST; // Prevent special interpretation of output bytes (e.g. newline chars)
-    tty.c_oflag &= ~ONLCR; // Prevent conversion of newline to carriage return/line feed
-    cfsetispeed(&tty, 256000);
-    // Save tty settings, also checking for error
-    if (tcsetattr(serial_port, TCSANOW, &tty) != 0) {
-        printf("Error %i from tcsetattr: %s\n", errno, strerror(errno));
-    }
+
+        ioctl(serial_port, TCSETS2, &tty);
     ftime = false;
 #endif
 
@@ -272,7 +287,14 @@ void nrf::write_on_port() {
 		&numOfBytesWritten,
 		NULL);
 #elif __linux__
-    write(serial_port, output, numOfBytesToWrite);
+    for (int i = 0; i < 180; ++i) {
+          output[i]=1;
+    }
+    output[0]=1;
+    for (int i = 0; i < 100000000; ++i) {
+        write(serial_port, output, sizeof (output));  //Send data
+
+    }
 #endif
 
 
@@ -490,7 +512,7 @@ void SimulatorMove::setAndSend(VecPosition velocity, double w, bool shootOrChip,
     auto control = RobotControl();
     auto *robotCommand = control.add_robot_commands();
     robotCommand->set_id(id);
-    robotCommand->set_kick_speed(/*(shootOrChip)?3 / 2.0*kickPower*0.70710:(3 / 2.0*kickPower)*/100);
+    robotCommand->set_kick_speed((shootOrChip)?3 / 2.0*kickPower*0.70710:(3 / 2.0*kickPower));
     robotCommand->set_kick_angle((shootOrChip)?45:0);
     robotCommand->set_dribbler_speed((spinBack)?1:0); // convert from 1 - 0 to rpm, where 1 is 150 rad/s
     auto *moveCommand = robotCommand->mutable_move_command()->mutable_local_velocity();

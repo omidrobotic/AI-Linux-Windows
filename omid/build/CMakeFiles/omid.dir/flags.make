@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/omid/Desktop/omid/build -I/home/omid/Desktop/omid/ai/Protobuf -I/usr/local/lib/libprotobuf.so 
+CXX_INCLUDES = -I/home/omid/Desktop/AI-Linux-Windos-2021/omid/build -I/home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf -I/usr/local/lib/libprotobuf.so 
 

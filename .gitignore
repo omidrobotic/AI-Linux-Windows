@@ -1,2 +1,7 @@
 omid/build
 
+*.cmake
+*.cmake
+*.cmake
+*.txt
+omid/build/CMakeFiles/Makefile2

@@ -62,10 +62,10 @@ RM = /home/omid/clion-2021.1.2/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omid/Desktop/omid
+CMAKE_SOURCE_DIR = /home/omid/Desktop/AI-Linux-Windos-2021/omid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omid/Desktop/omid/cmake-build-debug
+CMAKE_BINARY_DIR = /home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/omid.dir/depend.make
@@ -78,562 +78,562 @@ include CMakeFiles/omid.dir/flags.make
 
 CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.o: ../ai/HandleMainThreadFunctions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.o -c /home/omid/Desktop/omid/ai/HandleMainThreadFunctions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/HandleMainThreadFunctions.cpp
 
 CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/HandleMainThreadFunctions.cpp > CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/HandleMainThreadFunctions.cpp > CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.i
 
 CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/HandleMainThreadFunctions.cpp -o CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/HandleMainThreadFunctions.cpp -o CMakeFiles/omid.dir/ai/HandleMainThreadFunctions.cpp.s
 
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/HighLevel.cpp.o: ../ai/HighLevel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/omid.dir/ai/HighLevel.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/HighLevel.cpp.o -c /home/omid/Desktop/omid/ai/HighLevel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/omid.dir/ai/HighLevel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/HighLevel.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/HighLevel.cpp
 
 CMakeFiles/omid.dir/ai/HighLevel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/HighLevel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/HighLevel.cpp > CMakeFiles/omid.dir/ai/HighLevel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/HighLevel.cpp > CMakeFiles/omid.dir/ai/HighLevel.cpp.i
 
 CMakeFiles/omid.dir/ai/HighLevel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/HighLevel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/HighLevel.cpp -o CMakeFiles/omid.dir/ai/HighLevel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/HighLevel.cpp -o CMakeFiles/omid.dir/ai/HighLevel.cpp.s
 
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/MotionControl.cpp.o: ../ai/MotionControl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/omid.dir/ai/MotionControl.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/MotionControl.cpp.o -c /home/omid/Desktop/omid/ai/MotionControl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/omid.dir/ai/MotionControl.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/MotionControl.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/MotionControl.cpp
 
 CMakeFiles/omid.dir/ai/MotionControl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/MotionControl.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/MotionControl.cpp > CMakeFiles/omid.dir/ai/MotionControl.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/MotionControl.cpp > CMakeFiles/omid.dir/ai/MotionControl.cpp.i
 
 CMakeFiles/omid.dir/ai/MotionControl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/MotionControl.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/MotionControl.cpp -o CMakeFiles/omid.dir/ai/MotionControl.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/MotionControl.cpp -o CMakeFiles/omid.dir/ai/MotionControl.cpp.s
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_geometry_legacy.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_refbox_log.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_legacy.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.o: ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/messages_robocup_ssl_wrapper_tracked.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_config.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_config.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_control.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_control.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_error.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_error.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.o: ../ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/ssl_simulation_robot_feedback.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.o: ../ai/Protobuf/ER-force/vision_detection.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/ER-force/vision_detection.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/vision_detection.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/ER-force/vision_detection.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/vision_detection.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/ER-force/vision_detection.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/ER-force/vision_detection.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/ER-force/vision_detection.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.o: ../ai/Protobuf/Refree/game_event.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/Refree/game_event.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/game_event.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/Refree/game_event.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/game_event.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/Refree/game_event.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/game_event.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.o: ../ai/Protobuf/Refree/rcon.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/Refree/rcon.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/rcon.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/Refree/rcon.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/rcon.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/Refree/rcon.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/rcon.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/Refree/rcon.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.o: ../ai/Protobuf/Refree/referee.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/Refree/referee.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/referee.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/Refree/referee.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/referee.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/Refree/referee.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/referee.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/Refree/referee.pb.cc.s
 
 CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.o: ../ai/Protobuf/Refree/savestate.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.o -c /home/omid/Desktop/omid/ai/Protobuf/Refree/savestate.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/savestate.pb.cc
 
 CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Protobuf/Refree/savestate.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/savestate.pb.cc > CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.i
 
 CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Protobuf/Refree/savestate.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Protobuf/Refree/savestate.pb.cc -o CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.s
 
 CMakeFiles/omid.dir/ai/RRT.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/RRT.cpp.o: ../ai/RRT.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/omid.dir/ai/RRT.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/RRT.cpp.o -c /home/omid/Desktop/omid/ai/RRT.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/omid.dir/ai/RRT.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/RRT.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/RRT.cpp
 
 CMakeFiles/omid.dir/ai/RRT.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/RRT.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/RRT.cpp > CMakeFiles/omid.dir/ai/RRT.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/RRT.cpp > CMakeFiles/omid.dir/ai/RRT.cpp.i
 
 CMakeFiles/omid.dir/ai/RRT.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/RRT.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/RRT.cpp -o CMakeFiles/omid.dir/ai/RRT.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/RRT.cpp -o CMakeFiles/omid.dir/ai/RRT.cpp.s
 
 CMakeFiles/omid.dir/ai/Referee.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Referee.cpp.o: ../ai/Referee.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/omid.dir/ai/Referee.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Referee.cpp.o -c /home/omid/Desktop/omid/ai/Referee.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/omid.dir/ai/Referee.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Referee.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Referee.cpp
 
 CMakeFiles/omid.dir/ai/Referee.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Referee.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Referee.cpp > CMakeFiles/omid.dir/ai/Referee.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Referee.cpp > CMakeFiles/omid.dir/ai/Referee.cpp.i
 
 CMakeFiles/omid.dir/ai/Referee.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Referee.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Referee.cpp -o CMakeFiles/omid.dir/ai/Referee.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Referee.cpp -o CMakeFiles/omid.dir/ai/Referee.cpp.s
 
 CMakeFiles/omid.dir/ai/Socket_udp.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Socket_udp.cpp.o: ../ai/Socket_udp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/omid.dir/ai/Socket_udp.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Socket_udp.cpp.o -c /home/omid/Desktop/omid/ai/Socket_udp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/omid.dir/ai/Socket_udp.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Socket_udp.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Socket_udp.cpp
 
 CMakeFiles/omid.dir/ai/Socket_udp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Socket_udp.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Socket_udp.cpp > CMakeFiles/omid.dir/ai/Socket_udp.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Socket_udp.cpp > CMakeFiles/omid.dir/ai/Socket_udp.cpp.i
 
 CMakeFiles/omid.dir/ai/Socket_udp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Socket_udp.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Socket_udp.cpp -o CMakeFiles/omid.dir/ai/Socket_udp.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Socket_udp.cpp -o CMakeFiles/omid.dir/ai/Socket_udp.cpp.s
 
 CMakeFiles/omid.dir/ai/Strategy.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Strategy.cpp.o: ../ai/Strategy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/omid.dir/ai/Strategy.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Strategy.cpp.o -c /home/omid/Desktop/omid/ai/Strategy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/omid.dir/ai/Strategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Strategy.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Strategy.cpp
 
 CMakeFiles/omid.dir/ai/Strategy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Strategy.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Strategy.cpp > CMakeFiles/omid.dir/ai/Strategy.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Strategy.cpp > CMakeFiles/omid.dir/ai/Strategy.cpp.i
 
 CMakeFiles/omid.dir/ai/Strategy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Strategy.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Strategy.cpp -o CMakeFiles/omid.dir/ai/Strategy.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Strategy.cpp -o CMakeFiles/omid.dir/ai/Strategy.cpp.s
 
 CMakeFiles/omid.dir/ai/Vision.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/Vision.cpp.o: ../ai/Vision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/omid.dir/ai/Vision.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Vision.cpp.o -c /home/omid/Desktop/omid/ai/Vision.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/omid.dir/ai/Vision.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/Vision.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Vision.cpp
 
 CMakeFiles/omid.dir/ai/Vision.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/Vision.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/Vision.cpp > CMakeFiles/omid.dir/ai/Vision.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Vision.cpp > CMakeFiles/omid.dir/ai/Vision.cpp.i
 
 CMakeFiles/omid.dir/ai/Vision.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/Vision.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/Vision.cpp -o CMakeFiles/omid.dir/ai/Vision.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Vision.cpp -o CMakeFiles/omid.dir/ai/Vision.cpp.s
 
 CMakeFiles/omid.dir/ai/VisionBall.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/VisionBall.cpp.o: ../ai/VisionBall.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/omid.dir/ai/VisionBall.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/VisionBall.cpp.o -c /home/omid/Desktop/omid/ai/VisionBall.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/omid.dir/ai/VisionBall.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/VisionBall.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/VisionBall.cpp
 
 CMakeFiles/omid.dir/ai/VisionBall.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/VisionBall.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/VisionBall.cpp > CMakeFiles/omid.dir/ai/VisionBall.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/VisionBall.cpp > CMakeFiles/omid.dir/ai/VisionBall.cpp.i
 
 CMakeFiles/omid.dir/ai/VisionBall.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/VisionBall.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/VisionBall.cpp -o CMakeFiles/omid.dir/ai/VisionBall.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/VisionBall.cpp -o CMakeFiles/omid.dir/ai/VisionBall.cpp.s
 
 CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: ../ai/VisionComminucation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o -c /home/omid/Desktop/omid/ai/VisionComminucation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/VisionComminucation.cpp
 
 CMakeFiles/omid.dir/ai/VisionComminucation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/VisionComminucation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/VisionComminucation.cpp > CMakeFiles/omid.dir/ai/VisionComminucation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/VisionComminucation.cpp > CMakeFiles/omid.dir/ai/VisionComminucation.cpp.i
 
 CMakeFiles/omid.dir/ai/VisionComminucation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/VisionComminucation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/VisionComminucation.cpp -o CMakeFiles/omid.dir/ai/VisionComminucation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/VisionComminucation.cpp -o CMakeFiles/omid.dir/ai/VisionComminucation.cpp.s
 
 CMakeFiles/omid.dir/ai/VisionRobot.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/VisionRobot.cpp.o: ../ai/VisionRobot.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/omid.dir/ai/VisionRobot.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/VisionRobot.cpp.o -c /home/omid/Desktop/omid/ai/VisionRobot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/omid.dir/ai/VisionRobot.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/VisionRobot.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/VisionRobot.cpp
 
 CMakeFiles/omid.dir/ai/VisionRobot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/VisionRobot.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/VisionRobot.cpp > CMakeFiles/omid.dir/ai/VisionRobot.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/VisionRobot.cpp > CMakeFiles/omid.dir/ai/VisionRobot.cpp.i
 
 CMakeFiles/omid.dir/ai/VisionRobot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/VisionRobot.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/VisionRobot.cpp -o CMakeFiles/omid.dir/ai/VisionRobot.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/VisionRobot.cpp -o CMakeFiles/omid.dir/ai/VisionRobot.cpp.s
 
 CMakeFiles/omid.dir/ai/estimation.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/estimation.cpp.o: ../ai/estimation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/omid.dir/ai/estimation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/estimation.cpp.o -c /home/omid/Desktop/omid/ai/estimation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/omid.dir/ai/estimation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/estimation.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/estimation.cpp
 
 CMakeFiles/omid.dir/ai/estimation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/estimation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/estimation.cpp > CMakeFiles/omid.dir/ai/estimation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/estimation.cpp > CMakeFiles/omid.dir/ai/estimation.cpp.i
 
 CMakeFiles/omid.dir/ai/estimation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/estimation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/estimation.cpp -o CMakeFiles/omid.dir/ai/estimation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/estimation.cpp -o CMakeFiles/omid.dir/ai/estimation.cpp.s
 
 CMakeFiles/omid.dir/ai/filter.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/filter.cpp.o: ../ai/filter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/omid.dir/ai/filter.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/filter.cpp.o -c /home/omid/Desktop/omid/ai/filter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/omid.dir/ai/filter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/filter.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/filter.cpp
 
 CMakeFiles/omid.dir/ai/filter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/filter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/filter.cpp > CMakeFiles/omid.dir/ai/filter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/filter.cpp > CMakeFiles/omid.dir/ai/filter.cpp.i
 
 CMakeFiles/omid.dir/ai/filter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/filter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/filter.cpp -o CMakeFiles/omid.dir/ai/filter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/filter.cpp -o CMakeFiles/omid.dir/ai/filter.cpp.s
 
 CMakeFiles/omid.dir/ai/geometry.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/geometry.cpp.o: ../ai/geometry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/omid.dir/ai/geometry.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/geometry.cpp.o -c /home/omid/Desktop/omid/ai/geometry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/omid.dir/ai/geometry.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/geometry.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/geometry.cpp
 
 CMakeFiles/omid.dir/ai/geometry.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/geometry.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/geometry.cpp > CMakeFiles/omid.dir/ai/geometry.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/geometry.cpp > CMakeFiles/omid.dir/ai/geometry.cpp.i
 
 CMakeFiles/omid.dir/ai/geometry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/geometry.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/geometry.cpp -o CMakeFiles/omid.dir/ai/geometry.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/geometry.cpp -o CMakeFiles/omid.dir/ai/geometry.cpp.s
 
 CMakeFiles/omid.dir/ai/graphical/glball.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/graphical/glball.cpp.o: ../ai/graphical/glball.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glball.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glball.cpp.o -c /home/omid/Desktop/omid/ai/graphical/glball.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glball.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glball.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glball.cpp
 
 CMakeFiles/omid.dir/ai/graphical/glball.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/graphical/glball.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/graphical/glball.cpp > CMakeFiles/omid.dir/ai/graphical/glball.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glball.cpp > CMakeFiles/omid.dir/ai/graphical/glball.cpp.i
 
 CMakeFiles/omid.dir/ai/graphical/glball.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/graphical/glball.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/graphical/glball.cpp -o CMakeFiles/omid.dir/ai/graphical/glball.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glball.cpp -o CMakeFiles/omid.dir/ai/graphical/glball.cpp.s
 
 CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o: ../ai/graphical/glcircle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o -c /home/omid/Desktop/omid/ai/graphical/glcircle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glcircle.cpp
 
 CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/graphical/glcircle.cpp > CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glcircle.cpp > CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.i
 
 CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/graphical/glcircle.cpp -o CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glcircle.cpp -o CMakeFiles/omid.dir/ai/graphical/glcircle.cpp.s
 
 CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o: ../ai/graphical/glfield.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o -c /home/omid/Desktop/omid/ai/graphical/glfield.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glfield.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glfield.cpp
 
 CMakeFiles/omid.dir/ai/graphical/glfield.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/graphical/glfield.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/graphical/glfield.cpp > CMakeFiles/omid.dir/ai/graphical/glfield.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glfield.cpp > CMakeFiles/omid.dir/ai/graphical/glfield.cpp.i
 
 CMakeFiles/omid.dir/ai/graphical/glfield.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/graphical/glfield.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/graphical/glfield.cpp -o CMakeFiles/omid.dir/ai/graphical/glfield.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glfield.cpp -o CMakeFiles/omid.dir/ai/graphical/glfield.cpp.s
 
 CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o: ../ai/graphical/glframe.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o -c /home/omid/Desktop/omid/ai/graphical/glframe.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glframe.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glframe.cpp
 
 CMakeFiles/omid.dir/ai/graphical/glframe.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/graphical/glframe.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/graphical/glframe.cpp > CMakeFiles/omid.dir/ai/graphical/glframe.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glframe.cpp > CMakeFiles/omid.dir/ai/graphical/glframe.cpp.i
 
 CMakeFiles/omid.dir/ai/graphical/glframe.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/graphical/glframe.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/graphical/glframe.cpp -o CMakeFiles/omid.dir/ai/graphical/glframe.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glframe.cpp -o CMakeFiles/omid.dir/ai/graphical/glframe.cpp.s
 
 CMakeFiles/omid.dir/ai/graphical/glline.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/graphical/glline.cpp.o: ../ai/graphical/glline.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glline.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glline.cpp.o -c /home/omid/Desktop/omid/ai/graphical/glline.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glline.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glline.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glline.cpp
 
 CMakeFiles/omid.dir/ai/graphical/glline.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/graphical/glline.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/graphical/glline.cpp > CMakeFiles/omid.dir/ai/graphical/glline.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glline.cpp > CMakeFiles/omid.dir/ai/graphical/glline.cpp.i
 
 CMakeFiles/omid.dir/ai/graphical/glline.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/graphical/glline.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/graphical/glline.cpp -o CMakeFiles/omid.dir/ai/graphical/glline.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glline.cpp -o CMakeFiles/omid.dir/ai/graphical/glline.cpp.s
 
 CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o: ../ai/graphical/glrobot.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o -c /home/omid/Desktop/omid/ai/graphical/glrobot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glrobot.cpp
 
 CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/graphical/glrobot.cpp > CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glrobot.cpp > CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.i
 
 CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/graphical/glrobot.cpp -o CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/glrobot.cpp -o CMakeFiles/omid.dir/ai/graphical/glrobot.cpp.s
 
 CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o: ../ai/graphical/gltext.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o -c /home/omid/Desktop/omid/ai/graphical/gltext.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/graphical/gltext.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/gltext.cpp
 
 CMakeFiles/omid.dir/ai/graphical/gltext.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/graphical/gltext.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/graphical/gltext.cpp > CMakeFiles/omid.dir/ai/graphical/gltext.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/gltext.cpp > CMakeFiles/omid.dir/ai/graphical/gltext.cpp.i
 
 CMakeFiles/omid.dir/ai/graphical/gltext.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/graphical/gltext.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/graphical/gltext.cpp -o CMakeFiles/omid.dir/ai/graphical/gltext.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/graphical/gltext.cpp -o CMakeFiles/omid.dir/ai/graphical/gltext.cpp.s
 
 CMakeFiles/omid.dir/ai/main.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/main.cpp.o: ../ai/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/omid.dir/ai/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/main.cpp.o -c /home/omid/Desktop/omid/ai/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/omid.dir/ai/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/main.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/main.cpp
 
 CMakeFiles/omid.dir/ai/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/main.cpp > CMakeFiles/omid.dir/ai/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/main.cpp > CMakeFiles/omid.dir/ai/main.cpp.i
 
 CMakeFiles/omid.dir/ai/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/main.cpp -o CMakeFiles/omid.dir/ai/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/main.cpp -o CMakeFiles/omid.dir/ai/main.cpp.s
 
 CMakeFiles/omid.dir/ai/nrf.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/nrf.cpp.o: ../ai/nrf.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/omid.dir/ai/nrf.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/nrf.cpp.o -c /home/omid/Desktop/omid/ai/nrf.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/omid.dir/ai/nrf.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/nrf.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/nrf.cpp
 
 CMakeFiles/omid.dir/ai/nrf.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/nrf.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/nrf.cpp > CMakeFiles/omid.dir/ai/nrf.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/nrf.cpp > CMakeFiles/omid.dir/ai/nrf.cpp.i
 
 CMakeFiles/omid.dir/ai/nrf.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/nrf.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/nrf.cpp -o CMakeFiles/omid.dir/ai/nrf.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/nrf.cpp -o CMakeFiles/omid.dir/ai/nrf.cpp.s
 
 CMakeFiles/omid.dir/ai/timer.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/timer.cpp.o: ../ai/timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/omid.dir/ai/timer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/timer.cpp.o -c /home/omid/Desktop/omid/ai/timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/omid.dir/ai/timer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/timer.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/timer.cpp
 
 CMakeFiles/omid.dir/ai/timer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/timer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/timer.cpp > CMakeFiles/omid.dir/ai/timer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/timer.cpp > CMakeFiles/omid.dir/ai/timer.cpp.i
 
 CMakeFiles/omid.dir/ai/timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/timer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/timer.cpp -o CMakeFiles/omid.dir/ai/timer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/timer.cpp -o CMakeFiles/omid.dir/ai/timer.cpp.s
 
 CMakeFiles/omid.dir/ai/world.cpp.o: CMakeFiles/omid.dir/flags.make
 CMakeFiles/omid.dir/ai/world.cpp.o: ../ai/world.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/omid.dir/ai/world.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/world.cpp.o -c /home/omid/Desktop/omid/ai/world.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/omid.dir/ai/world.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omid.dir/ai/world.cpp.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/world.cpp
 
 CMakeFiles/omid.dir/ai/world.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omid.dir/ai/world.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/omid/ai/world.cpp > CMakeFiles/omid.dir/ai/world.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/world.cpp > CMakeFiles/omid.dir/ai/world.cpp.i
 
 CMakeFiles/omid.dir/ai/world.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omid.dir/ai/world.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/omid/ai/world.cpp -o CMakeFiles/omid.dir/ai/world.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/world.cpp -o CMakeFiles/omid.dir/ai/world.cpp.s
 
 # Object files for target omid
 omid_OBJECTS = \
@@ -735,7 +735,7 @@ omid: /usr/lib/x86_64-linux-gnu/libglut.so
 omid: /usr/lib/x86_64-linux-gnu/libXmu.so
 omid: /usr/lib/x86_64-linux-gnu/libXi.so
 omid: CMakeFiles/omid.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omid/Desktop/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Linking CXX executable omid"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Linking CXX executable omid"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/omid.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -748,6 +748,6 @@ CMakeFiles/omid.dir/clean:
 .PHONY : CMakeFiles/omid.dir/clean
 
 CMakeFiles/omid.dir/depend:
-	cd /home/omid/Desktop/omid/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omid/Desktop/omid /home/omid/Desktop/omid /home/omid/Desktop/omid/cmake-build-debug /home/omid/Desktop/omid/cmake-build-debug /home/omid/Desktop/omid/cmake-build-debug/CMakeFiles/omid.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omid/Desktop/AI-Linux-Windos-2021/omid /home/omid/Desktop/AI-Linux-Windos-2021/omid /home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug /home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug /home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/omid.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/omid.dir/depend
 
