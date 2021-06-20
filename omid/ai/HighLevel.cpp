@@ -1295,7 +1295,7 @@ void HighLevel::ReadyForKick(int index)
 {
 	if (index!= ready_for_kick)
 	{
-		cout << "ready for kick= " << world.getRobotTNumberForIndex(index) << endl;
+//		cout << "ready for kick= " << world.getRobotTNumberForIndex(index) << endl;
 	}
 	ready_for_kick = index;
 
