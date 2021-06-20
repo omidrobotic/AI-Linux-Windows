@@ -287,14 +287,11 @@ void nrf::write_on_port() {
 		&numOfBytesWritten,
 		NULL);
 #elif __linux__
-    for (int i = 0; i < 180; ++i) {
-          output[i]=1;
-    }
-    output[0]=1;
-    for (int i = 0; i < 100000000; ++i) {
+   /* for (int i = 0; i < 180; ++i) {
+      output[i]=1;
+    }*/
+   output[27]=1;
         write(serial_port, output, sizeof (output));  //Send data
-
-    }
 #endif
 
 
