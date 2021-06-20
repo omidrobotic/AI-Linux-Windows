@@ -287,11 +287,23 @@ void nrf::write_on_port() {
 		&numOfBytesWritten,
 		NULL);
 #elif __linux__
-   /* for (int i = 0; i < 180; ++i) {
+    /*for (int i = 0; i < 180; ++i) {
       output[i]=1;
     }*/
-   output[27]=1;
-        write(serial_port, output, sizeof (output));  //Send data
+    char output1[30];
+  /* output1[29]='\001';
+   output1[28]='\367';
+    output1[27]='\337';
+    output1[26]='}';*/
+
+    for (int i = 0; i < 30; ++i) {
+        output1[i]=0;
+    }
+    output1[28]='\001';
+    output1[27]='\367';
+    output1[26]='\337';
+    output1[25]='}';
+    write(serial_port, output1,sizeof (output1));  //Send data
 #endif
 
 
@@ -524,6 +536,9 @@ void SimulatorMove::setAndSend(VecPosition velocity, double w, bool shootOrChip,
     char _data[control.ByteSize()];
     control.SerializePartialToArray(_data, sizeof(_data));
     ERforce.send(_data, sizeof(_data));
+
+
+
 
 }
 void SimulatorMove::testy()

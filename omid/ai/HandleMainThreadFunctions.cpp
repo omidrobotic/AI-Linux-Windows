@@ -7,7 +7,9 @@ int y = 0;
 //Strategy
 void produceRobotsDestinations()
 {
-	Balk::set_balks_in_world_object();
+#if GAME_MODE_ROBOCUP_2021==1
+
+    Balk::set_balks_in_world_object();
 	//auto start_timeM = std::chrono::high_resolution_clock::now();
 	///set robots to line
 	//DrawShape::ClearCircles();
@@ -47,7 +49,11 @@ void produceRobotsDestinations()
 		world.robotT[i].spinBack = false;
 
 	}
-
+    for (int i = 0; i <= world.numT; ++i) {
+        if(i!=1)
+        world.robotT[i].destination_position=world.robotT[i].position;
+    }
+HighLevel::move_ball_to_position(1,VecPosition(1000,1000));
 	  
 
 
@@ -97,7 +103,8 @@ void produceRobotsDestinations()
 
     // Begin Farhan Daemi
 
-    HighLevel::turn_all_spinbacks_on();
+    //HighLevel::turn_all_spinbacks_on();
+
 //    HighLevel::goalKeeper_defend_and_pass(GOALI_NUMBER);
 //    HighLevel::forward_formation(4);
 //    HighLevel::defence_formation(2);
@@ -116,7 +123,7 @@ void produceRobotsDestinations()
 //	HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
 	//HighLevel::defence_format(8);
 
-	switch (world.playMode)
+/*	switch (world.playMode)
 	{
     case mode_State::Stop:
         switch (world.kickMode)
@@ -149,7 +156,7 @@ void produceRobotsDestinations()
 		default:
 			break;
 		}
-		break;
+		break;*/
 
 
 	//case mode_State::Wait:
@@ -296,7 +303,7 @@ void produceRobotsDestinations()
 	//case mode_State::Timeout:
 	//	HighLevel::time_out();
 	//	break;
-	}
+	//}
 
 	//set last destination
 	HighLevel::set_last_destination_set();
@@ -304,8 +311,9 @@ void produceRobotsDestinations()
 	//auto end_timeM = std::chrono::high_resolution_clock::now();
 	//auto timeM = end_timeM - start_timeM;
 	//cout << timeM.count() / 1000000.0 << endl;
-	
-}
+#elif GAME_MODE_ROBOCUP_2021==2
+#endif
+    }
 	
 
 //RRT

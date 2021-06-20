@@ -69,8 +69,8 @@ bool HighLevel::move_ball_to_position(int robotIndex, VecPosition target_pos)
     float robot_angle = world.robotT[world.getIndexForRobotTNumber(robotIndex)].angle;
     float ballAngle = robot_to_ballVec.AngleBetween(VecPosition(1, 0));
     if((robot_pos.getY() - ball_pos.getY()) >= 0) ballAngle = -ballAngle;
-
     world.robotT[world.getIndexForRobotTNumber(robotIndex)].spinBack = true;
+
     // if the ball is inside kicker of robot
     if(world.getRobotTNumberForIndex(HighLevel::find_robot_have_ball('T')) == robotIndex)
     {
@@ -97,7 +97,7 @@ bool HighLevel::move_ball_to_position(int robotIndex, VecPosition target_pos)
         {
             gotoXY(robotIndex, ball_pos);
             // lookAt(robotIndex, ballAngle);
-            sleep(3);
+//            sleep(3);
         }
     }
     else
@@ -3398,7 +3398,7 @@ int HighLevel::find_robot_have_ball(char team)
 		}
 	}
 	//DISTANCE ERROR = 90
-	if (distance2ball <= BALL_RADIUS + DISTANCE_ROBOT_HAVE_BALL)
+	if (distance2ball <= BALL_RADIUS + DISTANCE_ROBOT_HAVE_BALL-60)
 		return distance2ball_index;
 	else
 		return -1;

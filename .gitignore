@@ -1,5 +1,6 @@
 omid/build
-
+omid/ai/Protobuf
+omid/cmake-build-debug
 *.cmake
 *.cmake
 *.cmake

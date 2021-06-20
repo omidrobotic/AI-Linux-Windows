@@ -465,17 +465,8 @@ int main(int argc, char **argv)
             //auto start_time = std::chrono::high_resolution_clock::now();
             for (int i = 0; i < 11; i++)
             {
-
-                    rnfi = world.getRobotTNumberForIndex(i);
-                  //  ERF.go_setKick_setSpinBack_withoutSend(world.robotT[i].velocityToGo, world.robotT[i].wToGo, world.robotT[i].shoot_or_chip, world.robotT[i].kick_power,world.robotT[i].spinBack, rnfi, world, SimulatorMove::robot_speed);
-                //  ERF.set_spinBack(false,i);
-              //    ERF.set_kick(false,0,i);
-               //   ERF.set_velocity_and_W(VecPosition(0,0), 2, i);
-              /// world.robotT[i].destination_position=VecPosition(0,0);
                 ERF.setAndSend(world.robotT[i].velocityToGo,world.robotT[i].wToGo,world.robotT[i].shoot_or_chip,world.robotT[i].kick_power,world.robotT[i].spinBack,i,world);
-                sleep(0.016);
-
-
+                //sleep(0.016);
             }
             //ERF.testy();
             //ERF.send_to_ERforce();
@@ -1228,7 +1219,7 @@ int main(int argc, char **argv)
 	std::thread refree_thread(refree_func);
 	std::thread vision_thread(vision_func);
 	std::thread glut_thread(GLUT_func);
-	//std::thread radio_thread(radio_func);
+	std::thread radio_thread(radio_func);
 	//std::thread Send_Nrf_Temp(send_nrf_temp);
 
 #ifdef w_manual
@@ -1253,7 +1244,7 @@ int main(int argc, char **argv)
 	refree_thread.join();
 	vision_thread.join();
 	glut_thread.join();
-	//radio_thread.join();
+	radio_thread.join();
 	//Send_Nrf_Temp.join();
 
 #ifdef w_manual
@@ -1271,5 +1262,5 @@ int main(int argc, char **argv)
 	//Recieve_From_Nrf.join();
 	//Turn_On_LED.join();
 	//MC.join();
-	test_thread.join();
+	//test_thread.join();
 }
