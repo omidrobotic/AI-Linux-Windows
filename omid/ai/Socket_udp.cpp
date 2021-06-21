@@ -21,6 +21,10 @@ void Socket_udp::Init_Socket_Server(const char * Group_Addr, int Port_Num)
         if (ifa->ifa_addr && ifa->ifa_addr->sa_family==AF_INET) {
             sa = (struct sockaddr_in *) ifa->ifa_addr;
             addr = inet_ntoa(sa->sin_addr);
+            if(ifa->ifa_name=="eth1")
+            {
+                ip_ERforce=addr;
+            }
             printf("Interface: %s\tAddress: %s\n", ifa->ifa_name, addr);
         }
     }
@@ -89,7 +93,7 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num)
 
 	// Have the multicast socket join the multicast group
 	mreq.imr_multiaddr.s_addr = inet_addr(Group_Addr);
-	mreq.imr_interface.s_addr= inet_addr("172.20.0.24");
+	mreq.imr_interface.s_addr= inet_addr(ip_ERforce);
 	//mreq.imr_interface.s_addr = INADDR_ANY;
 	retcode = setsockopt(Multi_Server_Sock, IPPROTO_IP, IP_ADD_MEMBERSHIP,
 		(char *)&mreq, sizeof(mreq));

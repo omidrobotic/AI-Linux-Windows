@@ -54,7 +54,7 @@ public:
 
 #endif
 
-
+      char *ip_ERforce="192.168.0.3";
 	  unsigned int         Multi_Server_Sock;
 	  struct sockaddr_in   Client_Addr;
 	  struct sockaddr_in   Server_Addr;
