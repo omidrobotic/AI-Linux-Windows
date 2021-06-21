@@ -23,10 +23,12 @@ void Socket_udp::Init_Socket_Server(in_addr_t Group_Addr, int Port_Num, const ch
             if(ifa->ifa_name==_udp_client_interface)
             {
                 inteface=addr;
+                printf("find\n");
             }
             printf("Interface: %s\tAddress: %s\n", ifa->ifa_name, addr);
         }
     }
+    inteface="172.20.0.24";
 
     freeifaddrs(ifap);
 #ifdef WIN
