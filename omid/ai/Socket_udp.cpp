@@ -61,16 +61,15 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num, const
         if (ifa->ifa_addr && ifa->ifa_addr->sa_family==AF_INET) {
             sa = (struct sockaddr_in *) ifa->ifa_addr;
             addr = inet_ntoa(sa->sin_addr);
-            if(ifa->ifa_name==/*_udp_client_interface*/"eth1")
+            if(strcmp(ifa->ifa_name, _udp_client_interface)==0)
             {
                 inteface=addr;
                 printf("find\n");
             }
-            printf("%d\n",strcmp(ifa->ifa_name, "eth1"));
             printf("Interface: %s\tAddress: %s\n", ifa->ifa_name, addr);
         }
     }
-    inteface="172.25.0.24";
+    //inteface="172.25.0.24";
 
     freeifaddrs(ifap);
 #ifdef WIN
