@@ -1,4 +1,4 @@
-/home/omid/clion-2021.1.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/omid/Desktop/omidfor
+/home/omid/clion-2021.1.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/omid/Desktop/AI-Linux-Windos-2021/omid
 CMake Warning (dev) at /home/omid/clion-2021.1.2/bin/cmake/linux/share/cmake-3.19/Modules/FindOpenGL.cmake:293 (message):
   Policy CMP0072 is not set: FindOpenGL prefers GLVND by default when
   available.  Run "cmake --help-policy CMP0072" for policy details.  Use the
@@ -21,4 +21,4 @@ This warning is for project developers.  Use -Wno-dev to suppress it.
 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/omid/Desktop/omidfor/cmake-build-debug
+-- Build files have been written to: /home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug

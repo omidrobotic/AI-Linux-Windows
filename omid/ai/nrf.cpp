@@ -537,10 +537,6 @@ void SimulatorMove::setAndSend(VecPosition velocity, double w, bool shootOrChip,
     auto control = RobotControl();
     auto *robotCommand = control.add_robot_commands();
     robotCommand->set_id(id);
-    if(MAX_BALL_SPEED<3 / 2.0*kickPower*0.70710 && shootOrChip)
-        kickPower=MAX_BALL_SPEED/(2*0.70710);
-    else if(MAX_BALL_SPEED<(3/(2.0*kickPower)) && kickPower!=0)
-        kickPower=3/2.0*MAX_BALL_SPEED;
     robotCommand->set_kick_speed((shootOrChip)?3 / 2.0*kickPower*0.70710:(3 / 2.0*kickPower));
     robotCommand->set_kick_angle((shootOrChip)?45:0);
     robotCommand->set_dribbler_speed((spinBack)?1:0); // convert from 1 - 0 to rpm, where 1 is 150 rad/s
@@ -550,7 +546,7 @@ void SimulatorMove::setAndSend(VecPosition velocity, double w, bool shootOrChip,
     velocityLocal = convert_robot_velocity_from_field_to_robot_coord(velocity, world.robotT[index].angle);
     moveCommand->set_forward(velocityLocal.getX()/300.000);
     moveCommand->set_left(velocityLocal.getY()/300.000);
-    moveCommand->set_angular(w*1.15);
+    moveCommand->set_angular(w*2);
 
 
     char _data[control.ByteSize()];

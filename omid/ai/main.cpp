@@ -326,8 +326,8 @@ int main(int argc, char **argv)
 			refree.Refree_parser(world);
 //			if (refree.m_counter != m)
 			{
-			//	cout << "\n KickMode :" << mode_state.getKickModeName(world.kickMode);
-				//cout << "\n PlayMode :" << mode_state.getPlayModeName(world.playMode);
+				cout << "\n KickMode :" << mode_state.getKickModeName(world.kickMode);
+				cout << "\n PlayMode :" << mode_state.getPlayModeName(world.playMode);
 				m = refree.m_counter;
 			}
 			//auto end_time1 = std::chrono::high_resolution_clock::now();
@@ -1234,7 +1234,7 @@ int main(int argc, char **argv)
 	std::thread Matlab_Diagrams(matlab_diagrams);
 #endif
 
-	//std::thread test_thread(test_func);
+	std::thread test_thread(test_func);
 	//std::thread Recieve_From_Nrf(recieve_from_nrf);
 	//std::thread app_thread(APP_func);
 	//std::thread Turn_On_LED(turn_on_led);
