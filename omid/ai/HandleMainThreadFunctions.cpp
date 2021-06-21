@@ -114,9 +114,8 @@ void produceRobotsDestinations()
     // End Farhan Daemi
 
 
-
-//	HighLevel::GoaliHoleCover();
-//	HighLevel::plan_scor(4);
+	HighLevel::GoaliHoleCover();
+	HighLevel::plan_scor(4);
 //	HighLevel::defence_scor2(2);
 //	HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
     //HighLevel::defence_format(8);
