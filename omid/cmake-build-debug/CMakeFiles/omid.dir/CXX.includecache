@@ -554,10 +554,6 @@ world.h
 GameState.h
 /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/GameState.h
 
-/home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Socket_udp.cpp
-Socket_udp.h
-/home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Socket_udp.h
-
 /home/omid/Desktop/AI-Linux-Windos-2021/omid/ai/Socket_udp.h
 stdio.h
 -

@@ -319,6 +319,7 @@ int main(int argc, char **argv)
 	{
 		uint32_t m = 100;
 		refree.recive_Init();
+		cout<<"hello";
 		while (true)
 		{
 			//auto start_time1 = std::chrono::high_resolution_clock::now();

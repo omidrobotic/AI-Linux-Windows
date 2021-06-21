@@ -24,7 +24,7 @@ void Refree::Refree_parser(World &world)
 	///return size of data
 	int ct = refree_udp.recive();
 	//std::cout << "\n refree ln:" << ct;
-	//std::cout << "\n refree \n" << refree_udp.buffer_recive;
+	std::cout << "\n refree \n" << refree_udp.buffer_recive;
 
 	/// Parse a protocol buffer(buffer_recive) contained in an array of bytes.
 	if (packet.ParseFromArray(refree_udp.buffer_recive, ct) < 0)
