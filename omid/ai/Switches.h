@@ -67,7 +67,7 @@
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"127.0.0.1"
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"192.168.43.10" //Farhan
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"192.168.0.3" //Zoli
-#define GROUP_ADDR_SEND_ERforce_COMMAND	"127.0.0.1" //Zoli
+#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.24.0.20" //Zoli
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"192.168.0.4" //Omid Vision PC
 
 
