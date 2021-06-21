@@ -10,7 +10,7 @@ bool Vision::recievePacket(void)
 {
 	
 	int ct=vision_udp.recive();
-	cout << "\n vision ln:" << ct;
+	//cout << "\n vision ln:" << ct;
 	packet.ParseFromArray(vision_udp.buffer_recive, ct);
 	
 	if (packet.has_detection())

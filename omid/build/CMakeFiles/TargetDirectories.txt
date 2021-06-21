@@ -1,3 +1,0 @@
-/home/omid/Desktop/AI-Linux-Windos-2021/omid/build/CMakeFiles/rebuild_cache.dir
-/home/omid/Desktop/AI-Linux-Windos-2021/omid/build/CMakeFiles/edit_cache.dir
-/home/omid/Desktop/AI-Linux-Windos-2021/omid/build/CMakeFiles/omid.dir
