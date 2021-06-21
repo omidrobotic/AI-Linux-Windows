@@ -12,7 +12,7 @@
 // Linux headers
 #include <fcntl.h> // Contains file controls like O_RDWR
 #include <errno.h> // Error integer and strerror() function
-#include <termios.h> // Contains POSIX terminal control definitions
+///#include <termios.h> // Contains POSIX terminal control definitions
 #include <unistd.h> // write(), read(), close()
 #include <stdlib.h>
 #include <stdint.h>     /* uint32_t */
@@ -245,7 +245,7 @@ void nrf::write_on_port() {
             fcntl(serial_port, F_SETFL, 0);
             printf("port is open.\n");
         }
-        struct termios2 tty;      // structure to store the port settings in
+   /*     struct termios2 tty;      // structure to store the port settings in
         ioctl(serial_port, TCGETS2, &tty);
 
         //================= (.c_cflag) ===============//
@@ -263,7 +263,7 @@ void nrf::write_on_port() {
         tty.c_ospeed = 256000;
         //  tty.c_oflag     =   0;              // No remapping, no delays
         //  tty.c_oflag     &=  ~OPOST;            // Make raw
-        ioctl(serial_port, TCSETS2, &tty);
+        ioctl(serial_port, TCSETS2, &tty);*/
         ftime = false;
 #endif
 
