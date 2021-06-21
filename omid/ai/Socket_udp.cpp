@@ -89,7 +89,7 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num)
 
 	// Have the multicast socket join the multicast group
 	mreq.imr_multiaddr.s_addr = inet_addr(Group_Addr);
-	mreq.imr_interface.s_addr= inet_addr("192.168.0.3");
+	mreq.imr_interface.s_addr= inet_addr("172.20.0.24");
 	//mreq.imr_interface.s_addr = INADDR_ANY;
 	retcode = setsockopt(Multi_Server_Sock, IPPROTO_IP, IP_ADD_MEMBERSHIP,
 		(char *)&mreq, sizeof(mreq));
