@@ -10,7 +10,7 @@ Socket_udp::Socket_udp(void)
 {
 
 }
-void Socket_udp::Init_Socket_Server(in_addr_t Group_Addr, int Port_Num, char *_udp_client_interface)
+void Socket_udp::Init_Socket_Server(in_addr_t Group_Addr, int Port_Num, const char * _udp_client_interface)
 {
     struct ifaddrs *ifap, *ifa;
     struct sockaddr_in *sa;
