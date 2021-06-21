@@ -63,7 +63,8 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num, const
             addr = inet_ntoa(sa->sin_addr);
             if(strcmp(ifa->ifa_name, _udp_client_interface)==0)
             {
-                inteface=addr;
+                memcpy(inteface,addr,sizeof (addr));
+//                inteface=addr;
                 printf("find\n");
             }
             printf("Interface: %s\tAddress: %s\n", ifa->ifa_name, addr);
