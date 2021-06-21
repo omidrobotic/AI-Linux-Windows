@@ -23,6 +23,8 @@
 #include <netinet/in.h>
 #endif
 #include "Switches.h"
+#include<stdio.h>
+#include<string.h>
 class Socket_udp
 {
 

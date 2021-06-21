@@ -66,10 +66,11 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num, const
                 inteface=addr;
                 printf("find\n");
             }
+            printf("%d\n",strcmp(ifa->ifa_name, "eth1"));
             printf("Interface: %s\tAddress: %s\n", ifa->ifa_name, addr);
         }
     }
-   // inteface="172.25.0.24";
+    inteface="172.25.0.24";
 
     freeifaddrs(ifap);
 #ifdef WIN
