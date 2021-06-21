@@ -1230,7 +1230,7 @@ int main(int argc, char **argv)
 	std::thread refree_thread(refree_func);
 	std::thread vision_thread(vision_func);
 	std::thread glut_thread(GLUT_func);
-	//std::thread radio_thread(radio_func);
+	std::thread radio_thread(radio_func);
 	//.std::thread Send_Nrf_Temp(send_nrf_temp);
 
 #ifdef w_manual
@@ -1245,7 +1245,7 @@ int main(int argc, char **argv)
 	std::thread Matlab_Diagrams(matlab_diagrams);
 #endif
 
-	std::thread test_thread(test_func);
+	//std::thread test_thread(test_func);
 	//std::thread Recieve_From_Nrf(recieve_from_nrf);
 	//std::thread app_thread(APP_func);
 	//std::thread Turn_On_LED(turn_on_led);
@@ -1255,7 +1255,7 @@ int main(int argc, char **argv)
 	refree_thread.join();
 	vision_thread.join();
 	glut_thread.join();
-	//radio_thread.join();
+	radio_thread.join();
 	///Send_Nrf_Temp.join();
 
 #ifdef w_manual
@@ -1273,5 +1273,5 @@ int main(int argc, char **argv)
 	//Recieve_From_Nrf.join();
 	//Turn_On_LED.join();
 	//MC.join();
-	test_thread.join();
+	//test_thread.join();
 }

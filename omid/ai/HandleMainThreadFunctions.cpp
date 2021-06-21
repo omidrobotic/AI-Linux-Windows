@@ -133,19 +133,22 @@ void produceRobotsDestinations()
 
 
 
+/*
 
     switch (world.playMode)
     {
         case mode_State::ballPlacement:
             indexOfNearestRobot = HighLevel::nearest_robot_to_ball('T');
-      /*      for (int i = 0; i <= world.numT; i++)
+      */
+/*      for (int i = 0; i <= world.numT; i++)
             {
                 if (indexOfNearestRobot==i)
                     HighLevel::move_ball_to_position(world.getRobotTNumberForIndex(indexOfNearestRobot),
                                                      world.team_T.Set_Refree_Ball_Position);
                 else
                     world.robotT[i].destination_position=world.robotT[i].position;
-            }*/
+            }*//*
+
             world.robotT[indexOfNearestRobot].kick_power=0;
             break;
         case mode_State::Stop:
@@ -203,9 +206,11 @@ void produceRobotsDestinations()
                     HighLevel::start_robotT_format_penaltyt(world, 1);
                     break;
 
-                    /*case mode_State::KickMode::NoKickMode:
+                    */
+/*case mode_State::KickMode::NoKickMode:
                         HighLevel::start_robotT_format_NoKickMode("NoKickMode");
-                        break;*/
+                        break;*//*
+
 
                 case mode_State::KickMode::DirectFreeKickT:
                     HighLevel::GoaliHoleCover();
@@ -246,7 +251,8 @@ void produceRobotsDestinations()
             //	{
 
             //	}
-            /*else if (HighLevel::play_mode== opponent)
+            */
+/*else if (HighLevel::play_mode== opponent)
             {
                 HighLevel::GoaliHoleCover();
                 HighLevel::defence_hol_robotO(1, HighLevel::find_robot_have_ball('O'));
@@ -259,7 +265,8 @@ void produceRobotsDestinations()
                 HighLevel::defence_hol_robotO(-1,1);
                 HighLevel::defence_scor2(int((world.numT - 2) * 0.67));
                 HighLevel::find_roboto_pass(world.numT - (int((world.numT - 2) * 0.67) + 2));
-            }*/
+            }*//*
+
             switch (world.kickMode)
             {
                 case mode_State::KickMode::KickOffO:
@@ -278,10 +285,12 @@ void produceRobotsDestinations()
 
                 case mode_State::KickMode::NoKickMode:
 
-                    /*HighLevel::GoaliHoleCover();
+                    */
+/*HighLevel::GoaliHoleCover();
                     HighLevel::plan_scor(4);
                     HighLevel::defence_scor2(2);
-                    HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));*/
+                    HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));*//*
+
                     HighLevel::GoaliHoleCover();
                     HighLevel::plan_scor(int(PRESENT_OF_ATTACKER*(world.numT - 2)));
 
@@ -336,6 +345,7 @@ void produceRobotsDestinations()
         default:
             break;
     }
+*/
 
     //set last destination
     HighLevel::set_last_destination_set();

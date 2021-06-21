@@ -1,4 +1,10 @@
 #include "Socket_udp.h"
+
+
+#include <arpa/inet.h>
+#include <sys/socket.h>
+#include <ifaddrs.h>
+#include <stdio.h>
 //omidguard dont touch
 Socket_udp::Socket_udp(void)
 {
@@ -6,6 +12,20 @@ Socket_udp::Socket_udp(void)
 }
 void Socket_udp::Init_Socket_Server(const char * Group_Addr, int Port_Num)
 {
+    struct ifaddrs *ifap, *ifa;
+    struct sockaddr_in *sa;
+    char *addr;
+    printf("test");
+    getifaddrs (&ifap);
+    for (ifa = ifap; ifa; ifa = ifa->ifa_next) {
+        if (ifa->ifa_addr && ifa->ifa_addr->sa_family==AF_INET) {
+            sa = (struct sockaddr_in *) ifa->ifa_addr;
+            addr = inet_ntoa(sa->sin_addr);
+            printf("Interface: %s\tAddress: %s\n", ifa->ifa_name, addr);
+        }
+    }
+
+    freeifaddrs(ifap);
 #ifdef WIN
 // This stuff initializes winsock
 WSAStartup(wVersionRequested, &wsaData);
@@ -69,7 +89,8 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num)
 
 	// Have the multicast socket join the multicast group
 	mreq.imr_multiaddr.s_addr = inet_addr(Group_Addr);
-	mreq.imr_interface.s_addr = INADDR_ANY;
+	mreq.imr_interface.s_addr= inet_addr("192.168.0.3");
+	//mreq.imr_interface.s_addr = INADDR_ANY;
 	retcode = setsockopt(Multi_Server_Sock, IPPROTO_IP, IP_ADD_MEMBERSHIP,
 		(char *)&mreq, sizeof(mreq));
 	if (retcode < 0)
@@ -102,7 +123,7 @@ void Socket_udp::send2ERforce(std::string *buffer_send,int buffer_send_len)
 int Socket_udp::recive(void)
 {
 
-	
+
 	addr_len = sizeof(Client_Addr);
 	
 		// Receive a datagram from the multicast server
@@ -111,7 +132,7 @@ int Socket_udp::recive(void)
 			printf("*** ERROR - recvfrom() failed %d \n ", addr_len);
 			//getchar();
 		}
-
+//getifaddr();
 		// Output the received buffer to the screen as a string
 		//printf("%s\n", buffer);
 		return retcode;
