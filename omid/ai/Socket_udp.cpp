@@ -10,7 +10,7 @@ Socket_udp::Socket_udp(void)
 {
 
 }
-void Socket_udp::Init_Socket_Server(in_addr_t Group_Addr, int Port_Num)
+void Socket_udp::Init_Socket_Server_Multicas(in_addr_t Group_Addr, int Port_Num)
 {
 
 #ifdef WIN
