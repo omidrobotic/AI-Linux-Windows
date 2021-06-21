@@ -241,11 +241,17 @@ void nrf::write_on_port() {
         statusNrf = SetCommState(hComm, &dcbSerialParams);
         ftime = false;
 #elif __linux__
-        serial_port = open("/dev/ttyUSB2", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
+        sleep(0.5);
+        int fd1=open("/dev/ttyUSB1", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
+        sleep(0.5);
+        int fd2=open("/dev/ttyUSB2", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
+        sleep(0.5);
+        int fd3=open("/dev/ttyUSB3", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
+        sleep(0.5);
+        int fd4=open("/dev/ttyUSB4", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
 
-        if(serial_port == -1) // if open is unsucessful
+        if(fd1==-1 && fd2==-1 && fd3==-1 && fd4==-1)
         {
-            //perror("open_port: Unable to open /dev/ttyS0 - ");
             printf("open_port: Unable to open /dev/ttyUSB1. \n");
         }
         else
@@ -253,6 +259,13 @@ void nrf::write_on_port() {
             fcntl(serial_port, F_SETFL, 0);
             printf("port is open.\n");
         }
+        serial_port = open("/dev/ttyUSB1", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
+        sleep(1);
+        close(serial_port);
+        sleep(1);
+        serial_port = open("/dev/ttyUSB1", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
+
+
         struct termios2 tty;      // structure to store the port settings in
         ioctl(serial_port, TCGETS2, &tty);
 
@@ -260,22 +273,25 @@ void nrf::write_on_port() {
 
         tty.c_cflag     &=  ~PARENB;           // No parity bit is added to the output characters
         tty.c_cflag     &=  ~CSTOPB;        // Only one stop-bit is used
-        tty.c_cflag     &=  ~CSIZE;            // CSIZE is a mask for the number of bits per character
+        //tty.c_cflag     &=  ~CSIZE;            // CSIZE is a mask for the number of bits per character
         tty.c_cflag     |=  CS8;            // Set to 8 bits per character
-        tty.c_cflag     &=  ~CRTSCTS;       // Disable hadrware flow control (RTS/CTS)
-        tty.c_cflag     |=  CREAD | CLOCAL;
+        //tty.c_cflag     &=  ~CRTSCTS;       // Disable hadrware flow control (RTS/CTS)
+        //tty.c_cflag     |=  CREAD | CLOCAL;
         tty.c_cflag &= ~CBAUD;
-        tty.c_cflag |= CBAUDEX;
-        // tty.c_cflag |= BOTHER;
+       tty.c_cflag |= CBAUDEX;
+       //  tty.c_cflag |= BOTHER;
         tty.c_ispeed = 256000;
         tty.c_ospeed = 256000;
-        tty.c_oflag     =   0;              // No remapping, no delays
-        tty.c_oflag     &=  ~OPOST;            // Make raw
+      //  tty.c_oflag     =   0;              // No remapping, no delays
+      //  tty.c_oflag     &=  ~OPOST;            // Make raw
 
 
 
         ioctl(serial_port, TCSETS2, &tty);
-    ftime = false;
+        char send[1];
+        send[0]=0;
+        //write(serial_port, send,sizeof (send));  //Send data
+        ftime = false;
 #endif
 
 
@@ -290,20 +306,20 @@ void nrf::write_on_port() {
     /*for (int i = 0; i < 180; ++i) {
       output[i]=1;
     }*/
-    char output1[30];
+    char output1[180];
   /* output1[29]='\001';
    output1[28]='\367';
     output1[27]='\337';
     output1[26]='}';*/
 
-    for (int i = 0; i < 30; ++i) {
+    for (int i = 0; i < 180; ++i) {
         output1[i]=0;
     }
-    output1[28]='\001';
-    output1[27]='\367';
-    output1[26]='\337';
-    output1[25]='}';
-    write(serial_port, output1,sizeof (output1));  //Send data
+    output1[29]='\001';
+   output1[28]='\367';
+    output1[27]='\337';
+   output1[26]='}';
+   write(serial_port, output1,sizeof (output1));  //Send data
 #endif
 
 
@@ -521,6 +537,10 @@ void SimulatorMove::setAndSend(VecPosition velocity, double w, bool shootOrChip,
     auto control = RobotControl();
     auto *robotCommand = control.add_robot_commands();
     robotCommand->set_id(id);
+    if(MAX_BALL_SPEED<3 / 2.0*kickPower*0.70710 && shootOrChip)
+        kickPower=MAX_BALL_SPEED/(2*0.70710);
+    else if(MAX_BALL_SPEED<(3/(2.0*kickPower)) && kickPower!=0)
+        kickPower=3/2.0*MAX_BALL_SPEED;
     robotCommand->set_kick_speed((shootOrChip)?3 / 2.0*kickPower*0.70710:(3 / 2.0*kickPower));
     robotCommand->set_kick_angle((shootOrChip)?45:0);
     robotCommand->set_dribbler_speed((spinBack)?1:0); // convert from 1 - 0 to rpm, where 1 is 150 rad/s
@@ -530,7 +550,7 @@ void SimulatorMove::setAndSend(VecPosition velocity, double w, bool shootOrChip,
     velocityLocal = convert_robot_velocity_from_field_to_robot_coord(velocity, world.robotT[index].angle);
     moveCommand->set_forward(velocityLocal.getX()/300.000);
     moveCommand->set_left(velocityLocal.getY()/300.000);
-    moveCommand->set_angular(w*2);
+    moveCommand->set_angular(w*1.15);
 
 
     char _data[control.ByteSize()];
