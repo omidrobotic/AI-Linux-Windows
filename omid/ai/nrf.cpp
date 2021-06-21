@@ -315,7 +315,7 @@ SimulatorMove::SimulatorMove()
 }
 void SimulatorMove::initialize_port(const char* ip, int port)
 {
-    ERforce.Init_Socket_Server(ip, port); //"192.168.0.255"
+    ERforce.Init_Socket_Server(ip, port,UDP_CLIENT_INTERFACE); //"192.168.0.255"
 }
 void SimulatorMove::closeUDP()
 {
@@ -693,7 +693,7 @@ SimulatorMove::SimulatorMove()
 
 void SimulatorMove::initialize_port(const char* ip, int port)
 {
-	grsim_udp.Init_Socket_Server(ip, port); //"192.168.0.255"
+	grsim_udp.Init_Socket_Server(ip, port,UDP_CLIENT_INTERFACE); //"192.168.0.255"
 	
 }
 

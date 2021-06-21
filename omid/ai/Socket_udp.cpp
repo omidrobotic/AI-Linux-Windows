@@ -10,18 +10,17 @@ Socket_udp::Socket_udp(void)
 {
 
 }
-void Socket_udp::Init_Socket_Server(const char * Group_Addr, int Port_Num)
+void Socket_udp::Init_Socket_Server(const char * Group_Addr, int Port_Num, char *_udp_client_interface)
 {
     struct ifaddrs *ifap, *ifa;
     struct sockaddr_in *sa;
     char *addr;
-    printf("test");
     getifaddrs (&ifap);
     for (ifa = ifap; ifa; ifa = ifa->ifa_next) {
         if (ifa->ifa_addr && ifa->ifa_addr->sa_family==AF_INET) {
             sa = (struct sockaddr_in *) ifa->ifa_addr;
             addr = inet_ntoa(sa->sin_addr);
-            if(ifa->ifa_name==UDP_CLIENT_INTERFACE)
+            if(ifa->ifa_name==_udp_client_interface)
             {
                 inteface=addr;
             }
@@ -93,9 +92,11 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num)
 
 	// Have the multicast socket join the multicast group
 	mreq.imr_multiaddr.s_addr = inet_addr(Group_Addr);
-	if(inteface=="defult")
+	if(inteface=="defult") {
         mreq.imr_interface.s_addr = INADDR_ANY;
-    else
+        printf("defult cant find UDP_CLIENT_INTERFACE");
+    }
+        else
 	mreq.imr_interface.s_addr= inet_addr(inteface);
 	retcode = setsockopt(Multi_Server_Sock, IPPROTO_IP, IP_ADD_MEMBERSHIP,
 		(char *)&mreq, sizeof(mreq));
