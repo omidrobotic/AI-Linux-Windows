@@ -28,7 +28,7 @@ void Socket_udp::Init_Socket_Server(in_addr_t Group_Addr, int Port_Num, const ch
             printf("Interface: %s\tAddress: %s\n", ifa->ifa_name, addr);
         }
     }
-    inteface="172.20.0.24";
+    inteface="172.25.0.24";
 
     freeifaddrs(ifap);
 #ifdef WIN
