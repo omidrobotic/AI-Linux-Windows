@@ -47,7 +47,7 @@ if (retcode < 0)
 // Set addr_len
 addr_len = sizeof(Server_Addr);
 printf("*** ready to Sending multicast datagrams to '%d' (port = %d) \n",
-	Group_Addr, Port_Num);}
+       Server_Addr.sin_addr.s_addr, Port_Num);}
 
 
 
@@ -101,7 +101,7 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num, const
 
 	// Have the multicast socket join the multicast group
 	mreq.imr_multiaddr.s_addr = inet_addr(Group_Addr);
-	if(inteface==NULL/*"defult"*/) {
+	if(strcmp(inteface,"defult")==0) {
         mreq.imr_interface.s_addr = INADDR_ANY;
         printf("defult cant find UDP_CLIENT_INTERFACE");
     }
