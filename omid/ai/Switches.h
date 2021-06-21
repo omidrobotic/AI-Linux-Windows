@@ -57,7 +57,7 @@
 #define GROUP_ADDR_Refree  "224.5.23.1" 
 //----- Defines Vision-------------------------------------------------------------- 
 #define PORT_NUM_Vision        10006
-#define GROUP_ADDR_Vision  "224.5.23.2"
+#define GROUP_ADDR_Vision  "127.0.0.1"//"224.5.23.2"
 //----- Defines Send Grsim Commands-------------------------------------------------
 #define PORT_NUM_SEND_GRSIM_COMMAND		20011
 #define GROUP_ADDR_SEND_GRSIM_COMMAND	"127.0.0.1"//"192.168.0.2"
