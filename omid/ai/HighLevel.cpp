@@ -70,7 +70,8 @@ bool HighLevel::move_ball_to_position(int robotIndex, VecPosition target_pos)
     float ballAngle = robot_to_ballVec.AngleBetween(VecPosition(1, 0));
     if((robot_pos.getY() - ball_pos.getY()) >= 0) ballAngle = -ballAngle;
     world.robotT[world.getIndexForRobotTNumber(robotIndex)].spinBack = true;
-
+    world.robotT[world.getIndexForRobotTNumber(robotIndex)].kick_power = 0;
+    world.robotT[world.getIndexForRobotTNumber(robotIndex)].shoot_or_chip= true;
     // if the ball is inside kicker of robot
     if(world.getRobotTNumberForIndex(HighLevel::find_robot_have_ball('T')) == robotIndex)
     {
@@ -2369,11 +2370,11 @@ void HighLevel::Shoot(int index_robotT)
 				world.robotT[index_robotT].shoot_or_chip = 1;
 				//	world.robotT[id].kick_power = 7/((FieldLength/2)/mid_bigest_holl.getDistanceTo(world.ball.getCurrentBallPosition()));
 				if (0.70710678*sqrt(((mid_bigest_holl.getDistanceTo(world.ball.getCurrentBallPosition()) / 1000)*9.8) / (1 - (0.43*0.70710678*0.70710678))) >= MAX_BALL_SPEED)
-					//	world.robotT[index_robotT].kick_power = MAX_BALL_SPEED / 0.70710678;
-					world.robotT[index_robotT].kick_power = 3;
+						world.robotT[index_robotT].kick_power = MAX_BALL_SPEED / 0.70710678;
+					//world.robotT[index_robotT].kick_power = 3;
 				else
 					world.robotT[index_robotT].kick_power = 3;
-					//world.robotT[index_robotT].kick_power = 0.8*sqrt(((mid_bigest_holl.getDistanceTo(world.ball.getCurrentBallPosition()) / 1000)*9.8) / (1 - (0.43*0.70710678*0.70710678)));
+					world.robotT[index_robotT].kick_power = 0.8*sqrt(((mid_bigest_holl.getDistanceTo(world.ball.getCurrentBallPosition()) / 1000)*9.8) / (1 - (0.43*0.70710678*0.70710678)));
 				//z	world.spin = 0;
 				//z	world.speed = speed;
 				//z	world.chip = 1;
@@ -3119,6 +3120,7 @@ int HighLevel::find_best_robot_pass(int index_robotT)
 	double distance_roboto_for_chipe[MAX_ROBOTS_PER_TEAM_IN_THE_FIELD];
 	int max_index = 0;
 	int last_max = 0;
+	//cout<<"mast"<<finde_for_pass<<'\n';
 	if (finde_for_pass == 0)
 	{
 		int number_robott_block_robotT = 0;
@@ -3212,6 +3214,7 @@ int HighLevel::find_best_robot_pass(int index_robotT)
 		for (int i = 0; i < world.numO; i++)
 			robots[num_of_robots++] = Circle(world.robotO[i].position, ROBOT_RADIUS);
 
+
 		//for (int i = 0; i < world.numT; i++)
 		//	robots[num_of_robots++] = Circle(world.robotT[i].position, ROBOT_RADIUS);
 
@@ -3261,19 +3264,19 @@ int HighLevel::find_best_robot_pass(int index_robotT)
 
 			if (max < danger_importance_number_robott_block_roboto[j] + danger_importance_goal_distance[j] + distance_roboto_for_chipe[j] + danger_importance_goal[j]+ danger_importance_distance_to_robott[j])
 			{
-			/*	if (j == index_robotT)
+				if (j == index_robotT)
 				{
-					if(world.robotT[index_robotT].position.getDistanceTo(Field::getGoalMidP()) > (FieldLengthG / 4) || danger_importance_goal[index_robotT] < (Field::getUpBarO().getDistanceTo(Field::getDownBarO()) / 3))
+					if(world.robotT[index_robotT].position.getDistanceTo(Field::getGoalMidP()) > (FieldLengthG / 2.35) || danger_importance_goal[index_robotT] < (Field::getUpBarO().getDistanceTo(Field::getDownBarO()) / 3))
 					{
 
 					}
 					else
 					{
-						max = danger_importance_number_robott_block_roboto[j] * 200 - danger_importance_goal_distance[j] / 100 + distance_roboto_for_chipe[j] / 5000 + danger_importance_goal[j];
+						max = danger_importance_number_robott_block_roboto[j] * 400 - danger_importance_goal_distance[j] / 100 + distance_roboto_for_chipe[j] / 5000 + danger_importance_goal[j];
 						max_index = j;
 					}
 				}
-				else*/
+				else
 				{
 					max = danger_importance_number_robott_block_roboto[j]+ danger_importance_goal_distance[j] + distance_roboto_for_chipe[j] + danger_importance_goal[j]+ danger_importance_distance_to_robott[j];
 					max_index = j;
@@ -3287,7 +3290,7 @@ int HighLevel::find_best_robot_pass(int index_robotT)
 		if ((abs(score_pass[max_pass_score] - score_pass[max_index]) > 2)||(HighLevel::pass_mode != submit))
 		{
 			max_pass_score = max_index;
-			cout << "sdf" << endl;
+			//cout << "sdf" << endl;
 		}
 		max_index = max_pass_score;
 		///to shoot
@@ -3336,7 +3339,7 @@ int HighLevel::find_best_robot_pass(int index_robotT)
 		{
 			HighLevel::Shoot(sender_robotT_pass);
 		}
-		if (HighLevel::find_robot_have_ball('T') != -1)
+		if ((HighLevel::find_robot_have_ball('T') != -1 && HighLevel::find_robot_have_ball('O') != -1) && (world.ball.getVelocity().m_x<0.25 && world.ball.getVelocity().m_y<0.25) && world.robotT[sender_robotT_pass].position.getDistanceTo(world.ball.getCurrentBallPosition())>200)
 		{
 
 			HighLevel::pass_mode = receive;
@@ -3350,6 +3353,7 @@ int HighLevel::find_best_robot_pass(int index_robotT)
 		{
 				cant_pass_on_the_ground[z] = false;
 		}
+		cout<<"vaaaaay cheghad\n";
 	}
 	//DrawShape::DrawDot(world.robotT[index_robotT].position, 50, 0, 255, 0);
 	//DrawShape::DrawDot(world.robotT[denger_index_robotT].position, 50, 0, 0, 255);
@@ -3398,7 +3402,7 @@ int HighLevel::find_robot_have_ball(char team)
 		}
 	}
 	//DISTANCE ERROR = 90
-	if (distance2ball <= BALL_RADIUS + DISTANCE_ROBOT_HAVE_BALL-60)
+	if (distance2ball <= BALL_RADIUS + DISTANCE_ROBOT_HAVE_BALL-50)
 		return distance2ball_index;
 	else
 		return -1;
@@ -3449,7 +3453,7 @@ void HighLevel::Pass(int index1, int index2)
 			finde_for_pass = 1;
 			if (cant_pass_on_the_ground[index1] == true)
 			{
-				world.robotT[index1].velocity = VecPosition(2*(world.robotT[index2].position.getX() - world.robotT[index1].position.getX()), 2*(world.robotT[index2].position.getY() - world.robotT[index1].position.getY()));
+			//	world.robotT[index1].velocity = VecPosition(2*(world.robotT[index2].position.getX() - world.robotT[index1].position.getX()), 2*(world.robotT[index2].position.getY() - world.robotT[index1].position.getY()));
 				world.robotT[index1].shoot_or_chip = 1;
 				if (1.1*0.70710678*sqrt(((world.robotT[index1].position.getDistanceTo(world.robotT[index2].position) / 1000)*9.8) / (1.5 - (0.43))) >= MAX_BALL_SPEED)
 				{
@@ -3465,7 +3469,7 @@ void HighLevel::Pass(int index1, int index2)
 				if (1.1*sqrt(((world.robotT[index1].position.getDistanceTo(world.robotT[index2].position) / 1000)*9.8) / (1.5 - (0.43))) >= MAX_BALL_SPEED)
 					world.robotT[index1].kick_power = MAX_BALL_SPEED;
 				else
-					world.robotT[index1].kick_power = 0.8*sqrt(((world.robotT[index1].position.getDistanceTo(world.robotT[index2].position) / 1000)*9.8) / (1.5 - (0.43)));
+					world.robotT[index1].kick_power = 0.8*sqrt(((world.robotT[index1].position.getDistanceTo(world.robotT[index2].position) / 1000)*9.8) / (1.5 ));
 			}
 		}
 		else
@@ -3481,7 +3485,7 @@ void HighLevel::Pass(int index1, int index2)
 	}
 	else if (HighLevel::pass_mode == expectation)
 	{
-		finde_for_pass = 0;
+		//finde_for_pass = 0;
 		VecPosition end = VecPosition((world.ball.getCurrentBallPosition().getX() + 7*world.ball.velocity.getX()),(world.ball.getCurrentBallPosition().getY() + 7*world.ball.velocity.getY()));
 		Paraline ball_go = Paraline(world.ball.getCurrentBallPosition(), end);
 		VecPosition stand=ball_go.getPointOnParalineClosestTo(world.robotT[index2].position);
@@ -3567,7 +3571,7 @@ void HighLevel::plan_scor(int number_of_attacker)
 	VecPosition max_score_position;
 	VecPosition socre_position[MAX_ROBOTS_PER_TEAM_IN_THE_FIELD];
 	///////////////////////////////////////////////////////////set if you click on x>0
-	if (world.mouseX > 0 && k == 0 && plus_plan_score > 1)
+	/*if (world.mouseX > 0 && k == 0 && plus_plan_score > 1)
 	{
 		u = 0;
 		k = 1;
@@ -3579,9 +3583,9 @@ void HighLevel::plan_scor(int number_of_attacker)
 		k = 0;
 		plus_plan_score++;
 
-	}
+	}*/
 	//////////////////////////////////////////////////////////////////////////
-	if (u == 0)
+	//if (u == 0)
 	{
 		double max = 0;
 		typedef std::vector<double> int_vector;
