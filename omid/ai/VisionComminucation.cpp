@@ -3,7 +3,7 @@
 
 void Vision::recive_Init(void)
 {
-	vision_udp.Init_Socket_Client(GROUP_ADDR_Vision, PORT_NUM_Vision);
+	vision_udp.Init_Socket_Client(GROUP_ADDR_Vision, PORT_NUM_Vision,UDP_CLIENT_INTERFACE);
 }
 
 bool Vision::recievePacket(void)

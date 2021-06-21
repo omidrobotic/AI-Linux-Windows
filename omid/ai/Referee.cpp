@@ -12,7 +12,7 @@ void Refree::recive_Init(void)
     world.setTeamColor(TC_Yellow);
     world.team_T.sendDataPort=PORT_NUM_SEND_ERforce_COMMAND_YELLOW;
     world.getInstance().team_color=TC_Yellow;
-	refree_udp.Init_Socket_Client(GROUP_ADDR_Refree, PORT_NUM_Refree);
+	refree_udp.Init_Socket_Client(GROUP_ADDR_Refree, PORT_NUM_Refree,UDP_CLIENT_INTERFACE);
     world.getInstance().team_side=TS_LeftSide;
     world.setTeamSide(TS_LeftSide);
 	

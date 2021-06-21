@@ -30,15 +30,15 @@ public:
     void send2ERforce(std::string *buffer_send,int buffer_send_len);
 #ifdef _WIN32
 explicit Socket_udp(void);
-	 void Init_Socket_Server(const char * Group_Addr, int Port_Num,char *_udp_client_interface);
-     void Init_Socket_Client(const char * Group_Addr, int Port_Num);
+	 void Init_Socket_Server(const char * Group_Addr, int Port_Num);
+     void Init_Socket_Client(const char * Group_Addr, int Port_Num,char *_udp_client_interface);
 	 void send(char buffer_send[2048], int buffer_send_len);
 	 int recive(void);
 	 void Close_Socket(void);
 #elif __linux__
     explicit Socket_udp(void);
-    void Init_Socket_Server(in_addr_t Group_Addr, int Port_Num,const char * _udp_client_interface);
-    void Init_Socket_Client(const char * Group_Addr, int Port_Num);
+    void Init_Socket_Server(in_addr_t Group_Addr, int Port_Num);
+    void Init_Socket_Client(const char * Group_Addr, int Port_Num,const char * _udp_client_interface);
     void send(char buffer_send[100000], int buffer_send_len);
     int recive(void);
     void Close_Socket(void);

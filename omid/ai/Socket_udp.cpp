@@ -10,27 +10,9 @@ Socket_udp::Socket_udp(void)
 {
 
 }
-void Socket_udp::Init_Socket_Server(in_addr_t Group_Addr, int Port_Num, const char * _udp_client_interface)
+void Socket_udp::Init_Socket_Server(in_addr_t Group_Addr, int Port_Num)
 {
-    struct ifaddrs *ifap, *ifa;
-    struct sockaddr_in *sa;
-    char *addr;
-    getifaddrs (&ifap);
-    for (ifa = ifap; ifa; ifa = ifa->ifa_next) {
-        if (ifa->ifa_addr && ifa->ifa_addr->sa_family==AF_INET) {
-            sa = (struct sockaddr_in *) ifa->ifa_addr;
-            addr = inet_ntoa(sa->sin_addr);
-            if(ifa->ifa_name==_udp_client_interface)
-            {
-                inteface=addr;
-                printf("find\n");
-            }
-            printf("Interface: %s\tAddress: %s\n", ifa->ifa_name, addr);
-        }
-    }
-    inteface="172.25.0.24";
 
-    freeifaddrs(ifap);
 #ifdef WIN
 // This stuff initializes winsock
 WSAStartup(wVersionRequested, &wsaData);
@@ -69,9 +51,27 @@ printf("*** ready to Sending multicast datagrams to '%d' (port = %d) \n",
 
 
 
-void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num)
+void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num, const char * _udp_client_interface)
 {
+    struct ifaddrs *ifap, *ifa;
+    struct sockaddr_in *sa;
+    char *addr;
+    getifaddrs (&ifap);
+    for (ifa = ifap; ifa; ifa = ifa->ifa_next) {
+        if (ifa->ifa_addr && ifa->ifa_addr->sa_family==AF_INET) {
+            sa = (struct sockaddr_in *) ifa->ifa_addr;
+            addr = inet_ntoa(sa->sin_addr);
+            if(ifa->ifa_name==_udp_client_interface)
+            {
+                inteface=addr;
+                printf("find\n");
+            }
+            printf("Interface: %s\tAddress: %s\n", ifa->ifa_name, addr);
+        }
+    }
+    inteface="172.25.0.24";
 
+    freeifaddrs(ifap);
 #ifdef WIN
 	wVersionRequested = MAKEWORD(1, 1); // Stuff for WSA functions										// This stuff initializes winsock
 	WSAStartup(wVersionRequested, &wsaData);
