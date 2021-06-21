@@ -10,7 +10,7 @@ Socket_udp::Socket_udp(void)
 {
 
 }
-void Socket_udp::Init_Socket_Server_Multicas(in_addr_t Group_Addr, int Port_Num)
+void Socket_udp::Init_Socket_Server(in_addr_t Group_Addr, int Port_Num)
 {
 
 #ifdef WIN
@@ -29,7 +29,8 @@ if (Multi_Server_Sock < 0)
 }
 // Create multicast group address information
 Server_Addr.sin_family = AF_INET;
-Server_Addr.sin_addr.s_addr = Group_Addr;
+    Server_Addr.sin_addr.s_addr= inet_addr("172.25.0.24");
+///Server_Addr.sin_addr.s_addr = Group_Addr;
 //'simulator';//inet_addr(Group_Addr);
 Server_Addr.sin_port = htons(Port_Num);
 
