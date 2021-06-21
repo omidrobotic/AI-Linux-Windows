@@ -12,6 +12,7 @@
 // Linux headers
 #include <fcntl.h> // Contains file controls like O_RDWR
 #include <errno.h> // Error integer and strerror() function
+#include <termios.h> // Contains POSIX terminal control definitions
 #include <unistd.h> // write(), read(), close()
 #include <stdlib.h>
 #include <stdint.h>     /* uint32_t */
@@ -35,20 +36,6 @@
 #include <X11/Xlib.h>
 // #include "myheader.h"    // can no longer use windows.h or conio.h
 // #include "myheader2.h"
-#include <iostream>
-#include <sstream>
-#include <stdio.h>       // Standard input/output definitions
-#include <string.h>      // String function definitions
-#include <unistd.h>      // UNIX standard function definitions
-#include <fcntl.h>       // File control definitions
-#include <errno.h>       // Error number definitions
-// #include <termios.h>     // POSIX terminal control definitions (struct termios)
-#include <system_error>    // For throwing std::system_error
-#include <sys/ioctl.h> // Used for TCGETS2, which is required for custom baud rates
-#include <cassert>
-// #include <asm/termios.h> // Terminal control definitions (struct termios)
-#include <asm/ioctls.h>
-#include <asm/termbits.h>
 #endif
 #include "math.h"
 #include "matrix.h"
@@ -62,6 +49,7 @@
 #include "Switches.h"
 
 #if SEND_COMMANDS_TO_ROBOTS==2
+
 #include "Protobuf/ER-force/ssl_simulation_control.pb.h"
 #else
 #include "Protobuf/Grsim/grSim_Packet.pb.h"
@@ -85,20 +73,22 @@ DWORD nrf::numOfBytesRead = 0;
 LPCSTR nrf::portName = "\\\\.\\COM4";
 #elif __linux__
 int serial_port=0;
-LPCSTR nrf::portName = "/dev/ttyUSB0";
+LPCSTR nrf::portName = "/dev/ttyUSB1";
 #endif
 DCB nrf::dcbSerialParams = { 0 };
 MatrixD nrf::V(4, 1);
 bool nrf::statusNrf = false;
 bool nrf::ftime = true;
 /*! NRF VARIABLES */
-#include <stdio.h>
-#include <fcntl.h>
-#include <errno.h>
-//#include <asm/termios.h>
-#include <sys/ioctl.h>
-#include <asm-generic/termbits.h>
-//#include <asm/termios.h>
+#include <stdio.h> // standard input / output functions
+#include <string.h> // string function definitions
+#include <unistd.h> // UNIX standard function definitions
+#include <fcntl.h> // File control definitions
+#include <errno.h> // Error number definitions
+//#include <termios.h> // POSIX terminal control definitionss
+#include <time.h>   // time calls
+
+int fd; // file description for the serial port
 
 
 /*! GrsimMove VARIABLES */
@@ -241,16 +231,12 @@ void nrf::write_on_port() {
         statusNrf = SetCommState(hComm, &dcbSerialParams);
         ftime = false;
 #elif __linux__
-        sleep(0.5);
-        int fd1=open("/dev/ttyUSB1", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
-        sleep(0.5);
-        int fd2=open("/dev/ttyUSB2", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
-        sleep(0.5);
-        int fd3=open("/dev/ttyUSB3", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
-        sleep(0.5);
-        int fd4=open("/dev/ttyUSB4", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
-
-        if(fd1==-1 && fd2==-1 && fd3==-1 && fd4==-1)
+        serial_port = open("/dev/ttyUSB1", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
+        sleep(1);
+        close(serial_port);
+        sleep(1);
+        serial_port = open("/dev/ttyUSB1", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
+        if(serial_port == -1) // if open is unsucessful
         {
             printf("open_port: Unable to open /dev/ttyUSB1. \n");
         }
@@ -259,13 +245,6 @@ void nrf::write_on_port() {
             fcntl(serial_port, F_SETFL, 0);
             printf("port is open.\n");
         }
-        serial_port = open("/dev/ttyUSB1", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
-        sleep(1);
-        close(serial_port);
-        sleep(1);
-        serial_port = open("/dev/ttyUSB1", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
-
-
         struct termios2 tty;      // structure to store the port settings in
         ioctl(serial_port, TCGETS2, &tty);
 
@@ -278,51 +257,37 @@ void nrf::write_on_port() {
         //tty.c_cflag     &=  ~CRTSCTS;       // Disable hadrware flow control (RTS/CTS)
         //tty.c_cflag     |=  CREAD | CLOCAL;
         tty.c_cflag &= ~CBAUD;
-       tty.c_cflag |= CBAUDEX;
-       //  tty.c_cflag |= BOTHER;
+        tty.c_cflag |= CBAUDEX;
+        //  tty.c_cflag |= BOTHER;
         tty.c_ispeed = 256000;
         tty.c_ospeed = 256000;
-      //  tty.c_oflag     =   0;              // No remapping, no delays
-      //  tty.c_oflag     &=  ~OPOST;            // Make raw
-
-
-
+        //  tty.c_oflag     =   0;              // No remapping, no delays
+        //  tty.c_oflag     &=  ~OPOST;            // Make raw
         ioctl(serial_port, TCSETS2, &tty);
-        char send[1];
-        send[0]=0;
-        //write(serial_port, send,sizeof (send));  //Send data
         ftime = false;
 #endif
 
 
-}
+    } else {
 #ifdef _WIN32
-	WriteFile(hComm,
-		output,
-		numOfBytesToWrite,
-		&numOfBytesWritten,
-		NULL);
+        WriteFile(hComm,
+            output,
+            numOfBytesToWrite,
+            &numOfBytesWritten,
+            NULL);
 #elif __linux__
-    /*for (int i = 0; i < 180; ++i) {
-      output[i]=1;
-    }*/
-    char output1[180];
-  /* output1[29]='\001';
-   output1[28]='\367';
-    output1[27]='\337';
-    output1[26]='}';*/
 
-    for (int i = 0; i < 180; ++i) {
-        output1[i]=0;
-    }
-    output1[29]='\001';
-   output1[28]='\367';
-    output1[27]='\337';
-   output1[26]='}';
-   write(serial_port, output1,sizeof (output1));  //Send data
 #endif
-
-
+        output[1]=1;
+        output[2]=1;
+        output[3]=1;
+        output[4]=1;
+        for (int i = 0; i < 180; ++i) {
+           output[i] = 1;
+        }
+        write(fd, output, sizeof(output));  //Send data
+       printf("Wrote the bytes. \n");
+    }
 }
 void nrf::read_from_port()
 {
@@ -333,7 +298,7 @@ void nrf::read_from_port()
 		&numOfBytesRead,
 		NULL);
 #elif __linux__
-    read(serial_port, &input, numOfBytesToRead);
+  //  read(serial_port, &input, numOfBytesToRead);
 #endif
 
 }
@@ -537,11 +502,7 @@ void SimulatorMove::setAndSend(VecPosition velocity, double w, bool shootOrChip,
     auto control = RobotControl();
     auto *robotCommand = control.add_robot_commands();
     robotCommand->set_id(id);
-    if(MAX_BALL_SPEED<3 / 2.0*kickPower*0.70710 && shootOrChip)
-        kickPower=MAX_BALL_SPEED/(2*0.70710);
-    else if(MAX_BALL_SPEED<(3/(2.0*kickPower)) && kickPower!=0)
-        kickPower=3/2.0*MAX_BALL_SPEED;
-    robotCommand->set_kick_speed((shootOrChip)?3 / 2.0*kickPower*0.70710:(3 / 2.0*kickPower));
+    robotCommand->set_kick_speed(/*(shootOrChip)?3 / 2.0*kickPower*0.70710:(3 / 2.0*kickPower)*/100);
     robotCommand->set_kick_angle((shootOrChip)?45:0);
     robotCommand->set_dribbler_speed((spinBack)?1:0); // convert from 1 - 0 to rpm, where 1 is 150 rad/s
     auto *moveCommand = robotCommand->mutable_move_command()->mutable_local_velocity();
@@ -550,15 +511,12 @@ void SimulatorMove::setAndSend(VecPosition velocity, double w, bool shootOrChip,
     velocityLocal = convert_robot_velocity_from_field_to_robot_coord(velocity, world.robotT[index].angle);
     moveCommand->set_forward(velocityLocal.getX()/300.000);
     moveCommand->set_left(velocityLocal.getY()/300.000);
-    moveCommand->set_angular(w*1.15);
+    moveCommand->set_angular(w*2);
 
 
     char _data[control.ByteSize()];
     control.SerializePartialToArray(_data, sizeof(_data));
     ERforce.send(_data, sizeof(_data));
-
-
-
 
 }
 void SimulatorMove::testy()

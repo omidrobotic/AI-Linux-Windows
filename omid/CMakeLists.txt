@@ -51,13 +51,16 @@ add_executable(omid ${SOURCES})
 target_include_directories(omid PUBLIC
                            	${PROJECT_BINARY_DIR}
                            	${PROJECT_SOURCE_DIR}/ai/Protobuf
-                            	${Boost_FILESYSTEM_LIBRARY}
-    				${Boost_SYSTEM_LIBRARY}
-    				${PROTOBUF_LIBRARY}
+							${Boost_FILESYSTEM_LIBRARY}
+							${PATH_TO_LIB_SERIAL_LIBRARY_DIR}
+    						${Boost_SYSTEM_LIBRARY}
+    						${PROTOBUF_LIBRARY}
+							${EXTRA_INCLUDES}
                            )
-target_link_libraries(omid ${PROTOBUF_LIBRARIES})
+#target_link_libraries(omid ${PROTOBUF_LIBRARIES})
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
+
 include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} )
 
-target_link_libraries(omid ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} )
+target_link_libraries(omid ${PROTOBUF_LIBRARIES} ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} )

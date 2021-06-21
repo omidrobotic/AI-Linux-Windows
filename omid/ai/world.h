@@ -47,19 +47,6 @@
 
 
 /*! ENUMS */
-// Begin Farhan Daemi
-
-enum Role
-{
-    Goali = 0,
-    Forward = 1,
-    Defence = 2,
-    Sender = 3,
-    Reciever = 4,
-    Shooter = 5,
-};
-
-// End Farhan Daemi
 enum TeamColorData
 {
 	TC_Yellow = 0,
@@ -113,10 +100,6 @@ public:
 	long double timeCaptured;
 	double timeSent;
 	double timeRecived;
-//	Begin Farhan Daemi
-    Role role;
-    void setRole(Role _role);
-//	End Farhan Daemi
 
 	void operator = (const Robot &r);
 

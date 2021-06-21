@@ -31,13 +31,6 @@ void Robot::operator = (const Robot &r)
 
 	destination_set = r.destination_set;
 }
-// Begin Farhan Daemi
-void Robot::setRole(Role _role)
-{
-    role = _role;
-}
-// End Farhan Daemi
-
 /*! ROBOT METHODS */
 
 

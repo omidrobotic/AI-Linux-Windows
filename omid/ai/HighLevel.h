@@ -37,25 +37,6 @@ public:
 
 	//static void StartO(World &world);
 	//static void StartT(World &world);
-
-    ////Begin Farhan Demi
-    static void gotoXY(int robotIndex, VecPosition target);
-    static void lookAt(int robotIndex, float angle);
-    static bool move_ball_to_position(int robotIndex, VecPosition target_pos);
-    static void goalKeeper_defend_and_pass(int goalKeeperIndex);
-    static bool ball_is_in_penalty_area(char team);
-    static void defence_formation(int number_of_defender);
-    static int  nearest_robot_to_point_except_goali(VecPosition postion);
-    static int  oponent_is_shooting_index();
-    static void forward_formation(int number_of_forwards);
-    static void turn_all_spinbacks_on();
-    static void turn_all_spinbacks_off();
-    static void turn_spinbacks_on(int robotIndex);
-    static void turn_spinbacks_off(int robotIndex);
-
-
-    ////End Farhan Demi
-
 	////mohammad hossin
 	static void EstimationPosition(World &world);
 	static void Scoring_Situations(World &world);

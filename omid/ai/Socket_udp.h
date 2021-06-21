@@ -55,7 +55,7 @@ public:
 #endif
 
 
-	   int         Multi_Server_Sock=-1;
+	  unsigned int         Multi_Server_Sock;
 	  struct sockaddr_in   Client_Addr;
 	  struct sockaddr_in   Server_Addr;
 	  unsigned char        TTL;
