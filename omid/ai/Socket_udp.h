@@ -22,7 +22,7 @@
 #include <unistd.h>
 #include <netinet/in.h>
 #endif
-
+#include "Switches.h"
 class Socket_udp
 {
 
@@ -54,7 +54,7 @@ public:
 
 #endif
 
-      char *ip_ERforce="192.168.0.3";
+      char *inteface="defult";
 	  unsigned int         Multi_Server_Sock;
 	  struct sockaddr_in   Client_Addr;
 	  struct sockaddr_in   Server_Addr;

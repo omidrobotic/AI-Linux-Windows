@@ -156,6 +156,7 @@ CMakeFiles/omid.dir/ai/Referee.cpp.o: ../ai/world.h
 
 CMakeFiles/omid.dir/ai/Socket_udp.cpp.o: ../ai/Socket_udp.cpp
 CMakeFiles/omid.dir/ai/Socket_udp.cpp.o: ../ai/Socket_udp.h
+CMakeFiles/omid.dir/ai/Socket_udp.cpp.o: ../ai/Switches.h
 
 CMakeFiles/omid.dir/ai/Strategy.cpp.o: ../ai/Strategy.cpp
 

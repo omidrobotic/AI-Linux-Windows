@@ -44,12 +44,13 @@
 #define MAX_ROBOT_SPEED 900;
 
 
+
 #define PRESENT_OF_ATTACKER 0.80 //PRESENT OF ATTACKER ROBOT T
 //////////////////mhz
 
 
 
-
+#define UDP_CLIENT_INTERFACE "eth1"
 //----- Defines Refree -------------------------------------------------------------
 #define TEAM_NAME "OMID"
 #define PORT_NUM_Refree        10003	//10003          
