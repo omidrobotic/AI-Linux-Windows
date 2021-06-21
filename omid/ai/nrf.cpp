@@ -313,7 +313,7 @@ SimulatorMove::SimulatorMove()
         command[i] = packet.add_robot_commands();
     }
 }
-void SimulatorMove::initialize_port(const char* ip, int port)
+void SimulatorMove::initialize_port(in_addr_t ip, int port)
 {
     ERforce.Init_Socket_Server(ip, port,UDP_CLIENT_INTERFACE); //"192.168.0.255"
 }
