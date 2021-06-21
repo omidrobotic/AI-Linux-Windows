@@ -63,7 +63,8 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num, const
             addr = inet_ntoa(sa->sin_addr);
             if(strcmp(ifa->ifa_name, _udp_client_interface)==0)
             {
-                strcpy(inteface,addr);
+                memset(inteface, '\0', sizeof(inteface));
+               strcpy(inteface,addr);
 //                inteface=addr;
                 printf("find\n");
             }
@@ -99,7 +100,7 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num, const
 
 	// Have the multicast socket join the multicast group
 	mreq.imr_multiaddr.s_addr = inet_addr(Group_Addr);
-	if(inteface=="defult") {
+	if(inteface==NULL/*"defult"*/) {
         mreq.imr_interface.s_addr = INADDR_ANY;
         printf("defult cant find UDP_CLIENT_INTERFACE");
     }

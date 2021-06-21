@@ -56,7 +56,7 @@ public:
 
 #endif
 
-      char *inteface="defult";
+      char inteface[40]/*="defult"*/;
 	  unsigned int         Multi_Server_Sock;
 	  struct sockaddr_in   Client_Addr;
 	  struct sockaddr_in   Server_Addr;
