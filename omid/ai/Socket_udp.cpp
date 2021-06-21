@@ -29,9 +29,7 @@ if (Multi_Server_Sock < 0)
 }
 // Create multicast group address information
 Server_Addr.sin_family = AF_INET;
-   // Server_Addr.sin_addr.s_addr= 'simulator'/*inet_addr("172.25.0.24")*/;
-    htonl(INADDR_ANY);
-
+    Server_Addr.sin_addr.s_addr= htonl(INADDR_ANY);/*inet_addr("172.25.0.24")*/;
 ///Server_Addr.sin_addr.s_addr = Group_Addr;
 //'simulator';//inet_addr(Group_Addr);
 Server_Addr.sin_port = htons(Port_Num);
