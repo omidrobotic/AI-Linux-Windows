@@ -140,7 +140,7 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num, const
 	}
 
 }
-void Socket_udp::send(char buffer_send[5000],int buffer_send_len)
+void Socket_udp::send(char buffer_send[100],int buffer_send_len)
 {
 
 	    addr_len = sizeof(Server_Addr);
