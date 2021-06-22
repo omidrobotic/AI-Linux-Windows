@@ -473,7 +473,7 @@ int main(int argc, char **argv)
                //   ERF.set_velocity_and_W(VecPosition(0,0), 2, i);
               /// world.robotT[i].destination_position=VecPosition(0,0);
                 ERF.setAndSend(world.robotT[i].velocityToGo,world.robotT[i].wToGo,world.robotT[i].shoot_or_chip,world.robotT[i].kick_power,world.robotT[i].spinBack,i,world);
-             //   sleep(0.016);
+                sleep(0.01);
 
 
             }
