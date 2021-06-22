@@ -70,6 +70,8 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num, const
 //                inteface=addr;
                 printf("find\n");
             }
+           // printf("data va family: %s\tAddress: %s\n", ifa->ifa_addr->sa_data, ifa->ifa_addr->sa_family);
+            printf("Interface: %s\tAddress: %s\n", ifa->ifa_name, addr);
             printf("Interface: %s\tAddress: %s\n", ifa->ifa_name, addr);
         }
     }
