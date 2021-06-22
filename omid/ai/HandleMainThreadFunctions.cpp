@@ -120,7 +120,7 @@ void produceRobotsDestinations()
 //	HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
     //HighLevel::defence_format(8);
 
-    for (int i = 0; i <= world.numT; ++i) {
+    for (int i = 0; i < world.numT; ++i) {
         if (world.robotT[i].kick_power>0)
         {
             world.robotT[i].spinBack= false;
@@ -132,7 +132,12 @@ void produceRobotsDestinations()
 
 
 
+    int a, b;
 
+    a = ((world.numT - 2)-int(PRESENT_OF_ATTACKER*(world.numT - 2)));
+    b = int(PRESENT_OF_ATTACKER*(world.numT - 2));
+    if(a < 0) a = 2;
+    if(b < 0) b = 0;
     switch (world.playMode)
     {
         case mode_State::ballPlacement:
@@ -154,8 +159,9 @@ void produceRobotsDestinations()
                 case mode_State::KickMode::NoKickMode:
                     HighLevel::GoaliHoleCover();
                     HighLevel::ReadyForKick(HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
-                    HighLevel::defence_scor2((world.numT - 2)-int(PRESENT_OF_ATTACKER*(world.numT - 2)));
-                    HighLevel::find_roboto_pass(int(PRESENT_OF_ATTACKER*(world.numT - 2)));
+
+                   HighLevel::defence_scor2(a);
+                    HighLevel::find_roboto_pass(b);
                     break;
 
                 case mode_State::KickMode::KickOffOPrepare:
@@ -212,26 +218,26 @@ case mode_State::KickMode::NoKickMode:
                     HighLevel::GoaliHoleCover();
                     HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
                     HighLevel::defence_scor2((world.numT - 2) - int((world.numT - 2)*PRESENT_OF_ATTACKER));
-                    HighLevel::direct_free_kick(int(PRESENT_OF_ATTACKER*(world.numT - 2))+1, 0);
+                    HighLevel::direct_free_kick(b+1, 0);
                     break;
 
                 case mode_State::KickMode::DirectFreeKickO:
                     HighLevel::GoaliHoleCover();
                     //HighLevel::ReadyForKick(HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
-                    HighLevel::defence_scor2((world.numT - 2)-int(PRESENT_OF_ATTACKER*(world.numT - 2)));
-                    HighLevel::find_roboto_pass(int(PRESENT_OF_ATTACKER*(world.numT - 2)));
+                    HighLevel::defence_scor2(b);
+                    HighLevel::find_roboto_pass(b);
                     break;
 
                 case mode_State::KickMode::IndirectFreeKickT:
                     HighLevel::GoaliHoleCover();
                     HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
                     HighLevel::defence_scor2((world.numT - 2) - int((world.numT - 2)*PRESENT_OF_ATTACKER));
-                    HighLevel::direct_free_kick(int(PRESENT_OF_ATTACKER*(world.numT - 2)) + 1, 0);
+                    HighLevel::direct_free_kick(b + 1, 0);
                     break;
 
                 case mode_State::KickMode::IndirectFreeKickO:
                     HighLevel::GoaliHoleCover();
-                    HighLevel::find_roboto_pass(int(PRESENT_OF_ATTACKER*(world.numT - 2)));
+                    HighLevel::find_roboto_pass(b);
                     HighLevel::defence_scor2((world.numT - 2)- int(PRESENT_OF_ATTACKER*(world.numT - 2)));
                     //HighLevel::ReadyForKick(HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
                     break;
@@ -283,7 +289,7 @@ case mode_State::KickMode::NoKickMode:
 HighLevel::GoaliHoleCover();
 
                     HighLevel::GoaliHoleCover();
-                    HighLevel::plan_scor(int(PRESENT_OF_ATTACKER*(world.numT - 2)));
+                    HighLevel::plan_scor(b);
 
                     if(world.ball.getCurrentBallPosition().getDistanceTo(Field::getGoalMidO())<2500 && HighLevel::find_robot_have_ball('O')==-1)
                     {
