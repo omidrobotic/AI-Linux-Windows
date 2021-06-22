@@ -144,7 +144,7 @@ void produceRobotsDestinations()
     {
         case mode_State::ballPlacement:
             indexOfNearestRobot = HighLevel::nearest_robot_to_ball('T');
-      for (int i = 0; i < world.numT; i++)
+            for (int i = 0; i < world.numT; i++)
             {
                /* if (indexOfNearestRobot==i)
                     HighLevel::move_ball_to_position(world.getRobotTNumberForIndex(indexOfNearestRobot),
@@ -211,9 +211,9 @@ void produceRobotsDestinations()
                     HighLevel::start_robotT_format_penaltyt(world, 1);
                     break;
 
-case mode_State::KickMode::NoKickMode:
-                        HighLevel::start_robotT_format_NoKickMode("NoKickMode");
-                        break;
+                case mode_State::KickMode::NoKickMode:
+                    HighLevel::start_robotT_format_NoKickMode("NoKickMode");
+                    break;
 
 
                 case mode_State::KickMode::DirectFreeKickT:
@@ -288,7 +288,7 @@ case mode_State::KickMode::NoKickMode:
 
                 case mode_State::KickMode::NoKickMode:
 
-HighLevel::GoaliHoleCover();
+                    HighLevel::GoaliHoleCover();
 
                     HighLevel::GoaliHoleCover();
                     HighLevel::plan_scor(b);

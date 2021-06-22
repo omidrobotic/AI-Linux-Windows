@@ -32,7 +32,7 @@
 #define MAX_BALL_SPEED 6//meter/second
 #define SET_PASS_DISTANCE_BEST_PASS sqrt(pow(FieldLength,2)+ pow(FieldWidth, 2))*(1/3) 
 #define SAFE_PASS_DISTANCE sqrt(pow(FieldLength,2)+ pow(FieldWidth, 2))*(1/10)
-#define RESOULOTION_OF_FIND_PASS 100
+#define RESOULOTION_OF_FIND_PASS 50
 #define PROBLITY_GOAL_FREE_SPACE 1.25 //   2.25/3 present   //of tree
 #define PROBLITY_GOAL_DISTANCE sqrt(pow(FieldLength,2)+ pow(FieldWidth, 2))*(3.0/10) //   1.20/2 present   //of two
 #define PLAN_SCORE_POINT_X ((FieldLength / 2) - ROBOT_RADIUS) - (i*ROBOT_RADIUS * 2)
