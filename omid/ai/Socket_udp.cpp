@@ -13,6 +13,15 @@ Socket_udp::Socket_udp(void)
 void Socket_udp::Init_Socket_Server(const char *  Group_Addr, int Port_Num)
 {
     shutdown(inet_addr(Group_Addr),2);
+
+
+
+    struct hostent *hp;
+    char *host = "http://simulator/";
+    int i;
+    hp = gethostbyname(host);
+    printf("the simulator%d\n",hp);
+
 #ifdef WIN
 // This stuff initializes winsock
 WSAStartup(wVersionRequested, &wsaData);
