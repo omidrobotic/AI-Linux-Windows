@@ -10,7 +10,7 @@ Socket_udp::Socket_udp(void)
 {
 
 }
-void Socket_udp::Init_Socket_Server(in_addr_t Group_Addr, int Port_Num)
+void Socket_udp::Init_Socket_Server(const char *  Group_Addr, int Port_Num)
 {
 
 #ifdef WIN
@@ -29,9 +29,11 @@ if (Multi_Server_Sock < 0)
 }
 // Create multicast group address information
 Server_Addr.sin_family = AF_INET;
-    Server_Addr.sin_addr.s_addr= htonl(INADDR_ANY);/*inet_addr("172.25.0.24")*/;
-///Server_Addr.sin_addr.s_addr = Group_Addr;
-//'simulator';//inet_addr(Group_Addr);
+    Server_Addr.sin_addr.s_addr =  inet_addr(Group_Addr);
+    /*  gethostbyname("simulator")*/;
+    /*htonl(INADDR_ANY)*//*inet_addr("127.0.0.1");*//*inet_addr("172.25.0.24")*/;
+    /*Server_Addr.sin_addr.s_addr = Group_Addr;*/
+    /*'simulator';//inet_addr(Group_Addr);*/
 Server_Addr.sin_port = htons(Port_Num);
 
 // Set the TTL for the sends using a setsockopt()
@@ -43,7 +45,6 @@ if (retcode < 0)
 	printf("*** ERROR - setsockopt() failed with retcode = %d \n", retcode);
 	return;
 }
-
 // Set addr_len
 addr_len = sizeof(Server_Addr);
 printf("*** ready to Sending multicast datagrams to '%d' (port = %d) \n",

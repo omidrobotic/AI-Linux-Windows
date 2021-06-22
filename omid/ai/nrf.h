@@ -109,7 +109,7 @@ public:
 
 
 
-    void initialize_port(in_addr_t ip, int port);
+    void initialize_port(const char * ip, int port);
 
     void initialize_robot_color_and_timestamp(double timestamp);
 
