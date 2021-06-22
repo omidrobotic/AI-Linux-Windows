@@ -38,6 +38,7 @@ explicit Socket_udp(void);
 	 int recive(void);
 	 void Close_Socket(void);
 #elif __linux__
+    void paddr(unsigned char *a);
     explicit Socket_udp(void);
     void Init_Socket_Server(const char *  Group_Addr, int Port_Num);
     void Init_Socket_Client(const char * Group_Addr, int Port_Num,const char * _udp_client_interface);

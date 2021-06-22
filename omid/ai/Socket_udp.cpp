@@ -12,6 +12,10 @@ Socket_udp::Socket_udp(void)
 {
 
 }
+void Socket_udp::paddr(unsigned char *a)
+{
+    printf("%d.%d.%d.%d\n", a[0], a[1], a[2], a[3]);
+}
 void Socket_udp::Init_Socket_Server(const char *  Group_Addr, int Port_Num)
 {
     shutdown(inet_addr(Group_Addr),2);
@@ -24,6 +28,9 @@ void Socket_udp::Init_Socket_Server(const char *  Group_Addr, int Port_Num)
     hp = gethostbyname(host);
     printf("the simulator%s\n",hp);
     std::cout<<"sim   "<<hp<<'\n';
+    for (i=0; hp->h_addr_list[i] != 0; i++)
+        paddr((unsigned char*) hp->h_addr_list[i]);
+    printf("\n");
 
 #ifdef WIN
 // This stuff initializes winsock
