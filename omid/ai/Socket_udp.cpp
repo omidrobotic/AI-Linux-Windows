@@ -5,6 +5,8 @@
 #include <sys/socket.h>
 #include <ifaddrs.h>
 #include <stdio.h>
+#include "iostream"
+
 //omidguard dont touch
 Socket_udp::Socket_udp(void)
 {
@@ -21,6 +23,7 @@ void Socket_udp::Init_Socket_Server(const char *  Group_Addr, int Port_Num)
     int i;
     hp = gethostbyname(host);
     printf("the simulator%s\n",hp);
+    std::cout<<"sim   "<<hp<<'\n';
 
 #ifdef WIN
 // This stuff initializes winsock
