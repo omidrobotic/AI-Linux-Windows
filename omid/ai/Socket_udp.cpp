@@ -17,10 +17,10 @@ void Socket_udp::Init_Socket_Server(const char *  Group_Addr, int Port_Num)
 
 
     struct hostent *hp;
-    char *host = "http://simulator/";
+    char *host = "simulator";
     int i;
     hp = gethostbyname(host);
-    printf("the simulator%d\n",hp);
+    printf("the simulator%s\n",hp);
 
 #ifdef WIN
 // This stuff initializes winsock
