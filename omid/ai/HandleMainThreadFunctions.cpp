@@ -136,13 +136,15 @@ void produceRobotsDestinations()
 
     a = ((world.numT - 2)-int(PRESENT_OF_ATTACKER*(world.numT - 2)));
     b = int(PRESENT_OF_ATTACKER*(world.numT - 2));
-    if(a < 0) a = 2;
-    if(b < 0) b = 0;
+    //if(a < 0) a = 2;
+    //if(b < 0) b = 0;
+    a=2;
+    b=2;
     switch (world.playMode)
     {
         case mode_State::ballPlacement:
             indexOfNearestRobot = HighLevel::nearest_robot_to_ball('T');
-      for (int i = 0; i <= world.numT; i++)
+      for (int i = 0; i < world.numT; i++)
             {
                /* if (indexOfNearestRobot==i)
                     HighLevel::move_ball_to_position(world.getRobotTNumberForIndex(indexOfNearestRobot),
@@ -161,7 +163,7 @@ void produceRobotsDestinations()
                     HighLevel::ReadyForKick(HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
 
                    HighLevel::defence_scor2(a);
-                    HighLevel::find_roboto_pass(b);
+                  ///  HighLevel::find_roboto_pass(b);
                     break;
 
                 case mode_State::KickMode::KickOffOPrepare:
@@ -238,7 +240,7 @@ case mode_State::KickMode::NoKickMode:
                 case mode_State::KickMode::IndirectFreeKickO:
                     HighLevel::GoaliHoleCover();
                     HighLevel::find_roboto_pass(b);
-                    HighLevel::defence_scor2((world.numT - 2)- int(PRESENT_OF_ATTACKER*(world.numT - 2)));
+                    HighLevel::defence_scor2(a);
                     //HighLevel::ReadyForKick(HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
                     break;
                 default:
@@ -298,7 +300,8 @@ HighLevel::GoaliHoleCover();
                         HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
                     }
                     //cout << world.getRobotTNumberForIndex(uyu) << endl;
-                    HighLevel::defence_scor2((world.numT - 2) - int(PRESENT_OF_ATTACKER*(world.numT - 2)));
+                    HighLevel::defence_scor2(a);
+
 
                     break;
 
