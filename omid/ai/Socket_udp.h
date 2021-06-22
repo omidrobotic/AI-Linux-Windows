@@ -42,7 +42,7 @@ explicit Socket_udp(void);
     explicit Socket_udp(void);
     void Init_Socket_Server(const char *  Group_Addr, int Port_Num);
     void Init_Socket_Client(const char * Group_Addr, int Port_Num,const char * _udp_client_interface);
-    void send(char buffer_send[100000], int buffer_send_len);
+    void send(char buffer_send[100], int buffer_send_len);
     int recive(void);
     void Close_Socket(void);
 #endif
