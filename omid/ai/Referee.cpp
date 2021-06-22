@@ -62,12 +62,12 @@ void Refree::Refree_parser(World &world)
         if (World::team_color==TC_Yellow)
         {
             world.getInstance().team_side=TS_LeftSide;
-            world.setTeamSide(TS_RightSide);
+            world.setTeamSide(TS_LeftSide);
         }
         else
         {
             world.getInstance().team_side= TS_RightSide;
-            world.setTeamSide(TS_LeftSide);
+            world.setTeamSide(TS_RightSide);
         }
     }
     else
@@ -75,12 +75,12 @@ void Refree::Refree_parser(World &world)
         if (World::team_color==TC_Blue)
         {
             world.getInstance().team_side=TS_LeftSide;
-            world.setTeamSide(TS_LeftSide);
+            world.setTeamSide(TS_RightSide);
         }
         else
         {
             world.getInstance().team_side= TS_RightSide;
-            world.setTeamSide(TS_RightSide);
+            world.setTeamSide(TS_LeftSide);
         }
     }
 
