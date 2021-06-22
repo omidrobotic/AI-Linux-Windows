@@ -394,6 +394,7 @@ int main(int argc, char **argv)
 		glutKeyboardUpFunc(KeyboardUp);
 		glutMouseFunc(mouseCB);
 		glutTimerFunc(1, timer, 0);	//32
+        sleep(0.05);
 		glutMainLoop();
 	};
 	auto radio_func = [&]()
@@ -473,7 +474,7 @@ int main(int argc, char **argv)
                //   ERF.set_velocity_and_W(VecPosition(0,0), 2, i);
               /// world.robotT[i].destination_position=VecPosition(0,0);
                 ERF.setAndSend(world.robotT[i].velocityToGo,world.robotT[i].wToGo,world.robotT[i].shoot_or_chip,world.robotT[i].kick_power,world.robotT[i].spinBack,i,world);
-                sleep(0.01);
+                sleep(0.015);
 
 
             }
@@ -555,7 +556,7 @@ int main(int argc, char **argv)
 			//auto end_time = std::chrono::high_resolution_clock::now();
 			//auto time = end_time - start_time;
 			//cout << time.count() / 1000000.0 << endl;
-			sleep(0.01);
+			sleep(0.02);
 		}
 
 		//#if USE_FEEDFORWARD == 1
