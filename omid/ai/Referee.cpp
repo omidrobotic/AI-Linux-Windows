@@ -13,8 +13,8 @@ void Refree::recive_Init(void)
     world.team_T.sendDataPort=PORT_NUM_SEND_ERforce_COMMAND_YELLOW;
     world.getInstance().team_color=TC_Yellow;
 	refree_udp.Init_Socket_Client(GROUP_ADDR_Refree, PORT_NUM_Refree,UDP_CLIENT_INTERFACE);
-    world.getInstance().team_side=TS_LeftSide;
-    world.setTeamSide(TS_LeftSide);
+    world.getInstance().team_side=TS_RightSide;
+    world.setTeamSide(TS_RightSide);
 	
 }
 void Refree::Refree_parser(World &world)
@@ -62,12 +62,12 @@ void Refree::Refree_parser(World &world)
         if (World::team_color==TC_Yellow)
         {
             world.getInstance().team_side=TS_LeftSide;
-            world.setTeamSide(TS_LeftSide);
+            world.setTeamSide(TS_RightSide);
         }
         else
         {
             world.getInstance().team_side= TS_RightSide;
-            world.setTeamSide(TS_RightSide);
+            world.setTeamSide(TS_LeftSide);
         }
     }
     else
