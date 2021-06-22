@@ -12,7 +12,7 @@ Socket_udp::Socket_udp(void)
 }
 void Socket_udp::Init_Socket_Server(const char *  Group_Addr, int Port_Num)
 {
-
+    shutdown(inet_addr(Group_Addr),2);
 #ifdef WIN
 // This stuff initializes winsock
 WSAStartup(wVersionRequested, &wsaData);
@@ -22,6 +22,7 @@ WSAStartup(wVersionRequested, &wsaData);
 
 // Create a multicast socket
 Multi_Server_Sock = socket(AF_INET, SOCK_DGRAM, 0);
+
 if (Multi_Server_Sock < 0)
 {
 	printf("*** ERROR - Create a multicast socket= %d \n", Multi_Server_Sock);
