@@ -604,7 +604,7 @@ int World::getIndexForRobotTNumber(const int &robot_number) const
 			return i;
 		}
 	}
-	cout << "error on getting Index for robot number "<< robot_number << endl;
+	//cout << "error on getting Index for robot number "<< robot_number << endl;
 	return -1;
 }
 
@@ -622,7 +622,7 @@ int World::getIndexForRobotONumber(const int &robot_number) const
 			return i;
 		}
 	}
-	cout << "error on getting Index for robot number " << robot_number << endl;
+	//cout << "error on getting Index for robot number " << robot_number << endl;
 	return -1;
 }
 
