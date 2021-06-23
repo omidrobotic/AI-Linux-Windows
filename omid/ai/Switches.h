@@ -35,7 +35,7 @@
 #define RESOULOTION_OF_FIND_PASS 50
 #define PROBLITY_GOAL_FREE_SPACE 1.25 //   2.25/3 present   //of tree
 #define PROBLITY_GOAL_DISTANCE sqrt(pow(FieldLength,2)+ pow(FieldWidth, 2))*(3.0/10) //   1.20/2 present   //of two
-#define PLAN_SCORE_CPU 10
+#define PLAN_SCORE_CPU 2
 #define PLAN_SCORE_POINT_X ((FieldLength / 2) - ROBOT_RADIUS) - (i*ROBOT_RADIUS * PLAN_SCORE_CPU)
 #define PLAN_SCORE_POINT_Y ((FieldWidth / 2) - ROBOT_RADIUS) - (j*ROBOT_RADIUS * PLAN_SCORE_CPU)
 #define	PLAN_SCORE_MAXIMOM_X (((-FieldLength / 2) + PenaltyAreaWidth)+ 0.5*ROBOT_RADIUS)////penalty area
