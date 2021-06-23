@@ -1,9 +1,9 @@
 #ifndef SWITCHES_H
 #define SWITCHES_H
 
-#define GAME_MODE_ROBOCUP_2021 3 /// 1 : Run in Simulator 2 : Technical Challenge 3 : Hardware Challenge
+#define GAME_MODE_ROBOCUP_2021 1 /// 1 : Run in Simulator 2 : Technical Challenge 3 : Hardware Challenge
 #define CAM_COUNT 4
-#define DIVISION 3	/// 1 : for division A		2 : for division B      3 : for OmidReal
+#define DIVISION 2	/// 1 : for division A		2 : for division B      3 : for OmidReal
 #define MAX_BALLS 40
 #define MAX_ROBOTS_IN_THE_FIELD 2*MAX_ROBOTS_PER_TEAM_IN_THE_FIELD
 #define MAX_ROBOTS_PER_TEAM_IN_THE_FIELD 7
