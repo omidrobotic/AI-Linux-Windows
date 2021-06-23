@@ -131,7 +131,7 @@ void produceRobotsDestinations()
     }
 
 
-    if (world.numT>10)
+    if (world.numT>3)
     switch (world.playMode)
     {
         case mode_State::ballPlacement:
