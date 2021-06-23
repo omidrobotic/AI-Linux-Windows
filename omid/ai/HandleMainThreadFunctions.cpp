@@ -289,6 +289,7 @@ void produceRobotsDestinations()
                     } else {
                         HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
                     }
+                   // cout<<"shoot  :"<<world.robotT[HighLevel::nearest_robot_to_ball('T')].kick_power<<'\n';
                     //cout << world.getRobotTNumberForIndex(uyu) << endl;
                     HighLevel::defence_scor2(((world.numT - 2)-int(PRESENT_OF_ATTACKER*(world.numT - 2))));
 

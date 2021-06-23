@@ -503,14 +503,17 @@ void SimulatorMove::setAndSend(VecPosition velocity, double w, bool shootOrChip,
     auto *robotCommand = control.add_robot_commands();
     robotCommand->set_id(id);
     if(world.robotT[index].kick_power>0) {
-        cout<<kickPower<<'\n';
-        robotCommand->set_kick_speed((shootOrChip)?/*(3 / 2.0*kickPower)*/0:3 / 2.0*kickPower);
+        robotCommand->set_dribbler_speed(0); // convert from 1 - 0 to rpm, where 1 is 150 rad/s
+        robotCommand->set_kick_speed((shootOrChip)?(int)(3 / 2.0*kickPower):(int)(3 / 2.0*kickPower*0.70710));
     } else {
-        cout<<"0";
+        robotCommand->set_dribbler_speed(1); // convert from 1 - 0 to rpm, where 1 is 150 rad/s
         robotCommand->set_kick_speed(0);
     }
     robotCommand->set_kick_angle((shootOrChip)?0:45);
+/*
     robotCommand->set_dribbler_speed((spinBack)?1:0); // convert from 1 - 0 to rpm, where 1 is 150 rad/s
+*/
+
     auto *moveCommand = robotCommand->mutable_move_command()->mutable_local_velocity();
 
     VecPosition velocityLocal;
@@ -518,7 +521,8 @@ void SimulatorMove::setAndSend(VecPosition velocity, double w, bool shootOrChip,
     moveCommand->set_forward(velocityLocal.getX()/300.000);
     moveCommand->set_left(velocityLocal.getY()/300.000);
     moveCommand->set_angular(w*2);
-
+   /// if(id==10)
+   /// cout<<robotCommand->id()<<" : "<<robotCommand->kick_speed()<<" : "<<robotCommand->dribbler_speed()<<" : "<<robotCommand->kick_angle()<<"\n";
 
     char _data[control.ByteSize()];
     control.SerializePartialToArray(_data, sizeof(_data));

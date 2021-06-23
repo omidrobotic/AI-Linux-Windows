@@ -2899,6 +2899,7 @@ int HighLevel::find_best_robot_pass(int index_robotT)
 			max_pass_score = max_index;
 			cout << "sdf" << endl;
 		}
+        max_index=max_pass_score;
 		///to shoot
 
 		ball_to_shoot.getCircleIntersectionPoints(ball, &q1, &q2);
@@ -3016,6 +3017,7 @@ int HighLevel::find_robot_have_ball(char team)
 //pass index one to index2
 void HighLevel::Pass(int index1, int index2)
 {
+   // cout<<"id sender:  "<<world.getRobotTNumberForIndex(index1)<<"id reciver:   "<<world.getRobotTNumberForIndex(index2)<<'\n';
 	index_pass_senderT = index1;
 	VecPosition mid_bigest_holl;
 	VecPosition dest;
@@ -3058,12 +3060,13 @@ void HighLevel::Pass(int index1, int index2)
 			finde_for_pass = 1;
 			if (cant_pass_on_the_ground[index1] == true)
 			{
-				world.robotT[index1].velocity = VecPosition(2*(world.robotT[index2].position.getX() - world.robotT[index1].position.getX()), 2*(world.robotT[index2].position.getY() - world.robotT[index1].position.getY()));
+			    world.robotT[index1].destination_position=world.ball.getCurrentBallPosition();
+			//	world.robotT[index1].velocity = VecPosition(2*(world.robotT[index2].position.getX() - world.robotT[index1].position.getX()), 2*(world.robotT[index2].position.getY() - world.robotT[index1].position.getY()));
 				world.robotT[index1].shoot_or_chip = 1;
 				if (1.1*0.70710678*sqrt(((world.robotT[index1].position.getDistanceTo(world.robotT[index2].position) / 1000)*9.8) / (1.5 - (0.43))) >= MAX_BALL_SPEED)
 				{
 						world.robotT[index1].kick_power = MAX_BALL_SPEED / 0.70710678;
-					world.robotT[index1].kick_power = 3;
+					    //world.robotT[index1].kick_power = 3;
 				}
 				else
 					world.robotT[index1].kick_power = 0.6*1*sqrt(((world.robotT[index1].position.getDistanceTo(world.robotT[index2].position) / 1000)*9.8) / (1.5 - (0.43)));
@@ -3082,8 +3085,9 @@ void HighLevel::Pass(int index1, int index2)
 			world.robotT[index1].shoot_or_chip = 1;
 			world.robotT[index1].kick_power = 0;
 		}
-		if (((abs(world.ball.velocity.getX()) > 0.5) || (abs(world.ball.velocity.getY()) > 0.5)) && finde_for_pass==1)
+		if (HighLevel::nearest_robot_to_ball('T')!=index1 &&((abs(world.ball.velocity.getX()) > 0.1) || (abs(world.ball.velocity.getY()) > 0.1)) && finde_for_pass==1)
 		{
+		    cout<<"pass\n";
 			HighLevel::pass_mode = expectation;
 		}
 
@@ -3189,7 +3193,6 @@ void HighLevel::plan_scor(int number_of_attacker)
 		plus_plan_score++;
 
 	}
-	u=0;
 	//////////////////////////////////////////////////////////////////////////
 	if (u == 0)
 	{
