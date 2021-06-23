@@ -231,20 +231,38 @@ void nrf::write_on_port() {
         statusNrf = SetCommState(hComm, &dcbSerialParams);
         ftime = false;
 #elif __linux__
-        serial_port = open("/dev/ttyUSB1", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
+       /* int serial_port_all[4];
+        char * com="/dev/ttyUSB";
+        for (int i = 0; i < 4; ++i) {
+
+            char com_number=i+'0';
+           // strcat(&com,com_number);
+            size_t len = strlen(com);
+            char* ret = new char[len+2];
+            strcpy(ret, com);
+            ret[len] = com_number;
+            ret[len+1] = '\0';
+            serial_port_all[i]=open(ret, O_RDWR| O_NOCTTY*//*O_RDWR | O_NOCTTY | O_NDELAY*//*);
+            sleep(1);
+            close(serial_port);
+            sleep(1);
+            serial_port = open(ret, O_RDWR| O_NOCTTY*//*O_RDWR | O_NOCTTY | O_NDELAY*//*);
+            if(serial_port == -1) // if open is unsucessful
+            {
+                printf("%s faild \n");
+            }
+            else
+            {
+                fcntl(serial_port, F_SETFL, 0);
+                printf("%s port is open.\n");
+            }
+        }*/
+
+        serial_port=open("/dev/ttyUSB1", O_RDWR| O_NOCTTY);//*O_RDWR | O_NOCTTY | O_NDELAY*/);
         sleep(1);
         close(serial_port);
         sleep(1);
-        serial_port = open("/dev/ttyUSB1", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
-        if(serial_port == -1) // if open is unsucessful
-        {
-            printf("open_port: Unable to open /dev/ttyUSB1. \n");
-        }
-        else
-        {
-            fcntl(serial_port, F_SETFL, 0);
-            printf("port is open.\n");
-        }
+        serial_port = open("/dev/ttyUSB1", O_RDWR| O_NOCTTY);//*O_RDWR | O_NOCTTY | O_NDELAY*//*);
    /*     struct termios2 tty;      // structure to store the port settings in
         ioctl(serial_port, TCGETS2, &tty);
 
@@ -265,6 +283,7 @@ void nrf::write_on_port() {
         //  tty.c_oflag     &=  ~OPOST;            // Make raw
         ioctl(serial_port, TCSETS2, &tty);*/
         ftime = false;
+
 #endif
 
 
@@ -285,8 +304,8 @@ void nrf::write_on_port() {
         for (int i = 0; i < 180; ++i) {
            output[i] = 1;
         }
-        write(fd, output, sizeof(output));  //Send data
-       printf("Wrote the bytes. \n");
+       write(fd, output, sizeof(output));  //Send data
+      // printf("Wrote the bytes. \n");
     }
 }
 void nrf::read_from_port()

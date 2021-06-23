@@ -9,7 +9,6 @@ int indexOfNearestRobot;
 void produceRobotsDestinations()
 {
 #if GAME_MODE_ROBOCUP_2021==1
-
     Balk::set_balks_in_world_object();
     //auto start_timeM = std::chrono::high_resolution_clock::now();
     ///set robots to line
@@ -351,6 +350,7 @@ void produceRobotsDestinations()
     //auto timeM = end_timeM - start_timeM;
     //cout << timeM.count() / 1000000.0 << endl;
 #elif GAME_MODE_ROBOCUP_2021==2
+#elif GAME_MODE_ROBOCUP_2021==3 
 #endif
 }
 

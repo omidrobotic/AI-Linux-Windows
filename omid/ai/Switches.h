@@ -1,12 +1,12 @@
 #ifndef SWITCHES_H
 #define SWITCHES_H
 
-#define GAME_MODE_ROBOCUP_2021 1 /// 1 : Run in Simulator 2 : Technical Challenge 3 : Hardware Challenge
+#define GAME_MODE_ROBOCUP_2021 3 /// 1 : Run in Simulator 2 : Technical Challenge 3 : Hardware Challenge
 #define CAM_COUNT 4
-#define DIVISION 2	/// 1 : for division A		2 : for division B
+#define DIVISION 3	/// 1 : for division A		2 : for division B      3 : for OmidReal
 #define MAX_BALLS 40
 #define MAX_ROBOTS_IN_THE_FIELD 2*MAX_ROBOTS_PER_TEAM_IN_THE_FIELD
-#define MAX_ROBOTS_PER_TEAM_IN_THE_FIELD 6
+#define MAX_ROBOTS_PER_TEAM_IN_THE_FIELD 7
 #define MERGE_DISTANCE 500
 #define ROBOT_RADIUS 90	  ///millimeter  //ERforce 80 GRSIM 85 Real 85
 #define	BALL_RADIUS 21
@@ -18,7 +18,7 @@
 #define DRAW_MOUSE 0
 #define DRAW_RRT_PATHS 0
 #define DRAW_PENALTY_AREA_ATTACKER_LIMIT 0
-#define SEND_COMMANDS_TO_ROBOTS 2	/// 2: FOR COMMAND ER-force ROBOT 1 : FOR COMMAND TO REAL ROBOTS   0 : FOR COMMAND TO GRSIM ROBOTS
+#define SEND_COMMANDS_TO_ROBOTS 1	/// 2: FOR COMMAND ER-force ROBOT 1 : FOR COMMAND TO REAL ROBOTS   0 : FOR COMMAND TO GRSIM ROBOTS
 #define USE_FEEDFORWARD 0
 #define RECTANGULAR_PENALTY_AREA 1	/// 1 (non zero) : FOR RECTANGULAR PENALTY AREA   0 : FOR CIRCULAR PENALTY AREA
 #define REACH_DESTINATION_APPROXIMATION 25
@@ -65,9 +65,9 @@
 //----- Defines Send ER-force Commands-------------------------------------------------
 #define PORT_NUM_SEND_ERforce_COMMAND_YELLOW		10302
 #define PORT_NUM_SEND_ERforce_COMMAND_BLUE		10301
-#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.25.0.12"//div a
+//#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.25.0.12"//div a
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.20.0.6"//div c
-
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"127.0.0.1"
+#define GROUP_ADDR_SEND_ERforce_COMMAND	"192.168.0.4"
 
 #endif

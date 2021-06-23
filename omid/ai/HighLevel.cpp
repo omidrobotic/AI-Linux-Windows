@@ -3019,7 +3019,7 @@ void HighLevel::Pass(int index1, int index2)
 {
     if(index2==world.team_T.Goalie)
     {
-        HighLevel::Shoot(index1);
+        HighLevel::Shoot(HighLevel::nearest_robot_to_ball('T'));
 
     }
     else {

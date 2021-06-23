@@ -18,7 +18,7 @@ void Socket_udp::paddr(unsigned char *a)
 }
 void Socket_udp::Init_Socket_Server(const char *  Group_Addr, int Port_Num)
 {
-    /*shutdown(inet_addr(Group_Addr),2);
+    shutdown(inet_addr(Group_Addr),2);
 
 
 
@@ -30,7 +30,7 @@ void Socket_udp::Init_Socket_Server(const char *  Group_Addr, int Port_Num)
     std::cout<<"sim   "<<hp<<'\n';
     for (i=0; hp->h_addr_list[i] != 0; i++)
         paddr((unsigned char*) hp->h_addr_list[i]);
-    printf("\n");*/
+    printf("\n");
 #ifdef WIN
 // This stuff initializes winsock
 WSAStartup(wVersionRequested, &wsaData);
@@ -86,7 +86,7 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num, const
             {
                 memset(inteface, '\0', sizeof(inteface));
                strcpy(inteface,addr);
-//                inteface=addr;
+//                inteface=addr;127.0.0.1
                 printf("find\n");
             }
            // printf("data va family: %s\tAddress: %s\n", ifa->ifa_addr->sa_data, ifa->ifa_addr->sa_family);
@@ -100,7 +100,6 @@ void Socket_udp::Init_Socket_Client(const char * Group_Addr, int Port_Num, const
 	wVersionRequested = MAKEWORD(1, 1); // Stuff for WSA functions										// This stuff initializes winsock
 	WSAStartup(wVersionRequested, &wsaData);
 #endif
-
 
 	// Create a multicast socket and fill-in multicast address information
 	Multi_Server_Sock = socket(AF_INET, SOCK_DGRAM, 0);

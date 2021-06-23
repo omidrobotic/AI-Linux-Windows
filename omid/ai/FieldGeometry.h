@@ -48,7 +48,7 @@ const int GoalLength = 1200;
 const int GoalPostLength = 180;
 const int CornelPoint = 6000;
 const int PenaltyPoint = 1200;
-const int PenaltyAreaRadius = 0;//also knwon as mohavate jarime
+const int PenaltyAreaRadius = 1200;//also knwon as mohavate jarime
 const int PenaltyAreaWidth = 1800;
 const int PenaltyAreaLength = 3800;
 const int CenterCircleRadius = 500;
@@ -120,6 +120,45 @@ const VecPosition PALD(-3500, -250);	//penalty area line left down
 const VecPosition PARU(3500, 250);		//penalty area line right up
 const VecPosition PARD(3500, -250);		//penalty area line right down
 //**
+
+#elif DIVISION==3
+const double GlframeScale = 67.0; //if double size=67 and single size=50
+const int WholeFieldLength = 8050;	//10400
+const int WholeFieldWidth = 6050;	//7400
+const int SurroundFieldLength = 8050;
+const int SurroundFieldWidth = 6050;
+const int FieldLength = 8000;
+const int FieldWidth = 6000;
+const int FreeBound = 500;
+const int GoalLength = 1000;
+const int GoalPostLength = 200;
+const int CornelPoint = 4500;	//4490
+const int PenaltyPoint = 1000;
+const int PenaltyAreaRadius = 1000;//also knwon as mohavate jarime
+const int PenaltyAreaWidth = 1200;
+const int PenaltyAreaLength = 2400;
+const int CenterCircleRadius = 500;
+const int WholeFieldMargin = 700;
+const int SurroundFieldMargin = 300;	//250
+//const int PenaltyAreaCenterLineLength = 500;
+
+const double WholeFieldLengthG = 8.050;
+const double WholeFieldWidthG = 6.050;
+const double FieldLengthG = 8.000;
+const double FieldWidthG = 6.000;
+const double FreeBoundG = 0.500;
+const double GoalLengthG = 1.000;
+const double CornelPointG = 4.500;	//4.490
+const double PenaltyPointG = 1.000;
+//const double PenaltyAreaRadiusG = 1.000; //also knwon as mohavate jarime
+const int PenaltyAreaWidthG = 1.200;
+const int PenaltyAreaLengthG = 2.400;
+const double CenterCircleRadiusG = 0.500;
+const double WholeFieldMarginG = 0.700;
+const double SurroundFieldMarginG = 0.300;	//250
+const float GoalDeep = 0.180;
+
+
 #endif
 
 
