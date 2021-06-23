@@ -414,7 +414,7 @@ int main(int argc, char **argv)
 					rnfi = world.getRobotTNumberForIndex(i);
 					nrf::go_withoutSend(world.robotT[i].velocityToGo, world.robotT[i].wToGo, rnfi, rnfi, world);
 					nrf::write_on_port();
-					//cout << "send for robot id " << rnfi << " index " << i << "number " << rnfi << endl;
+					///cout << "send for robot id " << rnfi << " index " << i << "number " << rnfi << endl;
 				}
 			}
 			//world.exactSleep(16);

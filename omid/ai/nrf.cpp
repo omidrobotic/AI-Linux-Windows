@@ -36,6 +36,18 @@
 #include <X11/Xlib.h>
 // #include "myheader.h"    // can no longer use windows.h or conio.h
 // #include "myheader2.h"
+
+
+///nrf lib
+#include <stdio.h>
+#include <fcntl.h>
+#include <errno.h>
+//#include <asm/termios.h>
+#include <sys/ioctl.h>
+#include <asm-generic/termbits.h>
+
+
+
 #endif
 #include "math.h"
 #include "matrix.h"
@@ -258,30 +270,40 @@ void nrf::write_on_port() {
             }
         }*/
 
-        serial_port=open("/dev/ttyUSB1", O_RDWR| O_NOCTTY);//*O_RDWR | O_NOCTTY | O_NDELAY*/);
-        sleep(1);
-        close(serial_port);
-        sleep(1);
-        serial_port = open("/dev/ttyUSB1", O_RDWR| O_NOCTTY);//*O_RDWR | O_NOCTTY | O_NDELAY*//*);
-   /*     struct termios2 tty;      // structure to store the port settings in
+        serial_port = open("/dev/ttyUSB1", O_RDWR| O_NOCTTY/*O_RDWR | O_NOCTTY | O_NDELAY*/);
+
+        if(serial_port == -1) // if open is unsucessful
+        {
+            //perror("open_port: Unable to open /dev/ttyS0 - ");
+            printf("open_port: Unable to open /dev/ttyUSB1. \n");
+        }
+        else
+        {
+            fcntl(serial_port, F_SETFL, 0);
+            printf("port is open.\n");
+        }
+        struct termios2 tty;      // structure to store the port settings in
         ioctl(serial_port, TCGETS2, &tty);
 
         //================= (.c_cflag) ===============//
 
         tty.c_cflag     &=  ~PARENB;           // No parity bit is added to the output characters
         tty.c_cflag     &=  ~CSTOPB;        // Only one stop-bit is used
-        //tty.c_cflag     &=  ~CSIZE;            // CSIZE is a mask for the number of bits per character
+        tty.c_cflag     &=  ~CSIZE;            // CSIZE is a mask for the number of bits per character
         tty.c_cflag     |=  CS8;            // Set to 8 bits per character
-        //tty.c_cflag     &=  ~CRTSCTS;       // Disable hadrware flow control (RTS/CTS)
-        //tty.c_cflag     |=  CREAD | CLOCAL;
+        tty.c_cflag     &=  ~CRTSCTS;       // Disable hadrware flow control (RTS/CTS)
+        tty.c_cflag     |=  CREAD | CLOCAL;
         tty.c_cflag &= ~CBAUD;
         tty.c_cflag |= CBAUDEX;
-        //  tty.c_cflag |= BOTHER;
+        // tty.c_cflag |= BOTHER;
         tty.c_ispeed = 256000;
         tty.c_ospeed = 256000;
-        //  tty.c_oflag     =   0;              // No remapping, no delays
-        //  tty.c_oflag     &=  ~OPOST;            // Make raw
-        ioctl(serial_port, TCSETS2, &tty);*/
+        tty.c_oflag     =   0;              // No remapping, no delays
+        tty.c_oflag     &=  ~OPOST;            // Make raw
+
+
+
+        ioctl(serial_port, TCSETS2, &tty);
         ftime = false;
 
 #endif
@@ -297,14 +319,10 @@ void nrf::write_on_port() {
 #elif __linux__
 
 #endif
-        output[1]=1;
-        output[2]=1;
-        output[3]=1;
-        output[4]=1;
-        for (int i = 0; i < 180; ++i) {
-           output[i] = 1;
-        }
-       write(fd, output, sizeof(output));  //Send data
+     /*   for (int i = 0; i < 180; ++i) {
+            output[i]=1;
+        }*/
+       write(serial_port, output, sizeof(output));  //Send data
       // printf("Wrote the bytes. \n");
     }
 }

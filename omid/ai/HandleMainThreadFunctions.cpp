@@ -350,7 +350,13 @@ void produceRobotsDestinations()
     //auto timeM = end_timeM - start_timeM;
     //cout << timeM.count() / 1000000.0 << endl;
 #elif GAME_MODE_ROBOCUP_2021==2
-#elif GAME_MODE_ROBOCUP_2021==3 
+#elif GAME_MODE_ROBOCUP_2021==3
+    if (world.numT>1) {
+        
+        world.robotT[world.getIndexForRobotTNumber(4)].destination_position = VecPosition(-2000, 1000);
+        world.robotT[world.getIndexForRobotTNumber(7)].destination_position = VecPosition(-2000, -1000);
+    }
+   // world.robotT[world.getIndexForRobotTNumber(4)].velocityToGo=VecPosition(800,0);
 #endif
 }
 
