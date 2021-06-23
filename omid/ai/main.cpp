@@ -244,7 +244,7 @@ static void redraw(void)
 void timer(int time)
 {
 	glutPostRedisplay();
-	glutTimerFunc(32, timer, 0);	//32
+	glutTimerFunc(1, timer, 0);	//32
 }
 void mouseCB(int button, int state, int x, int y)
 {
@@ -394,7 +394,7 @@ int main(int argc, char **argv)
 		glutKeyboardFunc(Keyboard);
 		glutKeyboardUpFunc(KeyboardUp);
 		glutMouseFunc(mouseCB);
-		glutTimerFunc(32, timer, 0);	//32
+		glutTimerFunc(1, timer, 0);	//32
 		glutMainLoop();
 	};
 	auto radio_func = [&]()

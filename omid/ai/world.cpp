@@ -686,37 +686,37 @@ void World::exactSleep(double desired_delay)	//in milliseconds
 
 /*! DrawObjects METHODS */
 
-//void DrawShape::DrawDot(VecPosition point, double radius, double red, double green, double blue)
-//{
-//	Circle c(point, radius);
-//	GLFrame::addCirlceToPainting(c, red, green, blue,true);
-//	//_sleep(300);
-//}
-//
-//void DrawShape::DrawCircle(Circle circle, double red, double green, double blue, bool is_fill)
-//{
-//	GLFrame::addCirlceToPainting(circle, red, green, blue,is_fill);
-//}
-//
-//void DrawShape::DrawParaline(VecPosition start, VecPosition end, double red, double green, double blue)
-//{
-//	GLFrame::addLineToPainting(start, end, red, green, blue);
-//}
-//
-//void DrawShape::DrawParaline(Paraline pl, double red, double green, double blue)
-//{
-//	GLFrame::addLineToPainting(pl.getFirstPoint(),pl.getSecondPoint(), red, green, blue);
-//}
-//
-//void DrawShape::ClearCircles()
-//{
-//	GLFrame::resetCirclePaintings();
-//}
-//
-//void DrawShape::ClearLines()
-//{
-//	GLFrame::resetLinePaintings();
-//}
+void DrawShape::DrawDot(VecPosition point, double radius, double red, double green, double blue)
+{
+	Circle c(point, radius);
+	GLFrame::addCirlceToPainting(c, red, green, blue,true);
+	//_sleep(300);
+}
+
+void DrawShape::DrawCircle(Circle circle, double red, double green, double blue, bool is_fill)
+{
+	GLFrame::addCirlceToPainting(circle, red, green, blue,is_fill);
+}
+
+void DrawShape::DrawParaline(VecPosition start, VecPosition end, double red, double green, double blue)
+{
+	GLFrame::addLineToPainting(start, end, red, green, blue);
+}
+
+void DrawShape::DrawParaline(Paraline pl, double red, double green, double blue)
+{
+	GLFrame::addLineToPainting(pl.getFirstPoint(),pl.getSecondPoint(), red, green, blue);
+}
+
+void DrawShape::ClearCircles()
+{
+	GLFrame::resetCirclePaintings();
+}
+
+void DrawShape::ClearLines()
+{
+	GLFrame::resetLinePaintings();
+}
 
 /*! DrawObjects METHODS */
 

@@ -21,8 +21,8 @@
 #define SEND_COMMANDS_TO_ROBOTS 2	/// 2: FOR COMMAND ER-force ROBOT 1 : FOR COMMAND TO REAL ROBOTS   0 : FOR COMMAND TO GRSIM ROBOTS
 #define USE_FEEDFORWARD 0
 #define RECTANGULAR_PENALTY_AREA 1	/// 1 (non zero) : FOR RECTANGULAR PENALTY AREA   0 : FOR CIRCULAR PENALTY AREA
-#define REACH_DESTINATION_APPROXIMATION 25
-#define REACH_ANGLE_APPROXIMATION 0.4
+#define REACH_DESTINATION_APPROXIMATION 40
+#define REACH_ANGLE_APPROXIMATION 5
 
 //////////////////mhz
 #define DISTANCE_ROBOT_HAVE_BALL 50
@@ -56,7 +56,7 @@
 #define PORT_NUM_Refree        10003	//10003          
 #define GROUP_ADDR_Refree  "224.5.23.1" 
 //----- Defines Vision-------------------------------------------------------------- 
-#define PORT_NUM_Vision        10006
+#define PORT_NUM_Vision        10020
 #define GROUP_ADDR_Vision  "224.5.23.2"
 //----- Defines Send Grsim Commands-------------------------------------------------
 #define PORT_NUM_SEND_GRSIM_COMMAND		20011
@@ -64,7 +64,7 @@
 //----- Defines Send ER-force Commands-------------------------------------------------
 #define PORT_NUM_SEND_ERforce_COMMAND_YELLOW		10302
 #define PORT_NUM_SEND_ERforce_COMMAND_BLUE		10301
-#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.25.0.15"//div a
-//#define GROUP_ADDR_SEND_ERforce_COMMAND	"127.0.0.1"
+//#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.25.0.15"//div a
+#define GROUP_ADDR_SEND_ERforce_COMMAND	"127.0.0.1"
 
 #endif

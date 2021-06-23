@@ -502,8 +502,14 @@ void SimulatorMove::setAndSend(VecPosition velocity, double w, bool shootOrChip,
     auto control = RobotControl();
     auto *robotCommand = control.add_robot_commands();
     robotCommand->set_id(id);
-    robotCommand->set_kick_speed(/*(shootOrChip)?3 / 2.0*kickPower*0.70710:(3 / 2.0*kickPower)*/100);
-    robotCommand->set_kick_angle((shootOrChip)?45:0);
+    if(world.robotT[index].kick_power>0) {
+        cout<<kickPower<<'\n';
+        robotCommand->set_kick_speed((shootOrChip)?/*(3 / 2.0*kickPower)*/0:3 / 2.0*kickPower);
+    } else {
+        cout<<"0";
+        robotCommand->set_kick_speed(0);
+    }
+    robotCommand->set_kick_angle((shootOrChip)?0:45);
     robotCommand->set_dribbler_speed((spinBack)?1:0); // convert from 1 - 0 to rpm, where 1 is 150 rad/s
     auto *moveCommand = robotCommand->mutable_move_command()->mutable_local_velocity();
 

@@ -323,16 +323,16 @@ public:
 
 };
 
-//class DrawShape
-//{
-//public:
-//	static void DrawDot(VecPosition point, double radius = 50, double red = 255, double green = 0, double blue = 0);
-//	static void DrawCircle(Circle circle, double red = 255, double green = 0, double blue = 0,bool isfill = false);
-//	static void DrawParaline(VecPosition start, VecPosition end, double red = 255, double green = 0, double blue = 0);
-//	static void DrawParaline(Paraline pl, double red = 255, double green = 0, double blue = 0);
-//	static void ClearCircles();
-//	static void ClearLines();
-//};
+class DrawShape
+{
+public:
+	static void DrawDot(VecPosition point, double radius = 50, double red = 255, double green = 0, double blue = 0);
+	static void DrawCircle(Circle circle, double red = 255, double green = 0, double blue = 0,bool isfill = false);
+	static void DrawParaline(VecPosition start, VecPosition end, double red = 255, double green = 0, double blue = 0);
+	static void DrawParaline(Paraline pl, double red = 255, double green = 0, double blue = 0);
+	static void ClearCircles();
+	static void ClearLines();
+};
 class Tools
 {
 public:

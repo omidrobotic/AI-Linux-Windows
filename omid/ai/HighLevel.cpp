@@ -2899,7 +2899,6 @@ int HighLevel::find_best_robot_pass(int index_robotT)
 			max_pass_score = max_index;
 			cout << "sdf" << endl;
 		}
-		max_index = max_pass_score;
 		///to shoot
 
 		ball_to_shoot.getCircleIntersectionPoints(ball, &q1, &q2);
@@ -2961,12 +2960,12 @@ int HighLevel::find_best_robot_pass(int index_robotT)
 				cant_pass_on_the_ground[z] = false;
 		}
 	}
-	//DrawShape::DrawDot(world.robotT[index_robotT].position, 50, 0, 255, 0);
-	//DrawShape::DrawDot(world.robotT[denger_index_robotT].position, 50, 0, 0, 255);
-	//DrawShape::DrawDot(Field::getGoalMidO());
-	//Sleep(100);
-	//DrawShape::ClearCircles();
-	//DrawShape::ClearLines();
+/*	DrawShape::DrawDot(world.robotT[index_robotT].position, 50, 0, 255, 0);
+	DrawShape::DrawDot(world.robotT[denger_index_robotT].position, 50, 0, 0, 255);
+	DrawShape::DrawDot(Field::getGoalMidO());
+	sleep(0.0100);
+	DrawShape::ClearCircles();
+	DrawShape::ClearLines();*/
 	//world.robotT[index_robotT].destination_set = true;
 	max_pass_score = last_max;
 	return 0;
@@ -3190,6 +3189,7 @@ void HighLevel::plan_scor(int number_of_attacker)
 		plus_plan_score++;
 
 	}
+	u=0;
 	//////////////////////////////////////////////////////////////////////////
 	if (u == 0)
 	{
@@ -4063,7 +4063,7 @@ void HighLevel::ownership_ball()
 			HighLevel::play_mode = teammate;
 		}
 	}
-	cout << HighLevel::play_mode << endl;
+	//cout << HighLevel::play_mode << endl;
 }
 
 int HighLevel::block_the_ball_to_point(VecPosition send, VecPosition recive)
