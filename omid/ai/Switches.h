@@ -8,7 +8,7 @@
 #define MAX_ROBOTS_IN_THE_FIELD 2*MAX_ROBOTS_PER_TEAM_IN_THE_FIELD
 #define MAX_ROBOTS_PER_TEAM_IN_THE_FIELD 11
 #define MERGE_DISTANCE 500
-#define ROBOT_RADIUS 60	  ///millimeter  //ERforce 80 GRSIM 85 Real 85
+#define ROBOT_RADIUS 90	  ///millimeter  //ERforce 80 GRSIM 85 Real 85
 #define	BALL_RADIUS 21
 #define DISTANCE_TO_BALL_IN_STOP_MODE 500
 #define ATTACKER_DISTANCE_FROM_PENALTY_AREA_LIMIT 200
@@ -35,8 +35,9 @@
 #define RESOULOTION_OF_FIND_PASS 50
 #define PROBLITY_GOAL_FREE_SPACE 1.25 //   2.25/3 present   //of tree
 #define PROBLITY_GOAL_DISTANCE sqrt(pow(FieldLength,2)+ pow(FieldWidth, 2))*(3.0/10) //   1.20/2 present   //of two
-#define PLAN_SCORE_POINT_X ((FieldLength / 2) - ROBOT_RADIUS) - (i*ROBOT_RADIUS * 10)
-#define PLAN_SCORE_POINT_Y ((FieldWidth / 2) - ROBOT_RADIUS) - (j*ROBOT_RADIUS * 10)
+#define PLAN_SCORE_CPU 10
+#define PLAN_SCORE_POINT_X ((FieldLength / 2) - ROBOT_RADIUS) - (i*ROBOT_RADIUS * PLAN_SCORE_CPU)
+#define PLAN_SCORE_POINT_Y ((FieldWidth / 2) - ROBOT_RADIUS) - (j*ROBOT_RADIUS * PLAN_SCORE_CPU)
 #define	PLAN_SCORE_MAXIMOM_X (((-FieldLength / 2) + PenaltyAreaWidth)+ 0.5*ROBOT_RADIUS)////penalty area
 #define PLAN_SCORE_MINIMOM_X ((-FieldLength / 2)- 3.3 * ROBOT_RADIUS)////penalty area
 #define PLAN_SCORE_MAXIMOM_Y ((PenaltyAreaLength / 2)+ 3.3 * ROBOT_RADIUS)////penalty area

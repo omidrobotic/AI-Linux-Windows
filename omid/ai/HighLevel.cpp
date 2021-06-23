@@ -3061,7 +3061,7 @@ void HighLevel::Pass(int index1, int index2)
 			if (cant_pass_on_the_ground[index1] == true)
 			{
 			    world.robotT[index1].destination_position=world.ball.getCurrentBallPosition();
-			//	world.robotT[index1].velocity = VecPosition(2*(world.robotT[index2].position.getX() - world.robotT[index1].position.getX()), 2*(world.robotT[index2].position.getY() - world.robotT[index1].position.getY()));
+		//		world.robotT[index1].velocity = VecPosition(2*(world.robotT[index2].position.getX() - world.robotT[index1].position.getX()), 2*(world.robotT[index2].position.getY() - world.robotT[index1].position.getY()));
 				world.robotT[index1].shoot_or_chip = 1;
 				if (1.1*0.70710678*sqrt(((world.robotT[index1].position.getDistanceTo(world.robotT[index2].position) / 1000)*9.8) / (1.5 - (0.43))) >= MAX_BALL_SPEED)
 				{
@@ -3073,7 +3073,8 @@ void HighLevel::Pass(int index1, int index2)
 			}
 			else
 			{
-				world.robotT[index1].shoot_or_chip = 0;
+                world.robotT[index1].destination_position=world.ball.getCurrentBallPosition();
+                world.robotT[index1].shoot_or_chip = 0;
 				if (1.1*sqrt(((world.robotT[index1].position.getDistanceTo(world.robotT[index2].position) / 1000)*9.8) / (1.5 - (0.43))) >= MAX_BALL_SPEED)
 					world.robotT[index1].kick_power = MAX_BALL_SPEED;
 				else
@@ -3199,7 +3200,7 @@ void HighLevel::plan_scor(int number_of_attacker)
 		double max = 0;
 		typedef std::vector<double> int_vector;
 		typedef std::vector<int_vector> int_double_vector;
-		int_double_vector score((int)(FieldLength / ROBOT_RADIUS * 10) + 2, int_vector((int)(FieldWidth / ROBOT_RADIUS * 10)));
+		int_double_vector score((int)(FieldLength / ROBOT_RADIUS * PLAN_SCORE_CPU) + 2, int_vector((int)(FieldWidth / ROBOT_RADIUS * PLAN_SCORE_CPU)));
 		//VecPosition point[((int)(FieldLength / ROBOT_RADIUS * 2)) + 2][(int)(FieldWidth / ROBOT_RADIUS * 2)];
 		//double score[(int)(FieldLength / ROBOT_RADIUS * 2) + 2][(int)(FieldWidth / ROBOT_RADIUS * 2)];
 		//cout << (int)((FieldLength*FieldWidth) / (ROBOT_RADIUS * 2 *ROBOT_RADIUS * 2)) << endl;
@@ -3227,9 +3228,9 @@ void HighLevel::plan_scor(int number_of_attacker)
 
 		/////////////////////////////////////////////////////////////distance to robot
 		double x, y, sum = 0, sum1 = 0;
-		for (int i = 0; i < (int)(FieldLength / (ROBOT_RADIUS * 10)) + 1; i++)
+		for (int i = 0; i < (int)(FieldLength / (ROBOT_RADIUS * PLAN_SCORE_CPU)) + 1; i++)
 		{
-			for (int j = 0; j < (int)(FieldWidth / (ROBOT_RADIUS * 10)); j++)
+			for (int j = 0; j < (int)(FieldWidth / (ROBOT_RADIUS * PLAN_SCORE_CPU)); j++)
 			{
 			//	point[i][j] = VecPosition(((FieldLength / 2) - ROBOT_RADIUS) - (i*ROBOT_RADIUS * 2), ((FieldWidth / 2) - ROBOT_RADIUS) - (j*ROBOT_RADIUS * 2));
 				score[i][j] = 0;
@@ -3281,14 +3282,14 @@ void HighLevel::plan_scor(int number_of_attacker)
 		double max_score = 0;
 		double max_posx = 0, max_posy = 0;
 
-		for (int i = 0; i < (int)(FieldLength / (ROBOT_RADIUS * 10)) + 1; i++)
+		for (int i = 0; i < (int)(FieldLength / (ROBOT_RADIUS * PLAN_SCORE_CPU)) + 1; i++)
 		{
-			if ((i >= ((int)(FieldLength / (ROBOT_RADIUS * 10)))))
+			if ((i >= ((int)(FieldLength / (ROBOT_RADIUS * PLAN_SCORE_CPU)))))
 			{
 
 				u = 1;
 			}
-			for (int j = 0; j < (int)(FieldWidth / (ROBOT_RADIUS * 10)); j++)
+			for (int j = 0; j < (int)(FieldWidth / (ROBOT_RADIUS * PLAN_SCORE_CPU)); j++)
 			{
 				///////////////////////////////////////////////////longest to goal
 				Cone BallToGoal(VecPosition(PLAN_SCORE_POINT_X, PLAN_SCORE_POINT_Y)/*point[i][j]*/, Field::getUpBarO(), Field::getDownBarO());
@@ -3360,18 +3361,18 @@ void HighLevel::plan_scor(int number_of_attacker)
 			socre_position[l] = max_score_position;
 			HighLevel::check_last_destination_set(HighLevel::nearest_robot_to_point('T', VecPosition(max_posx, max_posy)), VecPosition(max_posx, max_posy));
 			//DrawShape::DrawDot(VecPosition(max_posx, max_posy), 70, 255, 0, 0);
-			for (int i = 0; i < (int)(FieldLength / (ROBOT_RADIUS * 10)) + 1; i++)
+			for (int i = 0; i < (int)(FieldLength / (ROBOT_RADIUS * PLAN_SCORE_CPU)) + 1; i++)
 			{
-				for (int j = 0; j < (int)(FieldWidth / (ROBOT_RADIUS * 10)); j++)
+				for (int j = 0; j < (int)(FieldWidth / (ROBOT_RADIUS * PLAN_SCORE_CPU)); j++)
 				{
 					score[i][j] -= (1 - HighLevel::rel(VecPosition(max_posx, max_posy).getDistanceTo(VecPosition(PLAN_SCORE_POINT_X, PLAN_SCORE_POINT_Y)/*point[i][j]*/), 0, (sqrt(FieldLength*FieldLength + FieldWidth*FieldWidth) / 6)));
 					score[i][j] = HighLevel::rel(score[i][j], 0, 1);
 				}
 			}
 			max_score = 0;
-			for (int i = 0; i < (int)(FieldLength / (ROBOT_RADIUS * 10)) + 1; i++)
+			for (int i = 0; i < (int)(FieldLength / (ROBOT_RADIUS * PLAN_SCORE_CPU)) + 1; i++)
 			{
-				for (int j = 0; j < (int)(FieldWidth / (ROBOT_RADIUS * 10)); j++)
+				for (int j = 0; j < (int)(FieldWidth / (ROBOT_RADIUS * PLAN_SCORE_CPU)); j++)
 				{
 					if (max_score <= score[i][j])
 					{
