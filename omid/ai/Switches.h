@@ -3,7 +3,7 @@
 
 #define GAME_MODE_ROBOCUP_2021 1 /// 1 : Run in Simulator 2 : Technical Challenge 3 : Hardware Challenge
 #define CAM_COUNT 4
-#define DIVISION 1	/// 1 : for division A		2 : for division B
+#define DIVISION 2	/// 1 : for division A		2 : for division B
 #define MAX_BALLS 40
 #define MAX_ROBOTS_IN_THE_FIELD 2*MAX_ROBOTS_PER_TEAM_IN_THE_FIELD
 #define MAX_ROBOTS_PER_TEAM_IN_THE_FIELD 11
@@ -56,7 +56,7 @@
 #define PORT_NUM_Refree        10003	//10003          
 #define GROUP_ADDR_Refree  "224.5.23.1" 
 //----- Defines Vision-------------------------------------------------------------- 
-#define PORT_NUM_Vision        10020
+#define PORT_NUM_Vision        10006
 #define GROUP_ADDR_Vision  "224.5.23.2"
 //----- Defines Send Grsim Commands-------------------------------------------------
 #define PORT_NUM_SEND_GRSIM_COMMAND		20011
@@ -64,7 +64,7 @@
 //----- Defines Send ER-force Commands-------------------------------------------------
 #define PORT_NUM_SEND_ERforce_COMMAND_YELLOW		10302
 #define PORT_NUM_SEND_ERforce_COMMAND_BLUE		10301
-//#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.25.0.15"//div a
-#define GROUP_ADDR_SEND_ERforce_COMMAND	"127.0.0.1"
+#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.25.0.15"//div a
+//#define GROUP_ADDR_SEND_ERforce_COMMAND	"127.0.0.1"
 
 #endif
