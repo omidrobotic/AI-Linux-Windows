@@ -6,7 +6,7 @@
 #define DIVISION 2	/// 1 : for division A		2 : for division B
 #define MAX_BALLS 40
 #define MAX_ROBOTS_IN_THE_FIELD 2*MAX_ROBOTS_PER_TEAM_IN_THE_FIELD
-#define MAX_ROBOTS_PER_TEAM_IN_THE_FIELD 11
+#define MAX_ROBOTS_PER_TEAM_IN_THE_FIELD 6
 #define MERGE_DISTANCE 500
 #define ROBOT_RADIUS 60	  ///millimeter  //ERforce 80 GRSIM 85 Real 85
 #define	BALL_RADIUS 21
