@@ -3017,135 +3017,146 @@ int HighLevel::find_robot_have_ball(char team)
 //pass index one to index2
 void HighLevel::Pass(int index1, int index2)
 {
-   // cout<<"id sender:  "<<world.getRobotTNumberForIndex(index1)<<"id reciver:   "<<world.getRobotTNumberForIndex(index2)<<'\n';
-	index_pass_senderT = index1;
-	VecPosition mid_bigest_holl;
-	VecPosition dest;
-	Line ball_to_index2 = Line::makeLineFromTwoPoints(world.ball.getCurrentBallPosition(), world.robotT[index2].position);
-	VecPosition point1, point2;
-	Circle circle(world.ball.getCurrentBallPosition(), ROBOT_RADIUS + BALL_RADIUS);
-	ball_to_index2.getCircleIntersectionPoints(circle, &point1, &point2);
-	if (HighLevel::pass_mode == submit)
-	{
+    if(index2==world.team_T.Goalie)
+    {
+        HighLevel::Shoot(index1);
 
-		if (world.robotT[index2].position.getDistanceTo(point1) > world.robotT[index2].position.getDistanceTo(point2))
-			dest = point1;
-		else
-			dest = point2;
+    }
+    else {
+        // cout<<"id sender:  "<<world.getRobotTNumberForIndex(index1)<<"id reciver:   "<<world.getRobotTNumberForIndex(index2)<<'\n';
+        index_pass_senderT = index1;
+        VecPosition mid_bigest_holl;
+        VecPosition dest;
+        Line ball_to_index2 = Line::makeLineFromTwoPoints(world.ball.getCurrentBallPosition(),
+                                                          world.robotT[index2].position);
+        VecPosition point1, point2;
+        Circle circle(world.ball.getCurrentBallPosition(), ROBOT_RADIUS + BALL_RADIUS);
+        ball_to_index2.getCircleIntersectionPoints(circle, &point1, &point2);
+        if (HighLevel::pass_mode == submit) {
 
-	VecPosition robot1_to_robot2 = world.robotT[index2].position - world.robotT[index1].position;
-		//DrawShape::DrawParaline(world.robotT[index1].position, world.robotT[index2].position);
-		double angle_robot1_to_robot2 = -
-	((robot1_to_robot2).AngleBetween(VecPosition(1, 0)))*sign(world.robotT[index1].position.getY() - world.robotT[index2].position.getY());
-		double angle_robot2_to_robot1 = -((-robot1_to_robot2).AngleBetween(VecPosition(1, 0)))*sign(world.robotT[index2].position.getY() - world.robotT[index1].position.getY());
+            if (world.robotT[index2].position.getDistanceTo(point1) >
+                world.robotT[index2].position.getDistanceTo(point2))
+                dest = point1;
+            else
+                dest = point2;
 
-		world.robotT[index1].destination_angle = angle_robot1_to_robot2;
-		world.robotT[index2].destination_angle = angle_robot2_to_robot1;
-		world.robotT[index1].destination_position = dest;
+            VecPosition robot1_to_robot2 = world.robotT[index2].position - world.robotT[index1].position;
+            //DrawShape::DrawParaline(world.robotT[index1].position, world.robotT[index2].position);
+            double angle_robot1_to_robot2 = -
+                                                    ((robot1_to_robot2).AngleBetween(VecPosition(1, 0))) *
+                                            sign(world.robotT[index1].position.getY() -
+                                                 world.robotT[index2].position.getY());
+            double angle_robot2_to_robot1 = -((-robot1_to_robot2).AngleBetween(VecPosition(1, 0))) *
+                                            sign(world.robotT[index2].position.getY() -
+                                                 world.robotT[index1].position.getY());
+
+            world.robotT[index1].destination_angle = angle_robot1_to_robot2;
+            world.robotT[index2].destination_angle = angle_robot2_to_robot1;
+            world.robotT[index1].destination_position = dest;
 
 
 //angle robot to ball
-		VecPosition robot1_to_ballVec = world.ball.getCurrentBallPosition() - world.robotT[index1].position;
-		double angle_robot1_to_ball = -((robot1_to_ballVec).AngleBetween(VecPosition(1, 0)))*sign(world.robotT[index1].position.getY() - world.ball.getCurrentBallPosition().getY());
+            VecPosition robot1_to_ballVec = world.ball.getCurrentBallPosition() - world.robotT[index1].position;
+            double angle_robot1_to_ball = -((robot1_to_ballVec).AngleBetween(VecPosition(1, 0))) *
+                                          sign(world.robotT[index1].position.getY() -
+                                               world.ball.getCurrentBallPosition().getY());
 
 
+            Line robot12robot2 = Line::makeLineFromTwoPoints(world.robotT[index1].position,
+                                                             world.robotT[index2].position);
+            VecPosition point3, point4;
 
-		Line robot12robot2 = Line::makeLineFromTwoPoints(world.robotT[index1].position, world.robotT[index2].position);
-		VecPosition point3, point4;
+            if ((abs(angle_robot1_to_robot2 - world.robotT[index1].angle) <= CORRECTION_FACTOR) &&
+                (abs(angle_robot1_to_ball - world.robotT[index1].angle) <= CORRECTION_FACTOR)) {
 
-		if ((abs(angle_robot1_to_robot2 - world.robotT[index1].angle) <= CORRECTION_FACTOR) && (abs(angle_robot1_to_ball - world.robotT[index1].angle) <= CORRECTION_FACTOR))
-		{
+                //HighLevel::pass_mode = expectation;
+                finde_for_pass = 1;
+                if (cant_pass_on_the_ground[index1] == true) {
+                    world.robotT[index1].destination_position = world.ball.getCurrentBallPosition();
+                    //		world.robotT[index1].velocity = VecPosition(2*(world.robotT[index2].position.getX() - world.robotT[index1].position.getX()), 2*(world.robotT[index2].position.getY() - world.robotT[index1].position.getY()));
+                    world.robotT[index1].shoot_or_chip = 1;
+                    if (1.1 * 0.70710678 *
+                        sqrt(((world.robotT[index1].position.getDistanceTo(world.robotT[index2].position) / 1000) *
+                              9.8) / (1.5 - (0.43))) >= MAX_BALL_SPEED) {
+                        world.robotT[index1].kick_power = MAX_BALL_SPEED / 0.70710678;
+                        //world.robotT[index1].kick_power = 3;
+                    } else
+                        world.robotT[index1].kick_power = 0.6 * 1 * sqrt(((world.robotT[index1].position.getDistanceTo(
+                                world.robotT[index2].position) / 1000) * 9.8) / (1.5 - (0.43)));
+                } else {
+                    world.robotT[index1].destination_position = world.ball.getCurrentBallPosition();
+                    world.robotT[index1].shoot_or_chip = 0;
+                    if (1.1 *
+                        sqrt(((world.robotT[index1].position.getDistanceTo(world.robotT[index2].position) / 1000) *
+                              9.8) / (1.5 - (0.43))) >= MAX_BALL_SPEED)
+                        world.robotT[index1].kick_power = MAX_BALL_SPEED;
+                    else
+                        world.robotT[index1].kick_power = 0.8 * sqrt(((world.robotT[index1].position.getDistanceTo(
+                                world.robotT[index2].position) / 1000) * 9.8) / (1.5 - (0.43)));
+                }
+            } else {
+                world.robotT[index1].shoot_or_chip = 1;
+                world.robotT[index1].kick_power = 0;
+            }
+            if (HighLevel::nearest_robot_to_ball('T') != index1 &&
+                ((abs(world.ball.velocity.getX()) > 0.1) || (abs(world.ball.velocity.getY()) > 0.1)) &&
+                finde_for_pass == 1) {
+                cout << "pass\n";
+                HighLevel::pass_mode = expectation;
+            }
 
-			//HighLevel::pass_mode = expectation;
-			finde_for_pass = 1;
-			if (cant_pass_on_the_ground[index1] == true)
-			{
-			    world.robotT[index1].destination_position=world.ball.getCurrentBallPosition();
-		//		world.robotT[index1].velocity = VecPosition(2*(world.robotT[index2].position.getX() - world.robotT[index1].position.getX()), 2*(world.robotT[index2].position.getY() - world.robotT[index1].position.getY()));
-				world.robotT[index1].shoot_or_chip = 1;
-				if (1.1*0.70710678*sqrt(((world.robotT[index1].position.getDistanceTo(world.robotT[index2].position) / 1000)*9.8) / (1.5 - (0.43))) >= MAX_BALL_SPEED)
-				{
-						world.robotT[index1].kick_power = MAX_BALL_SPEED / 0.70710678;
-					    //world.robotT[index1].kick_power = 3;
-				}
-				else
-					world.robotT[index1].kick_power = 0.6*1*sqrt(((world.robotT[index1].position.getDistanceTo(world.robotT[index2].position) / 1000)*9.8) / (1.5 - (0.43)));
-			}
-			else
-			{
-                world.robotT[index1].destination_position=world.ball.getCurrentBallPosition();
-                world.robotT[index1].shoot_or_chip = 0;
-				if (1.1*sqrt(((world.robotT[index1].position.getDistanceTo(world.robotT[index2].position) / 1000)*9.8) / (1.5 - (0.43))) >= MAX_BALL_SPEED)
-					world.robotT[index1].kick_power = MAX_BALL_SPEED;
-				else
-					world.robotT[index1].kick_power = 0.8*sqrt(((world.robotT[index1].position.getDistanceTo(world.robotT[index2].position) / 1000)*9.8) / (1.5 - (0.43)));
-			}
-		}
-		else
-		{
-			world.robotT[index1].shoot_or_chip = 1;
-			world.robotT[index1].kick_power = 0;
-		}
-		if (HighLevel::nearest_robot_to_ball('T')!=index1 &&((abs(world.ball.velocity.getX()) > 0.1) || (abs(world.ball.velocity.getY()) > 0.1)) && finde_for_pass==1)
-		{
-		    cout<<"pass\n";
-			HighLevel::pass_mode = expectation;
-		}
+        } else if (HighLevel::pass_mode == expectation) {
+            finde_for_pass = 0;
+            VecPosition end = VecPosition((world.ball.getCurrentBallPosition().getX() + 7 * world.ball.velocity.getX()),
+                                          (world.ball.getCurrentBallPosition().getY() +
+                                           7 * world.ball.velocity.getY()));
+            Paraline ball_go = Paraline(world.ball.getCurrentBallPosition(), end);
+            VecPosition stand = ball_go.getPointOnParalineClosestTo(world.robotT[index2].position);
+            //DrawShape::DrawDot(stand, 85, 255, 255, 0);
+            //DrawShape::DrawParaline(ball_go, 255, 0, 255);
+            VecPosition robot1_to_robot2 = world.robotT[index2].position - world.ball.getCurrentBallPosition();
+            double angle_robot2_to_robot1 = -((-robot1_to_robot2).AngleBetween(VecPosition(1, 0))) *
+                                            sign(world.robotT[index2].position.getY() -
+                                                 world.ball.getCurrentBallPosition().getY());
+            world.robotT[index2].destination_angle = angle_robot2_to_robot1;
+            if (world.robotT[index1].shoot_or_chip == 0) {
+                if (world.robotT[index2].position.getDistanceTo(point1) >
+                    world.robotT[index2].position.getDistanceTo(point2))
+                    dest = point2;
+                else
+                    dest = point1;
+                world.robotT[index2].destination_position = dest;
+            }
+            //Line ball_velocity = Line::makeLineFromTwoPoints(VecPosition(0,0), world.ball.velocity);
+            //world.robotT[index2].destination_position= /*world.ball.velocity +*/ world.ball.getCurrentBallPosition();
 
-	}
-	else if (HighLevel::pass_mode == expectation)
-	{
-		finde_for_pass = 0;
-		VecPosition end = VecPosition((world.ball.getCurrentBallPosition().getX() + 7*world.ball.velocity.getX()),(world.ball.getCurrentBallPosition().getY() + 7*world.ball.velocity.getY()));
-		Paraline ball_go = Paraline(world.ball.getCurrentBallPosition(), end);
-		VecPosition stand=ball_go.getPointOnParalineClosestTo(world.robotT[index2].position);
-		//DrawShape::DrawDot(stand, 85, 255, 255, 0);
-		//DrawShape::DrawParaline(ball_go, 255, 0, 255);
-		VecPosition robot1_to_robot2 = world.robotT[index2].position - world.ball.getCurrentBallPosition();
-		double angle_robot2_to_robot1 = -((-robot1_to_robot2).AngleBetween(VecPosition(1, 0)))*sign(world.robotT[index2].position.getY() - world.ball.getCurrentBallPosition().getY());
-		world.robotT[index2].destination_angle = angle_robot2_to_robot1;
-		if (world.robotT[index1].shoot_or_chip == 0)
-		{
-			if (world.robotT[index2].position.getDistanceTo(point1) > world.robotT[index2].position.getDistanceTo(point2))
-				dest = point2;
-			else
-				dest = point1;
-			world.robotT[index2].destination_position = dest;
-		}
-		//Line ball_velocity = Line::makeLineFromTwoPoints(VecPosition(0,0), world.ball.velocity);
-		//world.robotT[index2].destination_position= /*world.ball.velocity +*/ world.ball.getCurrentBallPosition();
-
-		if (abs(robot1_to_robot2.AngleBetween(world.ball.velocity))>(1.5*M_PI))
-		{
-			world.robotT[index2].destination_position = world.ball.getCurrentBallPosition();
-			world.robotT[index2].destination_set = true;
-		}
-		else
-		{
-			//world.robotT[index2].velocity = VecPosition(4 * (stand.getX() - world.robotT[index2].position.getX()), 4 * (stand.getY() - world.robotT[index2].position.getY()));
-			world.robotT[index2].destination_position = stand;
-			world.robotT[index2].destination_set = true;
-		}
-
-
-		if (HighLevel::find_robot_have_ball('T')==index2)
-		{
-			world.robotT[index2].destination_position =  world.ball.getCurrentBallPosition();
-			world.robotT[index2].destination_set = true;
-
-			HighLevel::pass_mode = receive;
-		}
-		else if ((world.ball.velocity).AngleBetween(robot1_to_robot2)>CORRECTION_FACTOR*5||((world.ball.velocity.getX()<CORRECTION_FACTOR * 5)&& world.ball.velocity.getY()<CORRECTION_FACTOR * 5))
-		{
-			world.robotT[index2].destination_position = world.ball.getCurrentBallPosition();
-			world.robotT[index2].destination_set = true;
-			HighLevel::pass_mode = receive;
-		}
-	}
-	world.robotT[index1].destination_set = true;
-	//world.robotT[index2].destination_set = true;
+            if (abs(robot1_to_robot2.AngleBetween(world.ball.velocity)) > (1.5 * M_PI)) {
+                world.robotT[index2].destination_position = world.ball.getCurrentBallPosition();
+                world.robotT[index2].destination_set = true;
+            } else {
+                //world.robotT[index2].velocity = VecPosition(4 * (stand.getX() - world.robotT[index2].position.getX()), 4 * (stand.getY() - world.robotT[index2].position.getY()));
+                world.robotT[index2].destination_position = stand;
+                world.robotT[index2].destination_set = true;
+            }
 
 
+            if (HighLevel::find_robot_have_ball('T') == index2) {
+                world.robotT[index2].destination_position = world.ball.getCurrentBallPosition();
+                world.robotT[index2].destination_set = true;
+
+                HighLevel::pass_mode = receive;
+            } else if ((world.ball.velocity).AngleBetween(robot1_to_robot2) > CORRECTION_FACTOR * 5 ||
+                       ((world.ball.velocity.getX() < CORRECTION_FACTOR * 5) &&
+                        world.ball.velocity.getY() < CORRECTION_FACTOR * 5)) {
+                world.robotT[index2].destination_position = world.ball.getCurrentBallPosition();
+                world.robotT[index2].destination_set = true;
+                HighLevel::pass_mode = receive;
+            }
+        }
+        world.robotT[index1].destination_set = true;
+        //world.robotT[index2].destination_set = true;
+
+    }
 }
 
 
