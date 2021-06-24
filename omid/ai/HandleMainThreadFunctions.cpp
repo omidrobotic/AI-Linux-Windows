@@ -495,8 +495,11 @@ else if(DIVISION==2)
                         break;
 
                     case mode_State::KickMode::KickOffT:
-                        HighLevel::ReadyForKick(
-                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
+                        HighLevel::GoaliHoleCover();
+                        HighLevel::Shoot(HighLevel::nearest_robot_to_ball('T'));
+                        HighLevel::defence_scor2(max_robot);
+//                        HighLevel::ReadyForKick(
+//                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
                         break;
 
                     case mode_State::KickMode::PenaltyO:
