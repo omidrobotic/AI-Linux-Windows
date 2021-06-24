@@ -375,7 +375,7 @@ else if(DIVISION==2)
 
                         HighLevel::GoaliHoleCover();
                         HighLevel::go_back_ball(HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition())) ;
-                     // if(min_robot>0)HighLevel::find_roboto_pass(min_robot);
+                   //   if(min_robot>0)HighLevel::find_roboto_pass(min_robot);
                         if(max_robot>0)HighLevel::defence_scor2(max_robot);
                         break;
 
@@ -508,11 +508,11 @@ else if(DIVISION==2)
                         break;
 
                     case mode_State::KickMode::NoKickMode:
-                        HighLevel::GoalieDefend(world.getIndexForRobotTNumber(world.team_T.Goalie));
+                       /// HighLevel::GoalieDefend(world.getIndexForRobotTNumber(world.team_T.Goalie));
                         if(HighLevel::find_robot_have_ball('T')!=-1) {
 
-
                             HighLevel::GoaliHoleCover();
+                           /// HighLevel::go_to_ball(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
                             HighLevel::defence_scor2(max_robot);
                             HighLevel::plan_scor(min_robot);
                             if (world.ball.getCurrentBallPosition().getDistanceTo(Field::getGoalMidO()) < 7000 &&
@@ -521,11 +521,18 @@ else if(DIVISION==2)
                             } else {
                                 HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
                             }
+                        } else if(HighLevel::find_robot_have_ball('O')!=-1)
+                        {
+                            HighLevel::GoaliHoleCover();
+                            HighLevel::go_to_ball(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
+                            HighLevel::defence_scor2(max_robot);
+                            HighLevel::go_back_ball(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
                         } else
                         {
-                            int itis2[1];
-                            itis2[0]=HighLevel::nearest_robot_to_ball('T');
-                     //       HighLevel::StopSurrounding(1, itis2);
+                            HighLevel::GoaliHoleCover();
+                            HighLevel::go_to_ball(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
+                            HighLevel::defence_scor2(max_robot);
+                            HighLevel::plan_scor(min_robot);
                         }
                         break;
 
