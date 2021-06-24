@@ -537,24 +537,36 @@ else if(DIVISION==2)
                         break;
 
                     case mode_State::KickMode::DirectFreeKickT:
+                        HighLevel::Shoot(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
                         HighLevel::start_robotT_format_NoKickMode("DirectFreeKickT");
-                        HighLevel::ReadyForKick(
-                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
+                       // HighLevel::ReadyForKick(
+                       //         HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
                         break;
 
                     case mode_State::KickMode::DirectFreeKickO:
-                        HighLevel::start_robotT_format_NoKickMode("DirectFreeKickO");
+                        HighLevel::GoaliHoleCover();
+                        HighLevel::go_back_ball(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
+
+                        /// HighLevel::go_to_ball(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
+                        HighLevel::defence_scor2(max_robot);
+                        //HighLevel::start_robotT_format_NoKickMode("DirectFreeKickO");
                         break;
 
                     case mode_State::KickMode::IndirectFreeKickT:
                         HighLevel::start_robotT_format_NoKickMode("IndirectFreeKickT");
-                        HighLevel::ReadyForKick(
-                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
+                        HighLevel::Shoot(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
+//                        HighLevel::ReadyForKick(
+//                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
                         break;
 
                     case mode_State::KickMode::IndirectFreeKickO:
-                        HighLevel::start_robotT_format_NoKickMode("IndirectFreeKickO");
-                        break;
+                       // HighLevel::start_robotT_format_NoKickMode("IndirectFreeKickO");
+                        HighLevel::GoaliHoleCover();
+                        HighLevel::go_back_ball(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
+
+                        /// HighLevel::go_to_ball(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
+                        HighLevel::defence_scor2(max_robot);
+                       break;
 
                     default:
                         break;
