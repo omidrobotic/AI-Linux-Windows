@@ -25,12 +25,6 @@ then go to located file
 > `chmod 755 auto.sh`
   
   
-then install <strong>Grsim</strong> from
-
-https://github.com/RoboCup-SSL/grSim
-
-run this cod from your <strong>Grsim</strong> System 
-
 
 then install <strong>OpenGL and GLUT</strong>
 
@@ -41,7 +35,7 @@ install librarys
 > `sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev`
 
 
-your run code system or if you use tow system run code in grsim system
+your run code system or if you use tow system run code in simulator system
 <italic>
   
   * if one system:
@@ -59,7 +53,28 @@ your run code system or if you use tow system run code in grsim system
   For example:
   > `#define GROUP_ADDR_SEND_GRSIM_COMMAND	"192.168.0.2"`
   
+### You can run code in Real setup in Omid ERforce and Grsim Simulation
+
+ ##### *fix switch simulator and mode
+  
+* #### run in <strong>Grsim</strong>:
+  
+then install <strong>Grsim</strong> from
+
+https://github.com/RoboCup-SSL/grSim
+
+run this cod from your <strong>Grsim</strong> System 
+
 go to the code runner system and run:
 > `./auto.sh`
 
+ type 'y' to run
+  
+  next command 
+  
+ > `make`
+  
+  finaly
+  
+  >`./omid'
 
