@@ -60,6 +60,247 @@ int max_pass_score=0;
 ////but in main is final robot position
 condition_pass HighLevel::pass_mode;
 ownership HighLevel::play_mode;
+
+void HighLevel::go_back_ball(int index) {
+    VecPosition intersection1, intersection2;
+    Line ball_to_robotO = Line::makeLineFromTwoPoints(world.ball.getCurrentBallPosition(),
+                                                      Field::getGoalMidP());
+    Circle roboto = Circle(world.ball.getCurrentBallPosition(), 2 * ROBOT_RADIUS + MERGE_DISTANCE);
+    ball_to_robotO.getCircleIntersectionPoints(roboto, &intersection1, &intersection2);
+        if ( Field::getGoalMidP().getDistanceTo(intersection1) <
+                Field::getGoalMidP().getDistanceTo(intersection2))
+            world.robotT[index].destination_position = intersection1;
+        else
+            world.robotT[index].destination_position = intersection2;
+
+    HighLevel::lookAtPos(index, world.ball.getCurrentBallPosition());
+
+}
+/*
+	Begining of Farhan Daemi Code
+	 ______         _
+	|  ____|       | |
+	| |__ __ _ _ __| |__   __ _ _ __
+	|  __/ _` | '__| '_ \ / _` | '_ \
+	| | | (_| | |  | | | | (_| | | | |
+	|_|  \__,_|_|  |_| |_|\__,_|_| |_|
+
+	[ This Part of Code is Writen by Farhan Daemi. ]
+
+	Function Details:
+		1.  gotoXY(index, target)										move the robot with given index to target position.
+		2.  lookAt(index, angle)										turn robot with given index to the given angle.
+		3.  move_ball_to_position(index, target)						move the ball from its current positon to the given target position
+		4.  turn_all_spinbacks_on()    									turn all Teamate Robots Spinback on
+		5.  turn_all_spinbacks_off()    								turn all Teamate Robots Spinback off
+		6.  turn_spinbacks_on(int robotIndex)    						turn a single Teamate Robot Spinback on
+		7.  turn_spinbacks_off(int robotIndex)    						turn a single Teamate Robot Spinback on
+		8.  goalKeeper_defend_and_pass(int goalKeeperIndex)    			goalKeeper defending and passing if the ball is in penalty area
+		9.  ball_is_in_penalty_area(char team)    						check is the ball is in penalty area or not. team can be 'T' for Teamate or 'O' for Oponent.
+		10. defence_formation(int number_of_defender)    				form a couple of robots in front of attacking Oponent Robots for covering our goal
+		11. nearest_robot_to_point_except_goali(VecPosition postion)    find the nearest Teamate Robot to a position except the goal keeper
+		12. oponent_is_shooting_index()    								the Oponent robot which is shooting to our goal (-1 for none)
+
+*/
+
+
+int passTimeOut = 0;
+bool setPassTimeOutBefore = false;
+VecPosition last_ball_pos_goalkeeper;
+
+//  1. gotoXY(index, target) -> move the robot with given index to target position.
+void HighLevel::gotoXY(int robotIndex, VecPosition target)
+{
+    world.robotT[world.getIndexForRobotTNumber(robotIndex)].destination_position = target;
+}
+
+//  2. lookAt(index, angle) -> turn robot with given index to the given angle.
+void HighLevel::lookAt(int robotIndex, float angle)
+{
+    world.robotT[world.getIndexForRobotTNumber(robotIndex)].destination_angle = angle;
+}
+
+bool HighLevel::arivedToPos(int playingRobotNum, VecPosition target)
+{
+    VecPosition robot_pos = world.robotT[world.getIndexForRobotTNumber(playingRobotNum)].position;
+    if(robot_pos.getDistanceTo(target) < 150) return true;
+    else return false;
+}
+int HighLevel::getStageRobot(int playingRobotNum)
+{
+    VecPosition robot_pos = world.robotT[world.getIndexForRobotTNumber(playingRobotNum)].position;
+    int min_dist = 9999999, min_i;
+    for(int i=0; i<world.numT; i++)
+    {
+        VecPosition other_robot_pos = world.robotT[world.getIndexForRobotTNumber(i)].position;
+        if(i != playingRobotNum && other_robot_pos.getDistanceTo(robot_pos) < min_dist)
+        {
+            min_dist = other_robot_pos.getDistanceTo(robot_pos);
+            min_i = i;
+        }
+    }
+    return  min_i;
+}
+
+bool HighLevel::lookAtPos(int playingRobotNum, VecPosition target)
+{
+    VecPosition robot_pos = world.robotT[world.getIndexForRobotTNumber(playingRobotNum)].position;
+    float robot_angle = world.robotT[world.getIndexForRobotTNumber(playingRobotNum)].angle;
+    VecPosition robot_to_targetVec = target - robot_pos;
+    float angle = robot_to_targetVec.AngleBetween(VecPosition(1, 0));
+    if((robot_pos.getY() - target.getY()) >= 0) angle = -angle;
+   // cout<<robot_angle<< "  "<< angle<<'\n';
+    if(abs(robot_angle - angle) < 0.1)
+    {
+        world.robotT[world.getIndexForRobotTNumber(playingRobotNum)].destination_angle = world.robotT[world.getIndexForRobotTNumber(playingRobotNum)].angle;
+        return true;
+    }
+    world.robotT[world.getIndexForRobotTNumber(playingRobotNum)].destination_angle = angle;
+    return false;
+}
+
+VecPosition * HighLevel::get_other_robots(int playingRobotNum)
+{
+    VecPosition other_robots[world.numT - 1];
+    int last_robot_y = - FieldWidth/2;
+    for (int i = 0; i < world.numT-1; ++i) {
+        VecPosition robot_pos;
+        int min_y = 99999;
+        int min_i;
+        for (int j = 0; j < world.numT; ++j) {
+            if(world.getRobotTNumberForIndex(j) != playingRobotNum){
+                VecPosition robot_pos_check = world.robotT[j].position;
+                if(robot_pos_check.getY() > last_robot_y && robot_pos_check.getY() < min_y)
+                {
+                    min_y = robot_pos_check.getY();
+                    robot_pos = robot_pos_check;
+                    min_i = world.getRobotTNumberForIndex(j);
+                }
+            }
+        }
+//        cout<<min_i<<'\n';
+        other_robots[i] = robot_pos;
+        last_robot_y = robot_pos.getY() + 50;
+    }
+    cout<<'\n';
+    return other_robots;
+}
+
+void HighLevel::GoalieDefend(int goalKeeperIndex)
+{
+    // declare some variables to use in algorithm
+    VecPosition ball_pos = world.ball.getCurrentBallPosition();
+    VecPosition robot_pos = world.robotT[world.getIndexForRobotTNumber(goalKeeperIndex)].position;
+    VecPosition ball_velocity_vec = world.ball.getVelocity();
+    float ball_velocity = VecPosition(0,0).getDistanceTo(ball_velocity_vec);
+    Line goal_line, ball_direction;
+    int goaliX = -WholeFieldLength/2 + 300;
+    goal_line = Line::makeLineFromTwoPoints(VecPosition( goaliX, 100), VecPosition( goaliX, -100));
+    VecPosition robot_to_ballVec = ball_pos - robot_pos;
+    float ballAngle = robot_to_ballVec.AngleBetween(VecPosition(1, 0));
+    if((robot_pos.getY() - ball_pos.getY()) >= 0) ballAngle = -ballAngle;
+    VecPosition dest;
+
+    world.team_T.Goalie = goalKeeperIndex; // So important -_-
+    HighLevel::lookAt(goalKeeperIndex, ballAngle);
+    if(ball_velocity > 200) // ball is coming
+    {
+        world.robotT[world.getIndexForRobotTNumber(goalKeeperIndex)].shoot_or_chip = 0;
+        world.robotT[world.getIndexForRobotTNumber(goalKeeperIndex)].kick_power = 0;
+        ball_direction = Line::makeLineFromTwoPoints(last_ball_pos_goalkeeper, ball_pos);
+        dest = ball_direction.getIntersection(goal_line);
+
+        if(ball_pos.getX() > WholeFieldLength/3 && abs(dest.getY() - robot_pos.getY()) > ROBOT_RADIUS*1.5)
+        {
+            if(dest.getY() > robot_pos.getY())
+                dest.setY( PenaltyAreaWidth);
+            else
+                dest.setY(-PenaltyAreaWidth);
+        }
+
+    }
+    else // ball is not moving
+    {
+        if(HighLevel::ball_is_in_penalty_area('T') )//|| oponent_is_shooting_index() == -1)
+        {
+            dest = VecPosition(WholeFieldLength/2 - 300, 0);
+        }
+        else
+        {
+            int nearest_robot_o = HighLevel::nearest_robot_to_ball('T');
+            VecPosition attacker_pos = world.robotT[nearest_robot_o].position;
+            float attacker_angle = (world.robotT[nearest_robot_o].angle * 180)/M_PI;
+            // Line shoot_line = Line::makeLineFromTwoPoints(attacker_pos, ball_pos);
+            Line shoot_line = Line::makeLineFromPositionAndAngle(attacker_pos, attacker_angle);
+            dest = shoot_line.getIntersection(goal_line);
+        }
+        last_ball_pos_goalkeeper = ball_pos;
+    }
+    if(dest.getY() >  PenaltyAreaLength/2 - 200)
+        dest.setY( PenaltyAreaLength/2 - 200);
+    if(dest.getY() < -PenaltyAreaLength/2 + 200)
+        dest.setY(-PenaltyAreaLength/2 + 200);
+    dest.setX(goaliX);
+    HighLevel::gotoXY(goalKeeperIndex, dest);
+
+}
+
+//  9. check is the ball is in penalty area or not. team can be 'T' for Teamate or 'O' for Oponent.
+bool HighLevel::ball_is_in_penalty_area(char team)
+{
+    VecPosition ball_pos = world.ball.getCurrentBallPosition();
+    float ballX = ball_pos.getX();
+    float ballY = ball_pos.getY();
+
+    if(team == 'T')
+    {
+        if(world.team_color == TC_Yellow)
+        {
+            if(ballX > WholeFieldLength/2 - PenaltyAreaWidth  && ballY > -PenaltyAreaLength/2 && ballY < PenaltyAreaLength/2)
+                return true;
+            else
+                return false;
+        }
+        else
+        {
+            if(ballX < -WholeFieldLength/2 + PenaltyAreaWidth  && ballY > -PenaltyAreaLength/2 && ballY < PenaltyAreaLength/2)
+                return true;
+            else
+                return false;
+        }
+    }
+    else
+    {
+        if(world.team_color == TC_Yellow)
+        {
+            if(ballX < -WholeFieldLength/2 + PenaltyAreaWidth  && ballY > -PenaltyAreaLength/2 && ballY < PenaltyAreaLength/2)
+                return true;
+            else
+                return false;
+        }
+        else
+        {
+            if(ballX > WholeFieldLength/2 - PenaltyAreaWidth  && ballY > -PenaltyAreaLength/2 && ballY < PenaltyAreaLength/2)
+                return true;
+            else
+                return false;
+        }
+    }
+}
+
+
+/*
+	End of Farhan Daemi Code
+	 ______         _
+	|  ____|       | |
+	| |__ __ _ _ __| |__   __ _ _ __
+	|  __/ _` | '__| '_ \ / _` | '_ \
+	| | | (_| | |  | | | | (_| | | | |
+	|_|  \__,_|_|  |_| |_|\__,_|_| |_|
+
+*/
+
+
 //////////////////////////////////////////////////////////m.a//////////////////////////
 
 //////////////draw line frome midp to ball circle and return closest intrsection
@@ -78,6 +319,19 @@ VecPosition HighLevel::StopSurrounding_get_general_target()
 	return target;
 }
 ///////
+
+
+//*****************************
+//////////If yoy have spin back
+//*****************************
+void HighLevel::go_to_ball(int index_robot)
+{
+
+}
+
+
+
+
 
 //////////////do not use its useless
 void HighLevel::BlockOponent(int NumofRobot, int index_robotT[], int dangerer_robotO_index)
@@ -1301,7 +1555,7 @@ void HighLevel::GoaliHoleCover()
 {
 	static Cone::Hole_Type bigest_hole;
 	VecPosition target;
-	Circle robots[10];
+	Circle robots[MAX_ROBOTS_PER_TEAM_IN_THE_FIELD];
 	int num_of_robots = 0;
 	int kk = 1;
 

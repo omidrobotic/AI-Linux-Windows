@@ -31,7 +31,14 @@ public:
 	//static void SetPrimitiveArrangement();
 	//static int GetNearestRobotTo(VecPosition point);
 	//static void SetGoaliPrimitiveArrangement();
-
+    static void gotoXY(int robotIndex, VecPosition target);
+    static void lookAt(int robotIndex, float angle);
+    static bool arivedToPos(int robotIndex, VecPosition target);
+    static int getStageRobot(int playingRobotNum);
+    static bool lookAtPos(int robotIndex, VecPosition target);
+    static VecPosition * get_other_robots(int playingRobotNum);
+    static void GoalieDefend(int defenderNum);
+    static bool ball_is_in_penalty_area(char team);
 	//bool Has50cmDistanceFromBall(int id);
 	//void Get50cmDistanceFromBall(int id);
 
@@ -56,6 +63,8 @@ public:
 	static  void BlockOponent(int NumofRobot, int index_robotT[], int dangerer_robotO_index);
 	static void several_position_Line(VecPosition dest, int NumofRobot, int index_robott[]);
 	////////mohammadhossein_zolfaghari
+    static void go_back_ball(int index);
+    static void go_to_ball(int index_robot);
 	//static double max(double x, double y);
 	static void find_roboto_pass(int number_of_robott_block_roboto);
 	static void direct_free_kick(int number_of_attacker, int sender_index);
