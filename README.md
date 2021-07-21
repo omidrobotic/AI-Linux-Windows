@@ -78,3 +78,8 @@ go to the code runner system and run:
   
   >`./omid'
 
+  
+  
+  * ### IN Linux
+  https://www.youtube.com/watch?v=ES_GI-lmhEU
+  https://www.youtube.com/watch?v=8_X5Iq9niDE
