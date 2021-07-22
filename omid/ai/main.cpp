@@ -285,7 +285,7 @@ int main(int argc, char **argv)
 	Estimation estimation;
 	world.glTimer.start();
 
-	world.setTeamSide(TS_LeftSide);
+	world.setTeamSide(TS_RightSide);
 
 	mode_State mode_state;
 	uint32_t stage_time_left;
@@ -334,7 +334,7 @@ int main(int argc, char **argv)
 			//auto time1 = end_time1 - start_time1;
 			//std::cout << "\n took loop refre \n" <<
 			//std::chrono::duration_cast<std::chrono::microseconds>(time1).count();
-            sleep(0.016);
+           // sleep(0.016);
 		}
 	};
 	auto vision_func = [&]()
@@ -412,6 +412,7 @@ int main(int argc, char **argv)
 				if (world.robotT[i].send_command == true)
 				{
 					rnfi = world.getRobotTNumberForIndex(i);
+                //    nrf::set_kick(world.robotT[i].shoot_or_chip, world.robotT[i].kick_power);
 					nrf::go_withoutSend(world.robotT[i].velocityToGo, world.robotT[i].wToGo, rnfi, rnfi, world);
 					nrf::write_on_port();
 					///cout << "send for robot id " << rnfi << " index " << i << "number " << rnfi << endl;
@@ -556,7 +557,7 @@ int main(int argc, char **argv)
 			//auto end_time = std::chrono::high_resolution_clock::now();
 			//auto time = end_time - start_time;
 			//cout << time.count() / 1000000.0 << endl;
-			sleep(0.016);
+			//sleep(0.016);
 		}
 
 		//#if USE_FEEDFORWARD == 1

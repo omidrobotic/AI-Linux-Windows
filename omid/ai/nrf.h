@@ -74,6 +74,7 @@ public:
 	static void go(VecPosition vp, char id);
 	static void go(VecPosition vp, int robot_number, char id, World world, double ww);
 	static void go_withoutSend(VecPosition vp, double ww, int robot_number, char id, World world);
+	static void set_kick(bool shoot_or_chip, short int kick_power);
 	static void convert_robot_velocity_to_wheels_velocity(VecPosition vv, double ww, AngRad rteta, MatrixD &V_send_out);	///for real robots
 	static void set_velocity(MatrixD V, char id);
 	static void write_on_port();
@@ -125,6 +126,9 @@ public:
     void convert_robot_velocity_to_wheels_velocity(VecPosition vv, double ww, AngRad rteta,
                                                    MatrixD &V_send_out);    ///for grsim
     VecPosition convert_robot_velocity_from_field_to_robot_coord(VecPosition vv, AngRad rteta);
+
+    void convert_to_ARM_NRF(VecPosition a);
+
 
     void set_wheels_velocity(MatrixD V, char id);
 

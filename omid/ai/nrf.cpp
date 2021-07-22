@@ -46,7 +46,8 @@
 #include <sys/ioctl.h>
 #include <asm-generic/termbits.h>
 
-
+//Farhan
+#include "HighLevel.h"
 
 #endif
 #include "math.h"
@@ -133,15 +134,26 @@ void nrf::go(VecPosition vp, int robot_number, char id, World world, double ww)
 	set_velocity(V, id);
 	write_on_port();
 }
+void nrf::set_kick(bool shoot_or_chip, short int kick_power)
+{
+    char kick = {};
+
+    kick = (kick_power % 8) << 5 | shoot_or_chip << 4;
+
+    output[30 - 5] = kick;
+}
 void nrf::go_withoutSend(VecPosition vp, double ww, int robot_number, char id, World world)
 {
 	//SetConsoleCtrlHandler((PHANDLER_ROUTINE)(ctrl_handler), true);
 	for (int i = 0; i < world.numT; i++)
 	{
-		if (world.robotT[i].id == robot_number)
-		{
-			convert_robot_velocity_to_wheels_velocity(vp, ww, world.robotT[i].angle, V);
-		}
+		if (world.robotT[i].id == robot_number) {
+            if (robot_number == 5) {
+                convert_robot_velocity_to_wheels_velocity(vp*1000, ww*400, world.robotT[i].angle, V);
+            } else {
+                convert_robot_velocity_to_wheels_velocity(vp, ww, world.robotT[i].angle, V);
+            }
+        }
 	}
 	set_velocity(V, id);
 }
@@ -150,36 +162,62 @@ void nrf::go_withoutSend(VecPosition vp, double ww, int robot_number, char id, W
 void nrf::convert_robot_velocity_to_wheels_velocity(VecPosition vv, double ww, AngRad rteta, MatrixD &V_send_out)
 {
 	//ww -> charkhesh hole mehvar khod.
-
 	MatrixD A(4, 3), V(4, 1), VW1(2, 1), VW(3, 1);
-
 	double R = 90;
-	VW(0, 0) = (vv.getX() / 64.5);
-	VW(1, 0) = (vv.getY() / 64.5);
-	VW(2, 0) = ww;// (ww / 180);
-
+	VW(0, 0) = ((vv.getX() / 64.4));
+	VW(1, 0) = ((vv.getY() /64.4));
+    VW(2, 0) = (ww/8);
 	double modified_coeficient = 1;//0.68
 	double bb0 = Deg2Rad(300), bb1 = Deg2Rad(225), bb2 = Deg2Rad(135), bb3 = Deg2Rad(60);
 
 	for (int k = 0; k < 2; k++)
 	{
-		A(0, 0) = (cos(rteta)*sin(bb0) + sin(rteta)*cos(bb0));     A(0, 1) = (sin(rteta)*sin(bb0) - cos(rteta)*cos(bb0));    A(0, 2) = -R;
-		A(1, 0) = (cos(rteta)*sin(bb1) + sin(rteta)*cos(bb1));     A(1, 1) = (sin(rteta)*sin(bb1) - cos(rteta)*cos(bb1));    A(1, 2) = -R;
-		A(2, 0) = (cos(rteta)*sin(bb2) + sin(rteta)*cos(bb2));     A(2, 1) = (sin(rteta)*sin(bb2) - cos(rteta)*cos(bb2));    A(2, 2) = -R;
-		A(3, 0) = (cos(rteta)*sin(bb3) + sin(rteta)*cos(bb3));     A(3, 1) = (sin(rteta)*sin(bb3) - cos(rteta)*cos(bb3));    A(3, 2) = -R;
+        A(0, 0) = (cos(rteta)*sin(bb0) + sin(rteta)*cos(bb0));     A(0, 1) = (sin(rteta)*sin(bb0) - cos(rteta)*cos(bb0));    A(0, 2) = -R;
+        A(1, 0) = (cos(rteta)*sin(bb1) + sin(rteta)*cos(bb1));     A(1, 1) = (sin(rteta)*sin(bb1) - cos(rteta)*cos(bb1));    A(1, 2) = -R;
+        A(2, 0) = (cos(rteta)*sin(bb2) + sin(rteta)*cos(bb2));     A(2, 1) = (sin(rteta)*sin(bb2) - cos(rteta)*cos(bb2));    A(2, 2) = -R;
+        A(3, 0) = (cos(rteta)*sin(bb3) + sin(rteta)*cos(bb3));     A(3, 1) = (sin(rteta)*sin(bb3) - cos(rteta)*cos(bb3));    A(3, 2) = -R;
 
-		/*MatrixD rotation(3, 3), B(4, 3);
-		rotation(0, 0) = cos(rteta); = -sin(rteta ); rotation(0, 2) = 0;
-		rotation(1, 0) = sin(rteta); rotation(1, 1) = cos(rteta ); rotation(1, 2) = 0;
-		rotation(2, 0) = 0; rotation(2, 1) = 0; rotation(2, 2) = 1;
-		double pi = M_PI;
-		B(0, 0) = (-0.5 / (cos(pi / 3) + cos(pi / 4)));     B(0, 1) = (0.5 / (sin(pi / 3) + sin(pi / 4)));   B(0, 2) = cos(pi / 4) / ((cos(pi / 3) + cos(pi / 4)) * 2 * R);
-		B(1, 0) = (0.5 / (cos(pi / 3) + cos(pi / 4)));      B(1, 1) = (0.5 / (sin(pi / 3) + sin(pi / 4)));    B(1, 2) = cos(pi / 3) / ((cos(pi / 3) + cos(pi / 4)) * 2 * R);
-		B(2, 0) = (0.5 / (cos(pi / 3) + cos(pi / 4)));     B(2, 1) = (-0.5 / (sin(pi / 3) + sin(pi / 4)));   B(2, 2) = cos(pi / 3) / ((cos(pi / 3) + cos(pi / 4)) * 2 * R);
-		B(3, 0) = (-0.5 / (cos(pi / 3) + cos(pi / 4)));    B(3, 1) = (-0.5 / (sin(pi / 3) + sin(pi / 4)));  B(3, 2) = cos(pi / 4) / ((cos(pi / 3) + cos(pi / 4)) * 2 * R);
-		A = B*rotation;*/
+
+
+
+        /*MatrixD rotation(3, 3), B(4, 3);
+        rotation(0, 0) = cos(rteta); = -sin(rteta ); rotation(0, 2) = 0;
+        rotation(1, 0) = sin(rteta); rotation(1, 1) = cos(rteta ); rotation(1, 2) = 0;
+        rotation(2, 0) = 0; rotation(2, 1) = 0; rotation(2, 2) = 1;
+        double pi = M_PI;
+        B(0, 0) = (-0.5 / (cos(pi / 3) + cos(pi / 4)));     B(0, 1) = (0.5 / (sin(pi / 3) + sin(pi / 4)));   B(0, 2) = cos(pi / 4) / ((cos(pi / 3) + cos(pi / 4)) * 2 * R);
+        B(1, 0) = (0.5 / (cos(pi / 3) + cos(pi / 4)));      B(1, 1) = (0.5 / (sin(pi / 3) + sin(pi / 4)));    B(1, 2) = cos(pi / 3) / ((cos(pi / 3) + cos(pi / 4)) * 2 * R);
+        B(2, 0) = (0.5 / (cos(pi / 3) + cos(pi / 4)));     B(2, 1) = (-0.5 / (sin(pi / 3) + sin(pi / 4)));   B(2, 2) = cos(pi / 3) / ((cos(pi / 3) + cos(pi / 4)) * 2 * R);
+        B(3, 0) = (-0.5 / (cos(pi / 3) + cos(pi / 4)));    B(3, 1) = (-0.5 / (sin(pi / 3) + sin(pi / 4)));  B(3, 2) = cos(pi / 4) / ((cos(pi / 3) + cos(pi / 4)) * 2 * R);
+        A = B*rotation;*/
 
 		V = modified_coeficient* A * VW;
+//        if(HighLevel::robotMoving) {
+//            if (V(0, 0) < 1 && V(0, 0) > 0.5) V(0, 0) = 1;
+//            else if (V(0, 0) > -1 && V(0, 0) < 0.5) V(0, 0) = -1;
+//            if (V(1, 0) < 1 && V(1, 0) > 0.5) V(1, 0) = 1;
+//            else if (V(1, 0) > -1 && V(1, 0) < 0.5) V(1, 0) = -1;
+//            if (V(2, 0) < 1 && V(2, 0) > 0.5) V(2, 0) = 1;
+//            else if (V(2, 0) > -1 && V(2, 0) < 0.5) V(2, 0) = -1;
+//            if (V(3, 0) < 1 && V(3, 0) > 0.5) V(3, 0) = 1;
+//            else if (V(3, 0) > -1 && V(3, 0) < 0.5) V(3, 0) = -1;
+//
+//            if (V(0, 0) < 0.5 && V(0, 0) > -0.5) V(0, 0) = 0;
+//            if (V(1, 0) < 0.5 && V(1, 0) > -0.5) V(1, 0) = 0;
+//            if (V(2, 0) < 0.5 && V(2, 0) > -0.5) V(2, 0) = 0;
+//            if (V(3, 0) < 0.5 && V(3, 0) > -0.5) V(3, 0) = 0;
+//        }
+//        V(0,0) += -ww*30;
+//        V(1,0) += -ww*30;
+//        V(2,0) += -ww*30;
+//        V(3,0) += -ww*30;
+
+     /*   V(0,0) = -ww * 80;
+        V(1,0) = -ww * 80;
+        V(2,0) = -ww * 80;
+        V(3,0) = -ww * 80;
+*/
+
 
 		double limit_v = 30;
 		double swap_v;
@@ -216,11 +254,16 @@ void nrf::set_velocity(MatrixD V, char id)
 	data[1] = (((int)V(1, 0) & 0x0F) << 4) | (((int)V(2, 0) & 0x3C) >> 2);
 	data[2] = (((int)V(2, 0) & 0x03) << 6) | (((int)V(3, 0) & 0x3F) << 0);
 
+
+	char kick = {};
+    kick = (world.robotT[world.getIndexForRobotTNumber(id)].kick_power % 8) << 5 | 0 << 4;
+
+
 	output[30 - 1] = id;
 	output[30 - 2] = data[0];
 	output[30 - 3] = data[1];
 	output[30 - 4] = data[2];
-	
+    output[30 - 5] = kick;
 }
 void nrf::write_on_port() {
 

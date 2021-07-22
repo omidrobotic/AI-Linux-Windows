@@ -1,22 +1,22 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_25ead/fast && /usr/bin/make  -f CMakeFiles/cmTC_25ead.dir/build.make CMakeFiles/cmTC_25ead.dir/build
+Run Build Command(s):/usr/bin/make cmTC_4ca78/fast && /usr/bin/make  -f CMakeFiles/cmTC_4ca78.dir/build.make CMakeFiles/cmTC_4ca78.dir/build
 make[1]: Entering directory '/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_25ead.dir/src.c.o
-/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_25ead.dir/src.c.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_25ead
-/home/omid/clion-2021.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25ead.dir/link.txt --verbose=1
-/usr/bin/cc CMakeFiles/cmTC_25ead.dir/src.c.o -o cmTC_25ead 
-/usr/bin/ld: CMakeFiles/cmTC_25ead.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_4ca78.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_4ca78.dir/src.c.o -c /home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4ca78
+/home/omid/clion-2021.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ca78.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_4ca78.dir/src.c.o -o cmTC_4ca78 
+/usr/bin/ld: CMakeFiles/cmTC_4ca78.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
 /usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_25ead.dir/build.make:106: cmTC_25ead] Error 1
+make[1]: *** [CMakeFiles/cmTC_4ca78.dir/build.make:106: cmTC_4ca78] Error 1
 make[1]: Leaving directory '/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_25ead/fast] Error 2
+make: *** [Makefile:140: cmTC_4ca78/fast] Error 2
 
 
 Source file was:
@@ -43,18 +43,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_172f8/fast && /usr/bin/make  -f CMakeFiles/cmTC_172f8.dir/build.make CMakeFiles/cmTC_172f8.dir/build
+Run Build Command(s):/usr/bin/make cmTC_10a41/fast && /usr/bin/make  -f CMakeFiles/cmTC_10a41.dir/build.make CMakeFiles/cmTC_10a41.dir/build
 make[1]: Entering directory '/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_172f8.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_172f8.dir/CheckFunctionExists.c.o -c /home/omid/clion-2021.1.2/bin/cmake/linux/share/cmake-3.19/Modules/CheckFunctionExists.c
-Linking C executable cmTC_172f8
-/home/omid/clion-2021.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_172f8.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_172f8.dir/CheckFunctionExists.c.o -o cmTC_172f8  -lpthreads 
+Building C object CMakeFiles/cmTC_10a41.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_10a41.dir/CheckFunctionExists.c.o -c /home/omid/clion-2021.1.2/bin/cmake/linux/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_10a41
+/home/omid/clion-2021.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_10a41.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_10a41.dir/CheckFunctionExists.c.o -o cmTC_10a41  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_172f8.dir/build.make:106: cmTC_172f8] Error 1
+make[1]: *** [CMakeFiles/cmTC_10a41.dir/build.make:106: cmTC_10a41] Error 1
 make[1]: Leaving directory '/home/omid/Desktop/AI-Linux-Windos-2021/omid/cmake-build-debug/CMakeFiles/CMakeTmp'
-make: *** [Makefile:140: cmTC_172f8/fast] Error 2
+make: *** [Makefile:140: cmTC_10a41/fast] Error 2
 
 
 

@@ -57,8 +57,8 @@ void Refree::Refree_parser(World &world)
     ////***    Set Team side
     ////***zolfaghari
     /////////////
-    world.getInstance().team_side=TS_LeftSide;
-    world.setTeamSide(TS_LeftSide);
+    world.getInstance().team_side=TS_RightSide;
+    world.setTeamSide(TS_RightSide);
   /*  if(packet.blueteamonpositivehalf())
     {
         if (World::team_color==TC_Yellow)

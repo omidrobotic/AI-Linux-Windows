@@ -4,10 +4,19 @@
 #include "Switches.h"
 #include "HighLevel.h"
 int y = 0;
+int stage = -1, cnt =0;
+int challengeNumber = 6;
+VecPosition dest;
+bool ch3= false;
+bool shooted= true;
+bool passi= false;
 //Strategy
 int indexOfNearestRobot;
+int _a=1;
+
 void produceRobotsDestinations()
 {
+
 #if GAME_MODE_ROBOCUP_2021==1
     Balk::set_balks_in_world_object();
     //auto start_timeM = std::chrono::high_resolution_clock::now();
@@ -119,19 +128,24 @@ void produceRobotsDestinations()
 //	HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
     //HighLevel::defence_format(8);
 
-    for (int i = 0; i < world.numT; ++i) {
-        if (world.robotT[i].kick_power>0)
-        {
-            world.robotT[i].spinBack= false;
-        } else
-        {
-            world.robotT[i].spinBack= true;
-        }
-    }
+
+//    for (int i = 0; i < world.numT; ++i) {
+//        if (world.robotT[i].kick_power>0)
+//        {
+//            world.robotT[i].spinBack= false;
+//        } else
+//        {
+//            world.robotT[i].spinBack= true;
+//        }
+//    }
+
+
 
 
     if (world.numT>2) {
-        HighLevel::GoaliHoleCover();
+//        HighLevel::GoaliHoleCover();
+        HighLevel::GoalieDefend(0);
+
        // HighLevel::defence_scor2(((world.numT - 2) - int(PRESENT_OF_ATTACKER * (world.numT - 2))));
 
         switch (world.playMode) {
@@ -283,8 +297,10 @@ void produceRobotsDestinations()
                         break;
 
                     case mode_State::KickMode::NoKickMode:
+//                        cout<< world.team_side << '\n';
 
 
+                    /* AI for Robocup 2021
                     //    HighLevel::GoaliHoleCover();
                         HighLevel::plan_scor(int(PRESENT_OF_ATTACKER * (world.numT - 2)));
 
@@ -296,8 +312,8 @@ void produceRobotsDestinations()
                         }
                         // cout<<"shoot  :"<<world.robotT[HighLevel::nearest_robot_to_ball('T')].kick_power<<'\n';
                         //cout << world.getRobotTNumberForIndex(uyu) << endl;
-                  //      HighLevel::defence_scor2(((world.numT - 2) - int(PRESENT_OF_ATTACKER * (world.numT - 2))));
-
+//                        HighLevel::defence_scor2(((world.numT - 2) - int(PRESENT_OF_ATTACKER * (world.numT - 2))));
+                    */
 
                         break;
 
@@ -351,14 +367,407 @@ void produceRobotsDestinations()
     //cout << timeM.count() / 1000000.0 << endl;
 #elif GAME_MODE_ROBOCUP_2021==2
 #elif GAME_MODE_ROBOCUP_2021==3
-    if (world.numT>1) {
-        
-        world.robotT[world.getIndexForRobotTNumber(4)].destination_position = VecPosition(-2000, 1000);
-        world.robotT[world.getIndexForRobotTNumber(7)].destination_position = VecPosition(-2000, -1000);
+    int attackerNum =world.getIndexForRobotTNumber(5);
+    int defenderNum = world.getIndexForRobotTNumber(7);
+  /*  if(world.playMode==mode_State::Stop ||  world.playMode==mode_State::Halt) {
+        world.robotT[attackerNum].destination_position=world.robotT[attackerNum].position;
+        world.robotT[defenderNum].destination_position=world.robotT[defenderNum].position;
+    } else*/// {
+  Circle robots[MAX_ROBOTS_IN_THE_FIELD];
+    for (int i = 0; i < world.numT; ++i) {
+        if(i!=attackerNum)
+        {
+            robots[i]=Circle(world.robotT[i].position, ROBOT_RADIUS);
+        }
     }
+
+        if (world.numT >= 1) {
+            /*  for (int i = 0; i < 7; ++i) {
+                  world.robotT[i].kick_power=2;
+              }*/
+            if (challengeNumber == 1) {
+                Cone::Hole_Type Longest_Hole1;
+                Cone::Hole_Type Longest_Hole2;
+                Cone::Hole_Type Longest_Hole3;
+
+                Circle robots[MAX_ROBOTS_IN_THE_FIELD];
+                double pos1 = 0;
+                double pos2 = 0;
+                double pos3 = 0;
+                for (int t = 0; t < world.numT; t++) {
+                    if (t != defenderNum)
+                        robots[t] = Circle(world.robotT[t].position, ROBOT_RADIUS);
+                }
+                if (stage == -1) {
+                    Cone BallToGoal1(VecPosition(-2000, 0), Field::getUpBarO(), Field::getDownBarO());
+                    if ((BallToGoal1.Get_Free_Space_In_Cone(robots, world.numT, Longest_Hole1) > 0)) {
+                        pos1 = HighLevel::rel((Longest_Hole1.Point_1 - VecPosition(-2000, 0)).AngleBetween(
+                                Longest_Hole1.Point_2 - VecPosition(-2000, 0)), 0, 3.14 / 2);;
+                    }
+                    Cone BallToGoal2(VecPosition(-2000, 1000), Field::getUpBarO(), Field::getDownBarO());
+                    if ((BallToGoal2.Get_Free_Space_In_Cone(robots, world.numT, Longest_Hole2) > 0)) {
+                        pos2 = HighLevel::rel((Longest_Hole2.Point_1 - VecPosition(-2000, 1000)).AngleBetween(
+                                Longest_Hole2.Point_2 - VecPosition(-2000, 1000)), 0, 3.14 / 2);;
+                    }
+                    Cone BallToGoal3(VecPosition(-2000, -1000), Field::getUpBarO(), Field::getDownBarO());
+                    if ((BallToGoal3.Get_Free_Space_In_Cone(robots, world.numT, Longest_Hole3) > 0)) {
+                        pos3 = HighLevel::rel((Longest_Hole3.Point_1 - VecPosition(-2000, -1000)).AngleBetween(
+                                Longest_Hole3.Point_2 - VecPosition(-2000, -1000)), 0, 3.14 / 2);;
+                    }
+
+
+                    if (pos2 >= pos1 && pos2 >= pos3)
+                        dest = VecPosition(-2000, 1000);
+
+
+                    else if (pos3 >= pos2 && pos3 >= pos1)
+                        dest = VecPosition(-2000, -1000);
+
+
+                    else if (pos1 >= pos2 && pos1 >= pos3)
+                        dest = VecPosition(-2000, 0);
+
+
+                    stage = 2;
+                }
+                if (stage == 2) {
+                    if (world.robotT[defenderNum].position.getDistanceTo(dest) > 200) {
+                        world.robotT[defenderNum].destination_position = dest;
+                        HighLevel::lookAtPos(defenderNum, Field::getGoalMidO());
+                    } else {
+                        world.robotT[defenderNum].destination_position = world.robotT[defenderNum].position;
+                        HighLevel::lookAtPos(defenderNum, Field::getGoalMidO());
+                    }
+
+
+                    if (shooted == true) {
+                        shooted = HighLevel::go_back_ball(attackerNum, world.robotT[defenderNum].position);
+
+                    } else {
+                        HighLevel::go_back_ball(attackerNum, world.robotT[defenderNum].position);
+                        if (world.ball.getCurrentBallPosition().getDistanceTo(world.robotT[attackerNum].position) >
+                            world.ball.getCurrentBallPosition().getDistanceTo(world.robotT[defenderNum].position))
+                            stage = 3;
+                    }
+                }
+                if (stage == 3) {
+                    HighLevel::Shoot(attackerNum);
+                    world.robotT[defenderNum].destination_position = VecPosition(0, 0);
+                }
+            }
+
+            if (challengeNumber == 2) {
+                VecPosition intersection1, intersection2;
+                Line ball_to_robotO = Line::makeLineFromTwoPoints(world.ball.getCurrentBallPosition(),
+                                                                  Field::getGoalMidO());
+                Circle roboto = Circle(world.ball.getCurrentBallPosition(), 2 * ROBOT_RADIUS);
+                ball_to_robotO.getCircleIntersectionPoints(roboto, &intersection1, &intersection2);
+                if (Field::getGoalMidO().getDistanceTo(intersection1) >
+                    Field::getGoalMidO().getDistanceTo(intersection2)) {
+                    if (world.robotT[attackerNum].position.getDistanceTo(intersection1) > 100) {
+                        world.robotT[attackerNum].destination_position = intersection1;
+                    } else {
+                        //world.robotT[index].destination_position = world.robotT[index].position;
+
+                        if (world.robotT[attackerNum].position.getDistanceTo(world.ball.getCurrentBallPosition()) <
+                            50) {
+                            if (world.robotT[attackerNum].position.getDistanceTo(VecPosition(-2000, 1000)) > 100)
+                                world.robotT[attackerNum].destination_position = VecPosition(-2000, 1000);
+                            else
+                                HighLevel::Shoot(attackerNum);
+                        } else {
+                            world.robotT[attackerNum].destination_position = world.ball.getCurrentBallPosition();
+                        }
+                    }
+                } else {
+                    if (world.robotT[attackerNum].position.getDistanceTo(intersection2) > 100) {
+                        world.robotT[attackerNum].destination_position = intersection2;
+                    } else {
+                        //world.robotT[index].destination_position = world.robotT[index].position;
+
+                        if (world.robotT[attackerNum].position.getDistanceTo(world.ball.getCurrentBallPosition()) <
+                            50) {
+                            if (world.robotT[attackerNum].position.getDistanceTo(VecPosition(-2000, 1000)) > 100)
+                                world.robotT[attackerNum].destination_position = VecPosition(-2000, 1000);
+                            else
+                                HighLevel::Shoot(attackerNum);
+                        } else {
+                            world.robotT[attackerNum].destination_position = world.ball.getCurrentBallPosition();
+                        }
+                    }
+                }
+            }
+
+            if (challengeNumber == 3) {
+                int playingRobotNum = 5;
+                if (world.robotT[world.getIndexForRobotTNumber(playingRobotNum)].position.getDistanceTo(
+                        world.ball.getCurrentBallPosition()) < 50 || ch3) {
+                    ch3 = true;
+                    VecPosition robot_pos = world.robotT[world.getIndexForRobotTNumber(playingRobotNum)].position;
+                    VecPosition ball_pos = world.ball.getCurrentBallPosition();
+                    VecPosition dest;
+                    VecPosition *other_robots_pos;
+                    VecPosition other_robots[world.numT - 1];
+                    int last_robot_y = -FieldWidth / 2;
+                    for (int i = 0; i < world.numT - 1; ++i) {
+                        VecPosition robot_pos;
+                        int min_y = 99999;
+                        int min_i;
+                        for (int j = 0; j < world.numT; ++j) {
+                            if (world.getRobotTNumberForIndex(j) != playingRobotNum) {
+                                VecPosition robot_pos_check = world.robotT[j].position;
+                                if (robot_pos_check.getY() > last_robot_y && robot_pos_check.getY() < min_y) {
+                                    min_y = robot_pos_check.getY();
+                                    robot_pos = robot_pos_check;
+                                    min_i = world.getRobotTNumberForIndex(j);
+                                }
+                            }
+                        }
+                        other_robots[i] = robot_pos;
+                        last_robot_y = robot_pos.getY() + 50;
+                    }
+                    if (stage == -1) {
+                        dest = ball_pos;
+                        dest.setY(ball_pos.getY() - ROBOT_RADIUS);
+                        HighLevel::lookAtPos(playingRobotNum, dest);
+                        HighLevel::gotoXY(playingRobotNum, dest);
+                        if (HighLevel::arivedToPos(playingRobotNum, dest)) stage++;
+                    } else if (stage < world.numT - 1) {
+                        dest = other_robots[stage];
+                        if (stage % 2 == 0) dest.setX(dest.getX() + 500);
+                        else dest.setX(dest.getX() - 500);
+                        HighLevel::lookAtPos(playingRobotNum, dest);
+                        HighLevel::gotoXY(playingRobotNum, dest);
+                        if (HighLevel::arivedToPos(playingRobotNum, dest)) stage++;
+                    } else HighLevel::gotoXY(playingRobotNum, robot_pos);
+                } else {
+                    world.robotT[world.getIndexForRobotTNumber(
+                            playingRobotNum)].destination_position = world.ball.getCurrentBallPosition();
+                }
+            }
+
+            if (challengeNumber == 4) {
+                VecPosition robot_to_mid_bigest_hollVec = world.robotT[defenderNum].position - world.robotT[attackerNum].position;
+                //DrawShape::DrawDot(mid_bigest_holl, 100, 255, 0, 0);
+                //	DrawShape::DrawParaline(mid_bigest_holl, world.robotT[index_robotT].position);
+                double angle_robot_to_mid_bigest_holl = -((robot_to_mid_bigest_hollVec).AngleBetween(VecPosition(1, 0)))*sign(world.robotT[attackerNum].position.getY() - world.robotT[defenderNum].position.getY());
+                world.robotT[attackerNum].destination_angle=angle_robot_to_mid_bigest_holl;
+                world.robotT[defenderNum].destination_position = VecPosition(-2000, 0);
+                VecPosition intersection1, intersection2;
+                Line ball_to_robotO = Line::makeLineFromTwoPoints(world.ball.getCurrentBallPosition(),
+                                                                  world.robotT[defenderNum].position);
+                Circle roboto = Circle(world.ball.getCurrentBallPosition(), 2 * ROBOT_RADIUS);
+                ball_to_robotO.getCircleIntersectionPoints(roboto, &intersection1, &intersection2);
+                if (world.robotT[defenderNum].position.getDistanceTo(intersection1) >
+                    world.robotT[defenderNum].position.getDistanceTo(intersection2)) {
+                    if (world.robotT[attackerNum].position.getDistanceTo(intersection1) > 40) {
+                        world.robotT[attackerNum].destination_position = intersection1;
+                    } else {
+                        //world.robotT[index].destination_position = world.robotT[index].position;
+                        world.robotT[attackerNum].destination_position = world.ball.getCurrentBallPosition();
+                        world.robotT[attackerNum].shoot_or_chip = 1;
+                        world.robotT[attackerNum].kick_power = 2;
+                        if(world.robotT[defenderNum].position.getDistanceTo(world.ball.getCurrentBallPosition())<100)
+                        {
+                            passi= true;
+                        }
+
+                    }
+                    //HighLevel::Pass(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()),HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
+
+
+                } else {
+                    if (world.robotT[attackerNum].position.getDistanceTo(intersection2) > 40) {
+                        world.robotT[attackerNum].destination_position = intersection2;
+                    } else {
+                        //world.robotT[index].destination_position = world.robotT[index].position;
+                        world.robotT[attackerNum].destination_position = world.ball.getCurrentBallPosition();
+                        world.robotT[attackerNum].shoot_or_chip = 1;
+                        world.robotT[attackerNum].kick_power = 2;
+                        if(world.robotT[defenderNum].position.getDistanceTo(world.ball.getCurrentBallPosition())<100)
+                        {
+                            passi= true;
+                        }
+
+                    }
+                }
+            }
+            if (challengeNumber == 5) {
+
+                world.robotT[world.getIndexForRobotTNumber(7)].destination_angle = M_PI / 4;
+                world.robotT[world.getIndexForRobotTNumber(
+                        7)].destination_position = world.robotT[world.getIndexForRobotTNumber(7)].position;
+
+            }
+
+
+           /* if(world.playMode==mode_State::Play) {
+cout <<"stage"<<world.robotT[world.getIndexForRobotTNumber(7)].position.getDistanceTo(world.ball.getCurrentBallPosition())<<'\n';
+
+                if (challengeNumber == 6) {
+                    if (stage == -1) {
+                        VecPosition robot_to_mid_bigest_hollVec =
+                                world.ball.getCurrentBallPosition() - world.robotT[attackerNum].position;
+                        double angle_robot_to_mid_bigest_holl =
+                                -((robot_to_mid_bigest_hollVec).AngleBetween(VecPosition(1, 0))) *
+                                sign(world.robotT[attackerNum].position.getY() -
+                                     world.ball.getCurrentBallPosition().getY());
+                        if (world.robotT[attackerNum].position.getDistanceTo(world.ball.getCurrentBallPosition()) <
+                            300) {
+                            if (abs(angle_robot_to_mid_bigest_holl - world.robotT[attackerNum].angle) <
+                                20.0 * M_PI / 180) {
+                                world.robotT[attackerNum].destination_position = world.ball.getCurrentBallPosition();
+                            } else {
+                                world.robotT[attackerNum].destination_position = world.robotT[attackerNum].position;
+                            }
+                        } else if (
+                                world.robotT[attackerNum].position.getDistanceTo(world.ball.getCurrentBallPosition()) >=
+                                300)
+                            world.robotT[attackerNum].destination_position = world.ball.getCurrentBallPosition();
+
+                        world.robotT[attackerNum].destination_angle = angle_robot_to_mid_bigest_holl;
+                        if (world.robotT[attackerNum].position.getDistanceTo(world.ball.getCurrentBallPosition()) <
+                            75) {
+                            stage = 0;
+                        }
+                    }
+                    if (stage == 0) {
+                        world.robotT[attackerNum].destination_position = VecPosition( -1475.96, -21.7726 );
+                        VecPosition robot_to_mid_bigest_hollVec1 =
+                                Field::getGoalMidO() - world.robotT[attackerNum].position;
+                        double angle_robot_to_mid_bigest_holl_goal =
+                                -((robot_to_mid_bigest_hollVec1).AngleBetween(VecPosition(1, 0))) *
+                                sign(world.robotT[attackerNum].position.getY() - Field::getGoalMidO().getY());
+                        world.robotT[attackerNum].destination_angle = angle_robot_to_mid_bigest_holl_goal;
+                        if (VecPosition( -1475.96, -21.7726 ).getDistanceTo(world.robotT[attackerNum].position) < 100) {
+                            stage = 1;
+                        }
+                        if (world.robotT[attackerNum].position.getDistanceTo(world.ball.getCurrentBallPosition()) >
+                            200) {
+                            stage = 0;
+                        }
+                    }
+                    if (stage == 1) {
+                        if (world.robotT[attackerNum].position.getDistanceTo(world.ball.getCurrentBallPosition()) >
+                            200) {
+                            stage = 0;
+                        }
+                        VecPosition mid_bigest_holl;
+                        Cone::Hole_Type Longest_Hole;
+                        Cone BallToGoal(world.ball.getCurrentBallPosition(), Field::getUpBarO(), Field::getDownBarO());
+                        VecPosition robot_to_mid_bigest_hollVec =
+                                world.ball.getCurrentBallPosition() - world.robotT[attackerNum].position;
+                        double angle_robot_to_mid_bigest_holl =
+                                -((robot_to_mid_bigest_hollVec).AngleBetween(VecPosition(1, 0))) *
+                                sign(world.robotT[attackerNum].position.getY() - mid_bigest_holl.getY());
+                        if (BallToGoal.Get_Free_Space_In_Cone(robots, world.numT, Longest_Hole) > 0) {
+                            mid_bigest_holl.setX((Longest_Hole.Point_1.getX() + Longest_Hole.Point_2.getX()) / 2);
+                            mid_bigest_holl.setY((Longest_Hole.Point_1.getY() + Longest_Hole.Point_2.getY()) / 2);
+                            if (abs(angle_robot_to_mid_bigest_holl - world.robotT[attackerNum].angle) <
+                                20.0 * M_PI / 180) {
+                                world.robotT[attackerNum].destination_position = world.ball.getCurrentBallPosition();
+                                world.robotT[attackerNum].shoot_or_chip = true;
+                                world.robotT[attackerNum].kick_power = 2;
+                            } else {
+                                world.robotT[attackerNum].destination_position = world.robotT[attackerNum].position;
+                                world.robotT[attackerNum].kick_power = 0;
+                            }
+                            world.robotT[attackerNum].destination_angle = angle_robot_to_mid_bigest_holl;
+                        }
+                    }
+
+                }
+
+            }
+            else */
+           if(world.playMode==mode_State::ballPlacement)
+            {
+                if (challengeNumber == 6) {
+                    if (stage == -1) {
+                        VecPosition robot_to_mid_bigest_hollVec =
+                                world.ball.getCurrentBallPosition() - world.robotT[attackerNum].position;
+                        double angle_robot_to_mid_bigest_holl =
+                                -((robot_to_mid_bigest_hollVec).AngleBetween(VecPosition(1, 0))) *
+                                sign(world.robotT[attackerNum].position.getY() -
+                                     world.ball.getCurrentBallPosition().getY());
+                        if (world.robotT[attackerNum].position.getDistanceTo(world.ball.getCurrentBallPosition()) <
+                            300) {
+                            if (abs(angle_robot_to_mid_bigest_holl - world.robotT[attackerNum].angle) <
+                                20.0 * M_PI / 180) {
+                                world.robotT[attackerNum].destination_position = world.ball.getCurrentBallPosition();
+                            } else {
+                                world.robotT[attackerNum].destination_position = world.robotT[attackerNum].position;
+                            }
+                        } else if (
+                                world.robotT[attackerNum].position.getDistanceTo(world.ball.getCurrentBallPosition()) >=
+                                300)
+                            world.robotT[attackerNum].destination_position = world.ball.getCurrentBallPosition();
+
+                        world.robotT[attackerNum].destination_angle = angle_robot_to_mid_bigest_holl;
+                        if (world.robotT[attackerNum].position.getDistanceTo(world.ball.getCurrentBallPosition()) <
+                            60) {
+                            stage = 0;
+                        }
+                    }
+                    if (stage == 0) {
+                        world.robotT[attackerNum].destination_position = world.ballPlacementPosition;
+                        VecPosition robot_to_mid_bigest_hollVec1 =
+                                Field::getGoalMidO() - world.robotT[attackerNum].position;
+                        double angle_robot_to_mid_bigest_holl_goal =
+                                -((robot_to_mid_bigest_hollVec1).AngleBetween(VecPosition(1, 0))) *
+                                sign(world.robotT[attackerNum].position.getY() - Field::getGoalMidO().getY());
+                        world.robotT[attackerNum].destination_angle = angle_robot_to_mid_bigest_holl_goal;
+                        if (world.ballPlacementPosition.getDistanceTo(world.robotT[attackerNum].position) < 100) {
+                            stage = 1;
+                        }
+                        if (world.robotT[attackerNum].position.getDistanceTo(world.ball.getCurrentBallPosition()) >
+                            130) {
+                            //stage = 0;
+                        }
+                    }
+                    if (stage == 1) {
+                        if (world.robotT[attackerNum].position.getDistanceTo(world.ball.getCurrentBallPosition()) >
+                            200) {
+                            stage = 0;
+                        }
+                        VecPosition mid_bigest_holl;
+                        Cone::Hole_Type Longest_Hole;
+                        Cone BallToGoal(world.ball.getCurrentBallPosition(), Field::getUpBarO(), Field::getDownBarO());
+                        VecPosition robot_to_mid_bigest_hollVec =
+                                world.ball.getCurrentBallPosition() - world.robotT[attackerNum].position;
+                        double angle_robot_to_mid_bigest_holl =
+                                -((robot_to_mid_bigest_hollVec).AngleBetween(VecPosition(1, 0))) *
+                                sign(world.robotT[attackerNum].position.getY() - mid_bigest_holl.getY());
+                        if (BallToGoal.Get_Free_Space_In_Cone(robots, world.numT, Longest_Hole) > 0) {
+                            mid_bigest_holl.setX((Longest_Hole.Point_1.getX() + Longest_Hole.Point_2.getX()) / 2);
+                            mid_bigest_holl.setY((Longest_Hole.Point_1.getY() + Longest_Hole.Point_2.getY()) / 2);
+                            if (abs(angle_robot_to_mid_bigest_holl - world.robotT[attackerNum].angle) <
+                                20.0 * M_PI / 180) {
+                                world.robotT[attackerNum].destination_position = world.ball.getCurrentBallPosition();
+                                world.robotT[attackerNum].shoot_or_chip = true;
+                                world.robotT[attackerNum].kick_power = 4;
+                            } else {
+                                world.robotT[attackerNum].destination_position = world.robotT[attackerNum].position;
+                                world.robotT[attackerNum].kick_power = 0;
+                            }
+                            world.robotT[attackerNum].destination_angle = angle_robot_to_mid_bigest_holl;
+                        }
+                    }
+
+                }
+            }
+            else
+            {
+                world.robotT[attackerNum].destination_position=world.robotT[attackerNum].position;
+                world.robotT[attackerNum].destination_angle=world.robotT[attackerNum].angle;
+            }
+
+        }
+    //}
    // world.robotT[world.getIndexForRobotTNumber(4)].velocityToGo=VecPosition(800,0);
 #endif
 }
+
 
 
 //RRT

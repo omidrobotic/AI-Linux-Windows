@@ -2341,7 +2341,7 @@ double SpeedDiagram::genVecW_forNrf(int robot_num, double angle)
 	//w = cal_W(angle_error);
 	//}
 	//cout << w << endl;
-	return cal_W_nrf(angle_error)+0.005;
+	return cal_W_nrf(angle_error)+/*0.005*/0;
 }
 
 double SpeedDiagram::cal_error_r(double rc /*current angle*/, double rd /*destination angle*/)
