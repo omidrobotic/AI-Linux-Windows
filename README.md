@@ -34,6 +34,8 @@ update
 install librarys
 > `sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev`
 
+https://user.xmission.com/~nate/glut.html
+
 
 your run code system or if you use tow system run code in simulator system
 <italic>
