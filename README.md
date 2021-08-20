@@ -3,7 +3,6 @@ You can run this project in both Linux and Windows operating systems. fallow the
 
 ### Linux
 
-
 1. First of all you need install **googleProtobuf** from [here](https://github.com/protocolbuffers/protobuf).
 2. Then clone this repository using the command bellow.
 ```
@@ -50,6 +49,7 @@ Finaly, run `omid` file inside `omid/ai/build` using the command bellow.
 ```
 ./omid
 ```
+It's better to use **[CLion](https://linuxhint.com/install_jetbrains_clion_ubuntu/#:~:text=To%20download%20CLion%2C%20visit%20the,Then%2C%20click%20on%20DOWNLOAD.)** as a **Compiler**.
 Have fun :)
 
   
