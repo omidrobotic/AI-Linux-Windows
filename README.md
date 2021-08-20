@@ -18,7 +18,7 @@ or
 
 then go to located file
 
-> `cd ai/Protobuf`
+> `cd ai`
   
   and run
   
