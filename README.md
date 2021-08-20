@@ -14,7 +14,7 @@ download the repository
 
 or
 
-> `git clon https://github.com/omidrobotic/AI-Linux-Windos-2021.git`
+> `git clone https://github.com/omidrobotic/AI-Linux-Windos-2021.git`
 
 then go to located file
 
