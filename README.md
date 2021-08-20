@@ -11,7 +11,7 @@ git clone https://github.com/omidrobotic/AI-Linux-Windos-2021.git
 ```
 3. We made a bash file which will do some setups for each ER-force or Grsim simulator just to make things easier for users. Before running this bash file you need to give it a permission of 777. so run these commands.
 ```
-cd AI-Linux-Windos-2021/ai
+cd AI-Linux-Windos-2021/omid/ai
 chmod 755 auto.sh
 ```
 4. It is required to install **OpenGL** as well. So install it like this. You can use [this link](https://user.xmission.com/~nate/glut.html) for more info
@@ -32,7 +32,7 @@ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 ```
 #define GROUP_ADDR_SEND_GRSIM_COMMAND	"192.168.0.2"
 ```
-7. Make sure you have set everything correctly in `ai/switch.h` for [Grsim](https://github.com/RoboCup-SSL/grSim), Erforce or Real. Also set the devision as well.
+7. Make sure you have set everything correctly in `omid/ai/switch.h` for [Grsim](https://github.com/RoboCup-SSL/grSim), Erforce or Real. Also set the devision as well.
 ```
 #define SEND_COMMANDS_TO_ROBOTS 2	 // 2: ER-force  1: REAL  0: Grsim
 #define DIVISION 2	                 // 1: A  2: B  3: OmidReal
