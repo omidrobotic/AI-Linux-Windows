@@ -128,7 +128,6 @@ void Robot_Move_Manual_Function(unsigned char key)
 		break;
 	}
 }
-
 void Robot_Move_ManualUp_Function(unsigned char key)
 {
 	switch (key)
@@ -169,7 +168,6 @@ void Robot_Move_ManualUp_Function(unsigned char key)
 		break;
 	}
 }
-
 void Robot_Wheels_Manual_Function(unsigned char key)
 {
 	switch (key)
@@ -233,10 +231,6 @@ void Robot_Wheels_Manual_Function(unsigned char key)
 		break;
 	}
 }
-
-
-
-
 static void redraw(void)
 {
 	glFrame.paintGL(world);
