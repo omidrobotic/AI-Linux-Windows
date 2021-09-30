@@ -46,7 +46,7 @@ Then go to `omid/build` and build the project using this command.
 cd build
 make
 ```
-Finaly, run `omid` file inside `omid/ai/build` using the command bellow. 
+Finaly, run `omid` file inside `omid/build` using the command bellow. 
 ```
 ./omid
 ```
