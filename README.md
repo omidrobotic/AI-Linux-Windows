@@ -37,12 +37,13 @@ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 #define DIVISION 2	                 // 1: A  2: B  3: OmidReal
 ```
 ### Run Project
-Make sure you are running the simulator (Grsim or ER-force) or vision. Then run the bash file in `omid/ai/` directory. Enter `y` for Grsim and `n` for ER-force.
+Make sure you are running the simulator (Grsim or ER-force) or vision. Then run the bash file in `omid/` directory. Enter `y` for Grsim and `n` for ER-force.
 ```
 ./auto.sh
 ```
-Then go to `omid/ai/build` and build the project using this command.
+Then go to `omid/build` and build the project using this command.
 ```
+cd build
 make
 ```
 Finaly, run `omid` file inside `omid/ai/build` using the command bellow. 
