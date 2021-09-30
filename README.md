@@ -50,7 +50,7 @@ Finaly, run `omid` file inside `omid/build` using the command bellow.
 ```
 ./omid
 ```
-It's better to use **[CLion](https://linuxhint.com/install_jetbrains_clion_ubuntu/#:~:text=To%20download%20CLion%2C%20visit%20the,Then%2C%20click%20on%20DOWNLOAD.)** as a **Compiler**.
+It's better to use **[CLion](https://www.jetbrains.com/help/clion/installation-guide.html#snap)** as a **Compiler**.
 ```
 sudo snap install clion --classic
 ```
