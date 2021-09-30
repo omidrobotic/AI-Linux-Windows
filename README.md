@@ -11,7 +11,7 @@ git clone https://github.com/omidrobotic/AI-Linux-Windos-2021.git
 3. We made a bash file which will do some setups for each ER-force or Grsim simulator just to make things easier for users. Before running this bash file you need to give it a permission of 777. so run these commands.
 ```
 cd AI-Linux-Windos-2021/omid
-sudo chmod 755 auto.sh
+sudo chmod 777 auto.sh
 ```
 4. It is required to install **OpenGL** as well. So install it like this. You can use [this link](https://user.xmission.com/~nate/glut.html) for more info
 ```
