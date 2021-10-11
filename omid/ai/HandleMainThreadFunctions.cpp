@@ -361,11 +361,12 @@ if(DIVISION==1)
         }
     }
     }
-else if(DIVISION==2)
-{
-//    int itis[1];
-//    itis[0]=HighLevel::nearest_robot_to_ball('T');
-//    HighLevel::BlockKicker(1, itis);
+    else if(DIVISION==2)
+    {
+    //    int itis[1];
+    //    itis[0]=HighLevel::nearest_robot_to_ball('T');
+    //    HighLevel::BlockKicker(1, itis);
+    HighLevel::GoalieDefend(0);
     if(world.numT>2)
     {
         int min_robot=((world.numT - 2) - int(PRESENT_OF_ATTACKER * (world.numT - 2)));

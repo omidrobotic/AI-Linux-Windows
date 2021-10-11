@@ -4,6 +4,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Set the project name
+set(OpenGL_GL_PREFERENCE GLVND)
 project (omid)
 
 # Create a sources variable with a link to all cpp files to compile

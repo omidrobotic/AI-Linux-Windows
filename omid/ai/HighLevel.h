@@ -46,14 +46,14 @@ public:
 	//static void StartT(World &world);
     static int robotVelocity; // 0 to 64 - (0 is the highest speed ^_^)
     static bool robotMoving;
-    static void gotoXY(int robotIndex, VecPosition target);
-    static void lookAt(int robotIndex, float angle);
-    static bool arivedToPos(int robotIndex, VecPosition target);
-    static int getStageRobot(int playingRobotNum);
-    static bool lookAtPos(int robotIndex, VecPosition target);
-    static VecPosition * get_other_robots(int playingRobotNum);
-    static void GoalieDefend(int defenderNum);
-    static bool ball_is_in_penalty_area(char team);
+//    static void gotoXY(int robotIndex, VecPosition target);
+//    static void lookAt(int robotIndex, float angle);
+//    static bool arivedToPos(int robotIndex, VecPosition target);
+//    static int getStageRobot(int playingRobotNum);
+//    static bool lookAtPos(int robotIndex, VecPosition target);
+//    static VecPosition * get_other_robots(int playingRobotNum);
+//    static void GoalieDefend(int defenderNum);
+//    static bool ball_is_in_penalty_area(char team);
 
 
     ////mohammad hossin
