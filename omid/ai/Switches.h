@@ -51,7 +51,7 @@
 const int GOALIE_NUM = 0;
 
 
-#define UDP_CLIENT_INTERFACE "eth2"
+#define UDP_CLIENT_INTERFACE "eth0"
 //----- Defines Refree -------------------------------------------------------------
 #define TEAM_NAME "OMID"
 #define PORT_NUM_Refree        10003	//10003          
