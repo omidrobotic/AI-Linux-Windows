@@ -44,12 +44,16 @@ void Refree::Refree_parser(World &world)
         world.setTeamColor(TC_Yellow);
         world.team_T.sendDataPort=(SEND_COMMANDS_TO_ROBOTS==2)?PORT_NUM_SEND_ERforce_COMMAND_YELLOW:PORT_NUM_SEND_GRSIM_COMMAND;
         world.getInstance().team_color=TC_Yellow;
+        world.getInstance().team_side=TS_RightSide;
+        world.setTeamSide(TS_RightSide);
     }
 	else if(packet.blue().name()==TEAM_NAME)
     {
         world.setTeamColor(TC_Blue);
         world.team_T.sendDataPort=(SEND_COMMANDS_TO_ROBOTS==2)?PORT_NUM_SEND_ERforce_COMMAND_BLUE:PORT_NUM_SEND_GRSIM_COMMAND;
         world.getInstance().team_color=TC_Blue;
+        world.getInstance().team_side=TS_LeftSide;
+        world.setTeamSide(TS_LeftSide);
     }
 
 	/////////////
@@ -57,8 +61,8 @@ void Refree::Refree_parser(World &world)
     ////***    Set Team side
     ////***zolfaghari
     /////////////
-    world.getInstance().team_side=TS_RightSide;
-    world.setTeamSide(TS_RightSide);
+//    world.getInstance().team_side=TS_RightSide;
+//    world.setTeamSide(TS_RightSide);
   /*  if(packet.blueteamonpositivehalf())
     {
         if (World::team_color==TC_Yellow)
