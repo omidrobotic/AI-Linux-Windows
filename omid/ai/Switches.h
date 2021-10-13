@@ -60,8 +60,8 @@ const int GOALIE_NUM = 0;
 #define PORT_NUM_Vision        10006
 #define GROUP_ADDR_Vision  "224.5.23.2"
 //----- Defines Send Grsim Commands-------------------------------------------------
-#define PORT_NUM_SEND_GRSIM_COMMAND		20012
-#define GROUP_ADDR_SEND_GRSIM_COMMAND	"Simulator"//"192.168.0.2"
+#define PORT_NUM_SEND_GRSIM_COMMAND		10300
+#define GROUP_ADDR_SEND_GRSIM_COMMAND	"172.20.0.6"//"192.168.0.2"
 //----- Defines Send ER-force Commands-------------------------------------------------
 #define PORT_NUM_SEND_ERforce_COMMAND_YELLOW		10302
 #define PORT_NUM_SEND_ERforce_COMMAND_BLUE		10301
