@@ -486,7 +486,7 @@ int main(int argc, char **argv)
 	{
 
 		sleep(0.005);
-		world.team_T.Goalie = 3;
+		world.team_T.Goalie = 0;
 		MatrixD V(4, 1);
 
 		//V(0, 0) = 0;
