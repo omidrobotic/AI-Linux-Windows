@@ -57,11 +57,11 @@ const int GOALIE_NUM = 0;
 #define PORT_NUM_Refree        10003	//10003          
 #define GROUP_ADDR_Refree  "224.5.23.1"
 //----- Defines Vision-------------------------------------------------------------- 
-#define PORT_NUM_Vision        10006
+#define PORT_NUM_Vision        10005
 #define GROUP_ADDR_Vision  "224.5.23.2"
 //----- Defines Send Grsim Commands-------------------------------------------------
 #define PORT_NUM_SEND_GRSIM_COMMAND		20012
-#define GROUP_ADDR_SEND_GRSIM_COMMAND	"simulator"//"192.168.0.2"
+#define GROUP_ADDR_SEND_GRSIM_COMMAND	"Simulator"//"192.168.0.2"
 //----- Defines Send ER-force Commands-------------------------------------------------
 #define PORT_NUM_SEND_ERforce_COMMAND_YELLOW		10302
 #define PORT_NUM_SEND_ERforce_COMMAND_BLUE		10301
