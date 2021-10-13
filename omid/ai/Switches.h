@@ -51,13 +51,13 @@
 const int GOALIE_NUM = 0;
 
 
-#define UDP_CLIENT_INTERFACE "eth0"
+#define UDP_CLIENT_INTERFACE "eth1"
 //----- Defines Refree -------------------------------------------------------------
 #define TEAM_NAME "OMID"
 #define PORT_NUM_Refree        10003	//10003          
 #define GROUP_ADDR_Refree  "224.5.23.1"
 //----- Defines Vision-------------------------------------------------------------- 
-#define PORT_NUM_Vision        10005
+#define PORT_NUM_Vision        10006
 #define GROUP_ADDR_Vision  "224.5.23.2"
 //----- Defines Send Grsim Commands-------------------------------------------------
 #define PORT_NUM_SEND_GRSIM_COMMAND		20012
