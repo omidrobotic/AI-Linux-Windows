@@ -51,7 +51,7 @@
 const int GOALIE_NUM = 0;
 
 
-#define UDP_CLIENT_INTERFACE "eth1"
+#define UDP_CLIENT_INTERFACE "eth2"
 //----- Defines Refree -------------------------------------------------------------
 #define TEAM_NAME "OMID"
 #define PORT_NUM_Refree        10003	//10003          
@@ -61,7 +61,7 @@ const int GOALIE_NUM = 0;
 #define GROUP_ADDR_Vision  "224.5.23.2"
 //----- Defines Send Grsim Commands-------------------------------------------------
 #define PORT_NUM_SEND_GRSIM_COMMAND		20012
-#define GROUP_ADDR_SEND_GRSIM_COMMAND	"127.0.0.1"//"192.168.0.2"
+#define GROUP_ADDR_SEND_GRSIM_COMMAND	"simulator"//"192.168.0.2"
 //----- Defines Send ER-force Commands-------------------------------------------------
 #define PORT_NUM_SEND_ERforce_COMMAND_YELLOW		10302
 #define PORT_NUM_SEND_ERforce_COMMAND_BLUE		10301

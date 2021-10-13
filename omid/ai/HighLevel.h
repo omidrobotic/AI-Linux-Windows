@@ -41,6 +41,7 @@ public:
     static bool ball_is_in_penalty_area(char team);
     static void RobotFormation();
     static VecPosition get_best_pos_for_cover(VecPosition center, float distance);
+    static void move_ball_to_position(int index, VecPosition pos);
 	//bool Has50cmDistanceFromBall(int id);
 	//void Get50cmDistanceFromBall(int id);
 

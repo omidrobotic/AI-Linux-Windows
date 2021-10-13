@@ -461,10 +461,10 @@ void HighLevel::GoalieDefend(int goalKeeperIndex)
     float ball_velocity = VecPosition(0,0).getDistanceTo(ball_velocity_vec);
     Line goal_line, ball_direction;
     int goaliX;
-    if(world.team_side == 0) // Right Side
+//    if(world.team_side == 0) // Right Side
         goaliX = (FieldLength/2 - ROBOT_RADIUS*2);
-    else
-        goaliX = -(FieldLength/2 - ROBOT_RADIUS*2);
+//    else
+//        goaliX = -(FieldLength/2 - ROBOT_RADIUS*2);
     goal_line = Line::makeLineFromTwoPoints(VecPosition( goaliX, 100), VecPosition( goaliX, -100));
     VecPosition robot_to_ballVec = ball_pos - robot_pos;
     float ballAngle = robot_to_ballVec.AngleBetween(VecPosition(1, 0));
@@ -493,13 +493,10 @@ void HighLevel::GoalieDefend(int goalKeeperIndex)
     {
         if(HighLevel::ball_is_in_penalty_area('T') ) //|| oponent_is_shooting_index() == -1)
         {
-            dest = VecPosition(WholeFieldLength/2 - 300, 0);
+//            dest = world.ball.getCurrentBallPosition();
+//            HighLevel::Pass(world.getIndexForRobotTNumber(goalKeeperIndex), world.getIndexForRobotTNumber(1));
+            HighLevel::Shoot(world.getIndexForRobotTNumber(goalKeeperIndex));
 
-            ///
-            ///
-            ///  Do something in here
-            ///
-            ///
         }
         else
         {
@@ -516,8 +513,10 @@ void HighLevel::GoalieDefend(int goalKeeperIndex)
         dest.setY( PenaltyAreaLength/2 - 200);
     if(dest.getY() < -PenaltyAreaLength/2 + 200)
         dest.setY(-PenaltyAreaLength/2 + 200);
-    dest.setX(goaliX);
-    HighLevel::gotoXY(goalKeeperIndex, dest);
+    if(!HighLevel::ball_is_in_penalty_area('T')){
+        dest.setX(goaliX);
+        HighLevel::gotoXY(goalKeeperIndex, dest);
+    }
 
 }
 
@@ -532,14 +531,14 @@ bool HighLevel::ball_is_in_penalty_area(char team)
     {
         if(world.team_color == TC_Yellow)
         {
-            if(ballX > WholeFieldLength/2 - PenaltyAreaWidth  && ballY > -PenaltyAreaLength/2 && ballY < PenaltyAreaLength/2)
+            if(ballX > FieldLength/2 - PenaltyAreaWidth  && ballY > -PenaltyAreaLength/2 && ballY < PenaltyAreaLength/2)
                 return true;
             else
                 return false;
         }
         else
         {
-            if(ballX < -WholeFieldLength/2 + PenaltyAreaWidth  && ballY > -PenaltyAreaLength/2 && ballY < PenaltyAreaLength/2)
+            if(ballX < -FieldLength/2 + PenaltyAreaWidth  && ballY > -PenaltyAreaLength/2 && ballY < PenaltyAreaLength/2)
                 return true;
             else
                 return false;
@@ -549,14 +548,14 @@ bool HighLevel::ball_is_in_penalty_area(char team)
     {
         if(world.team_color == TC_Yellow)
         {
-            if(ballX < -WholeFieldLength/2 + PenaltyAreaWidth  && ballY > -PenaltyAreaLength/2 && ballY < PenaltyAreaLength/2)
+            if(ballX < -FieldLength/2 + PenaltyAreaWidth  && ballY > -PenaltyAreaLength/2 && ballY < PenaltyAreaLength/2)
                 return true;
             else
                 return false;
         }
         else
         {
-            if(ballX > WholeFieldLength/2 - PenaltyAreaWidth  && ballY > -PenaltyAreaLength/2 && ballY < PenaltyAreaLength/2)
+            if(ballX > FieldLength/2 - PenaltyAreaWidth  && ballY > -PenaltyAreaLength/2 && ballY < PenaltyAreaLength/2)
                 return true;
             else
                 return false;
@@ -590,6 +589,12 @@ VecPosition HighLevel::get_best_pos_for_cover(VecPosition center, float distance
     }
     return dest;
 }
+
+void HighLevel::move_ball_to_position(int index, VecPosition pos){
+
+
+}
+
 /*
 	End of Farhan Daemi Code
 	 ______         _
