@@ -50,9 +50,8 @@ CMakeFiles/omid.dir/ai/MotionControl.cpp.o: \
  ../ai/GameState.h \
  ../ai/MotionControl.cpp \
  ../ai/MotionControl.h \
- ../ai/Protobuf/Grsim/grSim_Commands.pb.h \
- ../ai/Protobuf/Grsim/grSim_Packet.pb.h \
- ../ai/Protobuf/Grsim/grSim_Replacement.pb.h \
+ ../ai/Protobuf/ER-force/ssl_simulation_error.pb.h \
+ ../ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.h \
  ../ai/Socket_udp.h \
  ../ai/Switches.h \
  ../ai/geometry.h \
@@ -60,17 +59,6 @@ CMakeFiles/omid.dir/ai/MotionControl.cpp.o: \
  ../ai/nrf.h \
  ../ai/timer.h \
  ../ai/world.h
-CMakeFiles/omid.dir/ai/Protobuf/Grsim/grSim_Commands.pb.cc.o: \
- ../ai/Protobuf/Grsim/grSim_Commands.pb.cc \
- ../ai/Protobuf/Grsim/grSim_Commands.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/Grsim/grSim_Packet.pb.cc.o: \
- ../ai/Protobuf/Grsim/grSim_Commands.pb.h \
- ../ai/Protobuf/Grsim/grSim_Packet.pb.cc \
- ../ai/Protobuf/Grsim/grSim_Packet.pb.h \
- ../ai/Protobuf/Grsim/grSim_Replacement.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/Grsim/grSim_Replacement.pb.cc.o: \
- ../ai/Protobuf/Grsim/grSim_Replacement.pb.cc \
- ../ai/Protobuf/Grsim/grSim_Replacement.pb.h
 CMakeFiles/omid.dir/ai/Protobuf/Refree/game_event.pb.cc.o: \
  ../ai/Protobuf/Refree/game_event.pb.cc \
  ../ai/Protobuf/Refree/game_event.pb.h
@@ -88,41 +76,6 @@ CMakeFiles/omid.dir/ai/Protobuf/Refree/savestate.pb.cc.o: \
  ../ai/Protobuf/Refree/referee.pb.h \
  ../ai/Protobuf/Refree/savestate.pb.cc \
  ../ai/Protobuf/Refree/savestate.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc.o: \
- ../ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.cc \
- ../ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc.o: \
- ../ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.cc \
- ../ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc.o: \
- ../ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.cc \
- ../ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc.o: \
- ../ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.cc \
- ../ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc.o: \
- ../ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.cc \
- ../ai/Protobuf/Vision/messages_robocup_ssl_refbox_log.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc.o: \
- ../ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.cc \
- ../ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc.o: \
- ../ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_geometry_legacy.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.cc \
- ../ai/Protobuf/Vision/messages_robocup_ssl_wrapper_legacy.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc.o: \
- ../ai/Protobuf/Vision/messages_robocup_ssl_detection_tracked.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.cc \
- ../ai/Protobuf/Vision/messages_robocup_ssl_wrapper_tracked.pb.h
-CMakeFiles/omid.dir/ai/Protobuf/Vision/vision_detection.pb.cc.o: \
- ../ai/Protobuf/Vision/vision_detection.pb.cc \
- ../ai/Protobuf/Vision/vision_detection.pb.h
 CMakeFiles/omid.dir/ai/RRT.cpp.o: \
  ../ai/FieldGeometry.h \
  ../ai/GameState.h \
@@ -153,9 +106,9 @@ CMakeFiles/omid.dir/ai/Strategy.cpp.o: \
 CMakeFiles/omid.dir/ai/Vision.cpp.o: \
  ../ai/FieldGeometry.h \
  ../ai/GameState.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h \
  ../ai/Socket_udp.h \
  ../ai/Switches.h \
  ../ai/Vision.cpp \
@@ -168,9 +121,9 @@ CMakeFiles/omid.dir/ai/Vision.cpp.o: \
 CMakeFiles/omid.dir/ai/VisionBall.cpp.o: \
  ../ai/FieldGeometry.h \
  ../ai/GameState.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h \
  ../ai/Socket_udp.h \
  ../ai/Switches.h \
  ../ai/Vision.h \
@@ -183,9 +136,9 @@ CMakeFiles/omid.dir/ai/VisionBall.cpp.o: \
 CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: \
  ../ai/FieldGeometry.h \
  ../ai/GameState.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h \
  ../ai/Socket_udp.h \
  ../ai/Switches.h \
  ../ai/Vision.h \
@@ -198,9 +151,9 @@ CMakeFiles/omid.dir/ai/VisionComminucation.cpp.o: \
 CMakeFiles/omid.dir/ai/VisionRobot.cpp.o: \
  ../ai/FieldGeometry.h \
  ../ai/GameState.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h \
  ../ai/Socket_udp.h \
  ../ai/Switches.h \
  ../ai/Vision.h \
@@ -327,14 +280,13 @@ CMakeFiles/omid.dir/ai/main.cpp.o: \
  ../ai/GL/glut.h \
  ../ai/GameState.h \
  ../ai/MotionControl.h \
- ../ai/Protobuf/Grsim/grSim_Commands.pb.h \
- ../ai/Protobuf/Grsim/grSim_Packet.pb.h \
- ../ai/Protobuf/Grsim/grSim_Replacement.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_detection.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_wrapper.pb.h \
+ ../ai/Protobuf/ER-force/ssl_simulation_error.pb.h \
+ ../ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.h \
  ../ai/Protobuf/Refree/game_event.pb.h \
  ../ai/Protobuf/Refree/referee.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_detection.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_geometry.pb.h \
- ../ai/Protobuf/Vision/messages_robocup_ssl_wrapper.pb.h \
  ../ai/RRT.h \
  ../ai/Referee.h \
  ../ai/Socket_udp.h \
@@ -364,9 +316,12 @@ CMakeFiles/omid.dir/ai/nrf.cpp.o: \
  ../ai/FieldGeometry.h \
  ../ai/GameState.h \
  ../ai/HighLevel.h \
- ../ai/Protobuf/Grsim/grSim_Commands.pb.h \
- ../ai/Protobuf/Grsim/grSim_Packet.pb.h \
- ../ai/Protobuf/Grsim/grSim_Replacement.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_detection_tracked.pb.h \
+ ../ai/Protobuf/ER-force/messages_robocup_ssl_geometry.pb.h \
+ ../ai/Protobuf/ER-force/ssl_simulation_config.pb.h \
+ ../ai/Protobuf/ER-force/ssl_simulation_control.pb.h \
+ ../ai/Protobuf/ER-force/ssl_simulation_error.pb.h \
+ ../ai/Protobuf/ER-force/ssl_simulation_robot_control.pb.h \
  ../ai/RRT.h \
  ../ai/Socket_udp.h \
  ../ai/Switches.h \
