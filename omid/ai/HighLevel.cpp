@@ -60,15 +60,7 @@ int max_pass_score=0;
 ////but in main is final robot position
 condition_pass HighLevel::pass_mode;
 ownership HighLevel::play_mode;
-//*****************************
-//////////If yoy have spin back
-//*****************************
-void HighLevel::go_to_ball(int index_robot)
-{
-    HighLevel::lookAtPos(index_robot, world.ball.getCurrentBallPosition());
-    world.robotT[index_robot].destination_position=world.ball.getCurrentBallPosition();
-    world.robotT[index_robot].destination_set= true;
-}
+
 void HighLevel::go_back_ball(int index) {
     VecPosition intersection1, intersection2;
     Line ball_to_robotO = Line::makeLineFromTwoPoints(world.ball.getCurrentBallPosition(),
@@ -513,10 +505,15 @@ void HighLevel::GoalieDefend(int goalKeeperIndex)
         dest.setY( PenaltyAreaLength/2 - 200);
     if(dest.getY() < -PenaltyAreaLength/2 + 200)
         dest.setY(-PenaltyAreaLength/2 + 200);
+<<<<<<< HEAD
     if(!HighLevel::ball_is_in_penalty_area('T')){
         dest.setX(goaliX);
         HighLevel::gotoXY(goalKeeperIndex, dest);
     }
+=======
+    dest.setX(goaliX);
+    HighLevel::gotoXY(goalKeeperIndex, dest);
+>>>>>>> parent of 352a90e (first test on robocup server with div B)
 
 }
 
@@ -624,8 +621,13 @@ VecPosition HighLevel::StopSurrounding_get_general_target()
 ///////
 
 
+//*****************************
+//////////If yoy have spin back
+//*****************************
+void HighLevel::go_to_ball(int index_robot)
+{
 
-
+}
 
 
 

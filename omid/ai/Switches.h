@@ -8,7 +8,11 @@
 #define MAX_ROBOTS_IN_THE_FIELD 2*MAX_ROBOTS_PER_TEAM_IN_THE_FIELD
 #define MAX_ROBOTS_PER_TEAM_IN_THE_FIELD 10
 #define MERGE_DISTANCE 500
+<<<<<<< HEAD
 #define ROBOT_RADIUS 85	  ///millimeter  //ERforce 80 GRSIM 85 Real 85
+=======
+#define ROBOT_RADIUS 90	  ///millimeter  //ERforce 80 GRSIM 85 Real 85
+>>>>>>> parent of 352a90e (first test on robocup server with div B)
 #define	BALL_RADIUS 21
 #define DISTANCE_TO_BALL_IN_STOP_MODE 500
 #define ATTACKER_DISTANCE_FROM_PENALTY_AREA_LIMIT 200

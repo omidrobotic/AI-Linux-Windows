@@ -402,7 +402,7 @@ void produceRobotsDestinations()
 
                         HighLevel::GoaliHoleCover();
                         HighLevel::go_back_ball(HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition())) ;
-                   //   if(min_robot>0)HighLevel::find_roboto_pass(min_robot);
+                     // if(min_robot>0)HighLevel::find_roboto_pass(min_robot);
                         if(max_robot>0)HighLevel::defence_scor2(max_robot);
                         break;
 
@@ -525,6 +525,7 @@ void produceRobotsDestinations()
                 }*/
 
                 switch (world.kickMode) {
+<<<<<<< HEAD
 //                    case mode_State::KickMode::KickOffO:
 //                        HighLevel::start_robotT_format_NoKickMode("KickOffO");
 //                        break;
@@ -573,6 +574,46 @@ void produceRobotsDestinations()
 //                            HighLevel::plan_scor(min_robot);
 //                        }
 //                        break;
+=======
+                    case mode_State::KickMode::KickOffO:
+                        HighLevel::start_robotT_format_NoKickMode("KickOffO");
+                        break;
+
+                    case mode_State::KickMode::KickOffT:
+                        HighLevel::ReadyForKick(
+                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
+                        break;
+
+                    case mode_State::KickMode::PenaltyO:
+                        HighLevel::GoaliHoleCover();
+                        break;
+
+                    case mode_State::KickMode::PenaltyT:
+                        HighLevel::Shoot(HighLevel::nearest_robot_to_ball('T'));
+                        break;
+
+                    case mode_State::KickMode::NoKickMode:
+                        HighLevel::GoalieDefend(world.getIndexForRobotTNumber(world.team_T.Goalie));
+                        if(HighLevel::find_robot_have_ball('T')!=-1) {
+
+
+                            HighLevel::GoaliHoleCover();
+                            HighLevel::defence_scor2(max_robot);
+                            HighLevel::plan_scor(min_robot);
+                            if (world.ball.getCurrentBallPosition().getDistanceTo(Field::getGoalMidO()) < 7000 &&
+                                HighLevel::find_robot_have_ball('O') == -1) {
+                                HighLevel::Shoot(HighLevel::nearest_robot_to_ball('T'));
+                            } else {
+                                HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
+                            }
+                        } else
+                        {
+                            int itis2[1];
+                            itis2[0]=HighLevel::nearest_robot_to_ball('T');
+                     //       HighLevel::StopSurrounding(1, itis2);
+                        }
+                        break;
+>>>>>>> parent of 352a90e (first test on robocup server with div B)
 
                     case mode_State::KickMode::DirectFreeKickT:
                         HighLevel::Shoot(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
