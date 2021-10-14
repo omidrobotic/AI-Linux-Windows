@@ -450,11 +450,12 @@ void produceRobotsDestinations()
 
                     case mode_State::KickMode::DirectFreeKickT:
                         cout << "Wait Direct T " << endl;
-//                         HighLevel::GoaliHoleCover();
-// //                        HighLevel::find_best_robot_pass(
-// //                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
-//                         HighLevel::defence_scor2(min_robot);
-//                         HighLevel::direct_free_kick(max_robot + 1, 0);
+                        HighLevel::GoalieDefend(GOALIE_NUM);
+                        // HighLevel::GoaliHoleCover();
+//                        HighLevel::find_best_robot_pass(
+//                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
+                        HighLevel::defence_scor2(min_robot);
+                        HighLevel::direct_free_kick(max_robot + 1, 0);
                         HighLevel::Shoot(HighLevel::nearest_robot_to_ball('T'));
 //                        world.playMode = mode_State::Play;
                         break;
@@ -573,11 +574,11 @@ void produceRobotsDestinations()
 //                        break;
 
                     case mode_State::KickMode::DirectFreeKickT:
-                        HighLevel::Shoot(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
                         cout << "Play Direct T " << endl;
-                        // HighLevel::start_robotT_format_NoKickMode("DirectFreeKickT");
-                       // HighLevel::ReadyForKick(
-                       //         HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
+                        HighLevel::start_robotT_format_NoKickMode("DirectFreeKickT");
+                        HighLevel::ReadyForKick(
+                            HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
+                        HighLevel::Shoot(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
                         break;
 
                     case mode_State::KickMode::DirectFreeKickO:
