@@ -533,13 +533,13 @@ void produceRobotsDestinations()
 ////                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
 //                        break;
 //
-//                    case mode_State::KickMode::PenaltyO:
-//                        HighLevel::GoaliHoleCover();
-//                        break;
-//
-//                    case mode_State::KickMode::PenaltyT:
-//                        HighLevel::Shoot(HighLevel::nearest_robot_to_ball('T'));
-//                        break;
+                   case mode_State::KickMode::PenaltyO:
+                       HighLevel::GoalieDefend(GOALIE_NUM);
+                       break;
+
+                   case mode_State::KickMode::PenaltyT:
+                       HighLevel::Shoot(HighLevel::nearest_robot_to_ball('T'));
+                       break;
 
 //                    case mode_State::KickMode::NoKickMode:
 //                       /// HighLevel::GoalieDefend(world.getIndexForRobotTNumber(world.team_T.Goalie));
