@@ -509,10 +509,10 @@ void HighLevel::GoalieDefend(int goalKeeperIndex)
         }
         last_ball_pos_goalkeeper = ball_pos;
     }
-    if(dest.getY() >  PenaltyAreaLength/3)
-        dest.setY( PenaltyAreaLength/3);
-    if(dest.getY() < -PenaltyAreaLength/3)
-        dest.setY(-PenaltyAreaLength/3);
+    if(dest.getY() >  PenaltyAreaLength/4)
+        dest.setY( PenaltyAreaLength/4);
+    if(dest.getY() < -PenaltyAreaLength/4)
+        dest.setY(-PenaltyAreaLength/4);
     if(!HighLevel::ball_is_in_penalty_area('T')){
         dest.setX(goaliX);
         HighLevel::gotoXY(goalKeeperIndex, dest);
