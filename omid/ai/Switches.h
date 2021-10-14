@@ -73,7 +73,7 @@ const int GOALIE_NUM = 0;
 #define PORT_NUM_SEND_ERforce_COMMAND_YELLOW		10302
 #define PORT_NUM_SEND_ERforce_COMMAND_BLUE		10301
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.25.0.12" //field a
-#define GROUP_ADDR_SEND_ERforce_COMMAND	"192.168.48.16"  //field b
+#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.20.0.10"  //field b
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"127.0.0.1"
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"192.168.0.4"
 
