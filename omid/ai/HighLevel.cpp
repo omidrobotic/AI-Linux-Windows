@@ -2524,6 +2524,7 @@ void HighLevel::Shoot(int index_robotT)
 	{
 		if ((abs(world.robotT[index_robotT/*decider.index*/].angle - angle_robot_to_mid_bigest_holl)<  REACH_ANGLE_APPROXIMATION) && (abs(world.robotT[index_robotT/*decider.index*/].angle - angle_robot_to_ball)<  REACH_ANGLE_APPROXIMATION))
 		{
+			cout << "Shooted !!!" << endl;
 			if (Longest_Hole.Point_1.getDistanceTo(Longest_Hole.Point_2) < 90)
 			{
 				//((KickToPoint*)(decider.mediumlevels[decider.currentMediumLevel]))->SetParam(goal_dest, 7, 0, speed, 1, is_in_hurry);
@@ -3449,7 +3450,7 @@ int HighLevel::find_best_robot_pass(int index_robotT)
 		if ((abs(score_pass[max_pass_score] - score_pass[max_index]) > 2)||(HighLevel::pass_mode != submit))
 		{
 			max_pass_score = max_index;
-			cout << "sdf" << endl;
+			// cout << "sdf" << endl;
 		}
         max_index=max_pass_score;
 		///to shoot

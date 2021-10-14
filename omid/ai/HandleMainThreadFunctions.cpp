@@ -406,7 +406,7 @@ void produceRobotsDestinations()
                     case mode_State::KickMode::KickOffTPrepare:
                         HighLevel::start_robotT_format_NoKickMode("KickOffTPrepare");
                         HighLevel::ReadyForKick(
-                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
+                            HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
 
 
                         break;
@@ -605,6 +605,7 @@ void produceRobotsDestinations()
                     default:
                         break;
                 }
+                HighLevel::GoalieDefend(GOALIE_NUM);
                 break;
 
 
