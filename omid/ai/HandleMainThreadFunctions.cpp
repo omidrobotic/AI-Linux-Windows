@@ -497,6 +497,9 @@ void produceRobotsDestinations()
                 HighLevel::plan_scor(4);
                 HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
                 HighLevel::GoalieDefend(GOALIE_NUM);
+                for (int i = 0; i < world.numT; i++) {
+                    world.robotT[i].spinBack= false;
+                }
                 //world.setKickMode(mode_State::KickMode::NoKickMode);
                 //	if (HighLevel::play_mode == teammate)
                 //	{
