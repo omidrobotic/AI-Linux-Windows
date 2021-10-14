@@ -48,7 +48,7 @@
 
 #define PRESENT_OF_ATTACKER 0.80 //PRESENT OF ATTACKER ROBOT T
 //////////////////mhz
-const int GOALIE_NUM = 0;
+const int GOALIE_NUM = 3;
 
 
 #define UDP_CLIENT_INTERFACE "eth1"
