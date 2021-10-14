@@ -55,7 +55,7 @@ public:
 	double V_MSp_nrf = 200;	//grsim : 700	///max nice speed : 600
 	double V_d_nrf = V_MEr_nrf / pow(V_MSp_nrf, (1 / V_p_nrf));
 
-	double V_MEr_grsim = 750;	///grsim:750
+	double V_MEr_grsim = 200;	///grsim:750
 	double V_p_grsim = 1; //2	///grsim : 1
 	double V_MSp_grsim = 400;	//grsim : 400
 	double V_d_grsim = V_MEr_grsim / pow(V_MSp_grsim, (1 / V_p_grsim));
