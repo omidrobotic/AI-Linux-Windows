@@ -572,7 +572,7 @@ void produceRobotsDestinations()
 
                     case mode_State::KickMode::DirectFreeKickT:
                         HighLevel::Shoot(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
-                        HighLevel::start_robotT_format_NoKickMode("DirectFreeKickT");
+                        // HighLevel::start_robotT_format_NoKickMode("DirectFreeKickT");
                        // HighLevel::ReadyForKick(
                        //         HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
                         break;
@@ -587,8 +587,9 @@ void produceRobotsDestinations()
                         break;
 
                     case mode_State::KickMode::IndirectFreeKickT:
-                        HighLevel::start_robotT_format_NoKickMode("IndirectFreeKickT");
                         HighLevel::Shoot(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
+                        // HighLevel::start_robotT_format_NoKickMode("IndirectFreeKickT");
+                        // HighLevel::Shoot(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
 //                        HighLevel::ReadyForKick(
 //                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
                         break;
