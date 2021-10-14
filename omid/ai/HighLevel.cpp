@@ -2524,7 +2524,7 @@ void HighLevel::Shoot(int index_robotT)
 	{
 		if ((abs(world.robotT[index_robotT/*decider.index*/].angle - angle_robot_to_mid_bigest_holl)<  REACH_ANGLE_APPROXIMATION) && (abs(world.robotT[index_robotT/*decider.index*/].angle - angle_robot_to_ball)<  REACH_ANGLE_APPROXIMATION))
 		{
-			if (Longest_Hole.Point_1.getDistanceTo(Longest_Hole.Point_2) < 50)
+			if (Longest_Hole.Point_1.getDistanceTo(Longest_Hole.Point_2) < 90)
 			{
 				//((KickToPoint*)(decider.mediumlevels[decider.currentMediumLevel]))->SetParam(goal_dest, 7, 0, speed, 1, is_in_hurry);
 				//z	world.power = 7;
