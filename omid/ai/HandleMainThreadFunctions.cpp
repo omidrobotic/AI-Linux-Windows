@@ -135,16 +135,9 @@ void produceRobotsDestinations()
             else                    world.robotT[index].role = "None";
         }
     }
-//    for (int i = 0; i < world.numT; ++i) {
-//    for (int i = 0; i < world.numT; ++i) {
-//        if (world.robotT[i].kick_power>0)
-//        {
-//            world.robotT[i].spinBack= false;
-//        } else
-//        {
-//            world.robotT[i].spinBack= true;
-//        }
-//    }
+    for (int i = 0; i < world.numT; i++) {
+        world.robotT[i].spinBack= false;
+    }
 
 
 
