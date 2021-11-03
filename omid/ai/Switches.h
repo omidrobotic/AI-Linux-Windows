@@ -9,7 +9,11 @@
 #define MAX_ROBOTS_PER_TEAM_IN_THE_FIELD 10
 #define MERGE_DISTANCE 500
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define ROBOT_RADIUS 85	  ///millimeter  //ERforce 80 GRSIM 85 Real 85
+=======
+#define ROBOT_RADIUS 90	  ///millimeter  //ERforce 80 GRSIM 85 Real 85
+>>>>>>> parent of 352a90e (first test on robocup server with div B)
 =======
 #define ROBOT_RADIUS 90	  ///millimeter  //ERforce 80 GRSIM 85 Real 85
 >>>>>>> parent of 352a90e (first test on robocup server with div B)

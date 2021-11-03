@@ -513,6 +513,9 @@ void HighLevel::GoalieDefend(int goalKeeperIndex)
 =======
     dest.setX(goaliX);
     HighLevel::gotoXY(goalKeeperIndex, dest);
+<<<<<<< HEAD
+>>>>>>> parent of 352a90e (first test on robocup server with div B)
+=======
 >>>>>>> parent of 352a90e (first test on robocup server with div B)
 
 }
