@@ -40,8 +40,13 @@ public:
     static void GoalieDefend(int defenderNum);
     static bool ball_is_in_penalty_area(char team);
     static void RobotFormation();
-    static VecPosition get_best_pos_for_cover(VecPosition center, float distance);
+    static VecPosition get_best_pos_for_cover(VecPosition center, int robotIndex);
     static void move_ball_to_position(int index, VecPosition pos);
+    static void set_robots_roles(int goalie, int defend);
+    static void defend_formation();
+    static void Attack();
+    static bool goal_is_open();
+    static bool Pass2(int sender, int reciever);
 	//bool Has50cmDistanceFromBall(int id);
 	//void Get50cmDistanceFromBall(int id);
 

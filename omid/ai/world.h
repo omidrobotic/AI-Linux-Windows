@@ -126,7 +126,10 @@ public:
 	short int kick_power; ///between 0 to 7
 	bool shoot_or_chip;	///true(1) for shoot; false(0) for chip
 	bool spinBack;
-    string role; // "None", "Golie", "Send", "Recieve", "Defend"
+
+    // Farhan
+    string role; // "None", "Golie", "Attack", "Recieve", "Defend"
+    int coveredBy = -1;
 };
 class TeamData {
 public:

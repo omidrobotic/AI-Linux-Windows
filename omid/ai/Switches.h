@@ -18,11 +18,11 @@
 #define DRAW_MOUSE 0
 #define DRAW_RRT_PATHS 0
 #define DRAW_PENALTY_AREA_ATTACKER_LIMIT 0
-#define SEND_COMMANDS_TO_ROBOTS 2	/// 2: FOR COMMAND ER-force ROBOT 1 : FOR COMMAND TO REAL ROBOTS   0 : FOR COMMAND TO GRSIM ROBOTS
+#define SEND_COMMANDS_TO_ROBOTS 0	/// 2: FOR COMMAND ER-force ROBOT 1 : FOR COMMAND TO REAL ROBOTS   0 : FOR COMMAND TO GRSIM ROBOTS
 #define USE_FEEDFORWARD 1
 #define RECTANGULAR_PENALTY_AREA 1	/// 1 (non zero) : FOR RECTANGULAR PENALTY AREA   0 : FOR CIRCULAR PENALTY AREA
 #define REACH_DESTINATION_APPROXIMATION 25
-#define REACH_ANGLE_APPROXIMATION 0.4
+#define REACH_ANGLE_APPROXIMATION 0.1
 
 //////////////////mhz
 #define DISTANCE_ROBOT_HAVE_BALL 50
@@ -57,16 +57,16 @@ const int GOALIE_NUM = 3;
 #define PORT_NUM_Refree        10003	//10003          
 #define GROUP_ADDR_Refree  "224.5.23.1"
 //----- Defines Vision-------------------------------------------------------------- 
-#define PORT_NUM_Vision      10006
+#define PORT_NUM_Vision      10021 
 #define GROUP_ADDR_Vision  "224.5.23.2"
 //----- Defines Send Grsim Commands-------------------------------------------------
 // Server
 //#define PORT_NUM_SEND_GRSIM_COMMAND		10302
 //#define GROUP_ADDR_SEND_GRSIM_COMMAND	"simulator"
 // Test
-#define PORT_NUM_SEND_GRSIM_COMMAND		20011
+#define PORT_NUM_SEND_GRSIM_COMMAND		20012
 
-#define GROUP_ADDR_SEND_GRSIM_COMMAND	"192.168.48.16"
+#define GROUP_ADDR_SEND_GRSIM_COMMAND	"127.0.0.1"
 
 
 //----- Defines Send ER-force Commands-------------------------------------------------
