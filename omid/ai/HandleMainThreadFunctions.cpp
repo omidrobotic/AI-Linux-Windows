@@ -135,16 +135,9 @@ void produceRobotsDestinations()
             else                    world.robotT[index].role = "None";
         }
     }
-//    for (int i = 0; i < world.numT; ++i) {
-//    for (int i = 0; i < world.numT; ++i) {
-//        if (world.robotT[i].kick_power>0)
-//        {
-//            world.robotT[i].spinBack= false;
-//        } else
-//        {
-//            world.robotT[i].spinBack= true;
-//        }
-//    }
+    for (int i = 0; i < world.numT; i++) {
+        world.robotT[i].spinBack= false;
+    }
 
 
 
@@ -413,7 +406,7 @@ void produceRobotsDestinations()
                     case mode_State::KickMode::KickOffTPrepare:
                         HighLevel::start_robotT_format_NoKickMode("KickOffTPrepare");
                         HighLevel::ReadyForKick(
-                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
+                            HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
 
 
                         break;
@@ -456,16 +449,19 @@ void produceRobotsDestinations()
 
 
                     case mode_State::KickMode::DirectFreeKickT:
-                        HighLevel::GoaliHoleCover();
+                        cout << "Wait Direct T " << endl;
+                        HighLevel::GoalieDefend(GOALIE_NUM);
+                        // HighLevel::GoaliHoleCover();
 //                        HighLevel::find_best_robot_pass(
 //                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
-                        HighLevel::Shoot(HighLevel::nearest_robot_to_ball('T'));
                         HighLevel::defence_scor2(min_robot);
                         HighLevel::direct_free_kick(max_robot + 1, 0);
+                        HighLevel::Shoot(HighLevel::nearest_robot_to_ball('T'));
 //                        world.playMode = mode_State::Play;
                         break;
 
                     case mode_State::KickMode::DirectFreeKickO:
+                        cout << "Wait Direct O " << endl;
                         HighLevel::GoaliHoleCover();
                         HighLevel::go_back_ball(HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition())) ;
 
@@ -504,11 +500,14 @@ void produceRobotsDestinations()
                 HighLevel::plan_scor(4);
                 HighLevel::find_best_robot_pass(HighLevel::nearest_robot_to_ball('T'));
                 HighLevel::GoalieDefend(GOALIE_NUM);
+                for (int i = 0; i < world.numT; i++) {
+                    world.robotT[i].spinBack= false;
+                }
                 //world.setKickMode(mode_State::KickMode::NoKickMode);
-                //	if (HighLevel::play_mode == teammate)
-                //	{
-
-                //	}
+                if (HighLevel::play_mode == teammate)
+                {
+                    HighLevel::Shoot(HighLevel::nearest_robot_to_ball('T'));
+                }
                 //else if (HighLevel::play_mode== opponent)
                     /* {
                          HighLevel::GoaliHoleCover();
@@ -538,13 +537,13 @@ void produceRobotsDestinations()
 ////                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
 //                        break;
 //
-//                    case mode_State::KickMode::PenaltyO:
-//                        HighLevel::GoaliHoleCover();
-//                        break;
-//
-//                    case mode_State::KickMode::PenaltyT:
-//                        HighLevel::Shoot(HighLevel::nearest_robot_to_ball('T'));
-//                        break;
+                   case mode_State::KickMode::PenaltyO:
+                       HighLevel::GoalieDefend(GOALIE_NUM);
+                       break;
+
+                   case mode_State::KickMode::PenaltyT:
+                       HighLevel::Shoot(HighLevel::nearest_robot_to_ball('T'));
+                       break;
 
 //                    case mode_State::KickMode::NoKickMode:
 //                       /// HighLevel::GoalieDefend(world.getIndexForRobotTNumber(world.team_T.Goalie));
@@ -616,13 +615,15 @@ void produceRobotsDestinations()
 >>>>>>> parent of 352a90e (first test on robocup server with div B)
 
                     case mode_State::KickMode::DirectFreeKickT:
-                        HighLevel::Shoot(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
+                        cout << "Play Direct T " << endl;
                         HighLevel::start_robotT_format_NoKickMode("DirectFreeKickT");
-                       // HighLevel::ReadyForKick(
-                       //         HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
+                        HighLevel::ReadyForKick(
+                            HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
+                        HighLevel::Shoot(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
                         break;
 
                     case mode_State::KickMode::DirectFreeKickO:
+                        cout << "Play Direct O " << endl;
                         HighLevel::GoaliHoleCover();
                         HighLevel::go_back_ball(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
 
@@ -632,8 +633,9 @@ void produceRobotsDestinations()
                         break;
 
                     case mode_State::KickMode::IndirectFreeKickT:
-                        HighLevel::start_robotT_format_NoKickMode("IndirectFreeKickT");
                         HighLevel::Shoot(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
+                        // HighLevel::start_robotT_format_NoKickMode("IndirectFreeKickT");
+                        // HighLevel::Shoot(HighLevel::nearest_robot_to_point('T',world.ball.getCurrentBallPosition()));
 //                        HighLevel::ReadyForKick(
 //                                HighLevel::nearest_robot_to_point('T', world.ball.getCurrentBallPosition()));
                         break;
@@ -650,6 +652,7 @@ void produceRobotsDestinations()
                     default:
                         break;
                 }
+                HighLevel::GoalieDefend(GOALIE_NUM);
                 break;
 
 

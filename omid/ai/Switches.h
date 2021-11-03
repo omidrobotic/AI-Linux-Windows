@@ -8,15 +8,7 @@
 #define MAX_ROBOTS_IN_THE_FIELD 2*MAX_ROBOTS_PER_TEAM_IN_THE_FIELD
 #define MAX_ROBOTS_PER_TEAM_IN_THE_FIELD 10
 #define MERGE_DISTANCE 500
-<<<<<<< HEAD
-<<<<<<< HEAD
-#define ROBOT_RADIUS 85	  ///millimeter  //ERforce 80 GRSIM 85 Real 85
-=======
-#define ROBOT_RADIUS 90	  ///millimeter  //ERforce 80 GRSIM 85 Real 85
->>>>>>> parent of 352a90e (first test on robocup server with div B)
-=======
-#define ROBOT_RADIUS 90	  ///millimeter  //ERforce 80 GRSIM 85 Real 85
->>>>>>> parent of 352a90e (first test on robocup server with div B)
+#define ROBOT_RADIUS 80	  ///millimeter  //ERforce 80 GRSIM 85 Real 85
 #define	BALL_RADIUS 21
 #define DISTANCE_TO_BALL_IN_STOP_MODE 500
 #define ATTACKER_DISTANCE_FROM_PENALTY_AREA_LIMIT 200
@@ -56,7 +48,7 @@
 
 #define PRESENT_OF_ATTACKER 0.80 //PRESENT OF ATTACKER ROBOT T
 //////////////////mhz
-const int GOALIE_NUM = 0;
+const int GOALIE_NUM = 3;
 
 
 #define UDP_CLIENT_INTERFACE "eth1"
@@ -72,7 +64,7 @@ const int GOALIE_NUM = 0;
 //#define PORT_NUM_SEND_GRSIM_COMMAND		10302
 //#define GROUP_ADDR_SEND_GRSIM_COMMAND	"simulator"
 // Test
-#define PORT_NUM_SEND_GRSIM_COMMAND		10300
+#define PORT_NUM_SEND_GRSIM_COMMAND		20011
 
 #define GROUP_ADDR_SEND_GRSIM_COMMAND	"192.168.48.16"
 
@@ -81,7 +73,7 @@ const int GOALIE_NUM = 0;
 #define PORT_NUM_SEND_ERforce_COMMAND_YELLOW		10302
 #define PORT_NUM_SEND_ERforce_COMMAND_BLUE		10301
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.25.0.12" //field a
-#define GROUP_ADDR_SEND_ERforce_COMMAND	"192.168.48.16"  //field b
+#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.20.0.10"  //field b
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"127.0.0.1"
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"192.168.0.4"
 

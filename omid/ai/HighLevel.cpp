@@ -60,7 +60,15 @@ int max_pass_score=0;
 ////but in main is final robot position
 condition_pass HighLevel::pass_mode;
 ownership HighLevel::play_mode;
-
+//*****************************
+//////////If yoy have spin back
+//*****************************
+void HighLevel::go_to_ball(int index_robot)
+{
+    HighLevel::lookAtPos(index_robot, world.ball.getCurrentBallPosition());
+    world.robotT[index_robot].destination_position=world.ball.getCurrentBallPosition();
+    world.robotT[index_robot].destination_set= true;
+}
 void HighLevel::go_back_ball(int index) {
     VecPosition intersection1, intersection2;
     Line ball_to_robotO = Line::makeLineFromTwoPoints(world.ball.getCurrentBallPosition(),
@@ -501,22 +509,14 @@ void HighLevel::GoalieDefend(int goalKeeperIndex)
         }
         last_ball_pos_goalkeeper = ball_pos;
     }
-    if(dest.getY() >  PenaltyAreaLength/2 - 200)
-        dest.setY( PenaltyAreaLength/2 - 200);
-    if(dest.getY() < -PenaltyAreaLength/2 + 200)
-        dest.setY(-PenaltyAreaLength/2 + 200);
-<<<<<<< HEAD
+    if(dest.getY() >  PenaltyAreaLength/4)
+        dest.setY( PenaltyAreaLength/4);
+    if(dest.getY() < -PenaltyAreaLength/4)
+        dest.setY(-PenaltyAreaLength/4);
     if(!HighLevel::ball_is_in_penalty_area('T')){
         dest.setX(goaliX);
         HighLevel::gotoXY(goalKeeperIndex, dest);
     }
-=======
-    dest.setX(goaliX);
-    HighLevel::gotoXY(goalKeeperIndex, dest);
-<<<<<<< HEAD
->>>>>>> parent of 352a90e (first test on robocup server with div B)
-=======
->>>>>>> parent of 352a90e (first test on robocup server with div B)
 
 }
 
@@ -624,13 +624,8 @@ VecPosition HighLevel::StopSurrounding_get_general_target()
 ///////
 
 
-//*****************************
-//////////If yoy have spin back
-//*****************************
-void HighLevel::go_to_ball(int index_robot)
-{
 
-}
+
 
 
 
@@ -2529,7 +2524,8 @@ void HighLevel::Shoot(int index_robotT)
 	{
 		if ((abs(world.robotT[index_robotT/*decider.index*/].angle - angle_robot_to_mid_bigest_holl)<  REACH_ANGLE_APPROXIMATION) && (abs(world.robotT[index_robotT/*decider.index*/].angle - angle_robot_to_ball)<  REACH_ANGLE_APPROXIMATION))
 		{
-			if (Longest_Hole.Point_1.getDistanceTo(Longest_Hole.Point_2) < 50)
+			// cout << "Shooted !!!" << endl;
+			if (Longest_Hole.Point_1.getDistanceTo(Longest_Hole.Point_2) < 90)
 			{
 				//((KickToPoint*)(decider.mediumlevels[decider.currentMediumLevel]))->SetParam(goal_dest, 7, 0, speed, 1, is_in_hurry);
 				//z	world.power = 7;
@@ -3454,7 +3450,7 @@ int HighLevel::find_best_robot_pass(int index_robotT)
 		if ((abs(score_pass[max_pass_score] - score_pass[max_index]) > 2)||(HighLevel::pass_mode != submit))
 		{
 			max_pass_score = max_index;
-			cout << "sdf" << endl;
+			// cout << "sdf" << endl;
 		}
         max_index=max_pass_score;
 		///to shoot
