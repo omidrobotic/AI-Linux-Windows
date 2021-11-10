@@ -61,3 +61,6 @@ Have fun :)
   * ### IN Linux
   https://www.youtube.com/watch?v=ES_GI-lmhEU
   https://www.youtube.com/watch?v=8_X5Iq9niDE
+
+see this link for Vision PCI cameras and install drivers: 
+ https://docs.oracle.com/cd/E19407-01/820-7898-11/z40001c91006831.html
