@@ -56,8 +56,19 @@ sudo snap install clion --classic
 ```
 Have fun :)
 
-  
-  
+### Build
+ ```
+ cd ~/AI-Linux-Windos-2021/omid
+ ./auto.sh
+ cd build
+ make
+ ```
+### Run
+ ```
+ cd ~/AI-Linux-Windos-2021/omid/build
+ ./omid
+ ```
+
   * ### IN Linux
   https://www.youtube.com/watch?v=ES_GI-lmhEU
   https://www.youtube.com/watch?v=8_X5Iq9niDE
