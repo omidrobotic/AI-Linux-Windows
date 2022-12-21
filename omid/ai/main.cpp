@@ -38,6 +38,7 @@
 
 
 
+
 World world;
 GLFrame glFrame;
 //HINSTANCE ghInst;
@@ -1225,7 +1226,9 @@ int main(int argc, char **argv)
 
 	std::thread refree_thread(refree_func);
 	std::thread vision_thread(vision_func);
+#if GLUT_ENABLE
 	std::thread glut_thread(GLUT_func);
+#endif
 	std::thread radio_thread(radio_func);
 	//.std::thread Send_Nrf_Temp(send_nrf_temp);
 
@@ -1250,7 +1253,9 @@ int main(int argc, char **argv)
 
 	refree_thread.join();
 	vision_thread.join();
+#if GLUT_ENABLE
 	glut_thread.join();
+#endif
 	radio_thread.join();
 	///Send_Nrf_Temp.join();
 
