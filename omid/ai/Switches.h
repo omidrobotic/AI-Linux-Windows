@@ -68,7 +68,7 @@ const int GOALIE_NUM = 3;
 //#define GROUP_ADDR_SEND_GRSIM_COMMAND	"simulator"
 // Test
 #define PORT_NUM_SEND_GRSIM_COMMAND		20012
-#define MANUAL_ADDR_GRSIM 0     // 0:Disable  1:Enable 
+#define MANUAL_ADDR_GRSIM 0     // 0:auto IP  1:Manual IP 
 #define GROUP_ADDR_SEND_GRSIM_COMMAND		"192.168.1.39"
 
 

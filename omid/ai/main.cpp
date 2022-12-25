@@ -1232,7 +1232,7 @@ int main(int argc, char **argv)
 	};*/
 
 #pragma endregion
-
+	
 	std::thread refree_thread(refree_func);
 	std::thread vision_thread(vision_func);
 #if GLUT_ENABLE

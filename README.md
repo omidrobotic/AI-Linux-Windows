@@ -75,3 +75,11 @@ Have fun :)
 
 see this link for Vision PCI cameras and install drivers: 
  https://docs.oracle.com/cd/E19407-01/820-7898-11/z40001c91006831.html
+
+## Recently Added Tasks
+- [X] Make GUI thread optional. 
+- [X] System IP address can be detected automaticaly.
+- [ ] Designing new GUI with QT.
+- [ ] Optimizing cockcet code (which I think its working fine!!).
+- [ ] Prepare codes to go on docker.
+- [ ] 
