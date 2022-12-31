@@ -4,6 +4,7 @@
 #include "Switches.h"
 #include "HighLevel.h"
 #include "Strategy.h"
+
 int y = 0;
 int stage = -1, cnt =0;
 int challengeNumber = 6;

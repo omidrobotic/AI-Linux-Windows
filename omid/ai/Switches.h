@@ -1,6 +1,9 @@
 #ifndef SWITCHES_H
 #define SWITCHES_H
+//#include "GetSystemData.h"
 
+
+#define GLUT_ENABLE 0 ///enable 1 /disable 0  graphic thread
 #define GAME_MODE_ROBOCUP_2021 1 /// 1 : Run in Simulator 2 : Technical Challenge 3 : Hardware Challenge
 #define CAM_COUNT 4
 #define DIVISION 2	/// 1 : for division A		2 : for division B      3 : for OmidReal
@@ -65,15 +68,15 @@ const int GOALIE_NUM = 3;
 //#define GROUP_ADDR_SEND_GRSIM_COMMAND	"simulator"
 // Test
 #define PORT_NUM_SEND_GRSIM_COMMAND		20012
-
-#define GROUP_ADDR_SEND_GRSIM_COMMAND	"127.0.0.1"
+#define MANUAL_ADDR_GRSIM 0     // 0:auto IP  1:Manual IP 
+#define GROUP_ADDR_SEND_GRSIM_COMMAND		"192.168.1.39"
 
 
 //----- Defines Send ER-force Commands-------------------------------------------------
 #define PORT_NUM_SEND_ERforce_COMMAND_YELLOW		10302
 #define PORT_NUM_SEND_ERforce_COMMAND_BLUE		10301
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.25.0.12" //field a
-#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.20.0.10"  //field b
+#define GROUP_ADDR_SEND_ERforce_COMMAND	"172.20.10.5"  //field b
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"127.0.0.1"
 //#define GROUP_ADDR_SEND_ERforce_COMMAND	"192.168.0.4"
 

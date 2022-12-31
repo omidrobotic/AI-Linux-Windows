@@ -5,121 +5,166 @@
 
 #include <algorithm>
 
+#include <google/protobuf/stubs/common.h>
+#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
+#include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
+// This is a temporary google only hack
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+#include "third_party/protobuf/version.h"
+#endif
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
 
-PROTOBUF_PRAGMA_INIT_SEG
-constexpr SSL_Referee_Game_Event_Originator::SSL_Referee_Game_Event_Originator(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : team_(0)
+namespace protobuf_game_5fevent_2eproto {
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_game_5fevent_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_SSL_Referee_Game_Event_Originator;
+}  // namespace protobuf_game_5fevent_2eproto
+class SSL_Referee_Game_Event_OriginatorDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<SSL_Referee_Game_Event_Originator>
+      _instance;
+} _SSL_Referee_Game_Event_Originator_default_instance_;
+class SSL_Referee_Game_EventDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<SSL_Referee_Game_Event>
+      _instance;
+} _SSL_Referee_Game_Event_default_instance_;
+namespace protobuf_game_5fevent_2eproto {
+static void InitDefaultsSSL_Referee_Game_Event_Originator() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-  , botid_(0u){}
-struct SSL_Referee_Game_Event_OriginatorDefaultTypeInternal {
-  constexpr SSL_Referee_Game_Event_OriginatorDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~SSL_Referee_Game_Event_OriginatorDefaultTypeInternal() {}
-  union {
-    SSL_Referee_Game_Event_Originator _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SSL_Referee_Game_Event_OriginatorDefaultTypeInternal _SSL_Referee_Game_Event_Originator_default_instance_;
-constexpr SSL_Referee_Game_Event::SSL_Referee_Game_Event(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : message_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , originator_(nullptr)
-  , gameeventtype_(0)
-{}
-struct SSL_Referee_Game_EventDefaultTypeInternal {
-  constexpr SSL_Referee_Game_EventDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~SSL_Referee_Game_EventDefaultTypeInternal() {}
-  union {
-    SSL_Referee_Game_Event _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SSL_Referee_Game_EventDefaultTypeInternal _SSL_Referee_Game_Event_default_instance_;
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_game_5fevent_2eproto[2];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_game_5fevent_2eproto[2];
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_game_5fevent_2eproto = nullptr;
+  {
+    void* ptr = &::_SSL_Referee_Game_Event_Originator_default_instance_;
+    new (ptr) ::SSL_Referee_Game_Event_Originator();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::SSL_Referee_Game_Event_Originator::InitAsDefaultInstance();
+}
 
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_game_5fevent_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::SSL_Referee_Game_Event_Originator, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::SSL_Referee_Game_Event_Originator, _internal_metadata_),
+::google::protobuf::internal::SCCInfo<0> scc_info_SSL_Referee_Game_Event_Originator =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsSSL_Referee_Game_Event_Originator}, {}};
+
+static void InitDefaultsSSL_Referee_Game_Event() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_SSL_Referee_Game_Event_default_instance_;
+    new (ptr) ::SSL_Referee_Game_Event();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::SSL_Referee_Game_Event::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_SSL_Referee_Game_Event =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsSSL_Referee_Game_Event}, {
+      &protobuf_game_5fevent_2eproto::scc_info_SSL_Referee_Game_Event_Originator.base,}};
+
+void InitDefaults() {
+  ::google::protobuf::internal::InitSCC(&scc_info_SSL_Referee_Game_Event_Originator.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_SSL_Referee_Game_Event.base);
+}
+
+::google::protobuf::Metadata file_level_metadata[2];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
+
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_Referee_Game_Event_Originator, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_Referee_Game_Event_Originator, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::SSL_Referee_Game_Event_Originator, team_),
-  PROTOBUF_FIELD_OFFSET(::SSL_Referee_Game_Event_Originator, botid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_Referee_Game_Event_Originator, team_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_Referee_Game_Event_Originator, botid_),
   0,
   1,
-  PROTOBUF_FIELD_OFFSET(::SSL_Referee_Game_Event, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::SSL_Referee_Game_Event, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_Referee_Game_Event, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_Referee_Game_Event, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::SSL_Referee_Game_Event, gameeventtype_),
-  PROTOBUF_FIELD_OFFSET(::SSL_Referee_Game_Event, originator_),
-  PROTOBUF_FIELD_OFFSET(::SSL_Referee_Game_Event, message_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_Referee_Game_Event, gameeventtype_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_Referee_Game_Event, originator_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::SSL_Referee_Game_Event, message_),
   2,
   1,
   0,
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 7, sizeof(::SSL_Referee_Game_Event_Originator)},
   { 9, 17, sizeof(::SSL_Referee_Game_Event)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_SSL_Referee_Game_Event_Originator_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_SSL_Referee_Game_Event_default_instance_),
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&::_SSL_Referee_Game_Event_Originator_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::_SSL_Referee_Game_Event_default_instance_),
 };
 
-const char descriptor_table_protodef_game_5fevent_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\020game_event.proto\"\236\006\n\026SSL_Referee_Game_"
-  "Event\022<\n\rgameEventType\030\001 \002(\0162%.SSL_Refer"
-  "ee_Game_Event.GameEventType\0226\n\noriginato"
-  "r\030\002 \001(\0132\".SSL_Referee_Game_Event.Origina"
-  "tor\022\017\n\007message\030\003 \001(\t\032G\n\nOriginator\022*\n\004te"
-  "am\030\001 \002(\0162\034.SSL_Referee_Game_Event.Team\022\r"
-  "\n\005botId\030\002 \001(\r\"\371\003\n\rGameEventType\022\013\n\007UNKNO"
-  "WN\020\000\022\n\n\006CUSTOM\020\001\022\025\n\021NUMBER_OF_PLAYERS\020\002\022"
-  "\023\n\017BALL_LEFT_FIELD\020\003\022\010\n\004GOAL\020\004\022\020\n\014KICK_T"
-  "IMEOUT\020\005\022\027\n\023NO_PROGRESS_IN_GAME\020\006\022\021\n\rBOT"
-  "_COLLISION\020\007\022\025\n\021MULTIPLE_DEFENDER\020\010\022\037\n\033M"
-  "ULTIPLE_DEFENDER_PARTIALLY\020\t\022\034\n\030ATTACKER"
-  "_IN_DEFENSE_AREA\020\n\022\t\n\005ICING\020\013\022\016\n\nBALL_SP"
-  "EED\020\014\022\024\n\020ROBOT_STOP_SPEED\020\r\022\022\n\016BALL_DRIB"
-  "BLING\020\016\022\031\n\025ATTACKER_TOUCH_KEEPER\020\017\022\020\n\014DO"
-  "UBLE_TOUCH\020\020\022\034\n\030ATTACKER_TO_DEFENCE_AREA"
-  "\020\021\022#\n\037DEFENDER_TO_KICK_POINT_DISTANCE\020\022\022"
-  "\020\n\014BALL_HOLDING\020\023\022\021\n\rINDIRECT_GOAL\020\024\022\031\n\025"
-  "BALL_PLACEMENT_FAILED\020\025\022\020\n\014CHIP_ON_GOAL\020"
-  "\026\"8\n\004Team\022\020\n\014TEAM_UNKNOWN\020\000\022\017\n\013TEAM_YELL"
-  "OW\020\001\022\r\n\tTEAM_BLUE\020\002"
-  ;
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_game_5fevent_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_game_5fevent_2eproto = {
-  false, false, 819, descriptor_table_protodef_game_5fevent_2eproto, "game_event.proto", 
-  &descriptor_table_game_5fevent_2eproto_once, nullptr, 0, 2,
-  schemas, file_default_instances, TableStruct_game_5fevent_2eproto::offsets,
-  file_level_metadata_game_5fevent_2eproto, file_level_enum_descriptors_game_5fevent_2eproto, file_level_service_descriptors_game_5fevent_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable* descriptor_table_game_5fevent_2eproto_getter() {
-  return &descriptor_table_game_5fevent_2eproto;
+void protobuf_AssignDescriptors() {
+  AddDescriptors();
+  AssignDescriptors(
+      "game_event.proto", schemas, file_default_instances, TableStruct::offsets,
+      file_level_metadata, file_level_enum_descriptors, NULL);
 }
 
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_game_5fevent_2eproto(&descriptor_table_game_5fevent_2eproto);
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* SSL_Referee_Game_Event_GameEventType_descriptor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_game_5fevent_2eproto);
-  return file_level_enum_descriptors_game_5fevent_2eproto[0];
+void protobuf_AssignDescriptorsOnce() {
+  static ::google::protobuf::internal::once_flag once;
+  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
+}
+
+void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
+void protobuf_RegisterTypes(const ::std::string&) {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 2);
+}
+
+void AddDescriptorsImpl() {
+  InitDefaults();
+  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+      "\n\020game_event.proto\"\236\006\n\026SSL_Referee_Game_"
+      "Event\022<\n\rgameEventType\030\001 \002(\0162%.SSL_Refer"
+      "ee_Game_Event.GameEventType\0226\n\noriginato"
+      "r\030\002 \001(\0132\".SSL_Referee_Game_Event.Origina"
+      "tor\022\017\n\007message\030\003 \001(\t\032G\n\nOriginator\022*\n\004te"
+      "am\030\001 \002(\0162\034.SSL_Referee_Game_Event.Team\022\r"
+      "\n\005botId\030\002 \001(\r\"\371\003\n\rGameEventType\022\013\n\007UNKNO"
+      "WN\020\000\022\n\n\006CUSTOM\020\001\022\025\n\021NUMBER_OF_PLAYERS\020\002\022"
+      "\023\n\017BALL_LEFT_FIELD\020\003\022\010\n\004GOAL\020\004\022\020\n\014KICK_T"
+      "IMEOUT\020\005\022\027\n\023NO_PROGRESS_IN_GAME\020\006\022\021\n\rBOT"
+      "_COLLISION\020\007\022\025\n\021MULTIPLE_DEFENDER\020\010\022\037\n\033M"
+      "ULTIPLE_DEFENDER_PARTIALLY\020\t\022\034\n\030ATTACKER"
+      "_IN_DEFENSE_AREA\020\n\022\t\n\005ICING\020\013\022\016\n\nBALL_SP"
+      "EED\020\014\022\024\n\020ROBOT_STOP_SPEED\020\r\022\022\n\016BALL_DRIB"
+      "BLING\020\016\022\031\n\025ATTACKER_TOUCH_KEEPER\020\017\022\020\n\014DO"
+      "UBLE_TOUCH\020\020\022\034\n\030ATTACKER_TO_DEFENCE_AREA"
+      "\020\021\022#\n\037DEFENDER_TO_KICK_POINT_DISTANCE\020\022\022"
+      "\020\n\014BALL_HOLDING\020\023\022\021\n\rINDIRECT_GOAL\020\024\022\031\n\025"
+      "BALL_PLACEMENT_FAILED\020\025\022\020\n\014CHIP_ON_GOAL\020"
+      "\026\"8\n\004Team\022\020\n\014TEAM_UNKNOWN\020\000\022\017\n\013TEAM_YELL"
+      "OW\020\001\022\r\n\tTEAM_BLUE\020\002"
+  };
+  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
+      descriptor, 819);
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
+    "game_event.proto", &protobuf_RegisterTypes);
+}
+
+void AddDescriptors() {
+  static ::google::protobuf::internal::once_flag once;
+  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
+}
+// Force AddDescriptors() to be called at dynamic initialization time.
+struct StaticDescriptorInitializer {
+  StaticDescriptorInitializer() {
+    AddDescriptors();
+  }
+} static_descriptor_initializer;
+}  // namespace protobuf_game_5fevent_2eproto
+const ::google::protobuf::EnumDescriptor* SSL_Referee_Game_Event_GameEventType_descriptor() {
+  protobuf_game_5fevent_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_game_5fevent_2eproto::file_level_enum_descriptors[0];
 }
 bool SSL_Referee_Game_Event_GameEventType_IsValid(int value) {
   switch (value) {
@@ -152,37 +197,37 @@ bool SSL_Referee_Game_Event_GameEventType_IsValid(int value) {
   }
 }
 
-#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::UNKNOWN;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::CUSTOM;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::NUMBER_OF_PLAYERS;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::BALL_LEFT_FIELD;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::GOAL;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::KICK_TIMEOUT;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::NO_PROGRESS_IN_GAME;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::BOT_COLLISION;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::MULTIPLE_DEFENDER;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::MULTIPLE_DEFENDER_PARTIALLY;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::ATTACKER_IN_DEFENSE_AREA;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::ICING;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::BALL_SPEED;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::ROBOT_STOP_SPEED;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::BALL_DRIBBLING;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::ATTACKER_TOUCH_KEEPER;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::DOUBLE_TOUCH;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::ATTACKER_TO_DEFENCE_AREA;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::DEFENDER_TO_KICK_POINT_DISTANCE;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::BALL_HOLDING;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::INDIRECT_GOAL;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::BALL_PLACEMENT_FAILED;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::CHIP_ON_GOAL;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::GameEventType_MIN;
-constexpr SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::GameEventType_MAX;
-constexpr int SSL_Referee_Game_Event::GameEventType_ARRAYSIZE;
-#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* SSL_Referee_Game_Event_Team_descriptor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_game_5fevent_2eproto);
-  return file_level_enum_descriptors_game_5fevent_2eproto[1];
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::UNKNOWN;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::CUSTOM;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::NUMBER_OF_PLAYERS;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::BALL_LEFT_FIELD;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::GOAL;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::KICK_TIMEOUT;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::NO_PROGRESS_IN_GAME;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::BOT_COLLISION;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::MULTIPLE_DEFENDER;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::MULTIPLE_DEFENDER_PARTIALLY;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::ATTACKER_IN_DEFENSE_AREA;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::ICING;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::BALL_SPEED;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::ROBOT_STOP_SPEED;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::BALL_DRIBBLING;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::ATTACKER_TOUCH_KEEPER;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::DOUBLE_TOUCH;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::ATTACKER_TO_DEFENCE_AREA;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::DEFENDER_TO_KICK_POINT_DISTANCE;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::BALL_HOLDING;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::INDIRECT_GOAL;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::BALL_PLACEMENT_FAILED;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::CHIP_ON_GOAL;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::GameEventType_MIN;
+const SSL_Referee_Game_Event_GameEventType SSL_Referee_Game_Event::GameEventType_MAX;
+const int SSL_Referee_Game_Event::GameEventType_ARRAYSIZE;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+const ::google::protobuf::EnumDescriptor* SSL_Referee_Game_Event_Team_descriptor() {
+  protobuf_game_5fevent_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_game_5fevent_2eproto::file_level_enum_descriptors[1];
 }
 bool SSL_Referee_Game_Event_Team_IsValid(int value) {
   switch (value) {
@@ -195,168 +240,197 @@ bool SSL_Referee_Game_Event_Team_IsValid(int value) {
   }
 }
 
-#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-constexpr SSL_Referee_Game_Event_Team SSL_Referee_Game_Event::TEAM_UNKNOWN;
-constexpr SSL_Referee_Game_Event_Team SSL_Referee_Game_Event::TEAM_YELLOW;
-constexpr SSL_Referee_Game_Event_Team SSL_Referee_Game_Event::TEAM_BLUE;
-constexpr SSL_Referee_Game_Event_Team SSL_Referee_Game_Event::Team_MIN;
-constexpr SSL_Referee_Game_Event_Team SSL_Referee_Game_Event::Team_MAX;
-constexpr int SSL_Referee_Game_Event::Team_ARRAYSIZE;
-#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const SSL_Referee_Game_Event_Team SSL_Referee_Game_Event::TEAM_UNKNOWN;
+const SSL_Referee_Game_Event_Team SSL_Referee_Game_Event::TEAM_YELLOW;
+const SSL_Referee_Game_Event_Team SSL_Referee_Game_Event::TEAM_BLUE;
+const SSL_Referee_Game_Event_Team SSL_Referee_Game_Event::Team_MIN;
+const SSL_Referee_Game_Event_Team SSL_Referee_Game_Event::Team_MAX;
+const int SSL_Referee_Game_Event::Team_ARRAYSIZE;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 // ===================================================================
 
-class SSL_Referee_Game_Event_Originator::_Internal {
- public:
-  using HasBits = decltype(std::declval<SSL_Referee_Game_Event_Originator>()._has_bits_);
-  static void set_has_team(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_botid(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
-};
+void SSL_Referee_Game_Event_Originator::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int SSL_Referee_Game_Event_Originator::kTeamFieldNumber;
+const int SSL_Referee_Game_Event_Originator::kBotIdFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-SSL_Referee_Game_Event_Originator::SSL_Referee_Game_Event_Originator(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+SSL_Referee_Game_Event_Originator::SSL_Referee_Game_Event_Originator()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_game_5fevent_2eproto::scc_info_SSL_Referee_Game_Event_Originator.base);
   SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
-  // @@protoc_insertion_point(arena_constructor:SSL_Referee_Game_Event.Originator)
+  // @@protoc_insertion_point(constructor:SSL_Referee_Game_Event.Originator)
 }
 SSL_Referee_Game_Event_Originator::SSL_Referee_Game_Event_Originator(const SSL_Referee_Game_Event_Originator& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
       _has_bits_(from._has_bits_) {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&team_, &from.team_,
     static_cast<size_t>(reinterpret_cast<char*>(&botid_) -
     reinterpret_cast<char*>(&team_)) + sizeof(botid_));
   // @@protoc_insertion_point(copy_constructor:SSL_Referee_Game_Event.Originator)
 }
 
-inline void SSL_Referee_Game_Event_Originator::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&team_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&botid_) -
-    reinterpret_cast<char*>(&team_)) + sizeof(botid_));
+void SSL_Referee_Game_Event_Originator::SharedCtor() {
+  ::memset(&team_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&botid_) -
+      reinterpret_cast<char*>(&team_)) + sizeof(botid_));
 }
 
 SSL_Referee_Game_Event_Originator::~SSL_Referee_Game_Event_Originator() {
   // @@protoc_insertion_point(destructor:SSL_Referee_Game_Event.Originator)
-  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void SSL_Referee_Game_Event_Originator::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+void SSL_Referee_Game_Event_Originator::SharedDtor() {
 }
 
-void SSL_Referee_Game_Event_Originator::ArenaDtor(void* object) {
-  SSL_Referee_Game_Event_Originator* _this = reinterpret_cast< SSL_Referee_Game_Event_Originator* >(object);
-  (void)_this;
-}
-void SSL_Referee_Game_Event_Originator::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SSL_Referee_Game_Event_Originator::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ::google::protobuf::Descriptor* SSL_Referee_Game_Event_Originator::descriptor() {
+  ::protobuf_game_5fevent_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_game_5fevent_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const SSL_Referee_Game_Event_Originator& SSL_Referee_Game_Event_Originator::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_game_5fevent_2eproto::scc_info_SSL_Referee_Game_Event_Originator.base);
+  return *internal_default_instance();
+}
+
 
 void SSL_Referee_Game_Event_Originator::Clear() {
 // @@protoc_insertion_point(message_clear_start:SSL_Referee_Game_Event.Originator)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
+  if (cached_has_bits & 3u) {
     ::memset(&team_, 0, static_cast<size_t>(
         reinterpret_cast<char*>(&botid_) -
         reinterpret_cast<char*>(&team_)) + sizeof(botid_));
   }
   _has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* SSL_Referee_Game_Event_Originator::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
+bool SSL_Referee_Game_Event_Originator::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:SSL_Referee_Game_Event.Originator)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // required .SSL_Referee_Game_Event.Team team = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-          if (PROTOBUF_PREDICT_TRUE(::SSL_Referee_Game_Event_Team_IsValid(val))) {
-            _internal_set_team(static_cast<::SSL_Referee_Game_Event_Team>(val));
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::SSL_Referee_Game_Event_Team_IsValid(value)) {
+            set_team(static_cast< ::SSL_Referee_Game_Event_Team >(value));
           } else {
-            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(1, val, mutable_unknown_fields());
+            mutable_unknown_fields()->AddVarint(
+                1, static_cast< ::google::protobuf::uint64>(value));
           }
-        } else goto handle_unusual;
-        continue;
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       // optional uint32 botId = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          _Internal::set_has_botid(&has_bits);
-          botid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          set_has_botid();
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &botid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
-        if ((tag == 0) || ((tag & 7) == 4)) {
-          CHK_(ptr);
-          ctx->SetLastTag(tag);
+        if (tag == 0) {
           goto success;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
       }
-    }  // switch
-  }  // while
+    }
+  }
 success:
-  _has_bits_.Or(has_bits);
-  return ptr;
+  // @@protoc_insertion_point(parse_success:SSL_Referee_Game_Event.Originator)
+  return true;
 failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+  // @@protoc_insertion_point(parse_failure:SSL_Referee_Game_Event.Originator)
+  return false;
+#undef DO_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SSL_Referee_Game_Event_Originator::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:SSL_Referee_Game_Event.Originator)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+void SSL_Referee_Game_Event_Originator::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:SSL_Referee_Game_Event.Originator)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
   // required .SSL_Referee_Game_Event.Team team = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      1, this->_internal_team(), target);
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->team(), output);
   }
 
   // optional uint32 botId = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_botid(), target);
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->botid(), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:SSL_Referee_Game_Event.Originator)
+}
+
+::google::protobuf::uint8* SSL_Referee_Game_Event_Originator::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:SSL_Referee_Game_Event.Originator)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // required .SSL_Referee_Game_Event.Team team = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->team(), target);
+  }
+
+  // optional uint32 botId = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->botid(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SSL_Referee_Game_Event.Originator)
   return target;
@@ -366,53 +440,52 @@ size_t SSL_Referee_Game_Event_Originator::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:SSL_Referee_Game_Event.Originator)
   size_t total_size = 0;
 
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
   // required .SSL_Referee_Game_Event.Team team = 1;
-  if (_internal_has_team()) {
+  if (has_team()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_team());
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->team());
   }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   // optional uint32 botId = 2;
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000002u) {
+  if (has_botid()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->_internal_botid());
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->botid());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SSL_Referee_Game_Event_Originator::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    SSL_Referee_Game_Event_Originator::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SSL_Referee_Game_Event_Originator::GetClassData() const { return &_class_data_; }
-
-void SSL_Referee_Game_Event_Originator::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
-  static_cast<SSL_Referee_Game_Event_Originator *>(to)->MergeFrom(
-      static_cast<const SSL_Referee_Game_Event_Originator &>(from));
+void SSL_Referee_Game_Event_Originator::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:SSL_Referee_Game_Event.Originator)
+  GOOGLE_DCHECK_NE(&from, this);
+  const SSL_Referee_Game_Event_Originator* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const SSL_Referee_Game_Event_Originator>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:SSL_Referee_Game_Event.Originator)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:SSL_Referee_Game_Event.Originator)
+    MergeFrom(*source);
+  }
 }
-
 
 void SSL_Referee_Game_Event_Originator::MergeFrom(const SSL_Referee_Game_Event_Originator& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:SSL_Referee_Game_Event.Originator)
   GOOGLE_DCHECK_NE(&from, this);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
+  if (cached_has_bits & 3u) {
     if (cached_has_bits & 0x00000001u) {
       team_ = from.team_;
     }
@@ -421,7 +494,13 @@ void SSL_Referee_Game_Event_Originator::MergeFrom(const SSL_Referee_Game_Event_O
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SSL_Referee_Game_Event_Originator::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:SSL_Referee_Game_Event.Originator)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void SSL_Referee_Game_Event_Originator::CopyFrom(const SSL_Referee_Game_Event_Originator& from) {
@@ -432,227 +511,266 @@ void SSL_Referee_Game_Event_Originator::CopyFrom(const SSL_Referee_Game_Event_Or
 }
 
 bool SSL_Referee_Game_Event_Originator::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_has_bits_)) return false;
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
   return true;
 }
 
+void SSL_Referee_Game_Event_Originator::Swap(SSL_Referee_Game_Event_Originator* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void SSL_Referee_Game_Event_Originator::InternalSwap(SSL_Referee_Game_Event_Originator* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(team_, other->team_);
+  swap(botid_, other->botid_);
   swap(_has_bits_[0], other->_has_bits_[0]);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SSL_Referee_Game_Event_Originator, botid_)
-      + sizeof(SSL_Referee_Game_Event_Originator::botid_)
-      - PROTOBUF_FIELD_OFFSET(SSL_Referee_Game_Event_Originator, team_)>(
-          reinterpret_cast<char*>(&team_),
-          reinterpret_cast<char*>(&other->team_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SSL_Referee_Game_Event_Originator::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
-      &descriptor_table_game_5fevent_2eproto_getter, &descriptor_table_game_5fevent_2eproto_once,
-      file_level_metadata_game_5fevent_2eproto[0]);
+::google::protobuf::Metadata SSL_Referee_Game_Event_Originator::GetMetadata() const {
+  protobuf_game_5fevent_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_game_5fevent_2eproto::file_level_metadata[kIndexInFileMessages];
 }
+
 
 // ===================================================================
 
-class SSL_Referee_Game_Event::_Internal {
- public:
-  using HasBits = decltype(std::declval<SSL_Referee_Game_Event>()._has_bits_);
-  static void set_has_gameeventtype(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static const ::SSL_Referee_Game_Event_Originator& originator(const SSL_Referee_Game_Event* msg);
-  static void set_has_originator(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_message(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000004) ^ 0x00000004) != 0;
-  }
-};
-
-const ::SSL_Referee_Game_Event_Originator&
-SSL_Referee_Game_Event::_Internal::originator(const SSL_Referee_Game_Event* msg) {
-  return *msg->originator_;
+void SSL_Referee_Game_Event::InitAsDefaultInstance() {
+  ::_SSL_Referee_Game_Event_default_instance_._instance.get_mutable()->originator_ = const_cast< ::SSL_Referee_Game_Event_Originator*>(
+      ::SSL_Referee_Game_Event_Originator::internal_default_instance());
 }
-SSL_Referee_Game_Event::SSL_Referee_Game_Event(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int SSL_Referee_Game_Event::kGameEventTypeFieldNumber;
+const int SSL_Referee_Game_Event::kOriginatorFieldNumber;
+const int SSL_Referee_Game_Event::kMessageFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+SSL_Referee_Game_Event::SSL_Referee_Game_Event()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_game_5fevent_2eproto::scc_info_SSL_Referee_Game_Event.base);
   SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
-  // @@protoc_insertion_point(arena_constructor:SSL_Referee_Game_Event)
+  // @@protoc_insertion_point(constructor:SSL_Referee_Game_Event)
 }
 SSL_Referee_Game_Event::SSL_Referee_Game_Event(const SSL_Referee_Game_Event& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
       _has_bits_(from._has_bits_) {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_message()) {
-    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
-      GetArenaForAllocation());
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  message_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_message()) {
+    message_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.message_);
   }
-  if (from._internal_has_originator()) {
+  if (from.has_originator()) {
     originator_ = new ::SSL_Referee_Game_Event_Originator(*from.originator_);
   } else {
-    originator_ = nullptr;
+    originator_ = NULL;
   }
   gameeventtype_ = from.gameeventtype_;
   // @@protoc_insertion_point(copy_constructor:SSL_Referee_Game_Event)
 }
 
-inline void SSL_Referee_Game_Event::SharedCtor() {
-message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&originator_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&gameeventtype_) -
-    reinterpret_cast<char*>(&originator_)) + sizeof(gameeventtype_));
+void SSL_Referee_Game_Event::SharedCtor() {
+  message_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&originator_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&gameeventtype_) -
+      reinterpret_cast<char*>(&originator_)) + sizeof(gameeventtype_));
 }
 
 SSL_Referee_Game_Event::~SSL_Referee_Game_Event() {
   // @@protoc_insertion_point(destructor:SSL_Referee_Game_Event)
-  if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void SSL_Referee_Game_Event::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+void SSL_Referee_Game_Event::SharedDtor() {
+  message_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete originator_;
 }
 
-void SSL_Referee_Game_Event::ArenaDtor(void* object) {
-  SSL_Referee_Game_Event* _this = reinterpret_cast< SSL_Referee_Game_Event* >(object);
-  (void)_this;
-}
-void SSL_Referee_Game_Event::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SSL_Referee_Game_Event::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ::google::protobuf::Descriptor* SSL_Referee_Game_Event::descriptor() {
+  ::protobuf_game_5fevent_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_game_5fevent_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const SSL_Referee_Game_Event& SSL_Referee_Game_Event::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_game_5fevent_2eproto::scc_info_SSL_Referee_Game_Event.base);
+  return *internal_default_instance();
+}
+
 
 void SSL_Referee_Game_Event::Clear() {
 // @@protoc_insertion_point(message_clear_start:SSL_Referee_Game_Event)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
+  if (cached_has_bits & 3u) {
     if (cached_has_bits & 0x00000001u) {
-      message_.ClearNonDefaultToEmpty();
+      message_.ClearNonDefaultToEmptyNoArena();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(originator_ != nullptr);
+      GOOGLE_DCHECK(originator_ != NULL);
       originator_->Clear();
     }
   }
   gameeventtype_ = 0;
   _has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* SSL_Referee_Game_Event::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
+bool SSL_Referee_Game_Event::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:SSL_Referee_Game_Event)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // required .SSL_Referee_Game_Event.GameEventType gameEventType = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-          if (PROTOBUF_PREDICT_TRUE(::SSL_Referee_Game_Event_GameEventType_IsValid(val))) {
-            _internal_set_gameeventtype(static_cast<::SSL_Referee_Game_Event_GameEventType>(val));
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::SSL_Referee_Game_Event_GameEventType_IsValid(value)) {
+            set_gameeventtype(static_cast< ::SSL_Referee_Game_Event_GameEventType >(value));
           } else {
-            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(1, val, mutable_unknown_fields());
+            mutable_unknown_fields()->AddVarint(
+                1, static_cast< ::google::protobuf::uint64>(value));
           }
-        } else goto handle_unusual;
-        continue;
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       // optional .SSL_Referee_Game_Event.Originator originator = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_originator(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_originator()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       // optional string message = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          auto str = _internal_mutable_message();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          #ifndef NDEBUG
-          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "SSL_Referee_Game_Event.message");
-          #endif  // !NDEBUG
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_message()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+            this->message().data(), static_cast<int>(this->message().length()),
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "SSL_Referee_Game_Event.message");
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
-        if ((tag == 0) || ((tag & 7) == 4)) {
-          CHK_(ptr);
-          ctx->SetLastTag(tag);
+        if (tag == 0) {
           goto success;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
       }
-    }  // switch
-  }  // while
+    }
+  }
 success:
-  _has_bits_.Or(has_bits);
-  return ptr;
+  // @@protoc_insertion_point(parse_success:SSL_Referee_Game_Event)
+  return true;
 failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+  // @@protoc_insertion_point(parse_failure:SSL_Referee_Game_Event)
+  return false;
+#undef DO_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SSL_Referee_Game_Event::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:SSL_Referee_Game_Event)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+void SSL_Referee_Game_Event::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:SSL_Referee_Game_Event)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
   // required .SSL_Referee_Game_Event.GameEventType gameEventType = 1;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      1, this->_internal_gameeventtype(), target);
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->gameeventtype(), output);
   }
 
   // optional .SSL_Referee_Game_Event.Originator originator = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::originator(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->_internal_originator(), output);
   }
 
   // optional string message = 3;
   if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->message().data(), static_cast<int>(this->message().length()),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
       "SSL_Referee_Game_Event.message");
-    target = stream->WriteStringMaybeAliased(
-        3, this->_internal_message(), target);
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->message(), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:SSL_Referee_Game_Event)
+}
+
+::google::protobuf::uint8* SSL_Referee_Game_Event::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:SSL_Referee_Game_Event)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // required .SSL_Referee_Game_Event.GameEventType gameEventType = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->gameeventtype(), target);
+  }
+
+  // optional .SSL_Referee_Game_Event.Originator originator = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, this->_internal_originator(), deterministic, target);
+  }
+
+  // optional string message = 3;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->message().data(), static_cast<int>(this->message().length()),
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "SSL_Referee_Game_Event.message");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->message(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SSL_Referee_Game_Event)
   return target;
@@ -662,74 +780,80 @@ size_t SSL_Referee_Game_Event::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:SSL_Referee_Game_Event)
   size_t total_size = 0;
 
-  // required .SSL_Referee_Game_Event.GameEventType gameEventType = 1;
-  if (_internal_has_gameeventtype()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_gameeventtype());
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
   }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
+  // required .SSL_Referee_Game_Event.GameEventType gameEventType = 1;
+  if (has_gameeventtype()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->gameeventtype());
+  }
+  if (_has_bits_[0 / 32] & 3u) {
     // optional string message = 3;
-    if (cached_has_bits & 0x00000001u) {
+    if (has_message()) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_message());
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->message());
     }
 
     // optional .SSL_Referee_Game_Event.Originator originator = 2;
-    if (cached_has_bits & 0x00000002u) {
+    if (has_originator()) {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
           *originator_);
     }
 
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SSL_Referee_Game_Event::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    SSL_Referee_Game_Event::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SSL_Referee_Game_Event::GetClassData() const { return &_class_data_; }
-
-void SSL_Referee_Game_Event::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
-  static_cast<SSL_Referee_Game_Event *>(to)->MergeFrom(
-      static_cast<const SSL_Referee_Game_Event &>(from));
+void SSL_Referee_Game_Event::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:SSL_Referee_Game_Event)
+  GOOGLE_DCHECK_NE(&from, this);
+  const SSL_Referee_Game_Event* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const SSL_Referee_Game_Event>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:SSL_Referee_Game_Event)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:SSL_Referee_Game_Event)
+    MergeFrom(*source);
+  }
 }
-
 
 void SSL_Referee_Game_Event::MergeFrom(const SSL_Referee_Game_Event& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:SSL_Referee_Game_Event)
   GOOGLE_DCHECK_NE(&from, this);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
+  if (cached_has_bits & 7u) {
     if (cached_has_bits & 0x00000001u) {
-      _internal_set_message(from._internal_message());
+      set_has_message();
+      message_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.message_);
     }
     if (cached_has_bits & 0x00000002u) {
-      _internal_mutable_originator()->::SSL_Referee_Game_Event_Originator::MergeFrom(from._internal_originator());
+      mutable_originator()->::SSL_Referee_Game_Event_Originator::MergeFrom(from.originator());
     }
     if (cached_has_bits & 0x00000004u) {
       gameeventtype_ = from.gameeventtype_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SSL_Referee_Game_Event::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:SSL_Referee_Game_Event)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void SSL_Referee_Game_Event::CopyFrom(const SSL_Referee_Game_Event& from) {
@@ -740,45 +864,43 @@ void SSL_Referee_Game_Event::CopyFrom(const SSL_Referee_Game_Event& from) {
 }
 
 bool SSL_Referee_Game_Event::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_has_bits_)) return false;
-  if (_internal_has_originator()) {
-    if (!originator_->IsInitialized()) return false;
+  if ((_has_bits_[0] & 0x00000004) != 0x00000004) return false;
+  if (has_originator()) {
+    if (!this->originator_->IsInitialized()) return false;
   }
   return true;
 }
 
+void SSL_Referee_Game_Event::Swap(SSL_Referee_Game_Event* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void SSL_Referee_Game_Event::InternalSwap(SSL_Referee_Game_Event* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  message_.Swap(&other->message_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(originator_, other->originator_);
+  swap(gameeventtype_, other->gameeventtype_);
   swap(_has_bits_[0], other->_has_bits_[0]);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &message_, GetArenaForAllocation(),
-      &other->message_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SSL_Referee_Game_Event, gameeventtype_)
-      + sizeof(SSL_Referee_Game_Event::gameeventtype_)
-      - PROTOBUF_FIELD_OFFSET(SSL_Referee_Game_Event, originator_)>(
-          reinterpret_cast<char*>(&originator_),
-          reinterpret_cast<char*>(&other->originator_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SSL_Referee_Game_Event::GetMetadata() const {
-  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
-      &descriptor_table_game_5fevent_2eproto_getter, &descriptor_table_game_5fevent_2eproto_once,
-      file_level_metadata_game_5fevent_2eproto[1]);
+::google::protobuf::Metadata SSL_Referee_Game_Event::GetMetadata() const {
+  protobuf_game_5fevent_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_game_5fevent_2eproto::file_level_metadata[kIndexInFileMessages];
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
-PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::SSL_Referee_Game_Event_Originator* Arena::CreateMaybeMessage< ::SSL_Referee_Game_Event_Originator >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::SSL_Referee_Game_Event_Originator >(arena);
+namespace google {
+namespace protobuf {
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::SSL_Referee_Game_Event_Originator* Arena::CreateMaybeMessage< ::SSL_Referee_Game_Event_Originator >(Arena* arena) {
+  return Arena::CreateInternal< ::SSL_Referee_Game_Event_Originator >(arena);
 }
-template<> PROTOBUF_NOINLINE ::SSL_Referee_Game_Event* Arena::CreateMaybeMessage< ::SSL_Referee_Game_Event >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::SSL_Referee_Game_Event >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::SSL_Referee_Game_Event* Arena::CreateMaybeMessage< ::SSL_Referee_Game_Event >(Arena* arena) {
+  return Arena::CreateInternal< ::SSL_Referee_Game_Event >(arena);
 }
-PROTOBUF_NAMESPACE_CLOSE
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>

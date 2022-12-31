@@ -10,7 +10,7 @@ pwd
 echo "you want run code in erforce kachal or grsim simulation?"
 echo "type y to use Grsim and n to use ER-force ('y/n')?"
 # read simulation;
-simulation = "n"
+read simulation
 
 cd  ai/Protobuf
 

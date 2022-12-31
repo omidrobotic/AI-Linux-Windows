@@ -6,6 +6,7 @@
 #include <thread>
 #include <mutex>
 #include <ctime>
+#include "GetSystemData.h"
 #if SEND_COMMANDS_TO_ROBOTS==2
 #else
 #include "Protobuf/Grsim/grSim_Commands.pb.h"
@@ -35,6 +36,7 @@
 #define BACKGROUND_GREEN     0x0020 // background color contains green.
 #define BACKGROUND_RED       0x0040 // background color contains red.
 #define BACKGROUND_INTENSITY 0x0080 // background color is intensified.
+
 
 
 
@@ -275,6 +277,10 @@ void produceSpeedOfRobots();
 //===== Main program ========================================================
 int main(int argc, char **argv)
 {
+	GetSystemData mysystemip;
+	const char* myip = mysystemip.GetIP();
+
+	std::cout <<"Valid ip: "<< myip<<std::endl;
 
 	Estimation estimation;
 	world.glTimer.start();
@@ -417,9 +423,13 @@ int main(int argc, char **argv)
 
 		///send command to grsim robots
 #elif SEND_COMMANDS_TO_ROBOTS == 0
-        SimulatorMove gsm;
+		SimulatorMove gsm;
         auto set_color_change=world.getInstance().team_color;
-		gsm.initialize_port(GROUP_ADDR_SEND_GRSIM_COMMAND, PORT_NUM_SEND_GRSIM_COMMAND);
+		if (MANUAL_ADDR_GRSIM)
+			gsm.initialize_port(GROUP_ADDR_SEND_GRSIM_COMMAND, PORT_NUM_SEND_GRSIM_COMMAND);
+		else
+			gsm.initialize_port(myip, PORT_NUM_SEND_GRSIM_COMMAND);
+
 		gsm.initialize_robot_color_and_timestamp(0.0);
 		int rnfi;	///robot number for index
 		while (true)
@@ -590,7 +600,7 @@ int main(int argc, char **argv)
 
 #if DRAW_MATLAB_DIAGRAM == 1
 	auto matlab_diagrams = [&]()
-	{
+	{	
 		Sleep(3);
 
 		Matlab first_diagram(0, 1000, 0, 1000 ,1);
@@ -1222,10 +1232,12 @@ int main(int argc, char **argv)
 	};*/
 
 #pragma endregion
-
+	
 	std::thread refree_thread(refree_func);
 	std::thread vision_thread(vision_func);
+#if GLUT_ENABLE
 	std::thread glut_thread(GLUT_func);
+#endif
 	std::thread radio_thread(radio_func);
 	//.std::thread Send_Nrf_Temp(send_nrf_temp);
 
@@ -1250,7 +1262,9 @@ int main(int argc, char **argv)
 
 	refree_thread.join();
 	vision_thread.join();
+#if GLUT_ENABLE
 	glut_thread.join();
+#endif
 	radio_thread.join();
 	///Send_Nrf_Temp.join();
 
