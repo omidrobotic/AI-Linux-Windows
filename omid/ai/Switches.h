@@ -1,9 +1,8 @@
 #ifndef SWITCHES_H
 #define SWITCHES_H
-//#include "GetSystemData.h"
 
 
-#define GLUT_ENABLE 0 ///enable 1 /disable 0  graphic thread
+#define GLUT_ENABLE 1 ///enable 1 /disable 0  graphic thread
 #define GAME_MODE_ROBOCUP_2021 1 /// 1 : Run in Simulator 2 : Technical Challenge 3 : Hardware Challenge
 #define CAM_COUNT 4
 #define DIVISION 2	/// 1 : for division A		2 : for division B      3 : for OmidReal
