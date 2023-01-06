@@ -1,0 +1,2 @@
+./startall.sh
+./startrefree.sh
