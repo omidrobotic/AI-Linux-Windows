@@ -80,6 +80,5 @@ see this link for Vision PCI cameras and install drivers:
 - [X] Make GUI thread optional. 
 - [X] System IP address can be detected automaticaly.
 - [ ] Designing new GUI with QT.
-- [ ] Optimizing cockcet code (which I think its working fine!!).
+- [ ] Optimizing socket code (which I think is working fine!!).
 - [ ] Prepare codes to go on docker.
-- [ ] 
